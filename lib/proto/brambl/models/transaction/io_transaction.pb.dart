@@ -9,26 +9,26 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'spent_transaction_output.pb.dart' as $15;
-import 'unspent_transaction_output.pb.dart' as $16;
-import '../datum.pb.dart' as $17;
-import '../identifier.pb.dart' as $2;
+import 'spent_transaction_output.pb.dart' as $17;
+import 'unspent_transaction_output.pb.dart' as $18;
+import '../datum.pb.dart' as $19;
+import '../identifier.pb.dart' as $7;
 
 class IoTransaction extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'IoTransaction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.transaction'), createEmptyInstance: create)
-    ..pc<$15.SpentTransactionOutput>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $15.SpentTransactionOutput.create)
-    ..pc<$16.UnspentTransactionOutput>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $16.UnspentTransactionOutput.create)
-    ..aOM<$17.Datum_IoTransaction>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'datum', subBuilder: $17.Datum_IoTransaction.create)
-    ..aOM<$2.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $2.TransactionId.create)
+    ..pc<$17.SpentTransactionOutput>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $17.SpentTransactionOutput.create)
+    ..pc<$18.UnspentTransactionOutput>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $18.UnspentTransactionOutput.create)
+    ..aOM<$19.Datum_IoTransaction>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'datum', subBuilder: $19.Datum_IoTransaction.create)
+    ..aOM<$7.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $7.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
   IoTransaction._() : super();
   factory IoTransaction({
-    $core.Iterable<$15.SpentTransactionOutput>? inputs,
-    $core.Iterable<$16.UnspentTransactionOutput>? outputs,
-    $17.Datum_IoTransaction? datum,
-    $2.TransactionId? transactionId,
+    $core.Iterable<$17.SpentTransactionOutput>? inputs,
+    $core.Iterable<$18.UnspentTransactionOutput>? outputs,
+    $19.Datum_IoTransaction? datum,
+    $7.TransactionId? transactionId,
   }) {
     final _result = create();
     if (inputs != null) {
@@ -67,31 +67,31 @@ class IoTransaction extends $pb.GeneratedMessage {
   static IoTransaction? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$15.SpentTransactionOutput> get inputs => $_getList(0);
+  $core.List<$17.SpentTransactionOutput> get inputs => $_getList(0);
 
   @$pb.TagNumber(2)
-  $core.List<$16.UnspentTransactionOutput> get outputs => $_getList(1);
+  $core.List<$18.UnspentTransactionOutput> get outputs => $_getList(1);
 
   @$pb.TagNumber(3)
-  $17.Datum_IoTransaction get datum => $_getN(2);
+  $19.Datum_IoTransaction get datum => $_getN(2);
   @$pb.TagNumber(3)
-  set datum($17.Datum_IoTransaction v) { setField(3, v); }
+  set datum($19.Datum_IoTransaction v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasDatum() => $_has(2);
   @$pb.TagNumber(3)
   void clearDatum() => clearField(3);
   @$pb.TagNumber(3)
-  $17.Datum_IoTransaction ensureDatum() => $_ensure(2);
+  $19.Datum_IoTransaction ensureDatum() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $2.TransactionId get transactionId => $_getN(3);
+  $7.TransactionId get transactionId => $_getN(3);
   @$pb.TagNumber(4)
-  set transactionId($2.TransactionId v) { setField(4, v); }
+  set transactionId($7.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTransactionId() => $_has(3);
   @$pb.TagNumber(4)
   void clearTransactionId() => clearField(4);
   @$pb.TagNumber(4)
-  $2.TransactionId ensureTransactionId() => $_ensure(3);
+  $7.TransactionId ensureTransactionId() => $_ensure(3);
 }
 

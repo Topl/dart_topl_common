@@ -92,6 +92,57 @@ const GetTransactionByIdRequest$json = const {
 
 /// Descriptor for `GetTransactionByIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getTransactionByIdRequestDescriptor = $convert.base64Decode('ChlHZXRUcmFuc2FjdGlvbkJ5SWRSZXF1ZXN0ElQKDXRyYW5zYWN0aW9uSWQYASABKAsyJC5jby50b3BsLmJyYW1ibC5tb2RlbHMuVHJhbnNhY3Rpb25JZEII+kIFigECEAFSDXRyYW5zYWN0aW9uSWQSVAoQY29uZmlkZW5jZUZhY3RvchgCIAEoCzIoLmNvLnRvcGwuZ2VudXMuc2VydmljZXMuQ29uZmlkZW5jZUZhY3RvclIQY29uZmlkZW5jZUZhY3Rvcg==');
+@$core.Deprecated('Use getTxoStatsReqDescriptor instead')
+const GetTxoStatsReq$json = const {
+  '1': 'GetTxoStatsReq',
+};
+
+/// Descriptor for `GetTxoStatsReq`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTxoStatsReqDescriptor = $convert.base64Decode('Cg5HZXRUeG9TdGF0c1JlcQ==');
+@$core.Deprecated('Use getTxoStatsResDescriptor instead')
+const GetTxoStatsRes$json = const {
+  '1': 'GetTxoStatsRes',
+  '2': const [
+    const {'1': 'txos', '3': 1, '4': 1, '5': 11, '6': '.co.topl.genus.services.TxoStats', '8': const {}, '10': 'txos'},
+  ],
+};
+
+/// Descriptor for `GetTxoStatsRes`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTxoStatsResDescriptor = $convert.base64Decode('Cg5HZXRUeG9TdGF0c1JlcxI+CgR0eG9zGAEgASgLMiAuY28udG9wbC5nZW51cy5zZXJ2aWNlcy5UeG9TdGF0c0II+kIFigECEAFSBHR4b3M=');
+@$core.Deprecated('Use blockchainSizeStatsReqDescriptor instead')
+const BlockchainSizeStatsReq$json = const {
+  '1': 'BlockchainSizeStatsReq',
+};
+
+/// Descriptor for `BlockchainSizeStatsReq`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List blockchainSizeStatsReqDescriptor = $convert.base64Decode('ChZCbG9ja2NoYWluU2l6ZVN0YXRzUmVx');
+@$core.Deprecated('Use blockchainSizeStatsResDescriptor instead')
+const BlockchainSizeStatsRes$json = const {
+  '1': 'BlockchainSizeStatsRes',
+  '2': const [
+    const {'1': 'blockchainSize', '3': 1, '4': 1, '5': 11, '6': '.co.topl.genus.services.BlockchainSizeStats', '8': const {}, '10': 'blockchainSize'},
+  ],
+};
+
+/// Descriptor for `BlockchainSizeStatsRes`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List blockchainSizeStatsResDescriptor = $convert.base64Decode('ChZCbG9ja2NoYWluU2l6ZVN0YXRzUmVzEl0KDmJsb2NrY2hhaW5TaXplGAEgASgLMisuY28udG9wbC5nZW51cy5zZXJ2aWNlcy5CbG9ja2NoYWluU2l6ZVN0YXRzQgj6QgWKAQIQAVIOYmxvY2tjaGFpblNpemU=');
+@$core.Deprecated('Use blockStatsReqDescriptor instead')
+const BlockStatsReq$json = const {
+  '1': 'BlockStatsReq',
+};
+
+/// Descriptor for `BlockStatsReq`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List blockStatsReqDescriptor = $convert.base64Decode('Cg1CbG9ja1N0YXRzUmVx');
+@$core.Deprecated('Use blockStatsResDescriptor instead')
+const BlockStatsRes$json = const {
+  '1': 'BlockStatsRes',
+  '2': const [
+    const {'1': 'blockStats', '3': 1, '4': 1, '5': 11, '6': '.co.topl.genus.services.BlockStats', '8': const {}, '10': 'blockStats'},
+  ],
+};
+
+/// Descriptor for `BlockStatsRes`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List blockStatsResDescriptor = $convert.base64Decode('Cg1CbG9ja1N0YXRzUmVzEkwKCmJsb2NrU3RhdHMYASABKAsyIi5jby50b3BsLmdlbnVzLnNlcnZpY2VzLkJsb2NrU3RhdHNCCPpCBYoBAhABUgpibG9ja1N0YXRz');
 @$core.Deprecated('Use createOnChainTransactionIndexResponseDescriptor instead')
 const CreateOnChainTransactionIndexResponse$json = const {
   '1': 'CreateOnChainTransactionIndexResponse',
@@ -102,9 +153,9 @@ const CreateOnChainTransactionIndexResponse$json = const {
 
 /// Descriptor for `CreateOnChainTransactionIndexResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createOnChainTransactionIndexResponseDescriptor = $convert.base64Decode('CiVDcmVhdGVPbkNoYWluVHJhbnNhY3Rpb25JbmRleFJlc3BvbnNlEg4KAm9rGAEgASgIUgJvaw==');
-@$core.Deprecated('Use queryByAddressRequestDescriptor instead')
-const QueryByAddressRequest$json = const {
-  '1': 'QueryByAddressRequest',
+@$core.Deprecated('Use queryByLockAddressRequestDescriptor instead')
+const QueryByLockAddressRequest$json = const {
+  '1': 'QueryByLockAddressRequest',
   '2': const [
     const {'1': 'address', '3': 1, '4': 1, '5': 11, '6': '.co.topl.brambl.models.LockAddress', '8': const {}, '10': 'address'},
     const {'1': 'confidenceFactor', '3': 2, '4': 1, '5': 11, '6': '.co.topl.genus.services.ConfidenceFactor', '10': 'confidenceFactor'},
@@ -112,8 +163,8 @@ const QueryByAddressRequest$json = const {
   ],
 };
 
-/// Descriptor for `QueryByAddressRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List queryByAddressRequestDescriptor = $convert.base64Decode('ChVRdWVyeUJ5QWRkcmVzc1JlcXVlc3QSRgoHYWRkcmVzcxgBIAEoCzIiLmNvLnRvcGwuYnJhbWJsLm1vZGVscy5Mb2NrQWRkcmVzc0II+kIFigECEAFSB2FkZHJlc3MSVAoQY29uZmlkZW5jZUZhY3RvchgCIAEoCzIoLmNvLnRvcGwuZ2VudXMuc2VydmljZXMuQ29uZmlkZW5jZUZhY3RvclIQY29uZmlkZW5jZUZhY3RvchI2CgVzdGF0ZRgDIAEoDjIgLmNvLnRvcGwuZ2VudXMuc2VydmljZXMuVHhvU3RhdGVSBXN0YXRl');
+/// Descriptor for `QueryByLockAddressRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List queryByLockAddressRequestDescriptor = $convert.base64Decode('ChlRdWVyeUJ5TG9ja0FkZHJlc3NSZXF1ZXN0EkYKB2FkZHJlc3MYASABKAsyIi5jby50b3BsLmJyYW1ibC5tb2RlbHMuTG9ja0FkZHJlc3NCCPpCBYoBAhABUgdhZGRyZXNzElQKEGNvbmZpZGVuY2VGYWN0b3IYAiABKAsyKC5jby50b3BsLmdlbnVzLnNlcnZpY2VzLkNvbmZpZGVuY2VGYWN0b3JSEGNvbmZpZGVuY2VGYWN0b3ISNgoFc3RhdGUYAyABKA4yIC5jby50b3BsLmdlbnVzLnNlcnZpY2VzLlR4b1N0YXRlUgVzdGF0ZQ==');
 @$core.Deprecated('Use queryByAssetLabelRequestDescriptor instead')
 const QueryByAssetLabelRequest$json = const {
   '1': 'QueryByAssetLabelRequest',
@@ -125,16 +176,16 @@ const QueryByAssetLabelRequest$json = const {
 
 /// Descriptor for `QueryByAssetLabelRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryByAssetLabelRequestDescriptor = $convert.base64Decode('ChhRdWVyeUJ5QXNzZXRMYWJlbFJlcXVlc3QSTAoKYXNzZXRMYWJlbBgBIAEoCzIiLmNvLnRvcGwuZ2VudXMuc2VydmljZXMuQXNzZXRMYWJlbEII+kIFigECEAFSCmFzc2V0TGFiZWwSVAoQY29uZmlkZW5jZUZhY3RvchgCIAEoCzIoLmNvLnRvcGwuZ2VudXMuc2VydmljZXMuQ29uZmlkZW5jZUZhY3RvclIQY29uZmlkZW5jZUZhY3Rvcg==');
-@$core.Deprecated('Use txoAddressResponseDescriptor instead')
-const TxoAddressResponse$json = const {
-  '1': 'TxoAddressResponse',
+@$core.Deprecated('Use txoLockAddressResponseDescriptor instead')
+const TxoLockAddressResponse$json = const {
+  '1': 'TxoLockAddressResponse',
   '2': const [
     const {'1': 'Txos', '3': 1, '4': 3, '5': 11, '6': '.co.topl.genus.services.Txo', '10': 'Txos'},
   ],
 };
 
-/// Descriptor for `TxoAddressResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List txoAddressResponseDescriptor = $convert.base64Decode('ChJUeG9BZGRyZXNzUmVzcG9uc2USLwoEVHhvcxgBIAMoCzIbLmNvLnRvcGwuZ2VudXMuc2VydmljZXMuVHhvUgRUeG9z');
+/// Descriptor for `TxoLockAddressResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txoLockAddressResponseDescriptor = $convert.base64Decode('ChZUeG9Mb2NrQWRkcmVzc1Jlc3BvbnNlEi8KBFR4b3MYASADKAsyGy5jby50b3BsLmdlbnVzLnNlcnZpY2VzLlR4b1IEVHhvcw==');
 @$core.Deprecated('Use createOnChainTransactionIndexRequestDescriptor instead')
 const CreateOnChainTransactionIndexRequest$json = const {
   '1': 'CreateOnChainTransactionIndexRequest',
@@ -225,3 +276,38 @@ const IndexMatchValue$json = const {
 
 /// Descriptor for `IndexMatchValue`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List indexMatchValueDescriptor = $convert.base64Decode('Cg9JbmRleE1hdGNoVmFsdWUSIgoLc3RyaW5nVmFsdWUYASABKAlIAFILc3RyaW5nVmFsdWUSHAoIaW50VmFsdWUYAiABKANIAFIIaW50VmFsdWUSHgoJdWludFZhbHVlGAMgASgESABSCXVpbnRWYWx1ZRI6CglmaWVsZE5hbWUYBCABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWVSCWZpZWxkTmFtZUIHCgV2YWx1ZQ==');
+@$core.Deprecated('Use txoStatsDescriptor instead')
+const TxoStats$json = const {
+  '1': 'TxoStats',
+  '2': const [
+    const {'1': 'spent', '3': 1, '4': 1, '5': 4, '10': 'spent'},
+    const {'1': 'unspent', '3': 2, '4': 1, '5': 4, '10': 'unspent'},
+    const {'1': 'pending', '3': 4, '4': 1, '5': 4, '10': 'pending'},
+    const {'1': 'total', '3': 5, '4': 1, '5': 4, '10': 'total'},
+  ],
+};
+
+/// Descriptor for `TxoStats`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List txoStatsDescriptor = $convert.base64Decode('CghUeG9TdGF0cxIUCgVzcGVudBgBIAEoBFIFc3BlbnQSGAoHdW5zcGVudBgCIAEoBFIHdW5zcGVudBIYCgdwZW5kaW5nGAQgASgEUgdwZW5kaW5nEhQKBXRvdGFsGAUgASgEUgV0b3RhbA==');
+@$core.Deprecated('Use blockchainSizeStatsDescriptor instead')
+const BlockchainSizeStats$json = const {
+  '1': 'BlockchainSizeStats',
+  '2': const [
+    const {'1': 'blockHeaderBytes', '3': 1, '4': 1, '5': 4, '10': 'blockHeaderBytes'},
+    const {'1': 'transactionBytes', '3': 2, '4': 1, '5': 4, '10': 'transactionBytes'},
+  ],
+};
+
+/// Descriptor for `BlockchainSizeStats`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List blockchainSizeStatsDescriptor = $convert.base64Decode('ChNCbG9ja2NoYWluU2l6ZVN0YXRzEioKEGJsb2NrSGVhZGVyQnl0ZXMYASABKARSEGJsb2NrSGVhZGVyQnl0ZXMSKgoQdHJhbnNhY3Rpb25CeXRlcxgCIAEoBFIQdHJhbnNhY3Rpb25CeXRlcw==');
+@$core.Deprecated('Use blockStatsDescriptor instead')
+const BlockStats$json = const {
+  '1': 'BlockStats',
+  '2': const [
+    const {'1': 'empty', '3': 1, '4': 1, '5': 4, '10': 'empty'},
+    const {'1': 'nonEmpty', '3': 2, '4': 1, '5': 4, '10': 'nonEmpty'},
+  ],
+};
+
+/// Descriptor for `BlockStats`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List blockStatsDescriptor = $convert.base64Decode('CgpCbG9ja1N0YXRzEhQKBWVtcHR5GAEgASgEUgVlbXB0eRIaCghub25FbXB0eRgCIAEoBFIIbm9uRW1wdHk=');

@@ -10,42 +10,42 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'block_id.pb.dart' as $18;
-import 'eligibility_certificate.pb.dart' as $19;
-import 'operational_certificate.pb.dart' as $10;
-import 'staking_address.pb.dart' as $9;
+import 'block_id.pb.dart' as $2;
+import 'eligibility_certificate.pb.dart' as $5;
+import 'operational_certificate.pb.dart' as $3;
+import 'staking.pb.dart' as $6;
 
 class BlockHeader extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
-    ..aOM<$18.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentHeaderId', protoName: 'parentHeaderId', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentHeaderId', protoName: 'parentHeaderId', subBuilder: $2.BlockId.create)
     ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentSlot', $pb.PbFieldType.OU6, protoName: 'parentSlot', defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txRoot', $pb.PbFieldType.OY, protoName: 'txRoot')
     ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bloomFilter', $pb.PbFieldType.OY, protoName: 'bloomFilter')
     ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'height', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$19.EligibilityCertificate>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'eligibilityCertificate', protoName: 'eligibilityCertificate', subBuilder: $19.EligibilityCertificate.create)
-    ..aOM<$10.OperationalCertificate>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationalCertificate', protoName: 'operationalCertificate', subBuilder: $10.OperationalCertificate.create)
+    ..aOM<$5.EligibilityCertificate>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'eligibilityCertificate', protoName: 'eligibilityCertificate', subBuilder: $5.EligibilityCertificate.create)
+    ..aOM<$3.OperationalCertificate>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationalCertificate', protoName: 'operationalCertificate', subBuilder: $3.OperationalCertificate.create)
     ..a<$core.List<$core.int>>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', $pb.PbFieldType.OY)
-    ..aOM<$9.StakingAddress>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $9.StakingAddress.create)
-    ..aOM<$18.BlockId>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'headerId', protoName: 'headerId', subBuilder: $18.BlockId.create)
+    ..aOM<$6.StakingAddress>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $6.StakingAddress.create)
+    ..aOM<$2.BlockId>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'headerId', protoName: 'headerId', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
   BlockHeader._() : super();
   factory BlockHeader({
-    $18.BlockId? parentHeaderId,
+    $2.BlockId? parentHeaderId,
     $fixnum.Int64? parentSlot,
     $core.List<$core.int>? txRoot,
     $core.List<$core.int>? bloomFilter,
     $fixnum.Int64? timestamp,
     $fixnum.Int64? height,
     $fixnum.Int64? slot,
-    $19.EligibilityCertificate? eligibilityCertificate,
-    $10.OperationalCertificate? operationalCertificate,
+    $5.EligibilityCertificate? eligibilityCertificate,
+    $3.OperationalCertificate? operationalCertificate,
     $core.List<$core.int>? metadata,
-    $9.StakingAddress? address,
-    $18.BlockId? headerId,
+    $6.StakingAddress? address,
+    $2.BlockId? headerId,
   }) {
     final _result = create();
     if (parentHeaderId != null) {
@@ -108,15 +108,15 @@ class BlockHeader extends $pb.GeneratedMessage {
   static BlockHeader? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.BlockId get parentHeaderId => $_getN(0);
+  $2.BlockId get parentHeaderId => $_getN(0);
   @$pb.TagNumber(1)
-  set parentHeaderId($18.BlockId v) { setField(1, v); }
+  set parentHeaderId($2.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParentHeaderId() => $_has(0);
   @$pb.TagNumber(1)
   void clearParentHeaderId() => clearField(1);
   @$pb.TagNumber(1)
-  $18.BlockId ensureParentHeaderId() => $_ensure(0);
+  $2.BlockId ensureParentHeaderId() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get parentSlot => $_getI64(1);
@@ -173,26 +173,26 @@ class BlockHeader extends $pb.GeneratedMessage {
   void clearSlot() => clearField(7);
 
   @$pb.TagNumber(8)
-  $19.EligibilityCertificate get eligibilityCertificate => $_getN(7);
+  $5.EligibilityCertificate get eligibilityCertificate => $_getN(7);
   @$pb.TagNumber(8)
-  set eligibilityCertificate($19.EligibilityCertificate v) { setField(8, v); }
+  set eligibilityCertificate($5.EligibilityCertificate v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasEligibilityCertificate() => $_has(7);
   @$pb.TagNumber(8)
   void clearEligibilityCertificate() => clearField(8);
   @$pb.TagNumber(8)
-  $19.EligibilityCertificate ensureEligibilityCertificate() => $_ensure(7);
+  $5.EligibilityCertificate ensureEligibilityCertificate() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $10.OperationalCertificate get operationalCertificate => $_getN(8);
+  $3.OperationalCertificate get operationalCertificate => $_getN(8);
   @$pb.TagNumber(9)
-  set operationalCertificate($10.OperationalCertificate v) { setField(9, v); }
+  set operationalCertificate($3.OperationalCertificate v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasOperationalCertificate() => $_has(8);
   @$pb.TagNumber(9)
   void clearOperationalCertificate() => clearField(9);
   @$pb.TagNumber(9)
-  $10.OperationalCertificate ensureOperationalCertificate() => $_ensure(8);
+  $3.OperationalCertificate ensureOperationalCertificate() => $_ensure(8);
 
   @$pb.TagNumber(10)
   $core.List<$core.int> get metadata => $_getN(9);
@@ -204,25 +204,25 @@ class BlockHeader extends $pb.GeneratedMessage {
   void clearMetadata() => clearField(10);
 
   @$pb.TagNumber(11)
-  $9.StakingAddress get address => $_getN(10);
+  $6.StakingAddress get address => $_getN(10);
   @$pb.TagNumber(11)
-  set address($9.StakingAddress v) { setField(11, v); }
+  set address($6.StakingAddress v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasAddress() => $_has(10);
   @$pb.TagNumber(11)
   void clearAddress() => clearField(11);
   @$pb.TagNumber(11)
-  $9.StakingAddress ensureAddress() => $_ensure(10);
+  $6.StakingAddress ensureAddress() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $18.BlockId get headerId => $_getN(11);
+  $2.BlockId get headerId => $_getN(11);
   @$pb.TagNumber(12)
-  set headerId($18.BlockId v) { setField(12, v); }
+  set headerId($2.BlockId v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasHeaderId() => $_has(11);
   @$pb.TagNumber(12)
   void clearHeaderId() => clearField(12);
   @$pb.TagNumber(12)
-  $18.BlockId ensureHeaderId() => $_ensure(11);
+  $2.BlockId ensureHeaderId() => $_ensure(11);
 }
 

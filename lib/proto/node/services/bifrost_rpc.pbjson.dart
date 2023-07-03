@@ -42,6 +42,26 @@ const CurrentMempoolRes$json = const {
 
 /// Descriptor for `CurrentMempoolRes`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List currentMempoolResDescriptor = $convert.base64Decode('ChFDdXJyZW50TWVtcG9vbFJlcxJMCg50cmFuc2FjdGlvbklkcxgBIAMoCzIkLmNvLnRvcGwuYnJhbWJsLm1vZGVscy5UcmFuc2FjdGlvbklkUg50cmFuc2FjdGlvbklkcw==');
+@$core.Deprecated('Use currentMempoolContainsReqDescriptor instead')
+const CurrentMempoolContainsReq$json = const {
+  '1': 'CurrentMempoolContainsReq',
+  '2': const [
+    const {'1': 'transactionId', '3': 1, '4': 1, '5': 11, '6': '.co.topl.brambl.models.TransactionId', '8': const {}, '10': 'transactionId'},
+  ],
+};
+
+/// Descriptor for `CurrentMempoolContainsReq`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List currentMempoolContainsReqDescriptor = $convert.base64Decode('ChlDdXJyZW50TWVtcG9vbENvbnRhaW5zUmVxElQKDXRyYW5zYWN0aW9uSWQYASABKAsyJC5jby50b3BsLmJyYW1ibC5tb2RlbHMuVHJhbnNhY3Rpb25JZEII+kIFigECEAFSDXRyYW5zYWN0aW9uSWQ=');
+@$core.Deprecated('Use currentMempoolContainsResDescriptor instead')
+const CurrentMempoolContainsRes$json = const {
+  '1': 'CurrentMempoolContainsRes',
+  '2': const [
+    const {'1': 'inMempool', '3': 1, '4': 1, '5': 8, '10': 'inMempool'},
+  ],
+};
+
+/// Descriptor for `CurrentMempoolContainsRes`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List currentMempoolContainsResDescriptor = $convert.base64Decode('ChlDdXJyZW50TWVtcG9vbENvbnRhaW5zUmVzEhwKCWluTWVtcG9vbBgBIAEoCFIJaW5NZW1wb29s');
 @$core.Deprecated('Use fetchBlockHeaderReqDescriptor instead')
 const FetchBlockHeaderReq$json = const {
   '1': 'FetchBlockHeaderReq',
@@ -163,3 +183,40 @@ const SynchronizationTraversalRes$json = const {
 
 /// Descriptor for `SynchronizationTraversalRes`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List synchronizationTraversalResDescriptor = $convert.base64Decode('ChtTeW5jaHJvbml6YXRpb25UcmF2ZXJzYWxSZXMSPQoHYXBwbGllZBgBIAEoCzIhLmNvLnRvcGwuY29uc2Vuc3VzLm1vZGVscy5CbG9ja0lkSABSB2FwcGxpZWQSQQoJdW5hcHBsaWVkGAIgASgLMiEuY28udG9wbC5jb25zZW5zdXMubW9kZWxzLkJsb2NrSWRIAFIJdW5hcHBsaWVkQggKBnN0YXR1cw==');
+@$core.Deprecated('Use fetchNodeConfigReqDescriptor instead')
+const FetchNodeConfigReq$json = const {
+  '1': 'FetchNodeConfigReq',
+};
+
+/// Descriptor for `FetchNodeConfigReq`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fetchNodeConfigReqDescriptor = $convert.base64Decode('ChJGZXRjaE5vZGVDb25maWdSZXE=');
+@$core.Deprecated('Use fetchNodeConfigResDescriptor instead')
+const FetchNodeConfigRes$json = const {
+  '1': 'FetchNodeConfigRes',
+  '2': const [
+    const {'1': 'config', '3': 1, '4': 1, '5': 11, '6': '.co.topl.proto.node.NodeConfig', '8': const {}, '10': 'config'},
+  ],
+};
+
+/// Descriptor for `FetchNodeConfigRes`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fetchNodeConfigResDescriptor = $convert.base64Decode('ChJGZXRjaE5vZGVDb25maWdSZXMSQAoGY29uZmlnGAEgASgLMh4uY28udG9wbC5wcm90by5ub2RlLk5vZGVDb25maWdCCPpCBYoBAhABUgZjb25maWc=');
+@$core.Deprecated('Use fetchEpochDataReqDescriptor instead')
+const FetchEpochDataReq$json = const {
+  '1': 'FetchEpochDataReq',
+  '2': const [
+    const {'1': 'epoch', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.UInt64Value', '10': 'epoch'},
+  ],
+};
+
+/// Descriptor for `FetchEpochDataReq`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fetchEpochDataReqDescriptor = $convert.base64Decode('ChFGZXRjaEVwb2NoRGF0YVJlcRIyCgVlcG9jaBgBIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5VSW50NjRWYWx1ZVIFZXBvY2g=');
+@$core.Deprecated('Use fetchEpochDataResDescriptor instead')
+const FetchEpochDataRes$json = const {
+  '1': 'FetchEpochDataRes',
+  '2': const [
+    const {'1': 'epochData', '3': 1, '4': 1, '5': 11, '6': '.co.topl.proto.node.EpochData', '10': 'epochData'},
+  ],
+};
+
+/// Descriptor for `FetchEpochDataRes`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fetchEpochDataResDescriptor = $convert.base64Decode('ChFGZXRjaEVwb2NoRGF0YVJlcxI7CgllcG9jaERhdGEYASABKAsyHS5jby50b3BsLnByb3RvLm5vZGUuRXBvY2hEYXRhUgllcG9jaERhdGE=');

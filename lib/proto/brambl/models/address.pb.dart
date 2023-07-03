@@ -9,13 +9,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'identifier.pb.dart' as $2;
+import 'identifier.pb.dart' as $7;
 
 class LockAddress extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LockAddress', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network', $pb.PbFieldType.OU3)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ledger', $pb.PbFieldType.OU3)
-    ..aOM<$2.LockId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $2.LockId.create)
+    ..aOM<$7.LockId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $7.LockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -23,7 +23,7 @@ class LockAddress extends $pb.GeneratedMessage {
   factory LockAddress({
     $core.int? network,
     $core.int? ledger,
-    $2.LockId? id,
+    $7.LockId? id,
   }) {
     final _result = create();
     if (network != null) {
@@ -77,15 +77,15 @@ class LockAddress extends $pb.GeneratedMessage {
   void clearLedger() => clearField(2);
 
   @$pb.TagNumber(3)
-  $2.LockId get id => $_getN(2);
+  $7.LockId get id => $_getN(2);
   @$pb.TagNumber(3)
-  set id($2.LockId v) { setField(3, v); }
+  set id($7.LockId v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
   void clearId() => clearField(3);
   @$pb.TagNumber(3)
-  $2.LockId ensureId() => $_ensure(2);
+  $7.LockId ensureId() => $_ensure(2);
 }
 
 class TransactionOutputAddress extends $pb.GeneratedMessage {
@@ -93,7 +93,7 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network', $pb.PbFieldType.OU3)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ledger', $pb.PbFieldType.OU3)
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOM<$2.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $2.TransactionId.create)
+    ..aOM<$7.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $7.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -102,7 +102,7 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
     $core.int? network,
     $core.int? ledger,
     $core.int? index,
-    $2.TransactionId? id,
+    $7.TransactionId? id,
   }) {
     final _result = create();
     if (network != null) {
@@ -168,15 +168,15 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
   void clearIndex() => clearField(3);
 
   @$pb.TagNumber(4)
-  $2.TransactionId get id => $_getN(3);
+  $7.TransactionId get id => $_getN(3);
   @$pb.TagNumber(4)
-  set id($2.TransactionId v) { setField(4, v); }
+  set id($7.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasId() => $_has(3);
   @$pb.TagNumber(4)
   void clearId() => clearField(4);
   @$pb.TagNumber(4)
-  $2.TransactionId ensureId() => $_ensure(3);
+  $7.TransactionId ensureId() => $_ensure(3);
 }
 
 class TransactionInputAddress extends $pb.GeneratedMessage {
@@ -184,7 +184,7 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network', $pb.PbFieldType.OU3)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ledger', $pb.PbFieldType.OU3)
     ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOM<$2.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $2.TransactionId.create)
+    ..aOM<$7.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $7.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -193,7 +193,7 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
     $core.int? network,
     $core.int? ledger,
     $core.int? index,
-    $2.TransactionId? id,
+    $7.TransactionId? id,
   }) {
     final _result = create();
     if (network != null) {
@@ -259,14 +259,14 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
   void clearIndex() => clearField(3);
 
   @$pb.TagNumber(4)
-  $2.TransactionId get id => $_getN(3);
+  $7.TransactionId get id => $_getN(3);
   @$pb.TagNumber(4)
-  set id($2.TransactionId v) { setField(4, v); }
+  set id($7.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasId() => $_has(3);
   @$pb.TagNumber(4)
   void clearId() => clearField(4);
   @$pb.TagNumber(4)
-  $2.TransactionId ensureId() => $_ensure(3);
+  $7.TransactionId ensureId() => $_ensure(3);
 }
 

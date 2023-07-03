@@ -10,11 +10,11 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../brambl/models/transaction/unspent_transaction_output.pb.dart' as $16;
-import '../brambl/models/address.pb.dart' as $5;
+import '../brambl/models/transaction/unspent_transaction_output.pb.dart' as $18;
+import '../brambl/models/address.pb.dart' as $9;
 import '../google/protobuf/wrappers.pb.dart' as $22;
 import '../brambl/models/transaction/io_transaction.pb.dart' as $20;
-import '../consensus/models/block_id.pb.dart' as $18;
+import '../consensus/models/block_id.pb.dart' as $2;
 import '../consensus/models/block_header.pb.dart' as $21;
 import '../node/models/block.pb.dart' as $23;
 
@@ -24,17 +24,17 @@ export 'genus_models.pbenum.dart';
 
 class Txo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Txo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$16.UnspentTransactionOutput>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionOutput', protoName: 'transactionOutput', subBuilder: $16.UnspentTransactionOutput.create)
+    ..aOM<$18.UnspentTransactionOutput>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionOutput', protoName: 'transactionOutput', subBuilder: $18.UnspentTransactionOutput.create)
     ..e<TxoState>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: TxoState.SPENT, valueOf: TxoState.valueOf, enumValues: TxoState.values)
-    ..aOM<$5.TransactionOutputAddress>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputAddress', protoName: 'outputAddress', subBuilder: $5.TransactionOutputAddress.create)
+    ..aOM<$9.TransactionOutputAddress>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputAddress', protoName: 'outputAddress', subBuilder: $9.TransactionOutputAddress.create)
     ..hasRequiredFields = false
   ;
 
   Txo._() : super();
   factory Txo({
-    $16.UnspentTransactionOutput? transactionOutput,
+    $18.UnspentTransactionOutput? transactionOutput,
     TxoState? state,
-    $5.TransactionOutputAddress? outputAddress,
+    $9.TransactionOutputAddress? outputAddress,
   }) {
     final _result = create();
     if (transactionOutput != null) {
@@ -70,15 +70,15 @@ class Txo extends $pb.GeneratedMessage {
   static Txo? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $16.UnspentTransactionOutput get transactionOutput => $_getN(0);
+  $18.UnspentTransactionOutput get transactionOutput => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionOutput($16.UnspentTransactionOutput v) { setField(1, v); }
+  set transactionOutput($18.UnspentTransactionOutput v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionOutput() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionOutput() => clearField(1);
   @$pb.TagNumber(1)
-  $16.UnspentTransactionOutput ensureTransactionOutput() => $_ensure(0);
+  $18.UnspentTransactionOutput ensureTransactionOutput() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TxoState get state => $_getN(1);
@@ -90,15 +90,15 @@ class Txo extends $pb.GeneratedMessage {
   void clearState() => clearField(2);
 
   @$pb.TagNumber(3)
-  $5.TransactionOutputAddress get outputAddress => $_getN(2);
+  $9.TransactionOutputAddress get outputAddress => $_getN(2);
   @$pb.TagNumber(3)
-  set outputAddress($5.TransactionOutputAddress v) { setField(3, v); }
+  set outputAddress($9.TransactionOutputAddress v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasOutputAddress() => $_has(2);
   @$pb.TagNumber(3)
   void clearOutputAddress() => clearField(3);
   @$pb.TagNumber(3)
-  $5.TransactionOutputAddress ensureOutputAddress() => $_ensure(2);
+  $9.TransactionOutputAddress ensureOutputAddress() => $_ensure(2);
 }
 
 class ConfidenceFactor extends $pb.GeneratedMessage {
@@ -227,14 +227,14 @@ class AssetLabel_Empty extends $pb.GeneratedMessage {
 class AssetLabel_V1Label extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AssetLabel.V1Label', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.OU3)
-    ..aOM<$5.LockAddress>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mintingAddress', protoName: 'mintingAddress', subBuilder: $5.LockAddress.create)
+    ..aOM<$9.LockAddress>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mintingAddress', protoName: 'mintingAddress', subBuilder: $9.LockAddress.create)
     ..hasRequiredFields = false
   ;
 
   AssetLabel_V1Label._() : super();
   factory AssetLabel_V1Label({
     $core.int? version,
-    $5.LockAddress? mintingAddress,
+    $9.LockAddress? mintingAddress,
   }) {
     final _result = create();
     if (version != null) {
@@ -276,15 +276,15 @@ class AssetLabel_V1Label extends $pb.GeneratedMessage {
   void clearVersion() => clearField(1);
 
   @$pb.TagNumber(2)
-  $5.LockAddress get mintingAddress => $_getN(1);
+  $9.LockAddress get mintingAddress => $_getN(1);
   @$pb.TagNumber(2)
-  set mintingAddress($5.LockAddress v) { setField(2, v); }
+  set mintingAddress($9.LockAddress v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMintingAddress() => $_has(1);
   @$pb.TagNumber(2)
   void clearMintingAddress() => clearField(2);
   @$pb.TagNumber(2)
-  $5.LockAddress ensureMintingAddress() => $_ensure(1);
+  $9.LockAddress ensureMintingAddress() => $_ensure(1);
 }
 
 class AssetLabel_Tam2Label extends $pb.GeneratedMessage {
@@ -1015,7 +1015,7 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionReceipt', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..aOM<$20.IoTransaction>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', subBuilder: $20.IoTransaction.create)
     ..aOM<ConfidenceFactor>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: ConfidenceFactor.create)
-    ..aOM<$18.BlockId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
     ..aOM<ChainDistance>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'depth', subBuilder: ChainDistance.create)
     ..hasRequiredFields = false
   ;
@@ -1024,7 +1024,7 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   factory TransactionReceipt({
     $20.IoTransaction? transaction,
     ConfidenceFactor? confidenceFactor,
-    $18.BlockId? blockId,
+    $2.BlockId? blockId,
     ChainDistance? depth,
   }) {
     final _result = create();
@@ -1086,15 +1086,15 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $18.BlockId get blockId => $_getN(2);
+  $2.BlockId get blockId => $_getN(2);
   @$pb.TagNumber(3)
-  set blockId($18.BlockId v) { setField(3, v); }
+  set blockId($2.BlockId v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasBlockId() => $_has(2);
   @$pb.TagNumber(3)
   void clearBlockId() => clearField(3);
   @$pb.TagNumber(3)
-  $18.BlockId ensureBlockId() => $_ensure(2);
+  $2.BlockId ensureBlockId() => $_ensure(2);
 
   @$pb.TagNumber(4)
   ChainDistance get depth => $_getN(3);

@@ -9,17 +9,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../quivr/models/shared.pb.dart' as $3;
+import '../../quivr/models/shared.pb.dart' as $4;
 
 class Evidence extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Evidence', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$3.Digest>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: $3.Digest.create)
+    ..aOM<$4.Digest>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: $4.Digest.create)
     ..hasRequiredFields = false
   ;
 
   Evidence._() : super();
   factory Evidence({
-    $3.Digest? digest,
+    $4.Digest? digest,
   }) {
     final _result = create();
     if (digest != null) {
@@ -49,14 +49,14 @@ class Evidence extends $pb.GeneratedMessage {
   static Evidence? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Digest get digest => $_getN(0);
+  $4.Digest get digest => $_getN(0);
   @$pb.TagNumber(1)
-  set digest($3.Digest v) { setField(1, v); }
+  set digest($4.Digest v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDigest() => $_has(0);
   @$pb.TagNumber(1)
   void clearDigest() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Digest ensureDigest() => $_ensure(0);
+  $4.Digest ensureDigest() => $_ensure(0);
 }
 

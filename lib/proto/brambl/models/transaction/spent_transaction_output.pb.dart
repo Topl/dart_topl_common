@@ -9,23 +9,23 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../address.pb.dart' as $5;
-import '../box/attestation.pb.dart' as $14;
-import '../box/value.pb.dart' as $11;
+import '../address.pb.dart' as $9;
+import '../box/attestation.pb.dart' as $13;
+import '../box/value.pb.dart' as $14;
 
 class SpentTransactionOutput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SpentTransactionOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.transaction'), createEmptyInstance: create)
-    ..aOM<$5.TransactionOutputAddress>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $5.TransactionOutputAddress.create)
-    ..aOM<$14.Attestation>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'attestation', subBuilder: $14.Attestation.create)
-    ..aOM<$11.Value>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', subBuilder: $11.Value.create)
+    ..aOM<$9.TransactionOutputAddress>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $9.TransactionOutputAddress.create)
+    ..aOM<$13.Attestation>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'attestation', subBuilder: $13.Attestation.create)
+    ..aOM<$14.Value>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', subBuilder: $14.Value.create)
     ..hasRequiredFields = false
   ;
 
   SpentTransactionOutput._() : super();
   factory SpentTransactionOutput({
-    $5.TransactionOutputAddress? address,
-    $14.Attestation? attestation,
-    $11.Value? value,
+    $9.TransactionOutputAddress? address,
+    $13.Attestation? attestation,
+    $14.Value? value,
   }) {
     final _result = create();
     if (address != null) {
@@ -61,36 +61,36 @@ class SpentTransactionOutput extends $pb.GeneratedMessage {
   static SpentTransactionOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.TransactionOutputAddress get address => $_getN(0);
+  $9.TransactionOutputAddress get address => $_getN(0);
   @$pb.TagNumber(1)
-  set address($5.TransactionOutputAddress v) { setField(1, v); }
+  set address($9.TransactionOutputAddress v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAddress() => $_has(0);
   @$pb.TagNumber(1)
   void clearAddress() => clearField(1);
   @$pb.TagNumber(1)
-  $5.TransactionOutputAddress ensureAddress() => $_ensure(0);
+  $9.TransactionOutputAddress ensureAddress() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $14.Attestation get attestation => $_getN(1);
+  $13.Attestation get attestation => $_getN(1);
   @$pb.TagNumber(2)
-  set attestation($14.Attestation v) { setField(2, v); }
+  set attestation($13.Attestation v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasAttestation() => $_has(1);
   @$pb.TagNumber(2)
   void clearAttestation() => clearField(2);
   @$pb.TagNumber(2)
-  $14.Attestation ensureAttestation() => $_ensure(1);
+  $13.Attestation ensureAttestation() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $11.Value get value => $_getN(2);
+  $14.Value get value => $_getN(2);
   @$pb.TagNumber(3)
-  set value($11.Value v) { setField(3, v); }
+  set value($14.Value v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasValue() => $_has(2);
   @$pb.TagNumber(3)
   void clearValue() => clearField(3);
   @$pb.TagNumber(3)
-  $11.Value ensureValue() => $_ensure(2);
+  $14.Value ensureValue() => $_ensure(2);
 }
 

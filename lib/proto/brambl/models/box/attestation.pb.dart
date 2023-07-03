@@ -9,22 +9,22 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'lock.pb.dart' as $7;
-import '../../../quivr/models/proof.pb.dart' as $8;
-import 'challenge.pb.dart' as $6;
-import '../../../quivr/models/shared.pb.dart' as $3;
+import 'lock.pb.dart' as $11;
+import '../../../quivr/models/proof.pb.dart' as $12;
+import 'challenge.pb.dart' as $10;
+import '../../../quivr/models/shared.pb.dart' as $4;
 
 class Attestation_Predicate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Attestation.Predicate', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$7.Lock_Predicate>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $7.Lock_Predicate.create)
-    ..pc<$8.Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $8.Proof.create)
+    ..aOM<$11.Lock_Predicate>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $11.Lock_Predicate.create)
+    ..pc<$12.Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $12.Proof.create)
     ..hasRequiredFields = false
   ;
 
   Attestation_Predicate._() : super();
   factory Attestation_Predicate({
-    $7.Lock_Predicate? lock,
-    $core.Iterable<$8.Proof>? responses,
+    $11.Lock_Predicate? lock,
+    $core.Iterable<$12.Proof>? responses,
   }) {
     final _result = create();
     if (lock != null) {
@@ -57,33 +57,33 @@ class Attestation_Predicate extends $pb.GeneratedMessage {
   static Attestation_Predicate? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.Lock_Predicate get lock => $_getN(0);
+  $11.Lock_Predicate get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($7.Lock_Predicate v) { setField(1, v); }
+  set lock($11.Lock_Predicate v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $7.Lock_Predicate ensureLock() => $_ensure(0);
+  $11.Lock_Predicate ensureLock() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$8.Proof> get responses => $_getList(1);
+  $core.List<$12.Proof> get responses => $_getList(1);
 }
 
 class Attestation_Image extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Attestation.Image', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$7.Lock_Image>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $7.Lock_Image.create)
-    ..pc<$6.Challenge>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $6.Challenge.create)
-    ..pc<$8.Proof>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $8.Proof.create)
+    ..aOM<$11.Lock_Image>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $11.Lock_Image.create)
+    ..pc<$10.Challenge>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $10.Challenge.create)
+    ..pc<$12.Proof>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $12.Proof.create)
     ..hasRequiredFields = false
   ;
 
   Attestation_Image._() : super();
   factory Attestation_Image({
-    $7.Lock_Image? lock,
-    $core.Iterable<$6.Challenge>? known,
-    $core.Iterable<$8.Proof>? responses,
+    $11.Lock_Image? lock,
+    $core.Iterable<$10.Challenge>? known,
+    $core.Iterable<$12.Proof>? responses,
   }) {
     final _result = create();
     if (lock != null) {
@@ -119,38 +119,38 @@ class Attestation_Image extends $pb.GeneratedMessage {
   static Attestation_Image? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.Lock_Image get lock => $_getN(0);
+  $11.Lock_Image get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($7.Lock_Image v) { setField(1, v); }
+  set lock($11.Lock_Image v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $7.Lock_Image ensureLock() => $_ensure(0);
+  $11.Lock_Image ensureLock() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$6.Challenge> get known => $_getList(1);
+  $core.List<$10.Challenge> get known => $_getList(1);
 
   @$pb.TagNumber(3)
-  $core.List<$8.Proof> get responses => $_getList(2);
+  $core.List<$12.Proof> get responses => $_getList(2);
 }
 
 class Attestation_Commitment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Attestation.Commitment', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$7.Lock_Commitment>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $7.Lock_Commitment.create)
-    ..pc<$6.Challenge>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $6.Challenge.create)
-    ..pc<$3.Witness>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witness', $pb.PbFieldType.PM, subBuilder: $3.Witness.create)
-    ..pc<$8.Proof>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $8.Proof.create)
+    ..aOM<$11.Lock_Commitment>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $11.Lock_Commitment.create)
+    ..pc<$10.Challenge>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $10.Challenge.create)
+    ..pc<$4.Witness>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witness', $pb.PbFieldType.PM, subBuilder: $4.Witness.create)
+    ..pc<$12.Proof>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $12.Proof.create)
     ..hasRequiredFields = false
   ;
 
   Attestation_Commitment._() : super();
   factory Attestation_Commitment({
-    $7.Lock_Commitment? lock,
-    $core.Iterable<$6.Challenge>? known,
-    $core.Iterable<$3.Witness>? witness,
-    $core.Iterable<$8.Proof>? responses,
+    $11.Lock_Commitment? lock,
+    $core.Iterable<$10.Challenge>? known,
+    $core.Iterable<$4.Witness>? witness,
+    $core.Iterable<$12.Proof>? responses,
   }) {
     final _result = create();
     if (lock != null) {
@@ -189,24 +189,24 @@ class Attestation_Commitment extends $pb.GeneratedMessage {
   static Attestation_Commitment? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.Lock_Commitment get lock => $_getN(0);
+  $11.Lock_Commitment get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($7.Lock_Commitment v) { setField(1, v); }
+  set lock($11.Lock_Commitment v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $7.Lock_Commitment ensureLock() => $_ensure(0);
+  $11.Lock_Commitment ensureLock() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$6.Challenge> get known => $_getList(1);
+  $core.List<$10.Challenge> get known => $_getList(1);
 
   @$pb.TagNumber(3)
-  $core.List<$3.Witness> get witness => $_getList(2);
+  $core.List<$4.Witness> get witness => $_getList(2);
 
   @$pb.TagNumber(4)
-  $core.List<$8.Proof> get responses => $_getList(3);
+  $core.List<$12.Proof> get responses => $_getList(3);
 }
 
 enum Attestation_Value {

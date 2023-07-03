@@ -26,6 +26,12 @@ class NodeRpcClient extends $grpc.Client {
           ($1.CurrentMempoolReq value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.CurrentMempoolRes.fromBuffer(value));
+  static final _$currentMempoolContains = $grpc.ClientMethod<
+          $1.CurrentMempoolContainsReq, $1.CurrentMempoolContainsRes>(
+      '/co.topl.node.services.NodeRpc/CurrentMempoolContains',
+      ($1.CurrentMempoolContainsReq value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $1.CurrentMempoolContainsRes.fromBuffer(value));
   static final _$fetchBlockHeader =
       $grpc.ClientMethod<$1.FetchBlockHeaderReq, $1.FetchBlockHeaderRes>(
           '/co.topl.node.services.NodeRpc/FetchBlockHeader',
@@ -62,6 +68,18 @@ class NodeRpcClient extends $grpc.Client {
       ($1.SynchronizationTraversalReq value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $1.SynchronizationTraversalRes.fromBuffer(value));
+  static final _$fetchNodeConfig =
+      $grpc.ClientMethod<$1.FetchNodeConfigReq, $1.FetchNodeConfigRes>(
+          '/co.topl.node.services.NodeRpc/FetchNodeConfig',
+          ($1.FetchNodeConfigReq value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $1.FetchNodeConfigRes.fromBuffer(value));
+  static final _$fetchEpochData =
+      $grpc.ClientMethod<$1.FetchEpochDataReq, $1.FetchEpochDataRes>(
+          '/co.topl.node.services.NodeRpc/FetchEpochData',
+          ($1.FetchEpochDataReq value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $1.FetchEpochDataRes.fromBuffer(value));
 
   NodeRpcClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -78,6 +96,13 @@ class NodeRpcClient extends $grpc.Client {
       $1.CurrentMempoolReq request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$currentMempool, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.CurrentMempoolContainsRes> currentMempoolContains(
+      $1.CurrentMempoolContainsReq request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$currentMempoolContains, request,
+        options: options);
   }
 
   $grpc.ResponseFuture<$1.FetchBlockHeaderRes> fetchBlockHeader(
@@ -117,6 +142,20 @@ class NodeRpcClient extends $grpc.Client {
         _$synchronizationTraversal, $async.Stream.fromIterable([request]),
         options: options);
   }
+
+  $grpc.ResponseStream<$1.FetchNodeConfigRes> fetchNodeConfig(
+      $1.FetchNodeConfigReq request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$fetchNodeConfig, $async.Stream.fromIterable([request]),
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$1.FetchEpochDataRes> fetchEpochData(
+      $1.FetchEpochDataReq request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$fetchEpochData, request, options: options);
+  }
 }
 
 abstract class NodeRpcServiceBase extends $grpc.Service {
@@ -139,6 +178,15 @@ abstract class NodeRpcServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.CurrentMempoolReq.fromBuffer(value),
         ($1.CurrentMempoolRes value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.CurrentMempoolContainsReq,
+            $1.CurrentMempoolContainsRes>(
+        'CurrentMempoolContains',
+        currentMempoolContains_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $1.CurrentMempoolContainsReq.fromBuffer(value),
+        ($1.CurrentMempoolContainsRes value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$1.FetchBlockHeaderReq, $1.FetchBlockHeaderRes>(
             'FetchBlockHeader',
@@ -191,6 +239,22 @@ abstract class NodeRpcServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $1.SynchronizationTraversalReq.fromBuffer(value),
         ($1.SynchronizationTraversalRes value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$1.FetchNodeConfigReq, $1.FetchNodeConfigRes>(
+            'FetchNodeConfig',
+            fetchNodeConfig_Pre,
+            false,
+            true,
+            ($core.List<$core.int> value) =>
+                $1.FetchNodeConfigReq.fromBuffer(value),
+            ($1.FetchNodeConfigRes value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.FetchEpochDataReq, $1.FetchEpochDataRes>(
+        'FetchEpochData',
+        fetchEpochData_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.FetchEpochDataReq.fromBuffer(value),
+        ($1.FetchEpochDataRes value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.BroadcastTransactionRes> broadcastTransaction_Pre(
@@ -202,6 +266,12 @@ abstract class NodeRpcServiceBase extends $grpc.Service {
   $async.Future<$1.CurrentMempoolRes> currentMempool_Pre($grpc.ServiceCall call,
       $async.Future<$1.CurrentMempoolReq> request) async {
     return currentMempool(call, await request);
+  }
+
+  $async.Future<$1.CurrentMempoolContainsRes> currentMempoolContains_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$1.CurrentMempoolContainsReq> request) async {
+    return currentMempoolContains(call, await request);
   }
 
   $async.Future<$1.FetchBlockHeaderRes> fetchBlockHeader_Pre(
@@ -239,10 +309,23 @@ abstract class NodeRpcServiceBase extends $grpc.Service {
     yield* synchronizationTraversal(call, await request);
   }
 
+  $async.Stream<$1.FetchNodeConfigRes> fetchNodeConfig_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$1.FetchNodeConfigReq> request) async* {
+    yield* fetchNodeConfig(call, await request);
+  }
+
+  $async.Future<$1.FetchEpochDataRes> fetchEpochData_Pre($grpc.ServiceCall call,
+      $async.Future<$1.FetchEpochDataReq> request) async {
+    return fetchEpochData(call, await request);
+  }
+
   $async.Future<$1.BroadcastTransactionRes> broadcastTransaction(
       $grpc.ServiceCall call, $1.BroadcastTransactionReq request);
   $async.Future<$1.CurrentMempoolRes> currentMempool(
       $grpc.ServiceCall call, $1.CurrentMempoolReq request);
+  $async.Future<$1.CurrentMempoolContainsRes> currentMempoolContains(
+      $grpc.ServiceCall call, $1.CurrentMempoolContainsReq request);
   $async.Future<$1.FetchBlockHeaderRes> fetchBlockHeader(
       $grpc.ServiceCall call, $1.FetchBlockHeaderReq request);
   $async.Future<$1.FetchBlockBodyRes> fetchBlockBody(
@@ -255,4 +338,8 @@ abstract class NodeRpcServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $1.FetchBlockIdAtDepthReq request);
   $async.Stream<$1.SynchronizationTraversalRes> synchronizationTraversal(
       $grpc.ServiceCall call, $1.SynchronizationTraversalReq request);
+  $async.Stream<$1.FetchNodeConfigRes> fetchNodeConfig(
+      $grpc.ServiceCall call, $1.FetchNodeConfigReq request);
+  $async.Future<$1.FetchEpochDataRes> fetchEpochData(
+      $grpc.ServiceCall call, $1.FetchEpochDataReq request);
 }

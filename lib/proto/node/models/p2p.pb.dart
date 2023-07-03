@@ -174,3 +174,97 @@ class CurrentKnownHostsRes extends $pb.GeneratedMessage {
   $core.List<KnownHost> get coldHosts => $_getList(2);
 }
 
+class PingMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PingMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ping')
+    ..hasRequiredFields = false
+  ;
+
+  PingMessage._() : super();
+  factory PingMessage({
+    $core.String? ping,
+  }) {
+    final _result = create();
+    if (ping != null) {
+      _result.ping = ping;
+    }
+    return _result;
+  }
+  factory PingMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PingMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PingMessage clone() => PingMessage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PingMessage copyWith(void Function(PingMessage) updates) => super.copyWith((message) => updates(message as PingMessage)) as PingMessage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PingMessage create() => PingMessage._();
+  PingMessage createEmptyInstance() => create();
+  static $pb.PbList<PingMessage> createRepeated() => $pb.PbList<PingMessage>();
+  @$core.pragma('dart2js:noInline')
+  static PingMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PingMessage>(create);
+  static PingMessage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get ping => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set ping($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPing() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPing() => clearField(1);
+}
+
+class PongMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PongMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pong')
+    ..hasRequiredFields = false
+  ;
+
+  PongMessage._() : super();
+  factory PongMessage({
+    $core.String? pong,
+  }) {
+    final _result = create();
+    if (pong != null) {
+      _result.pong = pong;
+    }
+    return _result;
+  }
+  factory PongMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PongMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PongMessage clone() => PongMessage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PongMessage copyWith(void Function(PongMessage) updates) => super.copyWith((message) => updates(message as PongMessage)) as PongMessage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PongMessage create() => PongMessage._();
+  PongMessage createEmptyInstance() => create();
+  static $pb.PbList<PongMessage> createRepeated() => $pb.PbList<PongMessage>();
+  @$core.pragma('dart2js:noInline')
+  static PongMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PongMessage>(create);
+  static PongMessage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get pong => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set pong($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPong() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPong() => clearField(1);
+}
+

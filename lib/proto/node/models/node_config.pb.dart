@@ -10,60 +10,29 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class NodeConfigMap extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NodeConfigMap', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.proto.node'), createEmptyInstance: create)
-    ..m<$fixnum.Int64, NodeConfig>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slotConfigMap', protoName: 'slotConfigMap', entryClassName: 'NodeConfigMap.SlotConfigMapEntry', keyFieldType: $pb.PbFieldType.OU6, valueFieldType: $pb.PbFieldType.OM, valueCreator: NodeConfig.create, packageName: const $pb.PackageName('co.topl.proto.node'))
-    ..hasRequiredFields = false
-  ;
-
-  NodeConfigMap._() : super();
-  factory NodeConfigMap({
-    $core.Map<$fixnum.Int64, NodeConfig>? slotConfigMap,
-  }) {
-    final _result = create();
-    if (slotConfigMap != null) {
-      _result.slotConfigMap.addAll(slotConfigMap);
-    }
-    return _result;
-  }
-  factory NodeConfigMap.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NodeConfigMap.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  NodeConfigMap clone() => NodeConfigMap()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NodeConfigMap copyWith(void Function(NodeConfigMap) updates) => super.copyWith((message) => updates(message as NodeConfigMap)) as NodeConfigMap; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static NodeConfigMap create() => NodeConfigMap._();
-  NodeConfigMap createEmptyInstance() => create();
-  static $pb.PbList<NodeConfigMap> createRepeated() => $pb.PbList<NodeConfigMap>();
-  @$core.pragma('dart2js:noInline')
-  static NodeConfigMap getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NodeConfigMap>(create);
-  static NodeConfigMap? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.Map<$fixnum.Int64, NodeConfig> get slotConfigMap => $_getMap(0);
-}
-
 class NodeConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NodeConfig', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.proto.node'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slotDurationMillis', $pb.PbFieldType.OU3, protoName: 'slotDurationMillis')
+    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slotDurationMillis', $pb.PbFieldType.OU6, protoName: 'slotDurationMillis', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'epochLength', $pb.PbFieldType.OU6, protoName: 'epochLength', defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
   NodeConfig._() : super();
   factory NodeConfig({
-    $core.int? slotDurationMillis,
+    $fixnum.Int64? slot,
+    $fixnum.Int64? slotDurationMillis,
+    $fixnum.Int64? epochLength,
   }) {
     final _result = create();
+    if (slot != null) {
+      _result.slot = slot;
+    }
     if (slotDurationMillis != null) {
       _result.slotDurationMillis = slotDurationMillis;
+    }
+    if (epochLength != null) {
+      _result.epochLength = epochLength;
     }
     return _result;
   }
@@ -89,12 +58,30 @@ class NodeConfig extends $pb.GeneratedMessage {
   static NodeConfig? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.int get slotDurationMillis => $_getIZ(0);
+  $fixnum.Int64 get slot => $_getI64(0);
   @$pb.TagNumber(1)
-  set slotDurationMillis($core.int v) { $_setUnsignedInt32(0, v); }
+  set slot($fixnum.Int64 v) { $_setInt64(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasSlotDurationMillis() => $_has(0);
+  $core.bool hasSlot() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSlotDurationMillis() => clearField(1);
+  void clearSlot() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get slotDurationMillis => $_getI64(1);
+  @$pb.TagNumber(2)
+  set slotDurationMillis($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSlotDurationMillis() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSlotDurationMillis() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get epochLength => $_getI64(2);
+  @$pb.TagNumber(3)
+  set epochLength($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasEpochLength() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEpochLength() => clearField(3);
 }
 
