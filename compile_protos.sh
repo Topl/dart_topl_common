@@ -16,6 +16,11 @@ cd ./tmp/protobuf/external_proto
 protoc \
     --dart_out=grpc:../../../lib \
     $(find ./google -name '*.proto')
+    
+# Compile the "google well-known type" protos
+protoc \
+    --dart_out=grpc:../../../lib \
+    $(find ./validate -name '*.proto')
 
 # Now compile Topl's type protos
 cd ../proto
