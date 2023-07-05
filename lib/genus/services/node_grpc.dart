@@ -1,5 +1,7 @@
 import 'package:fixnum/fixnum.dart';
 import 'package:topl_common/proto/brambl/models/transaction/io_transaction.pb.dart';
+import 'package:topl_common/proto/google/protobuf/wrappers.pb.dart';
+import 'package:topl_common/proto/node/models/node_epochData.pb.dart';
 import 'package:topl_common/proto/node/services/bifrost_rpc.pbgrpc.dart';
 import 'package:topl_common/genus/request_utils.dart';
 import 'package:grpc/grpc.dart';
@@ -157,6 +159,27 @@ class NodeGRPCService {
     return response;
   }
 
+  /// Returns a [CurrentMempoolContainsRes] object for the transaction at the given [transactionId].
+  ///
+  /// [transactionId] is an [int] representing the transaction ID to retrieve
+  ///
+  /// [options] is an [CallOptions] for runtime options with RPC
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<CurrentMempoolContainsRes> currentMempoolContains({
+    required int transactionId,
+    CallOptions? options,
+  }) async {
+    final CurrentMempoolContainsReq request = CurrentMempoolContainsReq(
+        transactionId: getTransactionIdFromInt(transactionId));
+    final CurrentMempoolContainsRes response =
+        await nodeStub.currentMempoolContains(
+      request,
+      options: options,
+    );
+    return response;
+  }
+
   /// Broadcasts a [transaction] to the network.
   ///
   /// [transaction] is an [IoTransaction] to broadcast
@@ -192,5 +215,43 @@ class NodeGRPCService {
     await for (final SynchronizationTraversalRes response in stream) {
       yield response;
     }
+  }
+
+  /// Streams a [FetchNodeConfigRes] object with the node config.
+  ///
+  /// [options] is an [CallOptions] for runtime options with RPC
+  Stream<FetchNodeConfigRes> fetchNodeConfig({
+    CallOptions? options,
+  }) async* {
+    final FetchNodeConfigReq request = FetchNodeConfigReq();
+    final Stream<FetchNodeConfigRes> stream = nodeStub.fetchNodeConfig(
+      request,
+      options: options,
+    );
+
+    await for (final FetchNodeConfigRes response in stream) {
+      yield response;
+    }
+  }
+
+  /// Returns a [FetchEpochDataRes] object for the given [epoch].
+  ///
+  /// [epoch] is an [int] representing the epoch to retrieve
+  ///
+  /// [options] is an [CallOptions] for runtime options with RPC
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<FetchEpochDataRes> fetchEpochData({
+    required int epoch,
+    CallOptions? options,
+  }) async {
+    final FetchEpochDataReq request = FetchEpochDataReq(
+      epoch: UInt64Value(value: Int64(epoch)),
+    );
+    final FetchEpochDataRes response = await nodeStub.fetchEpochData(
+      request,
+      options: options,
+    );
+    return response;
   }
 }

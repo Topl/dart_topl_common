@@ -15,6 +15,9 @@ class GenusGRPCService {
   /// The client stub for the Genus Block gRPC service
   final BlockServiceClient genusBlockStub;
 
+  /// The client stub for the Genus NetworkMetrics gRPC service
+  final NetworkMetricsServiceClient genusNetworkMetricsStub;
+
   /// The host name or IP address of the remote node.
   final Object host;
 
@@ -36,6 +39,11 @@ class GenusGRPCService {
                   GrpcSettings(host: host, port: port, options: options)),
         ),
         genusTransactionStub = TransactionServiceClient(
+          getClientChannel(
+              grpcSettings:
+                  GrpcSettings(host: host, port: port, options: options)),
+        ),
+        genusNetworkMetricsStub = NetworkMetricsServiceClient(
           getClientChannel(
               grpcSettings:
                   GrpcSettings(host: host, port: port, options: options)),
@@ -330,7 +338,7 @@ class GenusGRPCService {
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
-  Stream<TxoLockAddressResponse> streamTxOsByAddress({
+  Stream<TxoLockAddressResponse> streamTxOsByLockAddress({
     required LockAddress address,
     double? confidence,
     CallOptions? options,
@@ -376,5 +384,54 @@ class GenusGRPCService {
     await for (final TxoResponse response in stream) {
       yield response;
     }
+  }
+
+  /////////////////////////////
+  /// Network Metrics
+  ///
+  /// Returns a [GetTxoStatsRes] object.
+  /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<GetTxoStatsRes> getTxoStats({
+    CallOptions? options,
+  }) async {
+    final GetTxoStatsReq request = GetTxoStatsReq();
+    final GetTxoStatsRes response = await genusNetworkMetricsStub.getTxoStats(
+      request,
+      options: options,
+    );
+    return response;
+  }
+
+  /// Returns a [BlockchainSizeStatsRes] object.
+  /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<BlockchainSizeStatsRes> getBlockchainSizeStats({
+    CallOptions? options,
+  }) async {
+    final BlockchainSizeStatsReq request = BlockchainSizeStatsReq();
+    final BlockchainSizeStatsRes response =
+        await genusNetworkMetricsStub.getBlockchainSizeStats(
+      request,
+      options: options,
+    );
+    return response;
+  }
+
+  /// Returns a [BlockStatsRes] object.
+  /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<BlockStatsRes> getBlockStats({
+    CallOptions? options,
+  }) async {
+    final BlockStatsReq request = BlockStatsReq();
+    final BlockStatsRes response = await genusNetworkMetricsStub.getBlockStats(
+      request,
+      options: options,
+    );
+    return response;
   }
 }
