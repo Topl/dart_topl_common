@@ -169,16 +169,16 @@ class GenusGRPCService {
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
-  Stream<TransactionResponse> getTransactionByAddressStream({
+  Stream<TransactionResponse> getTransactionByLockAddressStream({
     required LockAddress address,
     double? confidence,
     CallOptions? options,
   }) async* {
-    final QueryByAddressRequest request = QueryByAddressRequest(
+    final QueryByLockAddressRequest request = QueryByLockAddressRequest(
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
       address: address,
     );
-    final stream = genusTransactionStub.getTransactionByAddressStream(
+    final stream = genusTransactionStub.getTransactionByLockAddressStream(
       request,
       options: options,
     );
@@ -304,17 +304,17 @@ class GenusGRPCService {
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
-  Future<TxoAddressResponse> getTxOsByAddress({
+  Future<TxoLockAddressResponse> getTxOsByLockAddress({
     required LockAddress address,
     double? confidence,
     CallOptions? options,
   }) async {
-    final QueryByAddressRequest request = QueryByAddressRequest(
+    final QueryByLockAddressRequest request = QueryByLockAddressRequest(
       address: address,
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
     );
-    final TxoAddressResponse response =
-        await genusTransactionStub.getTxosByAddress(
+    final TxoLockAddressResponse response =
+        await genusTransactionStub.getTxosByLockAddress(
       request,
       options: options,
     );
@@ -330,22 +330,22 @@ class GenusGRPCService {
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
-  Stream<TxoAddressResponse> streamTxOsByAddress({
+  Stream<TxoLockAddressResponse> streamTxOsByAddress({
     required LockAddress address,
     double? confidence,
     CallOptions? options,
   }) async* {
-    final QueryByAddressRequest request = QueryByAddressRequest(
+    final QueryByLockAddressRequest request = QueryByLockAddressRequest(
       address: address,
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
     );
-    final Stream<TxoAddressResponse> stream =
-        genusTransactionStub.getTxosByAddressStream(
+    final Stream<TxoLockAddressResponse> stream =
+        genusTransactionStub.getTxosByLockAddressStream(
       request,
       options: options,
     );
 
-    await for (final TxoAddressResponse response in stream) {
+    await for (final TxoLockAddressResponse response in stream) {
       yield response;
     }
   }
