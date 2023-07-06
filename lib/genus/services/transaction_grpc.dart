@@ -124,7 +124,7 @@ class GenusGRPCService {
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
   Future<BlockResponse> getBlockById({
-    required int blockId,
+    required List<int> blockId,
     double? confidence,
     CallOptions? options,
   }) async {
@@ -152,7 +152,7 @@ class GenusGRPCService {
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
   Future<TransactionResponse> getTransactionById({
-    required int transactionId,
+    required List<int> transactionId,
     double? confidence,
     CallOptions? options,
   }) async {

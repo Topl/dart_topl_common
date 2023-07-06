@@ -1,7 +1,6 @@
 import 'package:fixnum/fixnum.dart';
 import 'package:topl_common/proto/brambl/models/transaction/io_transaction.pb.dart';
 import 'package:topl_common/proto/google/protobuf/wrappers.pb.dart';
-import 'package:topl_common/proto/node/models/node_epochData.pb.dart';
 import 'package:topl_common/proto/node/services/bifrost_rpc.pbgrpc.dart';
 import 'package:topl_common/genus/request_utils.dart';
 import 'package:grpc/grpc.dart';
@@ -48,7 +47,7 @@ class NodeGRPCService {
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
   Future<FetchTransactionRes> fetchTransaction({
-    required int transactionId,
+    required List<int> transactionId,
     CallOptions? options,
   }) async {
     final FetchTransactionReq request = FetchTransactionReq(
@@ -109,7 +108,7 @@ class NodeGRPCService {
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
   Future<FetchBlockBodyRes> fetchBlockBody({
-    required int blockId,
+    required List<int> blockId,
     CallOptions? options,
   }) async {
     final FetchBlockBodyReq request = FetchBlockBodyReq(
@@ -130,7 +129,7 @@ class NodeGRPCService {
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
   Future<FetchBlockHeaderRes> fetchBlockHeader({
-    required int blockId,
+    required List<int> blockId,
     CallOptions? options,
   }) async {
     final FetchBlockHeaderReq request = FetchBlockHeaderReq(
@@ -167,7 +166,7 @@ class NodeGRPCService {
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
   Future<CurrentMempoolContainsRes> currentMempoolContains({
-    required int transactionId,
+    required List<int> transactionId,
     CallOptions? options,
   }) async {
     final CurrentMempoolContainsReq request = CurrentMempoolContainsReq(

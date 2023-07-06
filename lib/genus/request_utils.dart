@@ -9,20 +9,20 @@ ConfidenceFactor? getConfidenceFactorFromDouble(double? confidence) {
   return confidence == null
       ? null
       : ConfidenceFactor(
-    value: confidence,
-  );
+          value: confidence,
+        );
 }
 
 /// Returns a [BlockId] object for the block at the given [blockId].
-BlockId getBlockIdFromInt(int blockId) {
+BlockId getBlockIdFromInt(List<int> blockId) {
   return BlockId(
-    value: [blockId],
+    value: blockId,
   );
 }
 
 /// Returns a [Identifier_IoTransaction32] object for the transaction at the given [transactionId].
 ///
 /// TODO: This model is still being worked on. This is a placeholder.
-TransactionId getTransactionIdFromInt(int transactionId) {
-  return TransactionId(value: [transactionId]);
+TransactionId getTransactionIdFromInt(List<int> transactionId) {
+  return TransactionId(value: transactionId);
 }
