@@ -3,6 +3,7 @@ import 'package:topl_common/proto/brambl/models/address.pb.dart';
 import 'package:topl_common/proto/genus/genus_models.pb.dart';
 import 'package:topl_common/proto/genus/genus_rpc.pbgrpc.dart';
 import 'package:topl_common/genus/request_utils.dart';
+import 'package:topl_common/genus/constants.dart';
 import 'package:grpc/grpc.dart';
 import '../grpc_channel_settings.dart';
 import '../native_grpc_channel.dart'
@@ -116,20 +117,29 @@ class GenusGRPCService {
 
   /// Returns a [BlockResponse] object for the block at the given [blockId] and [confidence].
   ///
-  /// [blockId] is a [List<int>] representing the block id to retrieve
+  /// [blockIdBytes] is an [List] of bytes representing the block ID to retrieve
+  ///
+  /// [blockIdString] is an [String] representing the block ID to retrieve
   ///
   /// [confidence] is a [double] representing the confidence factor of the block to retrieve.
   ///
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if blockID validation fails or an error occurs during the RPC request.
   Future<BlockResponse> getBlockById({
-    required List<int> blockId,
+    List<int> blockIdBytes = const [],
+    String blockIdString = "",
     double? confidence,
     CallOptions? options,
   }) async {
+    if (blockIdBytes.isEmpty && blockIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingBlockId);
+    }
+
     final GetBlockByIdRequest request = GetBlockByIdRequest(
-      blockId: getBlockIdFromInt(blockId),
+      blockId: !blockIdBytes.isEmpty
+          ? getBlockIdFromList(blockIdBytes)
+          : getBlockIdFromString(blockIdString),
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
     );
     final BlockResponse response = await genusBlockStub.getBlockById(
@@ -144,21 +154,30 @@ class GenusGRPCService {
 
   /// Returns a [TransactionResponse] object for the transaction at the given [transactionId] and [confidence].
   ///
-  /// [transactionId] is a [List<int>] representing the transaction id to retrieve
+  /// [transactionIdBytes] is an [List] of integers representing the transaction ID to retrieve
+  ///
+  /// [transactionIdString] is an [String] representing the transaction ID to retrieve
   ///
   /// [confidence] is a [double] representing the confidence factor of the transaction to retrieve.
   ///
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if transaction ID validation fails or an error occurs during the RPC request.
   Future<TransactionResponse> getTransactionById({
-    required List<int> transactionId,
+    List<int> transactionIdBytes = const [],
+    String transactionIdString = "",
     double? confidence,
     CallOptions? options,
   }) async {
+    if (transactionIdBytes.isEmpty && transactionIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingTransactionId);
+    }
+
     final GetTransactionByIdRequest request = GetTransactionByIdRequest(
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
-      transactionId: getTransactionIdFromInt(transactionId),
+      transactionId: !transactionIdBytes.isEmpty
+          ? getTransactionIdFromList(transactionIdBytes)
+          : getTransactionIdFromString(transactionIdString),
     );
     final TransactionResponse response =
         await genusTransactionStub.getTransactionById(

@@ -1,3 +1,4 @@
+import 'package:fast_base58/fast_base58.dart';
 import 'package:topl_common/proto/brambl/models/identifier.pb.dart';
 import 'package:topl_common/proto/consensus/models/block_id.pb.dart';
 import 'package:topl_common/proto/genus/genus_models.pb.dart';
@@ -13,16 +14,28 @@ ConfidenceFactor? getConfidenceFactorFromDouble(double? confidence) {
         );
 }
 
-/// Returns a [BlockId] object for the block at the given [blockId].
-BlockId getBlockIdFromInt(List<int> blockId) {
+/// Returns a [BlockId] object for the block at the given [blockIdList].
+BlockId getBlockIdFromList(List<int> blockIdList) {
   return BlockId(
-    value: blockId,
+    value: blockIdList,
   );
 }
 
-/// Returns a [Identifier_IoTransaction32] object for the transaction at the given [transactionId].
+/// Returns a [BlockId] object for the block at the given [blockIdString].
+BlockId getBlockIdFromString(String blockIdString) {
+  return BlockId(
+    value: Base58Decode(blockIdString),
+  );
+}
+
+/// Returns a [TransactionId] object for the transaction at the given [transactionIdList].
 ///
-/// TODO: This model is still being worked on. This is a placeholder.
-TransactionId getTransactionIdFromInt(List<int> transactionId) {
-  return TransactionId(value: transactionId);
+TransactionId getTransactionIdFromList(List<int> transactionIdList) {
+  return TransactionId(value: transactionIdList);
+}
+
+/// Returns a [TransactionId] object for the transaction at the given [transactionIdString].
+///
+TransactionId getTransactionIdFromString(String transactionIdString) {
+  return TransactionId(value: Base58Decode(transactionIdString));
 }

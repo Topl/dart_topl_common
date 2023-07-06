@@ -12,6 +12,7 @@ dependencies:
   protobuf: ^2.0.1
   grpc: ^3.0.2
   fixnum: ^1.1.0
+  fast_base58: ^0.2.1
 
 dev_dependencies:
   test: ^1.22.1

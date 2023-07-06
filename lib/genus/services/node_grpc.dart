@@ -3,6 +3,7 @@ import 'package:topl_common/proto/brambl/models/transaction/io_transaction.pb.da
 import 'package:topl_common/proto/google/protobuf/wrappers.pb.dart';
 import 'package:topl_common/proto/node/services/bifrost_rpc.pbgrpc.dart';
 import 'package:topl_common/genus/request_utils.dart';
+import 'package:topl_common/genus/constants.dart';
 import 'package:grpc/grpc.dart';
 import '../grpc_channel_settings.dart';
 import '../native_grpc_channel.dart'
@@ -41,17 +42,26 @@ class NodeGRPCService {
 
   /// Returns a [FetchTransactionRes] object for the transaction at the given [transactionId].
   ///
-  /// [transactionId] is an [int] representing the transaction ID to retrieve
+  /// [transactionIdBytes] is an [List] of integers representing the transaction ID to retrieve
+  ///
+  /// [transactionIdString] is an [String] representing the transaction ID to retrieve
   ///
   /// [options] is an [CallOptions] for runtime options with RPC
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if transaction ID validation fails or an error occurs during the RPC request.
   Future<FetchTransactionRes> fetchTransaction({
-    required List<int> transactionId,
+    List<int> transactionIdBytes = const [],
+    String transactionIdString = "",
     CallOptions? options,
   }) async {
+    if (transactionIdBytes.isEmpty && transactionIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingTransactionId);
+    }
+
     final FetchTransactionReq request = FetchTransactionReq(
-        transactionId: getTransactionIdFromInt(transactionId));
+        transactionId: !transactionIdBytes.isEmpty
+            ? getTransactionIdFromList(transactionIdBytes)
+            : getTransactionIdFromString(transactionIdString));
     final FetchTransactionRes response = await nodeStub.fetchTransaction(
       request,
       options: options,
@@ -102,18 +112,26 @@ class NodeGRPCService {
 
   /// Returns a [FetchBlockBodyRes] object for the block at the given [blockId].
   ///
-  /// [blockId] is an [int] representing the block ID to retrieve
+  /// [blockIdBytes] is an [List] of bytes representing the block ID to retrieve
+  ///
+  /// [blockIdString] is an [String] representing the block ID to retrieve
   ///
   /// [options] is an [CallOptions] for runtime options with RPC
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if block ID validation fails or an error occurs during the RPC request.
   Future<FetchBlockBodyRes> fetchBlockBody({
-    required List<int> blockId,
+    List<int> blockIdBytes = const [],
+    String blockIdString = "",
     CallOptions? options,
   }) async {
+    if (blockIdBytes.isEmpty && blockIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingBlockId);
+    }
+
     final FetchBlockBodyReq request = FetchBlockBodyReq(
-      blockId: getBlockIdFromInt(blockId),
-    );
+        blockId: !blockIdBytes.isEmpty
+            ? getBlockIdFromList(blockIdBytes)
+            : getBlockIdFromString(blockIdString));
     final FetchBlockBodyRes response = await nodeStub.fetchBlockBody(
       request,
       options: options,
@@ -123,18 +141,26 @@ class NodeGRPCService {
 
   /// Returns a [FetchBlockHeaderRes] object for the block at the given [blockId].
   ///
-  /// [blockId] is an [int] representing the block ID to retrieve
+  /// [blockIdBytes] is an [List] of bytes representing the block ID to retrieve
+  ///
+  /// [blockIdString] is an [String] representing the block ID to retrieve
   ///
   /// [options] is an [CallOptions] for runtime options with RPC
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if block ID validation fails or an error occurs during the RPC request.
   Future<FetchBlockHeaderRes> fetchBlockHeader({
-    required List<int> blockId,
+    List<int> blockIdBytes = const [],
+    String blockIdString = "",
     CallOptions? options,
   }) async {
+    if (blockIdBytes.isEmpty && blockIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingBlockId);
+    }
+
     final FetchBlockHeaderReq request = FetchBlockHeaderReq(
-      blockId: getBlockIdFromInt(blockId),
-    );
+        blockId: !blockIdBytes.isEmpty
+            ? getBlockIdFromList(blockIdBytes)
+            : getBlockIdFromString(blockIdString));
     final FetchBlockHeaderRes response = await nodeStub.fetchBlockHeader(
       request,
       options: options,
@@ -160,17 +186,26 @@ class NodeGRPCService {
 
   /// Returns a [CurrentMempoolContainsRes] object for the transaction at the given [transactionId].
   ///
-  /// [transactionId] is an [int] representing the transaction ID to retrieve
+  /// [transactionIdBytes] is an [List] of integers representing the transaction ID to retrieve
+  ///
+  /// [transactionIdString] is an [String] representing the transaction ID to retrieve
   ///
   /// [options] is an [CallOptions] for runtime options with RPC
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if transaction ID validation fails or an error occurs during the RPC request.
   Future<CurrentMempoolContainsRes> currentMempoolContains({
-    required List<int> transactionId,
+    List<int> transactionIdBytes = const [],
+    String transactionIdString = "",
     CallOptions? options,
   }) async {
+    if (transactionIdBytes.isEmpty && transactionIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingTransactionId);
+    }
+
     final CurrentMempoolContainsReq request = CurrentMempoolContainsReq(
-        transactionId: getTransactionIdFromInt(transactionId));
+        transactionId: !transactionIdBytes.isEmpty
+            ? getTransactionIdFromList(transactionIdBytes)
+            : getTransactionIdFromString(transactionIdString));
     final CurrentMempoolContainsRes response =
         await nodeStub.currentMempoolContains(
       request,
