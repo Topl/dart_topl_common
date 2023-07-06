@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.2] - 2023-07-06
+
+- Added new methods from protobuf_specs
+- Fixed byId query request id parameter
+- Enabled connecting to remote node instance
+
 ## [2.0.1] - 2023-06-12
 
 - Added GRPC-Web support
