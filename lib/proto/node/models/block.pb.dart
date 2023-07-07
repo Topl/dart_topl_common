@@ -9,19 +9,19 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../brambl/models/identifier.pb.dart' as $2;
+import '../../brambl/models/identifier.pb.dart' as $7;
 import '../../brambl/models/transaction/io_transaction.pb.dart' as $20;
 import '../../consensus/models/block_header.pb.dart' as $21;
 
 class BlockBody extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockBody', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
-    ..pc<$2.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $2.TransactionId.create)
+    ..pc<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $7.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
   BlockBody._() : super();
   factory BlockBody({
-    $core.Iterable<$2.TransactionId>? transactionIds,
+    $core.Iterable<$7.TransactionId>? transactionIds,
   }) {
     final _result = create();
     if (transactionIds != null) {
@@ -51,7 +51,7 @@ class BlockBody extends $pb.GeneratedMessage {
   static BlockBody? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$2.TransactionId> get transactionIds => $_getList(0);
+  $core.List<$7.TransactionId> get transactionIds => $_getList(0);
 }
 
 class FullBlockBody extends $pb.GeneratedMessage {

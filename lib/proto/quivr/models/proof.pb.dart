@@ -9,7 +9,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'shared.pb.dart' as $3;
+import 'shared.pb.dart' as $4;
 
 class Proof_Locked extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Locked', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
@@ -42,15 +42,15 @@ class Proof_Locked extends $pb.GeneratedMessage {
 
 class Proof_Digest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Digest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
-    ..aOM<$3.Preimage>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'preimage', subBuilder: $3.Preimage.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..aOM<$4.Preimage>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'preimage', subBuilder: $4.Preimage.create)
     ..hasRequiredFields = false
   ;
 
   Proof_Digest._() : super();
   factory Proof_Digest({
-    $3.TxBind? transactionBind,
-    $3.Preimage? preimage,
+    $4.TxBind? transactionBind,
+    $4.Preimage? preimage,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -83,39 +83,39 @@ class Proof_Digest extends $pb.GeneratedMessage {
   static Proof_Digest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.Preimage get preimage => $_getN(1);
+  $4.Preimage get preimage => $_getN(1);
   @$pb.TagNumber(2)
-  set preimage($3.Preimage v) { setField(2, v); }
+  set preimage($4.Preimage v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPreimage() => $_has(1);
   @$pb.TagNumber(2)
   void clearPreimage() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Preimage ensurePreimage() => $_ensure(1);
+  $4.Preimage ensurePreimage() => $_ensure(1);
 }
 
 class Proof_DigitalSignature extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.DigitalSignature', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
-    ..aOM<$3.Witness>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witness', subBuilder: $3.Witness.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..aOM<$4.Witness>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witness', subBuilder: $4.Witness.create)
     ..hasRequiredFields = false
   ;
 
   Proof_DigitalSignature._() : super();
   factory Proof_DigitalSignature({
-    $3.TxBind? transactionBind,
-    $3.Witness? witness,
+    $4.TxBind? transactionBind,
+    $4.Witness? witness,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -148,37 +148,37 @@ class Proof_DigitalSignature extends $pb.GeneratedMessage {
   static Proof_DigitalSignature? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $3.Witness get witness => $_getN(1);
+  $4.Witness get witness => $_getN(1);
   @$pb.TagNumber(2)
-  set witness($3.Witness v) { setField(2, v); }
+  set witness($4.Witness v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasWitness() => $_has(1);
   @$pb.TagNumber(2)
   void clearWitness() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Witness ensureWitness() => $_ensure(1);
+  $4.Witness ensureWitness() => $_ensure(1);
 }
 
 class Proof_HeightRange extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.HeightRange', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
   Proof_HeightRange._() : super();
   factory Proof_HeightRange({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -208,26 +208,26 @@ class Proof_HeightRange extends $pb.GeneratedMessage {
   static Proof_HeightRange? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 }
 
 class Proof_TickRange extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.TickRange', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
   Proof_TickRange._() : super();
   factory Proof_TickRange({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -257,26 +257,26 @@ class Proof_TickRange extends $pb.GeneratedMessage {
   static Proof_TickRange? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 }
 
 class Proof_ExactMatch extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.ExactMatch', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
   Proof_ExactMatch._() : super();
   factory Proof_ExactMatch({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -306,26 +306,26 @@ class Proof_ExactMatch extends $pb.GeneratedMessage {
   static Proof_ExactMatch? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 }
 
 class Proof_LessThan extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.LessThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
   Proof_LessThan._() : super();
   factory Proof_LessThan({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -355,26 +355,26 @@ class Proof_LessThan extends $pb.GeneratedMessage {
   static Proof_LessThan? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 }
 
 class Proof_GreaterThan extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.GreaterThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
   Proof_GreaterThan._() : super();
   factory Proof_GreaterThan({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -404,26 +404,26 @@ class Proof_GreaterThan extends $pb.GeneratedMessage {
   static Proof_GreaterThan? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 }
 
 class Proof_EqualTo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.EqualTo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
   Proof_EqualTo._() : super();
   factory Proof_EqualTo({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
   }) {
     final _result = create();
     if (transactionBind != null) {
@@ -453,27 +453,27 @@ class Proof_EqualTo extends $pb.GeneratedMessage {
   static Proof_EqualTo? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 }
 
 class Proof_Threshold extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Threshold', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..pc<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: Proof.create)
     ..hasRequiredFields = false
   ;
 
   Proof_Threshold._() : super();
   factory Proof_Threshold({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
     $core.Iterable<Proof>? responses,
   }) {
     final _result = create();
@@ -507,15 +507,15 @@ class Proof_Threshold extends $pb.GeneratedMessage {
   static Proof_Threshold? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.List<Proof> get responses => $_getList(1);
@@ -523,14 +523,14 @@ class Proof_Threshold extends $pb.GeneratedMessage {
 
 class Proof_Not extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Not', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..aOM<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'proof', subBuilder: Proof.create)
     ..hasRequiredFields = false
   ;
 
   Proof_Not._() : super();
   factory Proof_Not({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
     Proof? proof,
   }) {
     final _result = create();
@@ -564,15 +564,15 @@ class Proof_Not extends $pb.GeneratedMessage {
   static Proof_Not? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 
   @$pb.TagNumber(2)
   Proof get proof => $_getN(1);
@@ -588,7 +588,7 @@ class Proof_Not extends $pb.GeneratedMessage {
 
 class Proof_And extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.And', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..aOM<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: Proof.create)
     ..aOM<Proof>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: Proof.create)
     ..hasRequiredFields = false
@@ -596,7 +596,7 @@ class Proof_And extends $pb.GeneratedMessage {
 
   Proof_And._() : super();
   factory Proof_And({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
     Proof? left,
     Proof? right,
   }) {
@@ -634,15 +634,15 @@ class Proof_And extends $pb.GeneratedMessage {
   static Proof_And? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 
   @$pb.TagNumber(2)
   Proof get left => $_getN(1);
@@ -669,7 +669,7 @@ class Proof_And extends $pb.GeneratedMessage {
 
 class Proof_Or extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Or', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $3.TxBind.create)
+    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..aOM<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: Proof.create)
     ..aOM<Proof>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: Proof.create)
     ..hasRequiredFields = false
@@ -677,7 +677,7 @@ class Proof_Or extends $pb.GeneratedMessage {
 
   Proof_Or._() : super();
   factory Proof_Or({
-    $3.TxBind? transactionBind,
+    $4.TxBind? transactionBind,
     Proof? left,
     Proof? right,
   }) {
@@ -715,15 +715,15 @@ class Proof_Or extends $pb.GeneratedMessage {
   static Proof_Or? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.TxBind get transactionBind => $_getN(0);
+  $4.TxBind get transactionBind => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionBind($3.TxBind v) { setField(1, v); }
+  set transactionBind($4.TxBind v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionBind() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionBind() => clearField(1);
   @$pb.TagNumber(1)
-  $3.TxBind ensureTransactionBind() => $_ensure(0);
+  $4.TxBind ensureTransactionBind() => $_ensure(0);
 
   @$pb.TagNumber(2)
   Proof get left => $_getN(1);

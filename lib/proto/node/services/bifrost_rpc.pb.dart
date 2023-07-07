@@ -11,10 +11,13 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../brambl/models/transaction/io_transaction.pb.dart' as $20;
-import '../../brambl/models/identifier.pb.dart' as $2;
-import '../../consensus/models/block_id.pb.dart' as $18;
+import '../../brambl/models/identifier.pb.dart' as $7;
+import '../../consensus/models/block_id.pb.dart' as $2;
 import '../../consensus/models/block_header.pb.dart' as $21;
 import '../models/block.pb.dart' as $23;
+import '../models/node_config.pb.dart' as $25;
+import '../../google/protobuf/wrappers.pb.dart' as $22;
+import '../models/node_epochData.pb.dart' as $26;
 
 class BroadcastTransactionReq extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BroadcastTransactionReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
@@ -125,13 +128,13 @@ class CurrentMempoolReq extends $pb.GeneratedMessage {
 
 class CurrentMempoolRes extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CurrentMempoolRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..pc<$2.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $2.TransactionId.create)
+    ..pc<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $7.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
   CurrentMempoolRes._() : super();
   factory CurrentMempoolRes({
-    $core.Iterable<$2.TransactionId>? transactionIds,
+    $core.Iterable<$7.TransactionId>? transactionIds,
   }) {
     final _result = create();
     if (transactionIds != null) {
@@ -161,18 +164,114 @@ class CurrentMempoolRes extends $pb.GeneratedMessage {
   static CurrentMempoolRes? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$2.TransactionId> get transactionIds => $_getList(0);
+  $core.List<$7.TransactionId> get transactionIds => $_getList(0);
+}
+
+class CurrentMempoolContainsReq extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CurrentMempoolContainsReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
+    ..aOM<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $7.TransactionId.create)
+    ..hasRequiredFields = false
+  ;
+
+  CurrentMempoolContainsReq._() : super();
+  factory CurrentMempoolContainsReq({
+    $7.TransactionId? transactionId,
+  }) {
+    final _result = create();
+    if (transactionId != null) {
+      _result.transactionId = transactionId;
+    }
+    return _result;
+  }
+  factory CurrentMempoolContainsReq.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CurrentMempoolContainsReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CurrentMempoolContainsReq clone() => CurrentMempoolContainsReq()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CurrentMempoolContainsReq copyWith(void Function(CurrentMempoolContainsReq) updates) => super.copyWith((message) => updates(message as CurrentMempoolContainsReq)) as CurrentMempoolContainsReq; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CurrentMempoolContainsReq create() => CurrentMempoolContainsReq._();
+  CurrentMempoolContainsReq createEmptyInstance() => create();
+  static $pb.PbList<CurrentMempoolContainsReq> createRepeated() => $pb.PbList<CurrentMempoolContainsReq>();
+  @$core.pragma('dart2js:noInline')
+  static CurrentMempoolContainsReq getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CurrentMempoolContainsReq>(create);
+  static CurrentMempoolContainsReq? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $7.TransactionId get transactionId => $_getN(0);
+  @$pb.TagNumber(1)
+  set transactionId($7.TransactionId v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTransactionId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTransactionId() => clearField(1);
+  @$pb.TagNumber(1)
+  $7.TransactionId ensureTransactionId() => $_ensure(0);
+}
+
+class CurrentMempoolContainsRes extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CurrentMempoolContainsRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
+    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inMempool', protoName: 'inMempool')
+    ..hasRequiredFields = false
+  ;
+
+  CurrentMempoolContainsRes._() : super();
+  factory CurrentMempoolContainsRes({
+    $core.bool? inMempool,
+  }) {
+    final _result = create();
+    if (inMempool != null) {
+      _result.inMempool = inMempool;
+    }
+    return _result;
+  }
+  factory CurrentMempoolContainsRes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CurrentMempoolContainsRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CurrentMempoolContainsRes clone() => CurrentMempoolContainsRes()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CurrentMempoolContainsRes copyWith(void Function(CurrentMempoolContainsRes) updates) => super.copyWith((message) => updates(message as CurrentMempoolContainsRes)) as CurrentMempoolContainsRes; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CurrentMempoolContainsRes create() => CurrentMempoolContainsRes._();
+  CurrentMempoolContainsRes createEmptyInstance() => create();
+  static $pb.PbList<CurrentMempoolContainsRes> createRepeated() => $pb.PbList<CurrentMempoolContainsRes>();
+  @$core.pragma('dart2js:noInline')
+  static CurrentMempoolContainsRes getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CurrentMempoolContainsRes>(create);
+  static CurrentMempoolContainsRes? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get inMempool => $_getBF(0);
+  @$pb.TagNumber(1)
+  set inMempool($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasInMempool() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearInMempool() => clearField(1);
 }
 
 class FetchBlockHeaderReq extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchBlockHeaderReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$18.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
   FetchBlockHeaderReq._() : super();
   factory FetchBlockHeaderReq({
-    $18.BlockId? blockId,
+    $2.BlockId? blockId,
   }) {
     final _result = create();
     if (blockId != null) {
@@ -202,15 +301,15 @@ class FetchBlockHeaderReq extends $pb.GeneratedMessage {
   static FetchBlockHeaderReq? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.BlockId get blockId => $_getN(0);
+  $2.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($18.BlockId v) { setField(1, v); }
+  set blockId($2.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $18.BlockId ensureBlockId() => $_ensure(0);
+  $2.BlockId ensureBlockId() => $_ensure(0);
 }
 
 class FetchBlockHeaderRes extends $pb.GeneratedMessage {
@@ -264,13 +363,13 @@ class FetchBlockHeaderRes extends $pb.GeneratedMessage {
 
 class FetchBlockBodyReq extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchBlockBodyReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$18.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
   FetchBlockBodyReq._() : super();
   factory FetchBlockBodyReq({
-    $18.BlockId? blockId,
+    $2.BlockId? blockId,
   }) {
     final _result = create();
     if (blockId != null) {
@@ -300,15 +399,15 @@ class FetchBlockBodyReq extends $pb.GeneratedMessage {
   static FetchBlockBodyReq? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.BlockId get blockId => $_getN(0);
+  $2.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($18.BlockId v) { setField(1, v); }
+  set blockId($2.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $18.BlockId ensureBlockId() => $_ensure(0);
+  $2.BlockId ensureBlockId() => $_ensure(0);
 }
 
 class FetchBlockBodyRes extends $pb.GeneratedMessage {
@@ -362,13 +461,13 @@ class FetchBlockBodyRes extends $pb.GeneratedMessage {
 
 class FetchTransactionReq extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchTransactionReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$2.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $2.TransactionId.create)
+    ..aOM<$7.TransactionId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $7.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
   FetchTransactionReq._() : super();
   factory FetchTransactionReq({
-    $2.TransactionId? transactionId,
+    $7.TransactionId? transactionId,
   }) {
     final _result = create();
     if (transactionId != null) {
@@ -398,15 +497,15 @@ class FetchTransactionReq extends $pb.GeneratedMessage {
   static FetchTransactionReq? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.TransactionId get transactionId => $_getN(0);
+  $7.TransactionId get transactionId => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionId($2.TransactionId v) { setField(1, v); }
+  set transactionId($7.TransactionId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionId() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionId() => clearField(1);
   @$pb.TagNumber(1)
-  $2.TransactionId ensureTransactionId() => $_ensure(0);
+  $7.TransactionId ensureTransactionId() => $_ensure(0);
 }
 
 class FetchTransactionRes extends $pb.GeneratedMessage {
@@ -507,13 +606,13 @@ class FetchBlockIdAtHeightReq extends $pb.GeneratedMessage {
 
 class FetchBlockIdAtHeightRes extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchBlockIdAtHeightRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$18.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
   FetchBlockIdAtHeightRes._() : super();
   factory FetchBlockIdAtHeightRes({
-    $18.BlockId? blockId,
+    $2.BlockId? blockId,
   }) {
     final _result = create();
     if (blockId != null) {
@@ -543,15 +642,15 @@ class FetchBlockIdAtHeightRes extends $pb.GeneratedMessage {
   static FetchBlockIdAtHeightRes? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.BlockId get blockId => $_getN(0);
+  $2.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($18.BlockId v) { setField(1, v); }
+  set blockId($2.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $18.BlockId ensureBlockId() => $_ensure(0);
+  $2.BlockId ensureBlockId() => $_ensure(0);
 }
 
 class FetchBlockIdAtDepthReq extends $pb.GeneratedMessage {
@@ -603,13 +702,13 @@ class FetchBlockIdAtDepthReq extends $pb.GeneratedMessage {
 
 class FetchBlockIdAtDepthRes extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchBlockIdAtDepthRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$18.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
   FetchBlockIdAtDepthRes._() : super();
   factory FetchBlockIdAtDepthRes({
-    $18.BlockId? blockId,
+    $2.BlockId? blockId,
   }) {
     final _result = create();
     if (blockId != null) {
@@ -639,15 +738,15 @@ class FetchBlockIdAtDepthRes extends $pb.GeneratedMessage {
   static FetchBlockIdAtDepthRes? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.BlockId get blockId => $_getN(0);
+  $2.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($18.BlockId v) { setField(1, v); }
+  set blockId($2.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $18.BlockId ensureBlockId() => $_ensure(0);
+  $2.BlockId ensureBlockId() => $_ensure(0);
 }
 
 class SynchronizationTraversalReq extends $pb.GeneratedMessage {
@@ -693,15 +792,15 @@ class SynchronizationTraversalRes extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SynchronizationTraversalRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$18.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applied', subBuilder: $18.BlockId.create)
-    ..aOM<$18.BlockId>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unapplied', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applied', subBuilder: $2.BlockId.create)
+    ..aOM<$2.BlockId>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unapplied', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
   SynchronizationTraversalRes._() : super();
   factory SynchronizationTraversalRes({
-    $18.BlockId? applied,
-    $18.BlockId? unapplied,
+    $2.BlockId? applied,
+    $2.BlockId? unapplied,
   }) {
     final _result = create();
     if (applied != null) {
@@ -737,25 +836,201 @@ class SynchronizationTraversalRes extends $pb.GeneratedMessage {
   void clearStatus() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $18.BlockId get applied => $_getN(0);
+  $2.BlockId get applied => $_getN(0);
   @$pb.TagNumber(1)
-  set applied($18.BlockId v) { setField(1, v); }
+  set applied($2.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasApplied() => $_has(0);
   @$pb.TagNumber(1)
   void clearApplied() => clearField(1);
   @$pb.TagNumber(1)
-  $18.BlockId ensureApplied() => $_ensure(0);
+  $2.BlockId ensureApplied() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $18.BlockId get unapplied => $_getN(1);
+  $2.BlockId get unapplied => $_getN(1);
   @$pb.TagNumber(2)
-  set unapplied($18.BlockId v) { setField(2, v); }
+  set unapplied($2.BlockId v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUnapplied() => $_has(1);
   @$pb.TagNumber(2)
   void clearUnapplied() => clearField(2);
   @$pb.TagNumber(2)
-  $18.BlockId ensureUnapplied() => $_ensure(1);
+  $2.BlockId ensureUnapplied() => $_ensure(1);
+}
+
+class FetchNodeConfigReq extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchNodeConfigReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  FetchNodeConfigReq._() : super();
+  factory FetchNodeConfigReq() => create();
+  factory FetchNodeConfigReq.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FetchNodeConfigReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FetchNodeConfigReq clone() => FetchNodeConfigReq()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FetchNodeConfigReq copyWith(void Function(FetchNodeConfigReq) updates) => super.copyWith((message) => updates(message as FetchNodeConfigReq)) as FetchNodeConfigReq; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FetchNodeConfigReq create() => FetchNodeConfigReq._();
+  FetchNodeConfigReq createEmptyInstance() => create();
+  static $pb.PbList<FetchNodeConfigReq> createRepeated() => $pb.PbList<FetchNodeConfigReq>();
+  @$core.pragma('dart2js:noInline')
+  static FetchNodeConfigReq getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FetchNodeConfigReq>(create);
+  static FetchNodeConfigReq? _defaultInstance;
+}
+
+class FetchNodeConfigRes extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchNodeConfigRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
+    ..aOM<$25.NodeConfig>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'config', subBuilder: $25.NodeConfig.create)
+    ..hasRequiredFields = false
+  ;
+
+  FetchNodeConfigRes._() : super();
+  factory FetchNodeConfigRes({
+    $25.NodeConfig? config,
+  }) {
+    final _result = create();
+    if (config != null) {
+      _result.config = config;
+    }
+    return _result;
+  }
+  factory FetchNodeConfigRes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FetchNodeConfigRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FetchNodeConfigRes clone() => FetchNodeConfigRes()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FetchNodeConfigRes copyWith(void Function(FetchNodeConfigRes) updates) => super.copyWith((message) => updates(message as FetchNodeConfigRes)) as FetchNodeConfigRes; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FetchNodeConfigRes create() => FetchNodeConfigRes._();
+  FetchNodeConfigRes createEmptyInstance() => create();
+  static $pb.PbList<FetchNodeConfigRes> createRepeated() => $pb.PbList<FetchNodeConfigRes>();
+  @$core.pragma('dart2js:noInline')
+  static FetchNodeConfigRes getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FetchNodeConfigRes>(create);
+  static FetchNodeConfigRes? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $25.NodeConfig get config => $_getN(0);
+  @$pb.TagNumber(1)
+  set config($25.NodeConfig v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasConfig() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  $25.NodeConfig ensureConfig() => $_ensure(0);
+}
+
+class FetchEpochDataReq extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchEpochDataReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
+    ..aOM<$22.UInt64Value>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'epoch', subBuilder: $22.UInt64Value.create)
+    ..hasRequiredFields = false
+  ;
+
+  FetchEpochDataReq._() : super();
+  factory FetchEpochDataReq({
+    $22.UInt64Value? epoch,
+  }) {
+    final _result = create();
+    if (epoch != null) {
+      _result.epoch = epoch;
+    }
+    return _result;
+  }
+  factory FetchEpochDataReq.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FetchEpochDataReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FetchEpochDataReq clone() => FetchEpochDataReq()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FetchEpochDataReq copyWith(void Function(FetchEpochDataReq) updates) => super.copyWith((message) => updates(message as FetchEpochDataReq)) as FetchEpochDataReq; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FetchEpochDataReq create() => FetchEpochDataReq._();
+  FetchEpochDataReq createEmptyInstance() => create();
+  static $pb.PbList<FetchEpochDataReq> createRepeated() => $pb.PbList<FetchEpochDataReq>();
+  @$core.pragma('dart2js:noInline')
+  static FetchEpochDataReq getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FetchEpochDataReq>(create);
+  static FetchEpochDataReq? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $22.UInt64Value get epoch => $_getN(0);
+  @$pb.TagNumber(1)
+  set epoch($22.UInt64Value v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasEpoch() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEpoch() => clearField(1);
+  @$pb.TagNumber(1)
+  $22.UInt64Value ensureEpoch() => $_ensure(0);
+}
+
+class FetchEpochDataRes extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FetchEpochDataRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.services'), createEmptyInstance: create)
+    ..aOM<$26.EpochData>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'epochData', protoName: 'epochData', subBuilder: $26.EpochData.create)
+    ..hasRequiredFields = false
+  ;
+
+  FetchEpochDataRes._() : super();
+  factory FetchEpochDataRes({
+    $26.EpochData? epochData,
+  }) {
+    final _result = create();
+    if (epochData != null) {
+      _result.epochData = epochData;
+    }
+    return _result;
+  }
+  factory FetchEpochDataRes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FetchEpochDataRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FetchEpochDataRes clone() => FetchEpochDataRes()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FetchEpochDataRes copyWith(void Function(FetchEpochDataRes) updates) => super.copyWith((message) => updates(message as FetchEpochDataRes)) as FetchEpochDataRes; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FetchEpochDataRes create() => FetchEpochDataRes._();
+  FetchEpochDataRes createEmptyInstance() => create();
+  static $pb.PbList<FetchEpochDataRes> createRepeated() => $pb.PbList<FetchEpochDataRes>();
+  @$core.pragma('dart2js:noInline')
+  static FetchEpochDataRes getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FetchEpochDataRes>(create);
+  static FetchEpochDataRes? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $26.EpochData get epochData => $_getN(0);
+  @$pb.TagNumber(1)
+  set epochData($26.EpochData v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasEpochData() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearEpochData() => clearField(1);
+  @$pb.TagNumber(1)
+  $26.EpochData ensureEpochData() => $_ensure(0);
 }
 

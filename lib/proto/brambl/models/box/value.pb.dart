@@ -9,19 +9,18 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../quivr/models/shared.pb.dart' as $3;
-import '../../../consensus/models/staking_address.pb.dart' as $9;
-import '../../../consensus/models/operational_certificate.pb.dart' as $10;
+import '../../../quivr/models/shared.pb.dart' as $4;
+import '../../../consensus/models/staking.pb.dart' as $6;
 
 class Value_LVL extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value.LVL', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$3.Int128>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $3.Int128.create)
+    ..aOM<$4.Int128>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $4.Int128.create)
     ..hasRequiredFields = false
   ;
 
   Value_LVL._() : super();
   factory Value_LVL({
-    $3.Int128? quantity,
+    $4.Int128? quantity,
   }) {
     final _result = create();
     if (quantity != null) {
@@ -51,35 +50,35 @@ class Value_LVL extends $pb.GeneratedMessage {
   static Value_LVL? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Int128 get quantity => $_getN(0);
+  $4.Int128 get quantity => $_getN(0);
   @$pb.TagNumber(1)
-  set quantity($3.Int128 v) { setField(1, v); }
+  set quantity($4.Int128 v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasQuantity() => $_has(0);
   @$pb.TagNumber(1)
   void clearQuantity() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Int128 ensureQuantity() => $_ensure(0);
+  $4.Int128 ensureQuantity() => $_ensure(0);
 }
 
 class Value_TOPL extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value.TOPL', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$3.Int128>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $3.Int128.create)
-    ..aOM<$9.StakingAddress>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakingAddress', protoName: 'stakingAddress', subBuilder: $9.StakingAddress.create)
+    ..aOM<$4.Int128>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $4.Int128.create)
+    ..aOM<$6.StakingRegistration>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'registration', subBuilder: $6.StakingRegistration.create)
     ..hasRequiredFields = false
   ;
 
   Value_TOPL._() : super();
   factory Value_TOPL({
-    $3.Int128? quantity,
-    $9.StakingAddress? stakingAddress,
+    $4.Int128? quantity,
+    $6.StakingRegistration? registration,
   }) {
     final _result = create();
     if (quantity != null) {
       _result.quantity = quantity;
     }
-    if (stakingAddress != null) {
-      _result.stakingAddress = stakingAddress;
+    if (registration != null) {
+      _result.registration = registration;
     }
     return _result;
   }
@@ -105,41 +104,41 @@ class Value_TOPL extends $pb.GeneratedMessage {
   static Value_TOPL? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Int128 get quantity => $_getN(0);
+  $4.Int128 get quantity => $_getN(0);
   @$pb.TagNumber(1)
-  set quantity($3.Int128 v) { setField(1, v); }
+  set quantity($4.Int128 v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasQuantity() => $_has(0);
   @$pb.TagNumber(1)
   void clearQuantity() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Int128 ensureQuantity() => $_ensure(0);
+  $4.Int128 ensureQuantity() => $_ensure(0);
 
-  @$pb.TagNumber(2)
-  $9.StakingAddress get stakingAddress => $_getN(1);
-  @$pb.TagNumber(2)
-  set stakingAddress($9.StakingAddress v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasStakingAddress() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearStakingAddress() => clearField(2);
-  @$pb.TagNumber(2)
-  $9.StakingAddress ensureStakingAddress() => $_ensure(1);
+  @$pb.TagNumber(3)
+  $6.StakingRegistration get registration => $_getN(1);
+  @$pb.TagNumber(3)
+  set registration($6.StakingRegistration v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasRegistration() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearRegistration() => clearField(3);
+  @$pb.TagNumber(3)
+  $6.StakingRegistration ensureRegistration() => $_ensure(1);
 }
 
 class Value_Asset extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value.Asset', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'label')
-    ..aOM<$3.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $3.Int128.create)
-    ..aOM<$3.SmallData>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', subBuilder: $3.SmallData.create)
+    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $4.Int128.create)
+    ..aOM<$4.SmallData>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', subBuilder: $4.SmallData.create)
     ..hasRequiredFields = false
   ;
 
   Value_Asset._() : super();
   factory Value_Asset({
     $core.String? label,
-    $3.Int128? quantity,
-    $3.SmallData? metadata,
+    $4.Int128? quantity,
+    $4.SmallData? metadata,
   }) {
     final _result = create();
     if (label != null) {
@@ -184,98 +183,32 @@ class Value_Asset extends $pb.GeneratedMessage {
   void clearLabel() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Int128 get quantity => $_getN(1);
+  $4.Int128 get quantity => $_getN(1);
   @$pb.TagNumber(2)
-  set quantity($3.Int128 v) { setField(2, v); }
+  set quantity($4.Int128 v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasQuantity() => $_has(1);
   @$pb.TagNumber(2)
   void clearQuantity() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Int128 ensureQuantity() => $_ensure(1);
+  $4.Int128 ensureQuantity() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $3.SmallData get metadata => $_getN(2);
+  $4.SmallData get metadata => $_getN(2);
   @$pb.TagNumber(3)
-  set metadata($3.SmallData v) { setField(3, v); }
+  set metadata($4.SmallData v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasMetadata() => $_has(2);
   @$pb.TagNumber(3)
   void clearMetadata() => clearField(3);
   @$pb.TagNumber(3)
-  $3.SmallData ensureMetadata() => $_ensure(2);
-}
-
-class Value_Registration extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value.Registration', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$10.SignatureKesProduct>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'registration', subBuilder: $10.SignatureKesProduct.create)
-    ..aOM<$9.StakingAddress>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakingAddress', protoName: 'stakingAddress', subBuilder: $9.StakingAddress.create)
-    ..hasRequiredFields = false
-  ;
-
-  Value_Registration._() : super();
-  factory Value_Registration({
-    $10.SignatureKesProduct? registration,
-    $9.StakingAddress? stakingAddress,
-  }) {
-    final _result = create();
-    if (registration != null) {
-      _result.registration = registration;
-    }
-    if (stakingAddress != null) {
-      _result.stakingAddress = stakingAddress;
-    }
-    return _result;
-  }
-  factory Value_Registration.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Value_Registration.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Value_Registration clone() => Value_Registration()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Value_Registration copyWith(void Function(Value_Registration) updates) => super.copyWith((message) => updates(message as Value_Registration)) as Value_Registration; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static Value_Registration create() => Value_Registration._();
-  Value_Registration createEmptyInstance() => create();
-  static $pb.PbList<Value_Registration> createRepeated() => $pb.PbList<Value_Registration>();
-  @$core.pragma('dart2js:noInline')
-  static Value_Registration getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Value_Registration>(create);
-  static Value_Registration? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $10.SignatureKesProduct get registration => $_getN(0);
-  @$pb.TagNumber(1)
-  set registration($10.SignatureKesProduct v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasRegistration() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearRegistration() => clearField(1);
-  @$pb.TagNumber(1)
-  $10.SignatureKesProduct ensureRegistration() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  $9.StakingAddress get stakingAddress => $_getN(1);
-  @$pb.TagNumber(2)
-  set stakingAddress($9.StakingAddress v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasStakingAddress() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearStakingAddress() => clearField(2);
-  @$pb.TagNumber(2)
-  $9.StakingAddress ensureStakingAddress() => $_ensure(1);
+  $4.SmallData ensureMetadata() => $_ensure(2);
 }
 
 enum Value_Value {
   lvl, 
   topl, 
   asset, 
-  registration, 
   notSet
 }
 
@@ -284,15 +217,13 @@ class Value extends $pb.GeneratedMessage {
     1 : Value_Value.lvl,
     2 : Value_Value.topl,
     3 : Value_Value.asset,
-    4 : Value_Value.registration,
     0 : Value_Value.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4])
+    ..oo(0, [1, 2, 3])
     ..aOM<Value_LVL>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lvl', subBuilder: Value_LVL.create)
     ..aOM<Value_TOPL>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topl', subBuilder: Value_TOPL.create)
     ..aOM<Value_Asset>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'asset', subBuilder: Value_Asset.create)
-    ..aOM<Value_Registration>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'registration', subBuilder: Value_Registration.create)
     ..hasRequiredFields = false
   ;
 
@@ -301,7 +232,6 @@ class Value extends $pb.GeneratedMessage {
     Value_LVL? lvl,
     Value_TOPL? topl,
     Value_Asset? asset,
-    Value_Registration? registration,
   }) {
     final _result = create();
     if (lvl != null) {
@@ -312,9 +242,6 @@ class Value extends $pb.GeneratedMessage {
     }
     if (asset != null) {
       _result.asset = asset;
-    }
-    if (registration != null) {
-      _result.registration = registration;
     }
     return _result;
   }
@@ -374,16 +301,5 @@ class Value extends $pb.GeneratedMessage {
   void clearAsset() => clearField(3);
   @$pb.TagNumber(3)
   Value_Asset ensureAsset() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  Value_Registration get registration => $_getN(3);
-  @$pb.TagNumber(4)
-  set registration(Value_Registration v) { setField(4, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasRegistration() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearRegistration() => clearField(4);
-  @$pb.TagNumber(4)
-  Value_Registration ensureRegistration() => $_ensure(3);
 }
 

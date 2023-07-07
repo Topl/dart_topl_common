@@ -10,8 +10,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'transaction/schedule.pb.dart' as $12;
-import '../../quivr/models/shared.pb.dart' as $3;
+import 'transaction/schedule.pb.dart' as $15;
+import '../../quivr/models/shared.pb.dart' as $4;
 
 class Event_Eon extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Event.Eon', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
@@ -245,15 +245,15 @@ class Event_Header extends $pb.GeneratedMessage {
 
 class Event_IoTransaction extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Event.IoTransaction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$12.Schedule>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'schedule', subBuilder: $12.Schedule.create)
-    ..aOM<$3.SmallData>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', subBuilder: $3.SmallData.create)
+    ..aOM<$15.Schedule>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'schedule', subBuilder: $15.Schedule.create)
+    ..aOM<$4.SmallData>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', subBuilder: $4.SmallData.create)
     ..hasRequiredFields = false
   ;
 
   Event_IoTransaction._() : super();
   factory Event_IoTransaction({
-    $12.Schedule? schedule,
-    $3.SmallData? metadata,
+    $15.Schedule? schedule,
+    $4.SmallData? metadata,
   }) {
     final _result = create();
     if (schedule != null) {
@@ -286,26 +286,26 @@ class Event_IoTransaction extends $pb.GeneratedMessage {
   static Event_IoTransaction? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $12.Schedule get schedule => $_getN(0);
+  $15.Schedule get schedule => $_getN(0);
   @$pb.TagNumber(1)
-  set schedule($12.Schedule v) { setField(1, v); }
+  set schedule($15.Schedule v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSchedule() => $_has(0);
   @$pb.TagNumber(1)
   void clearSchedule() => clearField(1);
   @$pb.TagNumber(1)
-  $12.Schedule ensureSchedule() => $_ensure(0);
+  $15.Schedule ensureSchedule() => $_ensure(0);
 
   @$pb.TagNumber(4)
-  $3.SmallData get metadata => $_getN(1);
+  $4.SmallData get metadata => $_getN(1);
   @$pb.TagNumber(4)
-  set metadata($3.SmallData v) { setField(4, v); }
+  set metadata($4.SmallData v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasMetadata() => $_has(1);
   @$pb.TagNumber(4)
   void clearMetadata() => clearField(4);
   @$pb.TagNumber(4)
-  $3.SmallData ensureMetadata() => $_ensure(1);
+  $4.SmallData ensureMetadata() => $_ensure(1);
 }
 
 enum Event_Value {

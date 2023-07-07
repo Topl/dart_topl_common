@@ -41,3 +41,23 @@ const CurrentKnownHostsRes$json = const {
 
 /// Descriptor for `CurrentKnownHostsRes`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List currentKnownHostsResDescriptor = $convert.base64Decode('ChRDdXJyZW50S25vd25Ib3N0c1JlcxI6Cghob3RIb3N0cxgBIAMoCzIeLmNvLnRvcGwubm9kZS5tb2RlbHMuS25vd25Ib3N0Ughob3RIb3N0cxI8Cgl3YXJtSG9zdHMYAiADKAsyHi5jby50b3BsLm5vZGUubW9kZWxzLktub3duSG9zdFIJd2FybUhvc3RzEjwKCWNvbGRIb3N0cxgDIAMoCzIeLmNvLnRvcGwubm9kZS5tb2RlbHMuS25vd25Ib3N0Ugljb2xkSG9zdHM=');
+@$core.Deprecated('Use pingMessageDescriptor instead')
+const PingMessage$json = const {
+  '1': 'PingMessage',
+  '2': const [
+    const {'1': 'ping', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'ping'},
+  ],
+};
+
+/// Descriptor for `PingMessage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pingMessageDescriptor = $convert.base64Decode('CgtQaW5nTWVzc2FnZRIdCgRwaW5nGAEgASgJQgn6QgZyBJgBgAhSBHBpbmc=');
+@$core.Deprecated('Use pongMessageDescriptor instead')
+const PongMessage$json = const {
+  '1': 'PongMessage',
+  '2': const [
+    const {'1': 'pong', '3': 1, '4': 1, '5': 9, '8': const {}, '10': 'pong'},
+  ],
+};
+
+/// Descriptor for `PongMessage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pongMessageDescriptor = $convert.base64Decode('CgtQb25nTWVzc2FnZRIdCgRwb25nGAEgASgJQgn6QgZyBJgBgAhSBHBvbmc=');

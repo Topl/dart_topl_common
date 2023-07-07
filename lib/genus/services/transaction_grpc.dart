@@ -3,6 +3,7 @@ import 'package:topl_common/proto/brambl/models/address.pb.dart';
 import 'package:topl_common/proto/genus/genus_models.pb.dart';
 import 'package:topl_common/proto/genus/genus_rpc.pbgrpc.dart';
 import 'package:topl_common/genus/request_utils.dart';
+import 'package:topl_common/genus/constants.dart';
 import 'package:grpc/grpc.dart';
 import '../grpc_channel_settings.dart';
 import '../native_grpc_channel.dart'
@@ -14,6 +15,9 @@ class GenusGRPCService {
 
   /// The client stub for the Genus Block gRPC service
   final BlockServiceClient genusBlockStub;
+
+  /// The client stub for the Genus NetworkMetrics gRPC service
+  final NetworkMetricsServiceClient genusNetworkMetricsStub;
 
   /// The host name or IP address of the remote node.
   final Object host;
@@ -36,6 +40,11 @@ class GenusGRPCService {
                   GrpcSettings(host: host, port: port, options: options)),
         ),
         genusTransactionStub = TransactionServiceClient(
+          getClientChannel(
+              grpcSettings:
+                  GrpcSettings(host: host, port: port, options: options)),
+        ),
+        genusNetworkMetricsStub = NetworkMetricsServiceClient(
           getClientChannel(
               grpcSettings:
                   GrpcSettings(host: host, port: port, options: options)),
@@ -108,20 +117,29 @@ class GenusGRPCService {
 
   /// Returns a [BlockResponse] object for the block at the given [blockId] and [confidence].
   ///
-  /// [blockId] is a [List<int>] representing the block id to retrieve
+  /// [blockIdBytes] is an [List] of bytes representing the block ID to retrieve
+  ///
+  /// [blockIdString] is an [String] representing the block ID to retrieve
   ///
   /// [confidence] is a [double] representing the confidence factor of the block to retrieve.
   ///
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if blockID validation fails or an error occurs during the RPC request.
   Future<BlockResponse> getBlockById({
-    required int blockId,
+    List<int> blockIdBytes = const [],
+    String blockIdString = "",
     double? confidence,
     CallOptions? options,
   }) async {
+    if (blockIdBytes.isEmpty && blockIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingBlockId);
+    }
+
     final GetBlockByIdRequest request = GetBlockByIdRequest(
-      blockId: getBlockIdFromInt(blockId),
+      blockId: !blockIdBytes.isEmpty
+          ? getBlockIdFromList(blockIdBytes)
+          : getBlockIdFromString(blockIdString),
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
     );
     final BlockResponse response = await genusBlockStub.getBlockById(
@@ -136,21 +154,30 @@ class GenusGRPCService {
 
   /// Returns a [TransactionResponse] object for the transaction at the given [transactionId] and [confidence].
   ///
-  /// [transactionId] is a [List<int>] representing the transaction id to retrieve
+  /// [transactionIdBytes] is an [List] of integers representing the transaction ID to retrieve
+  ///
+  /// [transactionIdString] is an [String] representing the transaction ID to retrieve
   ///
   /// [confidence] is a [double] representing the confidence factor of the transaction to retrieve.
   ///
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
-  /// Throws an [Exception] if an error occurs during the RPC request.
+  /// Throws an [Exception] if transaction ID validation fails or an error occurs during the RPC request.
   Future<TransactionResponse> getTransactionById({
-    required int transactionId,
+    List<int> transactionIdBytes = const [],
+    String transactionIdString = "",
     double? confidence,
     CallOptions? options,
   }) async {
+    if (transactionIdBytes.isEmpty && transactionIdString.isEmpty) {
+      throw Exception(ErrorMessages.missingTransactionId);
+    }
+
     final GetTransactionByIdRequest request = GetTransactionByIdRequest(
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
-      transactionId: getTransactionIdFromInt(transactionId),
+      transactionId: !transactionIdBytes.isEmpty
+          ? getTransactionIdFromList(transactionIdBytes)
+          : getTransactionIdFromString(transactionIdString),
     );
     final TransactionResponse response =
         await genusTransactionStub.getTransactionById(
@@ -169,16 +196,16 @@ class GenusGRPCService {
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
-  Stream<TransactionResponse> getTransactionByAddressStream({
+  Stream<TransactionResponse> getTransactionByLockAddressStream({
     required LockAddress address,
     double? confidence,
     CallOptions? options,
   }) async* {
-    final QueryByAddressRequest request = QueryByAddressRequest(
+    final QueryByLockAddressRequest request = QueryByLockAddressRequest(
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
       address: address,
     );
-    final stream = genusTransactionStub.getTransactionByAddressStream(
+    final stream = genusTransactionStub.getTransactionByLockAddressStream(
       request,
       options: options,
     );
@@ -304,17 +331,17 @@ class GenusGRPCService {
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
-  Future<TxoAddressResponse> getTxOsByAddress({
+  Future<TxoLockAddressResponse> getTxOsByLockAddress({
     required LockAddress address,
     double? confidence,
     CallOptions? options,
   }) async {
-    final QueryByAddressRequest request = QueryByAddressRequest(
+    final QueryByLockAddressRequest request = QueryByLockAddressRequest(
       address: address,
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
     );
-    final TxoAddressResponse response =
-        await genusTransactionStub.getTxosByAddress(
+    final TxoLockAddressResponse response =
+        await genusTransactionStub.getTxosByLockAddress(
       request,
       options: options,
     );
@@ -330,22 +357,22 @@ class GenusGRPCService {
   /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
-  Stream<TxoAddressResponse> streamTxOsByAddress({
+  Stream<TxoLockAddressResponse> streamTxOsByLockAddress({
     required LockAddress address,
     double? confidence,
     CallOptions? options,
   }) async* {
-    final QueryByAddressRequest request = QueryByAddressRequest(
+    final QueryByLockAddressRequest request = QueryByLockAddressRequest(
       address: address,
       confidenceFactor: getConfidenceFactorFromDouble(confidence),
     );
-    final Stream<TxoAddressResponse> stream =
-        genusTransactionStub.getTxosByAddressStream(
+    final Stream<TxoLockAddressResponse> stream =
+        genusTransactionStub.getTxosByLockAddressStream(
       request,
       options: options,
     );
 
-    await for (final TxoAddressResponse response in stream) {
+    await for (final TxoLockAddressResponse response in stream) {
       yield response;
     }
   }
@@ -376,5 +403,54 @@ class GenusGRPCService {
     await for (final TxoResponse response in stream) {
       yield response;
     }
+  }
+
+  /////////////////////////////
+  /// Network Metrics
+  ///
+  /// Returns a [GetTxoStatsRes] object.
+  /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<GetTxoStatsRes> getTxoStats({
+    CallOptions? options,
+  }) async {
+    final GetTxoStatsReq request = GetTxoStatsReq();
+    final GetTxoStatsRes response = await genusNetworkMetricsStub.getTxoStats(
+      request,
+      options: options,
+    );
+    return response;
+  }
+
+  /// Returns a [BlockchainSizeStatsRes] object.
+  /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<BlockchainSizeStatsRes> getBlockchainSizeStats({
+    CallOptions? options,
+  }) async {
+    final BlockchainSizeStatsReq request = BlockchainSizeStatsReq();
+    final BlockchainSizeStatsRes response =
+        await genusNetworkMetricsStub.getBlockchainSizeStats(
+      request,
+      options: options,
+    );
+    return response;
+  }
+
+  /// Returns a [BlockStatsRes] object.
+  /// [options] is a [CallOptions] object that can be used to set additional options for the RPC request.
+  ///
+  /// Throws an [Exception] if an error occurs during the RPC request.
+  Future<BlockStatsRes> getBlockStats({
+    CallOptions? options,
+  }) async {
+    final BlockStatsReq request = BlockStatsReq();
+    final BlockStatsRes response = await genusNetworkMetricsStub.getBlockStats(
+      request,
+      options: options,
+    );
+    return response;
   }
 }

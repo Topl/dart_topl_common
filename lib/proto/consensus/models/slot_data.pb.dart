@@ -10,7 +10,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'block_id.pb.dart' as $18;
+import 'block_id.pb.dart' as $2;
 
 class SlotData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SlotData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
@@ -122,14 +122,14 @@ class SlotData extends $pb.GeneratedMessage {
 class SlotId extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SlotId', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$18.BlockId>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $18.BlockId.create)
+    ..aOM<$2.BlockId>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
   SlotId._() : super();
   factory SlotId({
     $fixnum.Int64? slot,
-    $18.BlockId? blockId,
+    $2.BlockId? blockId,
   }) {
     final _result = create();
     if (slot != null) {
@@ -171,14 +171,14 @@ class SlotId extends $pb.GeneratedMessage {
   void clearSlot() => clearField(1);
 
   @$pb.TagNumber(2)
-  $18.BlockId get blockId => $_getN(1);
+  $2.BlockId get blockId => $_getN(1);
   @$pb.TagNumber(2)
-  set blockId($18.BlockId v) { setField(2, v); }
+  set blockId($2.BlockId v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBlockId() => $_has(1);
   @$pb.TagNumber(2)
   void clearBlockId() => clearField(2);
   @$pb.TagNumber(2)
-  $18.BlockId ensureBlockId() => $_ensure(1);
+  $2.BlockId ensureBlockId() => $_ensure(1);
 }
 

@@ -9,20 +9,20 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'lock.pb.dart' as $7;
-import 'value.pb.dart' as $11;
+import 'lock.pb.dart' as $11;
+import 'value.pb.dart' as $14;
 
 class Box extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Box', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$7.Lock>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $7.Lock.create)
-    ..aOM<$11.Value>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', subBuilder: $11.Value.create)
+    ..aOM<$11.Lock>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $11.Lock.create)
+    ..aOM<$14.Value>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', subBuilder: $14.Value.create)
     ..hasRequiredFields = false
   ;
 
   Box._() : super();
   factory Box({
-    $7.Lock? lock,
-    $11.Value? value,
+    $11.Lock? lock,
+    $14.Value? value,
   }) {
     final _result = create();
     if (lock != null) {
@@ -55,25 +55,25 @@ class Box extends $pb.GeneratedMessage {
   static Box? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.Lock get lock => $_getN(0);
+  $11.Lock get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($7.Lock v) { setField(1, v); }
+  set lock($11.Lock v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $7.Lock ensureLock() => $_ensure(0);
+  $11.Lock ensureLock() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $11.Value get value => $_getN(1);
+  $14.Value get value => $_getN(1);
   @$pb.TagNumber(2)
-  set value($11.Value v) { setField(2, v); }
+  set value($14.Value v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
   @$pb.TagNumber(2)
-  $11.Value ensureValue() => $_ensure(1);
+  $14.Value ensureValue() => $_ensure(1);
 }
 

@@ -9,20 +9,20 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../address.pb.dart' as $5;
-import '../box/value.pb.dart' as $11;
+import '../address.pb.dart' as $9;
+import '../box/value.pb.dart' as $14;
 
 class UnspentTransactionOutput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UnspentTransactionOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.transaction'), createEmptyInstance: create)
-    ..aOM<$5.LockAddress>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $5.LockAddress.create)
-    ..aOM<$11.Value>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', subBuilder: $11.Value.create)
+    ..aOM<$9.LockAddress>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $9.LockAddress.create)
+    ..aOM<$14.Value>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', subBuilder: $14.Value.create)
     ..hasRequiredFields = false
   ;
 
   UnspentTransactionOutput._() : super();
   factory UnspentTransactionOutput({
-    $5.LockAddress? address,
-    $11.Value? value,
+    $9.LockAddress? address,
+    $14.Value? value,
   }) {
     final _result = create();
     if (address != null) {
@@ -55,25 +55,25 @@ class UnspentTransactionOutput extends $pb.GeneratedMessage {
   static UnspentTransactionOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.LockAddress get address => $_getN(0);
+  $9.LockAddress get address => $_getN(0);
   @$pb.TagNumber(1)
-  set address($5.LockAddress v) { setField(1, v); }
+  set address($9.LockAddress v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAddress() => $_has(0);
   @$pb.TagNumber(1)
   void clearAddress() => clearField(1);
   @$pb.TagNumber(1)
-  $5.LockAddress ensureAddress() => $_ensure(0);
+  $9.LockAddress ensureAddress() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $11.Value get value => $_getN(1);
+  $14.Value get value => $_getN(1);
   @$pb.TagNumber(2)
-  set value($11.Value v) { setField(2, v); }
+  set value($14.Value v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
   @$pb.TagNumber(2)
-  $11.Value ensureValue() => $_ensure(1);
+  $14.Value ensureValue() => $_ensure(1);
 }
 

@@ -10,17 +10,17 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'shared.pb.dart' as $3;
+import 'shared.pb.dart' as $4;
 
 class Proposition_Locked extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.Locked', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$3.Data>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', subBuilder: $3.Data.create)
+    ..aOM<$4.Data>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', subBuilder: $4.Data.create)
     ..hasRequiredFields = false
   ;
 
   Proposition_Locked._() : super();
   factory Proposition_Locked({
-    $3.Data? data,
+    $4.Data? data,
   }) {
     final _result = create();
     if (data != null) {
@@ -50,28 +50,28 @@ class Proposition_Locked extends $pb.GeneratedMessage {
   static Proposition_Locked? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Data get data => $_getN(0);
+  $4.Data get data => $_getN(0);
   @$pb.TagNumber(1)
-  set data($3.Data v) { setField(1, v); }
+  set data($4.Data v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasData() => $_has(0);
   @$pb.TagNumber(1)
   void clearData() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Data ensureData() => $_ensure(0);
+  $4.Data ensureData() => $_ensure(0);
 }
 
 class Proposition_Digest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.Digest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'routine')
-    ..aOM<$3.Digest>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: $3.Digest.create)
+    ..aOM<$4.Digest>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: $4.Digest.create)
     ..hasRequiredFields = false
   ;
 
   Proposition_Digest._() : super();
   factory Proposition_Digest({
     $core.String? routine,
-    $3.Digest? digest,
+    $4.Digest? digest,
   }) {
     final _result = create();
     if (routine != null) {
@@ -113,28 +113,28 @@ class Proposition_Digest extends $pb.GeneratedMessage {
   void clearRoutine() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Digest get digest => $_getN(1);
+  $4.Digest get digest => $_getN(1);
   @$pb.TagNumber(2)
-  set digest($3.Digest v) { setField(2, v); }
+  set digest($4.Digest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDigest() => $_has(1);
   @$pb.TagNumber(2)
   void clearDigest() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Digest ensureDigest() => $_ensure(1);
+  $4.Digest ensureDigest() => $_ensure(1);
 }
 
 class Proposition_DigitalSignature extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.DigitalSignature', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'routine')
-    ..aOM<$3.VerificationKey>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verificationKey', protoName: 'verificationKey', subBuilder: $3.VerificationKey.create)
+    ..aOM<$4.VerificationKey>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verificationKey', protoName: 'verificationKey', subBuilder: $4.VerificationKey.create)
     ..hasRequiredFields = false
   ;
 
   Proposition_DigitalSignature._() : super();
   factory Proposition_DigitalSignature({
     $core.String? routine,
-    $3.VerificationKey? verificationKey,
+    $4.VerificationKey? verificationKey,
   }) {
     final _result = create();
     if (routine != null) {
@@ -176,15 +176,15 @@ class Proposition_DigitalSignature extends $pb.GeneratedMessage {
   void clearRoutine() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.VerificationKey get verificationKey => $_getN(1);
+  $4.VerificationKey get verificationKey => $_getN(1);
   @$pb.TagNumber(2)
-  set verificationKey($3.VerificationKey v) { setField(2, v); }
+  set verificationKey($4.VerificationKey v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasVerificationKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearVerificationKey() => clearField(2);
   @$pb.TagNumber(2)
-  $3.VerificationKey ensureVerificationKey() => $_ensure(1);
+  $4.VerificationKey ensureVerificationKey() => $_ensure(1);
 }
 
 class Proposition_HeightRange extends $pb.GeneratedMessage {
@@ -387,14 +387,14 @@ class Proposition_ExactMatch extends $pb.GeneratedMessage {
 class Proposition_LessThan extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.LessThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'location')
-    ..aOM<$3.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $3.Int128.create)
+    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $4.Int128.create)
     ..hasRequiredFields = false
   ;
 
   Proposition_LessThan._() : super();
   factory Proposition_LessThan({
     $core.String? location,
-    $3.Int128? compareTo,
+    $4.Int128? compareTo,
   }) {
     final _result = create();
     if (location != null) {
@@ -436,28 +436,28 @@ class Proposition_LessThan extends $pb.GeneratedMessage {
   void clearLocation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Int128 get compareTo => $_getN(1);
+  $4.Int128 get compareTo => $_getN(1);
   @$pb.TagNumber(2)
-  set compareTo($3.Int128 v) { setField(2, v); }
+  set compareTo($4.Int128 v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompareTo() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompareTo() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Int128 ensureCompareTo() => $_ensure(1);
+  $4.Int128 ensureCompareTo() => $_ensure(1);
 }
 
 class Proposition_GreaterThan extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.GreaterThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'location')
-    ..aOM<$3.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $3.Int128.create)
+    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $4.Int128.create)
     ..hasRequiredFields = false
   ;
 
   Proposition_GreaterThan._() : super();
   factory Proposition_GreaterThan({
     $core.String? location,
-    $3.Int128? compareTo,
+    $4.Int128? compareTo,
   }) {
     final _result = create();
     if (location != null) {
@@ -499,28 +499,28 @@ class Proposition_GreaterThan extends $pb.GeneratedMessage {
   void clearLocation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Int128 get compareTo => $_getN(1);
+  $4.Int128 get compareTo => $_getN(1);
   @$pb.TagNumber(2)
-  set compareTo($3.Int128 v) { setField(2, v); }
+  set compareTo($4.Int128 v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompareTo() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompareTo() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Int128 ensureCompareTo() => $_ensure(1);
+  $4.Int128 ensureCompareTo() => $_ensure(1);
 }
 
 class Proposition_EqualTo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.EqualTo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'location')
-    ..aOM<$3.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $3.Int128.create)
+    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $4.Int128.create)
     ..hasRequiredFields = false
   ;
 
   Proposition_EqualTo._() : super();
   factory Proposition_EqualTo({
     $core.String? location,
-    $3.Int128? compareTo,
+    $4.Int128? compareTo,
   }) {
     final _result = create();
     if (location != null) {
@@ -562,15 +562,15 @@ class Proposition_EqualTo extends $pb.GeneratedMessage {
   void clearLocation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Int128 get compareTo => $_getN(1);
+  $4.Int128 get compareTo => $_getN(1);
   @$pb.TagNumber(2)
-  set compareTo($3.Int128 v) { setField(2, v); }
+  set compareTo($4.Int128 v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompareTo() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompareTo() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Int128 ensureCompareTo() => $_ensure(1);
+  $4.Int128 ensureCompareTo() => $_ensure(1);
 }
 
 class Proposition_Threshold extends $pb.GeneratedMessage {

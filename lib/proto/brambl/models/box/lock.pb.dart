@@ -9,19 +9,19 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'challenge.pb.dart' as $6;
-import '../identifier.pb.dart' as $2;
+import 'challenge.pb.dart' as $10;
+import '../identifier.pb.dart' as $7;
 
 class Lock_Predicate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Lock.Predicate', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..pc<$6.Challenge>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'challenges', $pb.PbFieldType.PM, subBuilder: $6.Challenge.create)
+    ..pc<$10.Challenge>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'challenges', $pb.PbFieldType.PM, subBuilder: $10.Challenge.create)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   Lock_Predicate._() : super();
   factory Lock_Predicate({
-    $core.Iterable<$6.Challenge>? challenges,
+    $core.Iterable<$10.Challenge>? challenges,
     $core.int? threshold,
   }) {
     final _result = create();
@@ -55,7 +55,7 @@ class Lock_Predicate extends $pb.GeneratedMessage {
   static Lock_Predicate? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$6.Challenge> get challenges => $_getList(0);
+  $core.List<$10.Challenge> get challenges => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get threshold => $_getIZ(1);
@@ -69,14 +69,14 @@ class Lock_Predicate extends $pb.GeneratedMessage {
 
 class Lock_Image extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Lock.Image', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..pc<$2.LockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leaves', $pb.PbFieldType.PM, subBuilder: $2.LockId.create)
+    ..pc<$7.LockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leaves', $pb.PbFieldType.PM, subBuilder: $7.LockId.create)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   Lock_Image._() : super();
   factory Lock_Image({
-    $core.Iterable<$2.LockId>? leaves,
+    $core.Iterable<$7.LockId>? leaves,
     $core.int? threshold,
   }) {
     final _result = create();
@@ -110,7 +110,7 @@ class Lock_Image extends $pb.GeneratedMessage {
   static Lock_Image? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$2.LockId> get leaves => $_getList(0);
+  $core.List<$7.LockId> get leaves => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get threshold => $_getIZ(1);
@@ -124,14 +124,14 @@ class Lock_Image extends $pb.GeneratedMessage {
 
 class Lock_Commitment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Lock.Commitment', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$2.AccumulatorRootId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'root', subBuilder: $2.AccumulatorRootId.create)
+    ..aOM<$7.AccumulatorRootId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'root', subBuilder: $7.AccumulatorRootId.create)
     ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
   Lock_Commitment._() : super();
   factory Lock_Commitment({
-    $2.AccumulatorRootId? root,
+    $7.AccumulatorRootId? root,
     $core.int? threshold,
   }) {
     final _result = create();
@@ -165,15 +165,15 @@ class Lock_Commitment extends $pb.GeneratedMessage {
   static Lock_Commitment? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.AccumulatorRootId get root => $_getN(0);
+  $7.AccumulatorRootId get root => $_getN(0);
   @$pb.TagNumber(1)
-  set root($2.AccumulatorRootId v) { setField(1, v); }
+  set root($7.AccumulatorRootId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRoot() => $_has(0);
   @$pb.TagNumber(1)
   void clearRoot() => clearField(1);
   @$pb.TagNumber(1)
-  $2.AccumulatorRootId ensureRoot() => $_ensure(0);
+  $7.AccumulatorRootId ensureRoot() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.int get threshold => $_getIZ(1);

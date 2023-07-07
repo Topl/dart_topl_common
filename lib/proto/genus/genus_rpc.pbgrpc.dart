@@ -115,24 +115,24 @@ class TransactionServiceClient extends $grpc.Client {
           ($0.GetTransactionByIdRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.TransactionResponse.fromBuffer(value));
-  static final _$getTransactionByAddressStream = $grpc.ClientMethod<
-          $0.QueryByAddressRequest, $0.TransactionResponse>(
-      '/co.topl.genus.services.TransactionService/getTransactionByAddressStream',
-      ($0.QueryByAddressRequest value) => value.writeToBuffer(),
+  static final _$getTransactionByLockAddressStream = $grpc.ClientMethod<
+          $0.QueryByLockAddressRequest, $0.TransactionResponse>(
+      '/co.topl.genus.services.TransactionService/getTransactionByLockAddressStream',
+      ($0.QueryByLockAddressRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.TransactionResponse.fromBuffer(value));
-  static final _$getTxosByAddress =
-      $grpc.ClientMethod<$0.QueryByAddressRequest, $0.TxoAddressResponse>(
-          '/co.topl.genus.services.TransactionService/getTxosByAddress',
-          ($0.QueryByAddressRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $0.TxoAddressResponse.fromBuffer(value));
-  static final _$getTxosByAddressStream =
-      $grpc.ClientMethod<$0.QueryByAddressRequest, $0.TxoAddressResponse>(
-          '/co.topl.genus.services.TransactionService/getTxosByAddressStream',
-          ($0.QueryByAddressRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              $0.TxoAddressResponse.fromBuffer(value));
+  static final _$getTxosByLockAddress = $grpc.ClientMethod<
+          $0.QueryByLockAddressRequest, $0.TxoLockAddressResponse>(
+      '/co.topl.genus.services.TransactionService/getTxosByLockAddress',
+      ($0.QueryByLockAddressRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.TxoLockAddressResponse.fromBuffer(value));
+  static final _$getTxosByLockAddressStream = $grpc.ClientMethod<
+          $0.QueryByLockAddressRequest, $0.TxoLockAddressResponse>(
+      '/co.topl.genus.services.TransactionService/getTxosByLockAddressStream',
+      ($0.QueryByLockAddressRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.TxoLockAddressResponse.fromBuffer(value));
   static final _$getTxosByAssetLabel =
       $grpc.ClientMethod<$0.QueryByAssetLabelRequest, $0.TxoResponse>(
           '/co.topl.genus.services.TransactionService/getTxosByAssetLabel',
@@ -176,25 +176,25 @@ class TransactionServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getTransactionById, request, options: options);
   }
 
-  $grpc.ResponseStream<$0.TransactionResponse> getTransactionByAddressStream(
-      $0.QueryByAddressRequest request,
-      {$grpc.CallOptions? options}) {
-    return $createStreamingCall(
-        _$getTransactionByAddressStream, $async.Stream.fromIterable([request]),
+  $grpc.ResponseStream<$0.TransactionResponse>
+      getTransactionByLockAddressStream($0.QueryByLockAddressRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$getTransactionByLockAddressStream,
+        $async.Stream.fromIterable([request]),
         options: options);
   }
 
-  $grpc.ResponseFuture<$0.TxoAddressResponse> getTxosByAddress(
-      $0.QueryByAddressRequest request,
+  $grpc.ResponseFuture<$0.TxoLockAddressResponse> getTxosByLockAddress(
+      $0.QueryByLockAddressRequest request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getTxosByAddress, request, options: options);
+    return $createUnaryCall(_$getTxosByLockAddress, request, options: options);
   }
 
-  $grpc.ResponseStream<$0.TxoAddressResponse> getTxosByAddressStream(
-      $0.QueryByAddressRequest request,
+  $grpc.ResponseStream<$0.TxoLockAddressResponse> getTxosByLockAddressStream(
+      $0.QueryByLockAddressRequest request,
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(
-        _$getTxosByAddressStream, $async.Stream.fromIterable([request]),
+        _$getTxosByLockAddressStream, $async.Stream.fromIterable([request]),
         options: options);
   }
 
@@ -250,33 +250,33 @@ abstract class TransactionServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetTransactionByIdRequest.fromBuffer(value),
         ($0.TransactionResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.QueryByAddressRequest, $0.TransactionResponse>(
-            'getTransactionByAddressStream',
-            getTransactionByAddressStream_Pre,
-            false,
-            true,
-            ($core.List<$core.int> value) =>
-                $0.QueryByAddressRequest.fromBuffer(value),
-            ($0.TransactionResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.QueryByAddressRequest, $0.TxoAddressResponse>(
-            'getTxosByAddress',
-            getTxosByAddress_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.QueryByAddressRequest.fromBuffer(value),
-            ($0.TxoAddressResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.QueryByAddressRequest, $0.TxoAddressResponse>(
-            'getTxosByAddressStream',
-            getTxosByAddressStream_Pre,
-            false,
-            true,
-            ($core.List<$core.int> value) =>
-                $0.QueryByAddressRequest.fromBuffer(value),
-            ($0.TxoAddressResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.QueryByLockAddressRequest,
+            $0.TransactionResponse>(
+        'getTransactionByLockAddressStream',
+        getTransactionByLockAddressStream_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.QueryByLockAddressRequest.fromBuffer(value),
+        ($0.TransactionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.QueryByLockAddressRequest,
+            $0.TxoLockAddressResponse>(
+        'getTxosByLockAddress',
+        getTxosByLockAddress_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.QueryByLockAddressRequest.fromBuffer(value),
+        ($0.TxoLockAddressResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.QueryByLockAddressRequest,
+            $0.TxoLockAddressResponse>(
+        'getTxosByLockAddressStream',
+        getTxosByLockAddressStream_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.QueryByLockAddressRequest.fromBuffer(value),
+        ($0.TxoLockAddressResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.QueryByAssetLabelRequest, $0.TxoResponse>(
         'getTxosByAssetLabel',
         getTxosByAssetLabel_Pre,
@@ -329,22 +329,22 @@ abstract class TransactionServiceBase extends $grpc.Service {
     return getTransactionById(call, await request);
   }
 
-  $async.Stream<$0.TransactionResponse> getTransactionByAddressStream_Pre(
+  $async.Stream<$0.TransactionResponse> getTransactionByLockAddressStream_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$0.QueryByAddressRequest> request) async* {
-    yield* getTransactionByAddressStream(call, await request);
+      $async.Future<$0.QueryByLockAddressRequest> request) async* {
+    yield* getTransactionByLockAddressStream(call, await request);
   }
 
-  $async.Future<$0.TxoAddressResponse> getTxosByAddress_Pre(
+  $async.Future<$0.TxoLockAddressResponse> getTxosByLockAddress_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$0.QueryByAddressRequest> request) async {
-    return getTxosByAddress(call, await request);
+      $async.Future<$0.QueryByLockAddressRequest> request) async {
+    return getTxosByLockAddress(call, await request);
   }
 
-  $async.Stream<$0.TxoAddressResponse> getTxosByAddressStream_Pre(
+  $async.Stream<$0.TxoLockAddressResponse> getTxosByLockAddressStream_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$0.QueryByAddressRequest> request) async* {
-    yield* getTxosByAddressStream(call, await request);
+      $async.Future<$0.QueryByLockAddressRequest> request) async* {
+    yield* getTxosByLockAddressStream(call, await request);
   }
 
   $async.Stream<$0.TxoResponse> getTxosByAssetLabel_Pre($grpc.ServiceCall call,
@@ -381,12 +381,12 @@ abstract class TransactionServiceBase extends $grpc.Service {
 
   $async.Future<$0.TransactionResponse> getTransactionById(
       $grpc.ServiceCall call, $0.GetTransactionByIdRequest request);
-  $async.Stream<$0.TransactionResponse> getTransactionByAddressStream(
-      $grpc.ServiceCall call, $0.QueryByAddressRequest request);
-  $async.Future<$0.TxoAddressResponse> getTxosByAddress(
-      $grpc.ServiceCall call, $0.QueryByAddressRequest request);
-  $async.Stream<$0.TxoAddressResponse> getTxosByAddressStream(
-      $grpc.ServiceCall call, $0.QueryByAddressRequest request);
+  $async.Stream<$0.TransactionResponse> getTransactionByLockAddressStream(
+      $grpc.ServiceCall call, $0.QueryByLockAddressRequest request);
+  $async.Future<$0.TxoLockAddressResponse> getTxosByLockAddress(
+      $grpc.ServiceCall call, $0.QueryByLockAddressRequest request);
+  $async.Stream<$0.TxoLockAddressResponse> getTxosByLockAddressStream(
+      $grpc.ServiceCall call, $0.QueryByLockAddressRequest request);
   $async.Stream<$0.TxoResponse> getTxosByAssetLabel(
       $grpc.ServiceCall call, $0.QueryByAssetLabelRequest request);
   $async.Future<$0.CreateOnChainTransactionIndexResponse>
@@ -399,4 +399,98 @@ abstract class TransactionServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetIndexedTransactionsRequest request);
   $async.Future<$0.DropIndexResponse> dropIndex(
       $grpc.ServiceCall call, $0.DropIndexRequest request);
+}
+
+class NetworkMetricsServiceClient extends $grpc.Client {
+  static final _$getTxoStats =
+      $grpc.ClientMethod<$0.GetTxoStatsReq, $0.GetTxoStatsRes>(
+          '/co.topl.genus.services.NetworkMetricsService/getTxoStats',
+          ($0.GetTxoStatsReq value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.GetTxoStatsRes.fromBuffer(value));
+  static final _$getBlockchainSizeStats = $grpc.ClientMethod<
+          $0.BlockchainSizeStatsReq, $0.BlockchainSizeStatsRes>(
+      '/co.topl.genus.services.NetworkMetricsService/getBlockchainSizeStats',
+      ($0.BlockchainSizeStatsReq value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.BlockchainSizeStatsRes.fromBuffer(value));
+  static final _$getBlockStats =
+      $grpc.ClientMethod<$0.BlockStatsReq, $0.BlockStatsRes>(
+          '/co.topl.genus.services.NetworkMetricsService/getBlockStats',
+          ($0.BlockStatsReq value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.BlockStatsRes.fromBuffer(value));
+
+  NetworkMetricsServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
+
+  $grpc.ResponseFuture<$0.GetTxoStatsRes> getTxoStats($0.GetTxoStatsReq request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getTxoStats, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BlockchainSizeStatsRes> getBlockchainSizeStats(
+      $0.BlockchainSizeStatsReq request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockchainSizeStats, request,
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.BlockStatsRes> getBlockStats($0.BlockStatsReq request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockStats, request, options: options);
+  }
+}
+
+abstract class NetworkMetricsServiceBase extends $grpc.Service {
+  $core.String get $name => 'co.topl.genus.services.NetworkMetricsService';
+
+  NetworkMetricsServiceBase() {
+    $addMethod($grpc.ServiceMethod<$0.GetTxoStatsReq, $0.GetTxoStatsRes>(
+        'getTxoStats',
+        getTxoStats_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetTxoStatsReq.fromBuffer(value),
+        ($0.GetTxoStatsRes value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BlockchainSizeStatsReq,
+            $0.BlockchainSizeStatsRes>(
+        'getBlockchainSizeStats',
+        getBlockchainSizeStats_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BlockchainSizeStatsReq.fromBuffer(value),
+        ($0.BlockchainSizeStatsRes value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BlockStatsReq, $0.BlockStatsRes>(
+        'getBlockStats',
+        getBlockStats_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.BlockStatsReq.fromBuffer(value),
+        ($0.BlockStatsRes value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$0.GetTxoStatsRes> getTxoStats_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.GetTxoStatsReq> request) async {
+    return getTxoStats(call, await request);
+  }
+
+  $async.Future<$0.BlockchainSizeStatsRes> getBlockchainSizeStats_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.BlockchainSizeStatsReq> request) async {
+    return getBlockchainSizeStats(call, await request);
+  }
+
+  $async.Future<$0.BlockStatsRes> getBlockStats_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.BlockStatsReq> request) async {
+    return getBlockStats(call, await request);
+  }
+
+  $async.Future<$0.GetTxoStatsRes> getTxoStats(
+      $grpc.ServiceCall call, $0.GetTxoStatsReq request);
+  $async.Future<$0.BlockchainSizeStatsRes> getBlockchainSizeStats(
+      $grpc.ServiceCall call, $0.BlockchainSizeStatsReq request);
+  $async.Future<$0.BlockStatsRes> getBlockStats(
+      $grpc.ServiceCall call, $0.BlockStatsReq request);
 }
