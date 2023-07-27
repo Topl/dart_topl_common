@@ -1,55 +1,43 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: genus/genus_models.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../brambl/models/transaction/unspent_transaction_output.pb.dart' as $18;
-import '../brambl/models/address.pb.dart' as $9;
-import '../google/protobuf/wrappers.pb.dart' as $22;
+import '../brambl/models/address.pb.dart' as $11;
 import '../brambl/models/transaction/io_transaction.pb.dart' as $20;
-import '../consensus/models/block_id.pb.dart' as $2;
+import '../brambl/models/transaction/unspent_transaction_output.pb.dart' as $18;
 import '../consensus/models/block_header.pb.dart' as $21;
-import '../node/models/block.pb.dart' as $23;
-
+import '../consensus/models/block_id.pb.dart' as $2;
+import '../google/protobuf/wrappers.pb.dart' as $24;
+import '../node/models/block.pb.dart' as $22;
 import 'genus_models.pbenum.dart';
 
 export 'genus_models.pbenum.dart';
 
 class Txo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Txo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$18.UnspentTransactionOutput>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionOutput', protoName: 'transactionOutput', subBuilder: $18.UnspentTransactionOutput.create)
-    ..e<TxoState>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: TxoState.SPENT, valueOf: TxoState.valueOf, enumValues: TxoState.values)
-    ..aOM<$9.TransactionOutputAddress>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputAddress', protoName: 'outputAddress', subBuilder: $9.TransactionOutputAddress.create)
+  factory Txo() => create();
+  Txo._() : super();
+  factory Txo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Txo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Txo', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..aOM<$18.UnspentTransactionOutput>(1, _omitFieldNames ? '' : 'transactionOutput', protoName: 'transactionOutput', subBuilder: $18.UnspentTransactionOutput.create)
+    ..e<TxoState>(2, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: TxoState.SPENT, valueOf: TxoState.valueOf, enumValues: TxoState.values)
+    ..aOM<$11.TransactionOutputAddress>(3, _omitFieldNames ? '' : 'outputAddress', protoName: 'outputAddress', subBuilder: $11.TransactionOutputAddress.create)
     ..hasRequiredFields = false
   ;
 
-  Txo._() : super();
-  factory Txo({
-    $18.UnspentTransactionOutput? transactionOutput,
-    TxoState? state,
-    $9.TransactionOutputAddress? outputAddress,
-  }) {
-    final _result = create();
-    if (transactionOutput != null) {
-      _result.transactionOutput = transactionOutput;
-    }
-    if (state != null) {
-      _result.state = state;
-    }
-    if (outputAddress != null) {
-      _result.outputAddress = outputAddress;
-    }
-    return _result;
-  }
-  factory Txo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Txo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -59,8 +47,10 @@ class Txo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Txo copyWith(void Function(Txo) updates) => super.copyWith((message) => updates(message as Txo)) as Txo; // ignore: deprecated_member_use
+  Txo copyWith(void Function(Txo) updates) => super.copyWith((message) => updates(message as Txo)) as Txo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Txo create() => Txo._();
   Txo createEmptyInstance() => create();
@@ -90,35 +80,28 @@ class Txo extends $pb.GeneratedMessage {
   void clearState() => clearField(2);
 
   @$pb.TagNumber(3)
-  $9.TransactionOutputAddress get outputAddress => $_getN(2);
+  $11.TransactionOutputAddress get outputAddress => $_getN(2);
   @$pb.TagNumber(3)
-  set outputAddress($9.TransactionOutputAddress v) { setField(3, v); }
+  set outputAddress($11.TransactionOutputAddress v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasOutputAddress() => $_has(2);
   @$pb.TagNumber(3)
   void clearOutputAddress() => clearField(3);
   @$pb.TagNumber(3)
-  $9.TransactionOutputAddress ensureOutputAddress() => $_ensure(2);
+  $11.TransactionOutputAddress ensureOutputAddress() => $_ensure(2);
 }
 
 class ConfidenceFactor extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ConfidenceFactor', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OD)
+  factory ConfidenceFactor() => create();
+  ConfidenceFactor._() : super();
+  factory ConfidenceFactor.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConfidenceFactor.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConfidenceFactor', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
-  ConfidenceFactor._() : super();
-  factory ConfidenceFactor({
-    $core.double? value,
-  }) {
-    final _result = create();
-    if (value != null) {
-      _result.value = value;
-    }
-    return _result;
-  }
-  factory ConfidenceFactor.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ConfidenceFactor.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -128,8 +111,10 @@ class ConfidenceFactor extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ConfidenceFactor copyWith(void Function(ConfidenceFactor) updates) => super.copyWith((message) => updates(message as ConfidenceFactor)) as ConfidenceFactor; // ignore: deprecated_member_use
+  ConfidenceFactor copyWith(void Function(ConfidenceFactor) updates) => super.copyWith((message) => updates(message as ConfidenceFactor)) as ConfidenceFactor;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ConfidenceFactor create() => ConfidenceFactor._();
   ConfidenceFactor createEmptyInstance() => create();
@@ -149,23 +134,16 @@ class ConfidenceFactor extends $pb.GeneratedMessage {
 }
 
 class ChainDistance extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ChainDistance', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
+  factory ChainDistance() => create();
+  ChainDistance._() : super();
+  factory ChainDistance.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ChainDistance.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChainDistance', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'value')
     ..hasRequiredFields = false
   ;
 
-  ChainDistance._() : super();
-  factory ChainDistance({
-    $fixnum.Int64? value,
-  }) {
-    final _result = create();
-    if (value != null) {
-      _result.value = value;
-    }
-    return _result;
-  }
-  factory ChainDistance.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChainDistance.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -175,8 +153,10 @@ class ChainDistance extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ChainDistance copyWith(void Function(ChainDistance) updates) => super.copyWith((message) => updates(message as ChainDistance)) as ChainDistance; // ignore: deprecated_member_use
+  ChainDistance copyWith(void Function(ChainDistance) updates) => super.copyWith((message) => updates(message as ChainDistance)) as ChainDistance;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ChainDistance create() => ChainDistance._();
   ChainDistance createEmptyInstance() => create();
@@ -196,14 +176,15 @@ class ChainDistance extends $pb.GeneratedMessage {
 }
 
 class AssetLabel_Empty extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AssetLabel.Empty', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+  factory AssetLabel_Empty() => create();
+  AssetLabel_Empty._() : super();
+  factory AssetLabel_Empty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AssetLabel_Empty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetLabel.Empty', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  AssetLabel_Empty._() : super();
-  factory AssetLabel_Empty() => create();
-  factory AssetLabel_Empty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AssetLabel_Empty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -213,8 +194,10 @@ class AssetLabel_Empty extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AssetLabel_Empty copyWith(void Function(AssetLabel_Empty) updates) => super.copyWith((message) => updates(message as AssetLabel_Empty)) as AssetLabel_Empty; // ignore: deprecated_member_use
+  AssetLabel_Empty copyWith(void Function(AssetLabel_Empty) updates) => super.copyWith((message) => updates(message as AssetLabel_Empty)) as AssetLabel_Empty;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AssetLabel_Empty create() => AssetLabel_Empty._();
   AssetLabel_Empty createEmptyInstance() => create();
@@ -225,28 +208,17 @@ class AssetLabel_Empty extends $pb.GeneratedMessage {
 }
 
 class AssetLabel_V1Label extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AssetLabel.V1Label', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version', $pb.PbFieldType.OU3)
-    ..aOM<$9.LockAddress>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mintingAddress', protoName: 'mintingAddress', subBuilder: $9.LockAddress.create)
+  factory AssetLabel_V1Label() => create();
+  AssetLabel_V1Label._() : super();
+  factory AssetLabel_V1Label.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AssetLabel_V1Label.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetLabel.V1Label', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU3)
+    ..aOM<$11.LockAddress>(2, _omitFieldNames ? '' : 'mintingAddress', protoName: 'mintingAddress', subBuilder: $11.LockAddress.create)
     ..hasRequiredFields = false
   ;
 
-  AssetLabel_V1Label._() : super();
-  factory AssetLabel_V1Label({
-    $core.int? version,
-    $9.LockAddress? mintingAddress,
-  }) {
-    final _result = create();
-    if (version != null) {
-      _result.version = version;
-    }
-    if (mintingAddress != null) {
-      _result.mintingAddress = mintingAddress;
-    }
-    return _result;
-  }
-  factory AssetLabel_V1Label.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AssetLabel_V1Label.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -256,8 +228,10 @@ class AssetLabel_V1Label extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AssetLabel_V1Label copyWith(void Function(AssetLabel_V1Label) updates) => super.copyWith((message) => updates(message as AssetLabel_V1Label)) as AssetLabel_V1Label; // ignore: deprecated_member_use
+  AssetLabel_V1Label copyWith(void Function(AssetLabel_V1Label) updates) => super.copyWith((message) => updates(message as AssetLabel_V1Label)) as AssetLabel_V1Label;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AssetLabel_V1Label create() => AssetLabel_V1Label._();
   AssetLabel_V1Label createEmptyInstance() => create();
@@ -276,70 +250,35 @@ class AssetLabel_V1Label extends $pb.GeneratedMessage {
   void clearVersion() => clearField(1);
 
   @$pb.TagNumber(2)
-  $9.LockAddress get mintingAddress => $_getN(1);
+  $11.LockAddress get mintingAddress => $_getN(1);
   @$pb.TagNumber(2)
-  set mintingAddress($9.LockAddress v) { setField(2, v); }
+  set mintingAddress($11.LockAddress v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMintingAddress() => $_has(1);
   @$pb.TagNumber(2)
   void clearMintingAddress() => clearField(2);
   @$pb.TagNumber(2)
-  $9.LockAddress ensureMintingAddress() => $_ensure(1);
+  $11.LockAddress ensureMintingAddress() => $_ensure(1);
 }
 
 class AssetLabel_Tam2Label extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AssetLabel.Tam2Label', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'groupHashMostSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashMostSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'groupHashMoreSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashMoreSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'groupHashLessSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashLessSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'groupHashLeastSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashLeastSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'seriesHashMostSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashMostSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'seriesHashMoreSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashMoreSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'seriesHashLessSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashLessSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'seriesHashLeastSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashLeastSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+  factory AssetLabel_Tam2Label() => create();
+  AssetLabel_Tam2Label._() : super();
+  factory AssetLabel_Tam2Label.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AssetLabel_Tam2Label.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetLabel.Tam2Label', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'groupHashMostSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashMostSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'groupHashMoreSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashMoreSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'groupHashLessSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashLessSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'groupHashLeastSignificant', $pb.PbFieldType.OF6, protoName: 'groupHashLeastSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'seriesHashMostSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashMostSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'seriesHashMoreSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashMoreSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'seriesHashLessSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashLessSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'seriesHashLeastSignificant', $pb.PbFieldType.OF6, protoName: 'seriesHashLeastSignificant', defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
-  AssetLabel_Tam2Label._() : super();
-  factory AssetLabel_Tam2Label({
-    $fixnum.Int64? groupHashMostSignificant,
-    $fixnum.Int64? groupHashMoreSignificant,
-    $fixnum.Int64? groupHashLessSignificant,
-    $fixnum.Int64? groupHashLeastSignificant,
-    $fixnum.Int64? seriesHashMostSignificant,
-    $fixnum.Int64? seriesHashMoreSignificant,
-    $fixnum.Int64? seriesHashLessSignificant,
-    $fixnum.Int64? seriesHashLeastSignificant,
-  }) {
-    final _result = create();
-    if (groupHashMostSignificant != null) {
-      _result.groupHashMostSignificant = groupHashMostSignificant;
-    }
-    if (groupHashMoreSignificant != null) {
-      _result.groupHashMoreSignificant = groupHashMoreSignificant;
-    }
-    if (groupHashLessSignificant != null) {
-      _result.groupHashLessSignificant = groupHashLessSignificant;
-    }
-    if (groupHashLeastSignificant != null) {
-      _result.groupHashLeastSignificant = groupHashLeastSignificant;
-    }
-    if (seriesHashMostSignificant != null) {
-      _result.seriesHashMostSignificant = seriesHashMostSignificant;
-    }
-    if (seriesHashMoreSignificant != null) {
-      _result.seriesHashMoreSignificant = seriesHashMoreSignificant;
-    }
-    if (seriesHashLessSignificant != null) {
-      _result.seriesHashLessSignificant = seriesHashLessSignificant;
-    }
-    if (seriesHashLeastSignificant != null) {
-      _result.seriesHashLeastSignificant = seriesHashLeastSignificant;
-    }
-    return _result;
-  }
-  factory AssetLabel_Tam2Label.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AssetLabel_Tam2Label.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -349,8 +288,10 @@ class AssetLabel_Tam2Label extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AssetLabel_Tam2Label copyWith(void Function(AssetLabel_Tam2Label) updates) => super.copyWith((message) => updates(message as AssetLabel_Tam2Label)) as AssetLabel_Tam2Label; // ignore: deprecated_member_use
+  AssetLabel_Tam2Label copyWith(void Function(AssetLabel_Tam2Label) updates) => super.copyWith((message) => updates(message as AssetLabel_Tam2Label)) as AssetLabel_Tam2Label;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AssetLabel_Tam2Label create() => AssetLabel_Tam2Label._();
   AssetLabel_Tam2Label createEmptyInstance() => create();
@@ -440,45 +381,26 @@ enum AssetLabel_Label {
 }
 
 class AssetLabel extends $pb.GeneratedMessage {
+  factory AssetLabel() => create();
+  AssetLabel._() : super();
+  factory AssetLabel.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AssetLabel.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, AssetLabel_Label> _AssetLabel_LabelByTag = {
     2 : AssetLabel_Label.empty,
     3 : AssetLabel_Label.v1Label,
     4 : AssetLabel_Label.tam2Label,
     0 : AssetLabel_Label.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AssetLabel', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetLabel', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
-    ..e<LabelType>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'labelType', $pb.PbFieldType.OE, protoName: 'labelType', defaultOrMaker: LabelType.EMPTY, valueOf: LabelType.valueOf, enumValues: LabelType.values)
-    ..aOM<AssetLabel_Empty>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'empty', subBuilder: AssetLabel_Empty.create)
-    ..aOM<AssetLabel_V1Label>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'v1Label', protoName: 'v1Label', subBuilder: AssetLabel_V1Label.create)
-    ..aOM<AssetLabel_Tam2Label>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tam2Label', protoName: 'tam2Label', subBuilder: AssetLabel_Tam2Label.create)
+    ..e<LabelType>(1, _omitFieldNames ? '' : 'labelType', $pb.PbFieldType.OE, protoName: 'labelType', defaultOrMaker: LabelType.EMPTY, valueOf: LabelType.valueOf, enumValues: LabelType.values)
+    ..aOM<AssetLabel_Empty>(2, _omitFieldNames ? '' : 'empty', subBuilder: AssetLabel_Empty.create)
+    ..aOM<AssetLabel_V1Label>(3, _omitFieldNames ? '' : 'v1Label', protoName: 'v1Label', subBuilder: AssetLabel_V1Label.create)
+    ..aOM<AssetLabel_Tam2Label>(4, _omitFieldNames ? '' : 'tam2Label', protoName: 'tam2Label', subBuilder: AssetLabel_Tam2Label.create)
     ..hasRequiredFields = false
   ;
 
-  AssetLabel._() : super();
-  factory AssetLabel({
-    LabelType? labelType,
-    AssetLabel_Empty? empty,
-    AssetLabel_V1Label? v1Label,
-    AssetLabel_Tam2Label? tam2Label,
-  }) {
-    final _result = create();
-    if (labelType != null) {
-      _result.labelType = labelType;
-    }
-    if (empty != null) {
-      _result.empty = empty;
-    }
-    if (v1Label != null) {
-      _result.v1Label = v1Label;
-    }
-    if (tam2Label != null) {
-      _result.tam2Label = tam2Label;
-    }
-    return _result;
-  }
-  factory AssetLabel.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AssetLabel.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -488,8 +410,10 @@ class AssetLabel extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AssetLabel copyWith(void Function(AssetLabel) updates) => super.copyWith((message) => updates(message as AssetLabel)) as AssetLabel; // ignore: deprecated_member_use
+  AssetLabel copyWith(void Function(AssetLabel) updates) => super.copyWith((message) => updates(message as AssetLabel)) as AssetLabel;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AssetLabel create() => AssetLabel._();
   AssetLabel createEmptyInstance() => create();
@@ -545,33 +469,18 @@ class AssetLabel extends $pb.GeneratedMessage {
 }
 
 class IndexSpec extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'IndexSpec', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'indexName', protoName: 'indexName')
-    ..aOM<IndexFieldSpec>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'indexFieldSpec', protoName: 'indexFieldSpec', subBuilder: IndexFieldSpec.create)
-    ..aOM<IndexFilter>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'indexFilter', protoName: 'indexFilter', subBuilder: IndexFilter.create)
+  factory IndexSpec() => create();
+  IndexSpec._() : super();
+  factory IndexSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory IndexSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IndexSpec', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'indexName', protoName: 'indexName')
+    ..aOM<IndexFieldSpec>(2, _omitFieldNames ? '' : 'indexFieldSpec', protoName: 'indexFieldSpec', subBuilder: IndexFieldSpec.create)
+    ..aOM<IndexFilter>(3, _omitFieldNames ? '' : 'indexFilter', protoName: 'indexFilter', subBuilder: IndexFilter.create)
     ..hasRequiredFields = false
   ;
 
-  IndexSpec._() : super();
-  factory IndexSpec({
-    $core.String? indexName,
-    IndexFieldSpec? indexFieldSpec,
-    IndexFilter? indexFilter,
-  }) {
-    final _result = create();
-    if (indexName != null) {
-      _result.indexName = indexName;
-    }
-    if (indexFieldSpec != null) {
-      _result.indexFieldSpec = indexFieldSpec;
-    }
-    if (indexFilter != null) {
-      _result.indexFilter = indexFilter;
-    }
-    return _result;
-  }
-  factory IndexSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory IndexSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -581,8 +490,10 @@ class IndexSpec extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  IndexSpec copyWith(void Function(IndexSpec) updates) => super.copyWith((message) => updates(message as IndexSpec)) as IndexSpec; // ignore: deprecated_member_use
+  IndexSpec copyWith(void Function(IndexSpec) updates) => super.copyWith((message) => updates(message as IndexSpec)) as IndexSpec;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IndexSpec create() => IndexSpec._();
   IndexSpec createEmptyInstance() => create();
@@ -630,34 +541,23 @@ enum IndexFieldSpec_Spec {
 }
 
 class IndexFieldSpec extends $pb.GeneratedMessage {
+  factory IndexFieldSpec() => create();
+  IndexFieldSpec._() : super();
+  factory IndexFieldSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory IndexFieldSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, IndexFieldSpec_Spec> _IndexFieldSpec_SpecByTag = {
     1 : IndexFieldSpec_Spec.jsonSpecs,
     2 : IndexFieldSpec_Spec.csvSpecs,
     0 : IndexFieldSpec_Spec.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'IndexFieldSpec', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IndexFieldSpec', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<JsonIndexSpecs>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'jsonSpecs', protoName: 'jsonSpecs', subBuilder: JsonIndexSpecs.create)
-    ..aOM<CsvIndexSpecs>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'csvSpecs', protoName: 'csvSpecs', subBuilder: CsvIndexSpecs.create)
+    ..aOM<JsonIndexSpecs>(1, _omitFieldNames ? '' : 'jsonSpecs', protoName: 'jsonSpecs', subBuilder: JsonIndexSpecs.create)
+    ..aOM<CsvIndexSpecs>(2, _omitFieldNames ? '' : 'csvSpecs', protoName: 'csvSpecs', subBuilder: CsvIndexSpecs.create)
     ..hasRequiredFields = false
   ;
 
-  IndexFieldSpec._() : super();
-  factory IndexFieldSpec({
-    JsonIndexSpecs? jsonSpecs,
-    CsvIndexSpecs? csvSpecs,
-  }) {
-    final _result = create();
-    if (jsonSpecs != null) {
-      _result.jsonSpecs = jsonSpecs;
-    }
-    if (csvSpecs != null) {
-      _result.csvSpecs = csvSpecs;
-    }
-    return _result;
-  }
-  factory IndexFieldSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory IndexFieldSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -667,8 +567,10 @@ class IndexFieldSpec extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  IndexFieldSpec copyWith(void Function(IndexFieldSpec) updates) => super.copyWith((message) => updates(message as IndexFieldSpec)) as IndexFieldSpec; // ignore: deprecated_member_use
+  IndexFieldSpec copyWith(void Function(IndexFieldSpec) updates) => super.copyWith((message) => updates(message as IndexFieldSpec)) as IndexFieldSpec;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IndexFieldSpec create() => IndexFieldSpec._();
   IndexFieldSpec createEmptyInstance() => create();
@@ -704,33 +606,18 @@ class IndexFieldSpec extends $pb.GeneratedMessage {
 }
 
 class CsvIndexSpecs extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CsvIndexSpecs', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..pc<CsvIndexSpec>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'specs', $pb.PbFieldType.PM, subBuilder: CsvIndexSpec.create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'separatorChar', $pb.PbFieldType.OU3, protoName: 'separatorChar')
-    ..aOM<$22.UInt32Value>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quoteChar', protoName: 'quoteChar', subBuilder: $22.UInt32Value.create)
+  factory CsvIndexSpecs() => create();
+  CsvIndexSpecs._() : super();
+  factory CsvIndexSpecs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CsvIndexSpecs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CsvIndexSpecs', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..pc<CsvIndexSpec>(1, _omitFieldNames ? '' : 'specs', $pb.PbFieldType.PM, subBuilder: CsvIndexSpec.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'separatorChar', $pb.PbFieldType.OU3, protoName: 'separatorChar')
+    ..aOM<$24.UInt32Value>(3, _omitFieldNames ? '' : 'quoteChar', protoName: 'quoteChar', subBuilder: $24.UInt32Value.create)
     ..hasRequiredFields = false
   ;
 
-  CsvIndexSpecs._() : super();
-  factory CsvIndexSpecs({
-    $core.Iterable<CsvIndexSpec>? specs,
-    $core.int? separatorChar,
-    $22.UInt32Value? quoteChar,
-  }) {
-    final _result = create();
-    if (specs != null) {
-      _result.specs.addAll(specs);
-    }
-    if (separatorChar != null) {
-      _result.separatorChar = separatorChar;
-    }
-    if (quoteChar != null) {
-      _result.quoteChar = quoteChar;
-    }
-    return _result;
-  }
-  factory CsvIndexSpecs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CsvIndexSpecs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -740,8 +627,10 @@ class CsvIndexSpecs extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CsvIndexSpecs copyWith(void Function(CsvIndexSpecs) updates) => super.copyWith((message) => updates(message as CsvIndexSpecs)) as CsvIndexSpecs; // ignore: deprecated_member_use
+  CsvIndexSpecs copyWith(void Function(CsvIndexSpecs) updates) => super.copyWith((message) => updates(message as CsvIndexSpecs)) as CsvIndexSpecs;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CsvIndexSpecs create() => CsvIndexSpecs._();
   CsvIndexSpecs createEmptyInstance() => create();
@@ -763,45 +652,30 @@ class CsvIndexSpecs extends $pb.GeneratedMessage {
   void clearSeparatorChar() => clearField(2);
 
   @$pb.TagNumber(3)
-  $22.UInt32Value get quoteChar => $_getN(2);
+  $24.UInt32Value get quoteChar => $_getN(2);
   @$pb.TagNumber(3)
-  set quoteChar($22.UInt32Value v) { setField(3, v); }
+  set quoteChar($24.UInt32Value v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasQuoteChar() => $_has(2);
   @$pb.TagNumber(3)
   void clearQuoteChar() => clearField(3);
   @$pb.TagNumber(3)
-  $22.UInt32Value ensureQuoteChar() => $_ensure(2);
+  $24.UInt32Value ensureQuoteChar() => $_ensure(2);
 }
 
 class CsvIndexSpec extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CsvIndexSpec', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldIndex', $pb.PbFieldType.OU3, protoName: 'fieldIndex')
-    ..e<SortOrder>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sortOrder', $pb.PbFieldType.OE, protoName: 'sortOrder', defaultOrMaker: SortOrder.ASCENDING, valueOf: SortOrder.valueOf, enumValues: SortOrder.values)
-    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isNumeric', protoName: 'isNumeric')
+  factory CsvIndexSpec() => create();
+  CsvIndexSpec._() : super();
+  factory CsvIndexSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CsvIndexSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CsvIndexSpec', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'fieldIndex', $pb.PbFieldType.OU3, protoName: 'fieldIndex')
+    ..e<SortOrder>(2, _omitFieldNames ? '' : 'sortOrder', $pb.PbFieldType.OE, protoName: 'sortOrder', defaultOrMaker: SortOrder.ASCENDING, valueOf: SortOrder.valueOf, enumValues: SortOrder.values)
+    ..aOB(3, _omitFieldNames ? '' : 'isNumeric', protoName: 'isNumeric')
     ..hasRequiredFields = false
   ;
 
-  CsvIndexSpec._() : super();
-  factory CsvIndexSpec({
-    $core.int? fieldIndex,
-    SortOrder? sortOrder,
-    $core.bool? isNumeric,
-  }) {
-    final _result = create();
-    if (fieldIndex != null) {
-      _result.fieldIndex = fieldIndex;
-    }
-    if (sortOrder != null) {
-      _result.sortOrder = sortOrder;
-    }
-    if (isNumeric != null) {
-      _result.isNumeric = isNumeric;
-    }
-    return _result;
-  }
-  factory CsvIndexSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CsvIndexSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -811,8 +685,10 @@ class CsvIndexSpec extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CsvIndexSpec copyWith(void Function(CsvIndexSpec) updates) => super.copyWith((message) => updates(message as CsvIndexSpec)) as CsvIndexSpec; // ignore: deprecated_member_use
+  CsvIndexSpec copyWith(void Function(CsvIndexSpec) updates) => super.copyWith((message) => updates(message as CsvIndexSpec)) as CsvIndexSpec;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CsvIndexSpec create() => CsvIndexSpec._();
   CsvIndexSpec createEmptyInstance() => create();
@@ -850,23 +726,16 @@ class CsvIndexSpec extends $pb.GeneratedMessage {
 }
 
 class JsonIndexSpecs extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JsonIndexSpecs', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..pc<JsonIndexSpec>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'specs', $pb.PbFieldType.PM, subBuilder: JsonIndexSpec.create)
+  factory JsonIndexSpecs() => create();
+  JsonIndexSpecs._() : super();
+  factory JsonIndexSpecs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory JsonIndexSpecs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'JsonIndexSpecs', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..pc<JsonIndexSpec>(1, _omitFieldNames ? '' : 'specs', $pb.PbFieldType.PM, subBuilder: JsonIndexSpec.create)
     ..hasRequiredFields = false
   ;
 
-  JsonIndexSpecs._() : super();
-  factory JsonIndexSpecs({
-    $core.Iterable<JsonIndexSpec>? specs,
-  }) {
-    final _result = create();
-    if (specs != null) {
-      _result.specs.addAll(specs);
-    }
-    return _result;
-  }
-  factory JsonIndexSpecs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory JsonIndexSpecs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -876,8 +745,10 @@ class JsonIndexSpecs extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  JsonIndexSpecs copyWith(void Function(JsonIndexSpecs) updates) => super.copyWith((message) => updates(message as JsonIndexSpecs)) as JsonIndexSpecs; // ignore: deprecated_member_use
+  JsonIndexSpecs copyWith(void Function(JsonIndexSpecs) updates) => super.copyWith((message) => updates(message as JsonIndexSpecs)) as JsonIndexSpecs;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static JsonIndexSpecs create() => JsonIndexSpecs._();
   JsonIndexSpecs createEmptyInstance() => create();
@@ -891,28 +762,17 @@ class JsonIndexSpecs extends $pb.GeneratedMessage {
 }
 
 class JsonIndexSpec extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JsonIndexSpec', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'jsonPath', protoName: 'jsonPath')
-    ..e<SortOrder>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sortOrder', $pb.PbFieldType.OE, protoName: 'sortOrder', defaultOrMaker: SortOrder.ASCENDING, valueOf: SortOrder.valueOf, enumValues: SortOrder.values)
+  factory JsonIndexSpec() => create();
+  JsonIndexSpec._() : super();
+  factory JsonIndexSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory JsonIndexSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'JsonIndexSpec', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'jsonPath', protoName: 'jsonPath')
+    ..e<SortOrder>(2, _omitFieldNames ? '' : 'sortOrder', $pb.PbFieldType.OE, protoName: 'sortOrder', defaultOrMaker: SortOrder.ASCENDING, valueOf: SortOrder.valueOf, enumValues: SortOrder.values)
     ..hasRequiredFields = false
   ;
 
-  JsonIndexSpec._() : super();
-  factory JsonIndexSpec({
-    $core.String? jsonPath,
-    SortOrder? sortOrder,
-  }) {
-    final _result = create();
-    if (jsonPath != null) {
-      _result.jsonPath = jsonPath;
-    }
-    if (sortOrder != null) {
-      _result.sortOrder = sortOrder;
-    }
-    return _result;
-  }
-  factory JsonIndexSpec.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory JsonIndexSpec.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -922,8 +782,10 @@ class JsonIndexSpec extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  JsonIndexSpec copyWith(void Function(JsonIndexSpec) updates) => super.copyWith((message) => updates(message as JsonIndexSpec)) as JsonIndexSpec; // ignore: deprecated_member_use
+  JsonIndexSpec copyWith(void Function(JsonIndexSpec) updates) => super.copyWith((message) => updates(message as JsonIndexSpec)) as JsonIndexSpec;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static JsonIndexSpec create() => JsonIndexSpec._();
   JsonIndexSpec createEmptyInstance() => create();
@@ -957,28 +819,21 @@ enum IndexFilter_Filter {
 }
 
 class IndexFilter extends $pb.GeneratedMessage {
+  factory IndexFilter() => create();
+  IndexFilter._() : super();
+  factory IndexFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory IndexFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, IndexFilter_Filter> _IndexFilter_FilterByTag = {
     1 : IndexFilter_Filter.regexIndexFilter,
     0 : IndexFilter_Filter.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'IndexFilter', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IndexFilter', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..oo(0, [1])
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'regexIndexFilter', protoName: 'regexIndexFilter')
+    ..aOS(1, _omitFieldNames ? '' : 'regexIndexFilter', protoName: 'regexIndexFilter')
     ..hasRequiredFields = false
   ;
 
-  IndexFilter._() : super();
-  factory IndexFilter({
-    $core.String? regexIndexFilter,
-  }) {
-    final _result = create();
-    if (regexIndexFilter != null) {
-      _result.regexIndexFilter = regexIndexFilter;
-    }
-    return _result;
-  }
-  factory IndexFilter.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory IndexFilter.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -988,8 +843,10 @@ class IndexFilter extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  IndexFilter copyWith(void Function(IndexFilter) updates) => super.copyWith((message) => updates(message as IndexFilter)) as IndexFilter; // ignore: deprecated_member_use
+  IndexFilter copyWith(void Function(IndexFilter) updates) => super.copyWith((message) => updates(message as IndexFilter)) as IndexFilter;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IndexFilter create() => IndexFilter._();
   IndexFilter createEmptyInstance() => create();
@@ -1012,38 +869,19 @@ class IndexFilter extends $pb.GeneratedMessage {
 }
 
 class TransactionReceipt extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionReceipt', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$20.IoTransaction>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', subBuilder: $20.IoTransaction.create)
-    ..aOM<ConfidenceFactor>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: ConfidenceFactor.create)
-    ..aOM<$2.BlockId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
-    ..aOM<ChainDistance>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'depth', subBuilder: ChainDistance.create)
+  factory TransactionReceipt() => create();
+  TransactionReceipt._() : super();
+  factory TransactionReceipt.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransactionReceipt.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransactionReceipt', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..aOM<$20.IoTransaction>(1, _omitFieldNames ? '' : 'transaction', subBuilder: $20.IoTransaction.create)
+    ..aOM<ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: ConfidenceFactor.create)
+    ..aOM<$2.BlockId>(3, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $2.BlockId.create)
+    ..aOM<ChainDistance>(4, _omitFieldNames ? '' : 'depth', subBuilder: ChainDistance.create)
     ..hasRequiredFields = false
   ;
 
-  TransactionReceipt._() : super();
-  factory TransactionReceipt({
-    $20.IoTransaction? transaction,
-    ConfidenceFactor? confidenceFactor,
-    $2.BlockId? blockId,
-    ChainDistance? depth,
-  }) {
-    final _result = create();
-    if (transaction != null) {
-      _result.transaction = transaction;
-    }
-    if (confidenceFactor != null) {
-      _result.confidenceFactor = confidenceFactor;
-    }
-    if (blockId != null) {
-      _result.blockId = blockId;
-    }
-    if (depth != null) {
-      _result.depth = depth;
-    }
-    return _result;
-  }
-  factory TransactionReceipt.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TransactionReceipt.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1053,8 +891,10 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransactionReceipt copyWith(void Function(TransactionReceipt) updates) => super.copyWith((message) => updates(message as TransactionReceipt)) as TransactionReceipt; // ignore: deprecated_member_use
+  TransactionReceipt copyWith(void Function(TransactionReceipt) updates) => super.copyWith((message) => updates(message as TransactionReceipt)) as TransactionReceipt;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransactionReceipt create() => TransactionReceipt._();
   TransactionReceipt createEmptyInstance() => create();
@@ -1109,28 +949,17 @@ class TransactionReceipt extends $pb.GeneratedMessage {
 }
 
 class HeightData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HeightData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'height')
-    ..aOM<BlockData>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blockData', protoName: 'blockData', subBuilder: BlockData.create)
+  factory HeightData() => create();
+  HeightData._() : super();
+  factory HeightData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory HeightData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HeightData', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'height')
+    ..aOM<BlockData>(2, _omitFieldNames ? '' : 'blockData', protoName: 'blockData', subBuilder: BlockData.create)
     ..hasRequiredFields = false
   ;
 
-  HeightData._() : super();
-  factory HeightData({
-    $fixnum.Int64? height,
-    BlockData? blockData,
-  }) {
-    final _result = create();
-    if (height != null) {
-      _result.height = height;
-    }
-    if (blockData != null) {
-      _result.blockData = blockData;
-    }
-    return _result;
-  }
-  factory HeightData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory HeightData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1140,8 +969,10 @@ class HeightData extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  HeightData copyWith(void Function(HeightData) updates) => super.copyWith((message) => updates(message as HeightData)) as HeightData; // ignore: deprecated_member_use
+  HeightData copyWith(void Function(HeightData) updates) => super.copyWith((message) => updates(message as HeightData)) as HeightData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HeightData create() => HeightData._();
   HeightData createEmptyInstance() => create();
@@ -1172,33 +1003,18 @@ class HeightData extends $pb.GeneratedMessage {
 }
 
 class BlockData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$21.BlockHeader>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'header', subBuilder: $21.BlockHeader.create)
-    ..aOM<$23.BlockBody>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'body', subBuilder: $23.BlockBody.create)
-    ..pc<$20.IoTransaction>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactions', $pb.PbFieldType.PM, subBuilder: $20.IoTransaction.create)
+  factory BlockData() => create();
+  BlockData._() : super();
+  factory BlockData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BlockData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockData', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
+    ..aOM<$21.BlockHeader>(1, _omitFieldNames ? '' : 'header', subBuilder: $21.BlockHeader.create)
+    ..aOM<$22.BlockBody>(2, _omitFieldNames ? '' : 'body', subBuilder: $22.BlockBody.create)
+    ..pc<$20.IoTransaction>(3, _omitFieldNames ? '' : 'transactions', $pb.PbFieldType.PM, subBuilder: $20.IoTransaction.create)
     ..hasRequiredFields = false
   ;
 
-  BlockData._() : super();
-  factory BlockData({
-    $21.BlockHeader? header,
-    $23.BlockBody? body,
-    $core.Iterable<$20.IoTransaction>? transactions,
-  }) {
-    final _result = create();
-    if (header != null) {
-      _result.header = header;
-    }
-    if (body != null) {
-      _result.body = body;
-    }
-    if (transactions != null) {
-      _result.transactions.addAll(transactions);
-    }
-    return _result;
-  }
-  factory BlockData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BlockData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1208,8 +1024,10 @@ class BlockData extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BlockData copyWith(void Function(BlockData) updates) => super.copyWith((message) => updates(message as BlockData)) as BlockData; // ignore: deprecated_member_use
+  BlockData copyWith(void Function(BlockData) updates) => super.copyWith((message) => updates(message as BlockData)) as BlockData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BlockData create() => BlockData._();
   BlockData createEmptyInstance() => create();
@@ -1230,17 +1048,20 @@ class BlockData extends $pb.GeneratedMessage {
   $21.BlockHeader ensureHeader() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $23.BlockBody get body => $_getN(1);
+  $22.BlockBody get body => $_getN(1);
   @$pb.TagNumber(2)
-  set body($23.BlockBody v) { setField(2, v); }
+  set body($22.BlockBody v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBody() => $_has(1);
   @$pb.TagNumber(2)
   void clearBody() => clearField(2);
   @$pb.TagNumber(2)
-  $23.BlockBody ensureBody() => $_ensure(1);
+  $22.BlockBody ensureBody() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.List<$20.IoTransaction> get transactions => $_getList(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

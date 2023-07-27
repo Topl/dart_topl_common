@@ -1,52 +1,37 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: brambl/models/transaction/io_transaction.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../datum.pb.dart' as $19;
+import '../identifier.pb.dart' as $9;
 import 'spent_transaction_output.pb.dart' as $17;
 import 'unspent_transaction_output.pb.dart' as $18;
-import '../datum.pb.dart' as $19;
-import '../identifier.pb.dart' as $7;
 
 class IoTransaction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'IoTransaction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.transaction'), createEmptyInstance: create)
-    ..pc<$17.SpentTransactionOutput>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $17.SpentTransactionOutput.create)
-    ..pc<$18.UnspentTransactionOutput>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $18.UnspentTransactionOutput.create)
-    ..aOM<$19.Datum_IoTransaction>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'datum', subBuilder: $19.Datum_IoTransaction.create)
-    ..aOM<$7.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $7.TransactionId.create)
+  factory IoTransaction() => create();
+  IoTransaction._() : super();
+  factory IoTransaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory IoTransaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IoTransaction', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.transaction'), createEmptyInstance: create)
+    ..pc<$17.SpentTransactionOutput>(1, _omitFieldNames ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $17.SpentTransactionOutput.create)
+    ..pc<$18.UnspentTransactionOutput>(2, _omitFieldNames ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $18.UnspentTransactionOutput.create)
+    ..aOM<$19.Datum_IoTransaction>(3, _omitFieldNames ? '' : 'datum', subBuilder: $19.Datum_IoTransaction.create)
+    ..aOM<$9.TransactionId>(4, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $9.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
-  IoTransaction._() : super();
-  factory IoTransaction({
-    $core.Iterable<$17.SpentTransactionOutput>? inputs,
-    $core.Iterable<$18.UnspentTransactionOutput>? outputs,
-    $19.Datum_IoTransaction? datum,
-    $7.TransactionId? transactionId,
-  }) {
-    final _result = create();
-    if (inputs != null) {
-      _result.inputs.addAll(inputs);
-    }
-    if (outputs != null) {
-      _result.outputs.addAll(outputs);
-    }
-    if (datum != null) {
-      _result.datum = datum;
-    }
-    if (transactionId != null) {
-      _result.transactionId = transactionId;
-    }
-    return _result;
-  }
-  factory IoTransaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory IoTransaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -56,8 +41,10 @@ class IoTransaction extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  IoTransaction copyWith(void Function(IoTransaction) updates) => super.copyWith((message) => updates(message as IoTransaction)) as IoTransaction; // ignore: deprecated_member_use
+  IoTransaction copyWith(void Function(IoTransaction) updates) => super.copyWith((message) => updates(message as IoTransaction)) as IoTransaction;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static IoTransaction create() => IoTransaction._();
   IoTransaction createEmptyInstance() => create();
@@ -84,14 +71,17 @@ class IoTransaction extends $pb.GeneratedMessage {
   $19.Datum_IoTransaction ensureDatum() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $7.TransactionId get transactionId => $_getN(3);
+  $9.TransactionId get transactionId => $_getN(3);
   @$pb.TagNumber(4)
-  set transactionId($7.TransactionId v) { setField(4, v); }
+  set transactionId($9.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTransactionId() => $_has(3);
   @$pb.TagNumber(4)
   void clearTransactionId() => clearField(4);
   @$pb.TagNumber(4)
-  $7.TransactionId ensureTransactionId() => $_ensure(3);
+  $9.TransactionId ensureTransactionId() => $_ensure(3);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

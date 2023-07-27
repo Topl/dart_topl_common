@@ -1,35 +1,32 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: brambl/models/box/value.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../quivr/models/shared.pb.dart' as $4;
 import '../../../consensus/models/staking.pb.dart' as $6;
+import '../../../quivr/models/shared.pb.dart' as $4;
 
 class Value_LVL extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value.LVL', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$4.Int128>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $4.Int128.create)
+  factory Value_LVL() => create();
+  Value_LVL._() : super();
+  factory Value_LVL.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Value_LVL.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.LVL', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..aOM<$4.Int128>(1, _omitFieldNames ? '' : 'quantity', subBuilder: $4.Int128.create)
     ..hasRequiredFields = false
   ;
 
-  Value_LVL._() : super();
-  factory Value_LVL({
-    $4.Int128? quantity,
-  }) {
-    final _result = create();
-    if (quantity != null) {
-      _result.quantity = quantity;
-    }
-    return _result;
-  }
-  factory Value_LVL.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Value_LVL.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -39,8 +36,10 @@ class Value_LVL extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Value_LVL copyWith(void Function(Value_LVL) updates) => super.copyWith((message) => updates(message as Value_LVL)) as Value_LVL; // ignore: deprecated_member_use
+  Value_LVL copyWith(void Function(Value_LVL) updates) => super.copyWith((message) => updates(message as Value_LVL)) as Value_LVL;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Value_LVL create() => Value_LVL._();
   Value_LVL createEmptyInstance() => create();
@@ -62,28 +61,17 @@ class Value_LVL extends $pb.GeneratedMessage {
 }
 
 class Value_TOPL extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value.TOPL', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$4.Int128>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $4.Int128.create)
-    ..aOM<$6.StakingRegistration>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'registration', subBuilder: $6.StakingRegistration.create)
+  factory Value_TOPL() => create();
+  Value_TOPL._() : super();
+  factory Value_TOPL.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Value_TOPL.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.TOPL', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..aOM<$4.Int128>(1, _omitFieldNames ? '' : 'quantity', subBuilder: $4.Int128.create)
+    ..aOM<$6.StakingRegistration>(3, _omitFieldNames ? '' : 'registration', subBuilder: $6.StakingRegistration.create)
     ..hasRequiredFields = false
   ;
 
-  Value_TOPL._() : super();
-  factory Value_TOPL({
-    $4.Int128? quantity,
-    $6.StakingRegistration? registration,
-  }) {
-    final _result = create();
-    if (quantity != null) {
-      _result.quantity = quantity;
-    }
-    if (registration != null) {
-      _result.registration = registration;
-    }
-    return _result;
-  }
-  factory Value_TOPL.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Value_TOPL.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -93,8 +81,10 @@ class Value_TOPL extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Value_TOPL copyWith(void Function(Value_TOPL) updates) => super.copyWith((message) => updates(message as Value_TOPL)) as Value_TOPL; // ignore: deprecated_member_use
+  Value_TOPL copyWith(void Function(Value_TOPL) updates) => super.copyWith((message) => updates(message as Value_TOPL)) as Value_TOPL;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Value_TOPL create() => Value_TOPL._();
   Value_TOPL createEmptyInstance() => create();
@@ -127,33 +117,18 @@ class Value_TOPL extends $pb.GeneratedMessage {
 }
 
 class Value_Asset extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value.Asset', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'label')
-    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity', subBuilder: $4.Int128.create)
-    ..aOM<$4.SmallData>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', subBuilder: $4.SmallData.create)
+  factory Value_Asset() => create();
+  Value_Asset._() : super();
+  factory Value_Asset.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Value_Asset.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.Asset', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'label')
+    ..aOM<$4.Int128>(2, _omitFieldNames ? '' : 'quantity', subBuilder: $4.Int128.create)
+    ..aOM<$4.SmallData>(3, _omitFieldNames ? '' : 'metadata', subBuilder: $4.SmallData.create)
     ..hasRequiredFields = false
   ;
 
-  Value_Asset._() : super();
-  factory Value_Asset({
-    $core.String? label,
-    $4.Int128? quantity,
-    $4.SmallData? metadata,
-  }) {
-    final _result = create();
-    if (label != null) {
-      _result.label = label;
-    }
-    if (quantity != null) {
-      _result.quantity = quantity;
-    }
-    if (metadata != null) {
-      _result.metadata = metadata;
-    }
-    return _result;
-  }
-  factory Value_Asset.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Value_Asset.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -163,8 +138,10 @@ class Value_Asset extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Value_Asset copyWith(void Function(Value_Asset) updates) => super.copyWith((message) => updates(message as Value_Asset)) as Value_Asset; // ignore: deprecated_member_use
+  Value_Asset copyWith(void Function(Value_Asset) updates) => super.copyWith((message) => updates(message as Value_Asset)) as Value_Asset;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Value_Asset create() => Value_Asset._();
   Value_Asset createEmptyInstance() => create();
@@ -213,40 +190,25 @@ enum Value_Value {
 }
 
 class Value extends $pb.GeneratedMessage {
+  factory Value() => create();
+  Value._() : super();
+  factory Value.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Value.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Value_Value> _Value_ValueByTag = {
     1 : Value_Value.lvl,
     2 : Value_Value.topl,
     3 : Value_Value.asset,
     0 : Value_Value.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Value', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<Value_LVL>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lvl', subBuilder: Value_LVL.create)
-    ..aOM<Value_TOPL>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topl', subBuilder: Value_TOPL.create)
-    ..aOM<Value_Asset>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'asset', subBuilder: Value_Asset.create)
+    ..aOM<Value_LVL>(1, _omitFieldNames ? '' : 'lvl', subBuilder: Value_LVL.create)
+    ..aOM<Value_TOPL>(2, _omitFieldNames ? '' : 'topl', subBuilder: Value_TOPL.create)
+    ..aOM<Value_Asset>(3, _omitFieldNames ? '' : 'asset', subBuilder: Value_Asset.create)
     ..hasRequiredFields = false
   ;
 
-  Value._() : super();
-  factory Value({
-    Value_LVL? lvl,
-    Value_TOPL? topl,
-    Value_Asset? asset,
-  }) {
-    final _result = create();
-    if (lvl != null) {
-      _result.lvl = lvl;
-    }
-    if (topl != null) {
-      _result.topl = topl;
-    }
-    if (asset != null) {
-      _result.asset = asset;
-    }
-    return _result;
-  }
-  factory Value.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Value.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -256,8 +218,10 @@ class Value extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Value copyWith(void Function(Value) updates) => super.copyWith((message) => updates(message as Value)) as Value; // ignore: deprecated_member_use
+  Value copyWith(void Function(Value) updates) => super.copyWith((message) => updates(message as Value)) as Value;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Value create() => Value._();
   Value createEmptyInstance() => create();
@@ -303,3 +267,6 @@ class Value extends $pb.GeneratedMessage {
   Value_Asset ensureAsset() => $_ensure(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: quivr/models/proof.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -12,14 +16,15 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'shared.pb.dart' as $4;
 
 class Proof_Locked extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Locked', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
+  factory Proof_Locked() => create();
+  Proof_Locked._() : super();
+  factory Proof_Locked.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_Locked.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.Locked', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  Proof_Locked._() : super();
-  factory Proof_Locked() => create();
-  factory Proof_Locked.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_Locked.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -29,8 +34,10 @@ class Proof_Locked extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_Locked copyWith(void Function(Proof_Locked) updates) => super.copyWith((message) => updates(message as Proof_Locked)) as Proof_Locked; // ignore: deprecated_member_use
+  Proof_Locked copyWith(void Function(Proof_Locked) updates) => super.copyWith((message) => updates(message as Proof_Locked)) as Proof_Locked;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_Locked create() => Proof_Locked._();
   Proof_Locked createEmptyInstance() => create();
@@ -41,28 +48,17 @@ class Proof_Locked extends $pb.GeneratedMessage {
 }
 
 class Proof_Digest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Digest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
-    ..aOM<$4.Preimage>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'preimage', subBuilder: $4.Preimage.create)
+  factory Proof_Digest() => create();
+  Proof_Digest._() : super();
+  factory Proof_Digest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_Digest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.Digest', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..aOM<$4.Preimage>(2, _omitFieldNames ? '' : 'preimage', subBuilder: $4.Preimage.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_Digest._() : super();
-  factory Proof_Digest({
-    $4.TxBind? transactionBind,
-    $4.Preimage? preimage,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    if (preimage != null) {
-      _result.preimage = preimage;
-    }
-    return _result;
-  }
-  factory Proof_Digest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_Digest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -72,8 +68,10 @@ class Proof_Digest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_Digest copyWith(void Function(Proof_Digest) updates) => super.copyWith((message) => updates(message as Proof_Digest)) as Proof_Digest; // ignore: deprecated_member_use
+  Proof_Digest copyWith(void Function(Proof_Digest) updates) => super.copyWith((message) => updates(message as Proof_Digest)) as Proof_Digest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_Digest create() => Proof_Digest._();
   Proof_Digest createEmptyInstance() => create();
@@ -106,28 +104,17 @@ class Proof_Digest extends $pb.GeneratedMessage {
 }
 
 class Proof_DigitalSignature extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.DigitalSignature', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
-    ..aOM<$4.Witness>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witness', subBuilder: $4.Witness.create)
+  factory Proof_DigitalSignature() => create();
+  Proof_DigitalSignature._() : super();
+  factory Proof_DigitalSignature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_DigitalSignature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.DigitalSignature', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..aOM<$4.Witness>(2, _omitFieldNames ? '' : 'witness', subBuilder: $4.Witness.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_DigitalSignature._() : super();
-  factory Proof_DigitalSignature({
-    $4.TxBind? transactionBind,
-    $4.Witness? witness,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    if (witness != null) {
-      _result.witness = witness;
-    }
-    return _result;
-  }
-  factory Proof_DigitalSignature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_DigitalSignature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -137,8 +124,10 @@ class Proof_DigitalSignature extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_DigitalSignature copyWith(void Function(Proof_DigitalSignature) updates) => super.copyWith((message) => updates(message as Proof_DigitalSignature)) as Proof_DigitalSignature; // ignore: deprecated_member_use
+  Proof_DigitalSignature copyWith(void Function(Proof_DigitalSignature) updates) => super.copyWith((message) => updates(message as Proof_DigitalSignature)) as Proof_DigitalSignature;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_DigitalSignature create() => Proof_DigitalSignature._();
   Proof_DigitalSignature createEmptyInstance() => create();
@@ -171,23 +160,16 @@ class Proof_DigitalSignature extends $pb.GeneratedMessage {
 }
 
 class Proof_HeightRange extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.HeightRange', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+  factory Proof_HeightRange() => create();
+  Proof_HeightRange._() : super();
+  factory Proof_HeightRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_HeightRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.HeightRange', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_HeightRange._() : super();
-  factory Proof_HeightRange({
-    $4.TxBind? transactionBind,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    return _result;
-  }
-  factory Proof_HeightRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_HeightRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -197,8 +179,10 @@ class Proof_HeightRange extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_HeightRange copyWith(void Function(Proof_HeightRange) updates) => super.copyWith((message) => updates(message as Proof_HeightRange)) as Proof_HeightRange; // ignore: deprecated_member_use
+  Proof_HeightRange copyWith(void Function(Proof_HeightRange) updates) => super.copyWith((message) => updates(message as Proof_HeightRange)) as Proof_HeightRange;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_HeightRange create() => Proof_HeightRange._();
   Proof_HeightRange createEmptyInstance() => create();
@@ -220,23 +204,16 @@ class Proof_HeightRange extends $pb.GeneratedMessage {
 }
 
 class Proof_TickRange extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.TickRange', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+  factory Proof_TickRange() => create();
+  Proof_TickRange._() : super();
+  factory Proof_TickRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_TickRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.TickRange', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_TickRange._() : super();
-  factory Proof_TickRange({
-    $4.TxBind? transactionBind,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    return _result;
-  }
-  factory Proof_TickRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_TickRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -246,8 +223,10 @@ class Proof_TickRange extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_TickRange copyWith(void Function(Proof_TickRange) updates) => super.copyWith((message) => updates(message as Proof_TickRange)) as Proof_TickRange; // ignore: deprecated_member_use
+  Proof_TickRange copyWith(void Function(Proof_TickRange) updates) => super.copyWith((message) => updates(message as Proof_TickRange)) as Proof_TickRange;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_TickRange create() => Proof_TickRange._();
   Proof_TickRange createEmptyInstance() => create();
@@ -269,23 +248,16 @@ class Proof_TickRange extends $pb.GeneratedMessage {
 }
 
 class Proof_ExactMatch extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.ExactMatch', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+  factory Proof_ExactMatch() => create();
+  Proof_ExactMatch._() : super();
+  factory Proof_ExactMatch.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_ExactMatch.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.ExactMatch', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_ExactMatch._() : super();
-  factory Proof_ExactMatch({
-    $4.TxBind? transactionBind,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    return _result;
-  }
-  factory Proof_ExactMatch.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_ExactMatch.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -295,8 +267,10 @@ class Proof_ExactMatch extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_ExactMatch copyWith(void Function(Proof_ExactMatch) updates) => super.copyWith((message) => updates(message as Proof_ExactMatch)) as Proof_ExactMatch; // ignore: deprecated_member_use
+  Proof_ExactMatch copyWith(void Function(Proof_ExactMatch) updates) => super.copyWith((message) => updates(message as Proof_ExactMatch)) as Proof_ExactMatch;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_ExactMatch create() => Proof_ExactMatch._();
   Proof_ExactMatch createEmptyInstance() => create();
@@ -318,23 +292,16 @@ class Proof_ExactMatch extends $pb.GeneratedMessage {
 }
 
 class Proof_LessThan extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.LessThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+  factory Proof_LessThan() => create();
+  Proof_LessThan._() : super();
+  factory Proof_LessThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_LessThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.LessThan', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_LessThan._() : super();
-  factory Proof_LessThan({
-    $4.TxBind? transactionBind,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    return _result;
-  }
-  factory Proof_LessThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_LessThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -344,8 +311,10 @@ class Proof_LessThan extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_LessThan copyWith(void Function(Proof_LessThan) updates) => super.copyWith((message) => updates(message as Proof_LessThan)) as Proof_LessThan; // ignore: deprecated_member_use
+  Proof_LessThan copyWith(void Function(Proof_LessThan) updates) => super.copyWith((message) => updates(message as Proof_LessThan)) as Proof_LessThan;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_LessThan create() => Proof_LessThan._();
   Proof_LessThan createEmptyInstance() => create();
@@ -367,23 +336,16 @@ class Proof_LessThan extends $pb.GeneratedMessage {
 }
 
 class Proof_GreaterThan extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.GreaterThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+  factory Proof_GreaterThan() => create();
+  Proof_GreaterThan._() : super();
+  factory Proof_GreaterThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_GreaterThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.GreaterThan', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_GreaterThan._() : super();
-  factory Proof_GreaterThan({
-    $4.TxBind? transactionBind,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    return _result;
-  }
-  factory Proof_GreaterThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_GreaterThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -393,8 +355,10 @@ class Proof_GreaterThan extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_GreaterThan copyWith(void Function(Proof_GreaterThan) updates) => super.copyWith((message) => updates(message as Proof_GreaterThan)) as Proof_GreaterThan; // ignore: deprecated_member_use
+  Proof_GreaterThan copyWith(void Function(Proof_GreaterThan) updates) => super.copyWith((message) => updates(message as Proof_GreaterThan)) as Proof_GreaterThan;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_GreaterThan create() => Proof_GreaterThan._();
   Proof_GreaterThan createEmptyInstance() => create();
@@ -416,23 +380,16 @@ class Proof_GreaterThan extends $pb.GeneratedMessage {
 }
 
 class Proof_EqualTo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.EqualTo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+  factory Proof_EqualTo() => create();
+  Proof_EqualTo._() : super();
+  factory Proof_EqualTo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_EqualTo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.EqualTo', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_EqualTo._() : super();
-  factory Proof_EqualTo({
-    $4.TxBind? transactionBind,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    return _result;
-  }
-  factory Proof_EqualTo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_EqualTo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -442,8 +399,10 @@ class Proof_EqualTo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_EqualTo copyWith(void Function(Proof_EqualTo) updates) => super.copyWith((message) => updates(message as Proof_EqualTo)) as Proof_EqualTo; // ignore: deprecated_member_use
+  Proof_EqualTo copyWith(void Function(Proof_EqualTo) updates) => super.copyWith((message) => updates(message as Proof_EqualTo)) as Proof_EqualTo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_EqualTo create() => Proof_EqualTo._();
   Proof_EqualTo createEmptyInstance() => create();
@@ -465,28 +424,17 @@ class Proof_EqualTo extends $pb.GeneratedMessage {
 }
 
 class Proof_Threshold extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Threshold', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
-    ..pc<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: Proof.create)
+  factory Proof_Threshold() => create();
+  Proof_Threshold._() : super();
+  factory Proof_Threshold.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_Threshold.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.Threshold', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..pc<Proof>(2, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: Proof.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_Threshold._() : super();
-  factory Proof_Threshold({
-    $4.TxBind? transactionBind,
-    $core.Iterable<Proof>? responses,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    if (responses != null) {
-      _result.responses.addAll(responses);
-    }
-    return _result;
-  }
-  factory Proof_Threshold.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_Threshold.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -496,8 +444,10 @@ class Proof_Threshold extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_Threshold copyWith(void Function(Proof_Threshold) updates) => super.copyWith((message) => updates(message as Proof_Threshold)) as Proof_Threshold; // ignore: deprecated_member_use
+  Proof_Threshold copyWith(void Function(Proof_Threshold) updates) => super.copyWith((message) => updates(message as Proof_Threshold)) as Proof_Threshold;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_Threshold create() => Proof_Threshold._();
   Proof_Threshold createEmptyInstance() => create();
@@ -522,28 +472,17 @@ class Proof_Threshold extends $pb.GeneratedMessage {
 }
 
 class Proof_Not extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Not', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
-    ..aOM<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'proof', subBuilder: Proof.create)
+  factory Proof_Not() => create();
+  Proof_Not._() : super();
+  factory Proof_Not.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_Not.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.Not', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..aOM<Proof>(2, _omitFieldNames ? '' : 'proof', subBuilder: Proof.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_Not._() : super();
-  factory Proof_Not({
-    $4.TxBind? transactionBind,
-    Proof? proof,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    if (proof != null) {
-      _result.proof = proof;
-    }
-    return _result;
-  }
-  factory Proof_Not.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_Not.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -553,8 +492,10 @@ class Proof_Not extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_Not copyWith(void Function(Proof_Not) updates) => super.copyWith((message) => updates(message as Proof_Not)) as Proof_Not; // ignore: deprecated_member_use
+  Proof_Not copyWith(void Function(Proof_Not) updates) => super.copyWith((message) => updates(message as Proof_Not)) as Proof_Not;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_Not create() => Proof_Not._();
   Proof_Not createEmptyInstance() => create();
@@ -587,33 +528,18 @@ class Proof_Not extends $pb.GeneratedMessage {
 }
 
 class Proof_And extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.And', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
-    ..aOM<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: Proof.create)
-    ..aOM<Proof>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: Proof.create)
+  factory Proof_And() => create();
+  Proof_And._() : super();
+  factory Proof_And.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_And.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.And', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..aOM<Proof>(2, _omitFieldNames ? '' : 'left', subBuilder: Proof.create)
+    ..aOM<Proof>(3, _omitFieldNames ? '' : 'right', subBuilder: Proof.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_And._() : super();
-  factory Proof_And({
-    $4.TxBind? transactionBind,
-    Proof? left,
-    Proof? right,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    if (left != null) {
-      _result.left = left;
-    }
-    if (right != null) {
-      _result.right = right;
-    }
-    return _result;
-  }
-  factory Proof_And.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_And.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -623,8 +549,10 @@ class Proof_And extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_And copyWith(void Function(Proof_And) updates) => super.copyWith((message) => updates(message as Proof_And)) as Proof_And; // ignore: deprecated_member_use
+  Proof_And copyWith(void Function(Proof_And) updates) => super.copyWith((message) => updates(message as Proof_And)) as Proof_And;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_And create() => Proof_And._();
   Proof_And createEmptyInstance() => create();
@@ -668,33 +596,18 @@ class Proof_And extends $pb.GeneratedMessage {
 }
 
 class Proof_Or extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof.Or', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.TxBind>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
-    ..aOM<Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: Proof.create)
-    ..aOM<Proof>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: Proof.create)
+  factory Proof_Or() => create();
+  Proof_Or._() : super();
+  factory Proof_Or.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof_Or.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof.Or', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$4.TxBind>(1, _omitFieldNames ? '' : 'transactionBind', protoName: 'transactionBind', subBuilder: $4.TxBind.create)
+    ..aOM<Proof>(2, _omitFieldNames ? '' : 'left', subBuilder: Proof.create)
+    ..aOM<Proof>(3, _omitFieldNames ? '' : 'right', subBuilder: Proof.create)
     ..hasRequiredFields = false
   ;
 
-  Proof_Or._() : super();
-  factory Proof_Or({
-    $4.TxBind? transactionBind,
-    Proof? left,
-    Proof? right,
-  }) {
-    final _result = create();
-    if (transactionBind != null) {
-      _result.transactionBind = transactionBind;
-    }
-    if (left != null) {
-      _result.left = left;
-    }
-    if (right != null) {
-      _result.right = right;
-    }
-    return _result;
-  }
-  factory Proof_Or.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof_Or.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -704,8 +617,10 @@ class Proof_Or extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof_Or copyWith(void Function(Proof_Or) updates) => super.copyWith((message) => updates(message as Proof_Or)) as Proof_Or; // ignore: deprecated_member_use
+  Proof_Or copyWith(void Function(Proof_Or) updates) => super.copyWith((message) => updates(message as Proof_Or)) as Proof_Or;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof_Or create() => Proof_Or._();
   Proof_Or createEmptyInstance() => create();
@@ -766,6 +681,11 @@ enum Proof_Value {
 }
 
 class Proof extends $pb.GeneratedMessage {
+  factory Proof() => create();
+  Proof._() : super();
+  factory Proof.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proof.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Proof_Value> _Proof_ValueByTag = {
     1 : Proof_Value.locked,
     2 : Proof_Value.digest,
@@ -782,84 +702,24 @@ class Proof extends $pb.GeneratedMessage {
     13 : Proof_Value.or,
     0 : Proof_Value.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proof', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proof', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
-    ..aOM<Proof_Locked>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'locked', subBuilder: Proof_Locked.create)
-    ..aOM<Proof_Digest>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: Proof_Digest.create)
-    ..aOM<Proof_DigitalSignature>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digitalSignature', protoName: 'digitalSignature', subBuilder: Proof_DigitalSignature.create)
-    ..aOM<Proof_HeightRange>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'heightRange', protoName: 'heightRange', subBuilder: Proof_HeightRange.create)
-    ..aOM<Proof_TickRange>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tickRange', protoName: 'tickRange', subBuilder: Proof_TickRange.create)
-    ..aOM<Proof_ExactMatch>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exactMatch', protoName: 'exactMatch', subBuilder: Proof_ExactMatch.create)
-    ..aOM<Proof_LessThan>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lessThan', protoName: 'lessThan', subBuilder: Proof_LessThan.create)
-    ..aOM<Proof_GreaterThan>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'greaterThan', protoName: 'greaterThan', subBuilder: Proof_GreaterThan.create)
-    ..aOM<Proof_EqualTo>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'equalTo', protoName: 'equalTo', subBuilder: Proof_EqualTo.create)
-    ..aOM<Proof_Threshold>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', subBuilder: Proof_Threshold.create)
-    ..aOM<Proof_Not>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'not', subBuilder: Proof_Not.create)
-    ..aOM<Proof_And>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'and', subBuilder: Proof_And.create)
-    ..aOM<Proof_Or>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'or', subBuilder: Proof_Or.create)
+    ..aOM<Proof_Locked>(1, _omitFieldNames ? '' : 'locked', subBuilder: Proof_Locked.create)
+    ..aOM<Proof_Digest>(2, _omitFieldNames ? '' : 'digest', subBuilder: Proof_Digest.create)
+    ..aOM<Proof_DigitalSignature>(3, _omitFieldNames ? '' : 'digitalSignature', protoName: 'digitalSignature', subBuilder: Proof_DigitalSignature.create)
+    ..aOM<Proof_HeightRange>(4, _omitFieldNames ? '' : 'heightRange', protoName: 'heightRange', subBuilder: Proof_HeightRange.create)
+    ..aOM<Proof_TickRange>(5, _omitFieldNames ? '' : 'tickRange', protoName: 'tickRange', subBuilder: Proof_TickRange.create)
+    ..aOM<Proof_ExactMatch>(6, _omitFieldNames ? '' : 'exactMatch', protoName: 'exactMatch', subBuilder: Proof_ExactMatch.create)
+    ..aOM<Proof_LessThan>(7, _omitFieldNames ? '' : 'lessThan', protoName: 'lessThan', subBuilder: Proof_LessThan.create)
+    ..aOM<Proof_GreaterThan>(8, _omitFieldNames ? '' : 'greaterThan', protoName: 'greaterThan', subBuilder: Proof_GreaterThan.create)
+    ..aOM<Proof_EqualTo>(9, _omitFieldNames ? '' : 'equalTo', protoName: 'equalTo', subBuilder: Proof_EqualTo.create)
+    ..aOM<Proof_Threshold>(10, _omitFieldNames ? '' : 'threshold', subBuilder: Proof_Threshold.create)
+    ..aOM<Proof_Not>(11, _omitFieldNames ? '' : 'not', subBuilder: Proof_Not.create)
+    ..aOM<Proof_And>(12, _omitFieldNames ? '' : 'and', subBuilder: Proof_And.create)
+    ..aOM<Proof_Or>(13, _omitFieldNames ? '' : 'or', subBuilder: Proof_Or.create)
     ..hasRequiredFields = false
   ;
 
-  Proof._() : super();
-  factory Proof({
-    Proof_Locked? locked,
-    Proof_Digest? digest,
-    Proof_DigitalSignature? digitalSignature,
-    Proof_HeightRange? heightRange,
-    Proof_TickRange? tickRange,
-    Proof_ExactMatch? exactMatch,
-    Proof_LessThan? lessThan,
-    Proof_GreaterThan? greaterThan,
-    Proof_EqualTo? equalTo,
-    Proof_Threshold? threshold,
-    Proof_Not? not,
-    Proof_And? and,
-    Proof_Or? or,
-  }) {
-    final _result = create();
-    if (locked != null) {
-      _result.locked = locked;
-    }
-    if (digest != null) {
-      _result.digest = digest;
-    }
-    if (digitalSignature != null) {
-      _result.digitalSignature = digitalSignature;
-    }
-    if (heightRange != null) {
-      _result.heightRange = heightRange;
-    }
-    if (tickRange != null) {
-      _result.tickRange = tickRange;
-    }
-    if (exactMatch != null) {
-      _result.exactMatch = exactMatch;
-    }
-    if (lessThan != null) {
-      _result.lessThan = lessThan;
-    }
-    if (greaterThan != null) {
-      _result.greaterThan = greaterThan;
-    }
-    if (equalTo != null) {
-      _result.equalTo = equalTo;
-    }
-    if (threshold != null) {
-      _result.threshold = threshold;
-    }
-    if (not != null) {
-      _result.not = not;
-    }
-    if (and != null) {
-      _result.and = and;
-    }
-    if (or != null) {
-      _result.or = or;
-    }
-    return _result;
-  }
-  factory Proof.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proof.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -869,8 +729,10 @@ class Proof extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proof copyWith(void Function(Proof) updates) => super.copyWith((message) => updates(message as Proof)) as Proof; // ignore: deprecated_member_use
+  Proof copyWith(void Function(Proof) updates) => super.copyWith((message) => updates(message as Proof)) as Proof;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proof create() => Proof._();
   Proof createEmptyInstance() => create();
@@ -1026,3 +888,6 @@ class Proof extends $pb.GeneratedMessage {
   Proof_Or ensureOr() => $_ensure(12);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

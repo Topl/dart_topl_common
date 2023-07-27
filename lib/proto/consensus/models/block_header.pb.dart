@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: consensus/models/block_header.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -16,78 +20,27 @@ import 'operational_certificate.pb.dart' as $3;
 import 'staking.pb.dart' as $6;
 
 class BlockHeader extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BlockHeader', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
-    ..aOM<$2.BlockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentHeaderId', protoName: 'parentHeaderId', subBuilder: $2.BlockId.create)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentSlot', $pb.PbFieldType.OU6, protoName: 'parentSlot', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txRoot', $pb.PbFieldType.OY, protoName: 'txRoot')
-    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bloomFilter', $pb.PbFieldType.OY, protoName: 'bloomFilter')
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'height', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'slot', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$5.EligibilityCertificate>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'eligibilityCertificate', protoName: 'eligibilityCertificate', subBuilder: $5.EligibilityCertificate.create)
-    ..aOM<$3.OperationalCertificate>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationalCertificate', protoName: 'operationalCertificate', subBuilder: $3.OperationalCertificate.create)
-    ..a<$core.List<$core.int>>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', $pb.PbFieldType.OY)
-    ..aOM<$6.StakingAddress>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $6.StakingAddress.create)
-    ..aOM<$2.BlockId>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'headerId', protoName: 'headerId', subBuilder: $2.BlockId.create)
+  factory BlockHeader() => create();
+  BlockHeader._() : super();
+  factory BlockHeader.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BlockHeader.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockHeader', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
+    ..aOM<$2.BlockId>(1, _omitFieldNames ? '' : 'parentHeaderId', protoName: 'parentHeaderId', subBuilder: $2.BlockId.create)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'parentSlot', $pb.PbFieldType.OU6, protoName: 'parentSlot', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'txRoot', $pb.PbFieldType.OY, protoName: 'txRoot')
+    ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'bloomFilter', $pb.PbFieldType.OY, protoName: 'bloomFilter')
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'height', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'slot', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$5.EligibilityCertificate>(8, _omitFieldNames ? '' : 'eligibilityCertificate', protoName: 'eligibilityCertificate', subBuilder: $5.EligibilityCertificate.create)
+    ..aOM<$3.OperationalCertificate>(9, _omitFieldNames ? '' : 'operationalCertificate', protoName: 'operationalCertificate', subBuilder: $3.OperationalCertificate.create)
+    ..a<$core.List<$core.int>>(10, _omitFieldNames ? '' : 'metadata', $pb.PbFieldType.OY)
+    ..aOM<$6.StakingAddress>(11, _omitFieldNames ? '' : 'address', subBuilder: $6.StakingAddress.create)
+    ..aOM<$2.BlockId>(12, _omitFieldNames ? '' : 'headerId', protoName: 'headerId', subBuilder: $2.BlockId.create)
     ..hasRequiredFields = false
   ;
 
-  BlockHeader._() : super();
-  factory BlockHeader({
-    $2.BlockId? parentHeaderId,
-    $fixnum.Int64? parentSlot,
-    $core.List<$core.int>? txRoot,
-    $core.List<$core.int>? bloomFilter,
-    $fixnum.Int64? timestamp,
-    $fixnum.Int64? height,
-    $fixnum.Int64? slot,
-    $5.EligibilityCertificate? eligibilityCertificate,
-    $3.OperationalCertificate? operationalCertificate,
-    $core.List<$core.int>? metadata,
-    $6.StakingAddress? address,
-    $2.BlockId? headerId,
-  }) {
-    final _result = create();
-    if (parentHeaderId != null) {
-      _result.parentHeaderId = parentHeaderId;
-    }
-    if (parentSlot != null) {
-      _result.parentSlot = parentSlot;
-    }
-    if (txRoot != null) {
-      _result.txRoot = txRoot;
-    }
-    if (bloomFilter != null) {
-      _result.bloomFilter = bloomFilter;
-    }
-    if (timestamp != null) {
-      _result.timestamp = timestamp;
-    }
-    if (height != null) {
-      _result.height = height;
-    }
-    if (slot != null) {
-      _result.slot = slot;
-    }
-    if (eligibilityCertificate != null) {
-      _result.eligibilityCertificate = eligibilityCertificate;
-    }
-    if (operationalCertificate != null) {
-      _result.operationalCertificate = operationalCertificate;
-    }
-    if (metadata != null) {
-      _result.metadata = metadata;
-    }
-    if (address != null) {
-      _result.address = address;
-    }
-    if (headerId != null) {
-      _result.headerId = headerId;
-    }
-    return _result;
-  }
-  factory BlockHeader.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BlockHeader.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -97,8 +50,10 @@ class BlockHeader extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  BlockHeader copyWith(void Function(BlockHeader) updates) => super.copyWith((message) => updates(message as BlockHeader)) as BlockHeader; // ignore: deprecated_member_use
+  BlockHeader copyWith(void Function(BlockHeader) updates) => super.copyWith((message) => updates(message as BlockHeader)) as BlockHeader;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BlockHeader create() => BlockHeader._();
   BlockHeader createEmptyInstance() => create();
@@ -226,3 +181,6 @@ class BlockHeader extends $pb.GeneratedMessage {
   $2.BlockId ensureHeaderId() => $_ensure(11);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

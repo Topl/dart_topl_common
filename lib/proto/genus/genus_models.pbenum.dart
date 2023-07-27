@@ -1,18 +1,22 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: genus/genus_models.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class TxoState extends $pb.ProtobufEnum {
-  static const TxoState SPENT = TxoState._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SPENT');
-  static const TxoState UNSPENT = TxoState._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'UNSPENT');
-  static const TxoState PENDING = TxoState._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'PENDING');
+  static const TxoState SPENT = TxoState._(0, _omitEnumNames ? '' : 'SPENT');
+  static const TxoState UNSPENT = TxoState._(1, _omitEnumNames ? '' : 'UNSPENT');
+  static const TxoState PENDING = TxoState._(2, _omitEnumNames ? '' : 'PENDING');
 
   static const $core.List<TxoState> values = <TxoState> [
     SPENT,
@@ -27,9 +31,9 @@ class TxoState extends $pb.ProtobufEnum {
 }
 
 class SortOrder extends $pb.ProtobufEnum {
-  static const SortOrder ASCENDING = SortOrder._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ASCENDING');
-  static const SortOrder DESCENDING = SortOrder._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DESCENDING');
-  static const SortOrder UNSORTED = SortOrder._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'UNSORTED');
+  static const SortOrder ASCENDING = SortOrder._(0, _omitEnumNames ? '' : 'ASCENDING');
+  static const SortOrder DESCENDING = SortOrder._(1, _omitEnumNames ? '' : 'DESCENDING');
+  static const SortOrder UNSORTED = SortOrder._(2, _omitEnumNames ? '' : 'UNSORTED');
 
   static const $core.List<SortOrder> values = <SortOrder> [
     ASCENDING,
@@ -44,11 +48,11 @@ class SortOrder extends $pb.ProtobufEnum {
 }
 
 class LabelType extends $pb.ProtobufEnum {
-  static const LabelType EMPTY = LabelType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'EMPTY');
-  static const LabelType LVL = LabelType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'LVL');
-  static const LabelType TOPL = LabelType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TOPL');
-  static const LabelType V1 = LabelType._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'V1');
-  static const LabelType TAM2 = LabelType._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TAM2');
+  static const LabelType EMPTY = LabelType._(0, _omitEnumNames ? '' : 'EMPTY');
+  static const LabelType LVL = LabelType._(1, _omitEnumNames ? '' : 'LVL');
+  static const LabelType TOPL = LabelType._(2, _omitEnumNames ? '' : 'TOPL');
+  static const LabelType V1 = LabelType._(3, _omitEnumNames ? '' : 'V1');
+  static const LabelType TAM2 = LabelType._(4, _omitEnumNames ? '' : 'TAM2');
 
   static const $core.List<LabelType> values = <LabelType> [
     EMPTY,
@@ -64,3 +68,5 @@ class LabelType extends $pb.ProtobufEnum {
   const LabelType._($core.int v, $core.String n) : super(v, n);
 }
 
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

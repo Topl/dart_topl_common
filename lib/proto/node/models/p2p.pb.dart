@@ -1,32 +1,29 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: node/models/p2p.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class CurrentKnownHostsReq extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CurrentKnownHostsReq', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxCount', $pb.PbFieldType.OU3, protoName: 'maxCount')
+  factory CurrentKnownHostsReq() => create();
+  CurrentKnownHostsReq._() : super();
+  factory CurrentKnownHostsReq.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CurrentKnownHostsReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CurrentKnownHostsReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.models'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'maxCount', $pb.PbFieldType.OU3, protoName: 'maxCount')
     ..hasRequiredFields = false
   ;
 
-  CurrentKnownHostsReq._() : super();
-  factory CurrentKnownHostsReq({
-    $core.int? maxCount,
-  }) {
-    final _result = create();
-    if (maxCount != null) {
-      _result.maxCount = maxCount;
-    }
-    return _result;
-  }
-  factory CurrentKnownHostsReq.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CurrentKnownHostsReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -36,8 +33,10 @@ class CurrentKnownHostsReq extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CurrentKnownHostsReq copyWith(void Function(CurrentKnownHostsReq) updates) => super.copyWith((message) => updates(message as CurrentKnownHostsReq)) as CurrentKnownHostsReq; // ignore: deprecated_member_use
+  CurrentKnownHostsReq copyWith(void Function(CurrentKnownHostsReq) updates) => super.copyWith((message) => updates(message as CurrentKnownHostsReq)) as CurrentKnownHostsReq;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CurrentKnownHostsReq create() => CurrentKnownHostsReq._();
   CurrentKnownHostsReq createEmptyInstance() => create();
@@ -57,28 +56,17 @@ class CurrentKnownHostsReq extends $pb.GeneratedMessage {
 }
 
 class KnownHost extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'KnownHost', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'port', $pb.PbFieldType.OU3)
+  factory KnownHost() => create();
+  KnownHost._() : super();
+  factory KnownHost.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory KnownHost.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'KnownHost', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'host')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'port', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  KnownHost._() : super();
-  factory KnownHost({
-    $core.String? host,
-    $core.int? port,
-  }) {
-    final _result = create();
-    if (host != null) {
-      _result.host = host;
-    }
-    if (port != null) {
-      _result.port = port;
-    }
-    return _result;
-  }
-  factory KnownHost.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory KnownHost.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -88,8 +76,10 @@ class KnownHost extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  KnownHost copyWith(void Function(KnownHost) updates) => super.copyWith((message) => updates(message as KnownHost)) as KnownHost; // ignore: deprecated_member_use
+  KnownHost copyWith(void Function(KnownHost) updates) => super.copyWith((message) => updates(message as KnownHost)) as KnownHost;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static KnownHost create() => KnownHost._();
   KnownHost createEmptyInstance() => create();
@@ -118,33 +108,18 @@ class KnownHost extends $pb.GeneratedMessage {
 }
 
 class CurrentKnownHostsRes extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CurrentKnownHostsRes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
-    ..pc<KnownHost>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hotHosts', $pb.PbFieldType.PM, protoName: 'hotHosts', subBuilder: KnownHost.create)
-    ..pc<KnownHost>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'warmHosts', $pb.PbFieldType.PM, protoName: 'warmHosts', subBuilder: KnownHost.create)
-    ..pc<KnownHost>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'coldHosts', $pb.PbFieldType.PM, protoName: 'coldHosts', subBuilder: KnownHost.create)
+  factory CurrentKnownHostsRes() => create();
+  CurrentKnownHostsRes._() : super();
+  factory CurrentKnownHostsRes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CurrentKnownHostsRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CurrentKnownHostsRes', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.models'), createEmptyInstance: create)
+    ..pc<KnownHost>(1, _omitFieldNames ? '' : 'hotHosts', $pb.PbFieldType.PM, protoName: 'hotHosts', subBuilder: KnownHost.create)
+    ..pc<KnownHost>(2, _omitFieldNames ? '' : 'warmHosts', $pb.PbFieldType.PM, protoName: 'warmHosts', subBuilder: KnownHost.create)
+    ..pc<KnownHost>(3, _omitFieldNames ? '' : 'coldHosts', $pb.PbFieldType.PM, protoName: 'coldHosts', subBuilder: KnownHost.create)
     ..hasRequiredFields = false
   ;
 
-  CurrentKnownHostsRes._() : super();
-  factory CurrentKnownHostsRes({
-    $core.Iterable<KnownHost>? hotHosts,
-    $core.Iterable<KnownHost>? warmHosts,
-    $core.Iterable<KnownHost>? coldHosts,
-  }) {
-    final _result = create();
-    if (hotHosts != null) {
-      _result.hotHosts.addAll(hotHosts);
-    }
-    if (warmHosts != null) {
-      _result.warmHosts.addAll(warmHosts);
-    }
-    if (coldHosts != null) {
-      _result.coldHosts.addAll(coldHosts);
-    }
-    return _result;
-  }
-  factory CurrentKnownHostsRes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CurrentKnownHostsRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -154,8 +129,10 @@ class CurrentKnownHostsRes extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CurrentKnownHostsRes copyWith(void Function(CurrentKnownHostsRes) updates) => super.copyWith((message) => updates(message as CurrentKnownHostsRes)) as CurrentKnownHostsRes; // ignore: deprecated_member_use
+  CurrentKnownHostsRes copyWith(void Function(CurrentKnownHostsRes) updates) => super.copyWith((message) => updates(message as CurrentKnownHostsRes)) as CurrentKnownHostsRes;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CurrentKnownHostsRes create() => CurrentKnownHostsRes._();
   CurrentKnownHostsRes createEmptyInstance() => create();
@@ -175,23 +152,16 @@ class CurrentKnownHostsRes extends $pb.GeneratedMessage {
 }
 
 class PingMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PingMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ping')
+  factory PingMessage() => create();
+  PingMessage._() : super();
+  factory PingMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PingMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PingMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'ping')
     ..hasRequiredFields = false
   ;
 
-  PingMessage._() : super();
-  factory PingMessage({
-    $core.String? ping,
-  }) {
-    final _result = create();
-    if (ping != null) {
-      _result.ping = ping;
-    }
-    return _result;
-  }
-  factory PingMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PingMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -201,8 +171,10 @@ class PingMessage extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PingMessage copyWith(void Function(PingMessage) updates) => super.copyWith((message) => updates(message as PingMessage)) as PingMessage; // ignore: deprecated_member_use
+  PingMessage copyWith(void Function(PingMessage) updates) => super.copyWith((message) => updates(message as PingMessage)) as PingMessage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PingMessage create() => PingMessage._();
   PingMessage createEmptyInstance() => create();
@@ -222,23 +194,16 @@ class PingMessage extends $pb.GeneratedMessage {
 }
 
 class PongMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PongMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.node.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pong')
+  factory PongMessage() => create();
+  PongMessage._() : super();
+  factory PongMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PongMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PongMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'pong')
     ..hasRequiredFields = false
   ;
 
-  PongMessage._() : super();
-  factory PongMessage({
-    $core.String? pong,
-  }) {
-    final _result = create();
-    if (pong != null) {
-      _result.pong = pong;
-    }
-    return _result;
-  }
-  factory PongMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory PongMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -248,8 +213,10 @@ class PongMessage extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  PongMessage copyWith(void Function(PongMessage) updates) => super.copyWith((message) => updates(message as PongMessage)) as PongMessage; // ignore: deprecated_member_use
+  PongMessage copyWith(void Function(PongMessage) updates) => super.copyWith((message) => updates(message as PongMessage)) as PongMessage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PongMessage create() => PongMessage._();
   PongMessage createEmptyInstance() => create();
@@ -268,3 +235,6 @@ class PongMessage extends $pb.GeneratedMessage {
   void clearPong() => clearField(1);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
