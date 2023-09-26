@@ -1,32 +1,38 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: quivr/models/shared.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// General purpose data
 class Data extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Data', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Data._() : super();
   factory Data({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  Data._() : super();
   factory Data.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Data.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Data', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -36,8 +42,10 @@ class Data extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Data copyWith(void Function(Data) updates) => super.copyWith((message) => updates(message as Data)) as Data; // ignore: deprecated_member_use
+  Data copyWith(void Function(Data) updates) => super.copyWith((message) => updates(message as Data)) as Data;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Data create() => Data._();
   Data createEmptyInstance() => create();
@@ -46,6 +54,7 @@ class Data extends $pb.GeneratedMessage {
   static Data getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Data>(create);
   static Data? _defaultInstance;
 
+  /// Byte representation of data value
   @$pb.TagNumber(1)
   $core.List<$core.int> get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -56,24 +65,26 @@ class Data extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Data format used for metadata
 class SmallData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SmallData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  SmallData._() : super();
   factory SmallData({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  SmallData._() : super();
   factory SmallData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SmallData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SmallData', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -83,8 +94,10 @@ class SmallData extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SmallData copyWith(void Function(SmallData) updates) => super.copyWith((message) => updates(message as SmallData)) as SmallData; // ignore: deprecated_member_use
+  SmallData copyWith(void Function(SmallData) updates) => super.copyWith((message) => updates(message as SmallData)) as SmallData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SmallData create() => SmallData._();
   SmallData createEmptyInstance() => create();
@@ -93,6 +106,7 @@ class SmallData extends $pb.GeneratedMessage {
   static SmallData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SmallData>(create);
   static SmallData? _defaultInstance;
 
+  /// Maximum length = 64
   @$pb.TagNumber(1)
   $core.List<$core.int> get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -103,24 +117,26 @@ class SmallData extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Event root
 class Root extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Root', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Root._() : super();
   factory Root({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  Root._() : super();
   factory Root.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Root.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Root', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -130,8 +146,10 @@ class Root extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Root copyWith(void Function(Root) updates) => super.copyWith((message) => updates(message as Root)) as Root; // ignore: deprecated_member_use
+  Root copyWith(void Function(Root) updates) => super.copyWith((message) => updates(message as Root)) as Root;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Root create() => Root._();
   Root createEmptyInstance() => create();
@@ -150,29 +168,31 @@ class Root extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Preimage (input) for a digest operation
 class Preimage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Preimage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'input', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'salt', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Preimage._() : super();
   factory Preimage({
     $core.List<$core.int>? input,
     $core.List<$core.int>? salt,
   }) {
-    final _result = create();
+    final $result = create();
     if (input != null) {
-      _result.input = input;
+      $result.input = input;
     }
     if (salt != null) {
-      _result.salt = salt;
+      $result.salt = salt;
     }
-    return _result;
+    return $result;
   }
+  Preimage._() : super();
   factory Preimage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Preimage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Preimage', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'input', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'salt', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -182,8 +202,10 @@ class Preimage extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Preimage copyWith(void Function(Preimage) updates) => super.copyWith((message) => updates(message as Preimage)) as Preimage; // ignore: deprecated_member_use
+  Preimage copyWith(void Function(Preimage) updates) => super.copyWith((message) => updates(message as Preimage)) as Preimage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Preimage create() => Preimage._();
   Preimage createEmptyInstance() => create();
@@ -211,24 +233,26 @@ class Preimage extends $pb.GeneratedMessage {
   void clearSalt() => clearField(2);
 }
 
+/// Information output to Hash
 class Digest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Digest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Digest._() : super();
   factory Digest({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  Digest._() : super();
   factory Digest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Digest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Digest', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -238,8 +262,10 @@ class Digest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Digest copyWith(void Function(Digest) updates) => super.copyWith((message) => updates(message as Digest)) as Digest; // ignore: deprecated_member_use
+  Digest copyWith(void Function(Digest) updates) => super.copyWith((message) => updates(message as Digest)) as Digest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Digest create() => Digest._();
   Digest createEmptyInstance() => create();
@@ -248,6 +274,7 @@ class Digest extends $pb.GeneratedMessage {
   static Digest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Digest>(create);
   static Digest? _defaultInstance;
 
+  /// strict length = 32
   @$pb.TagNumber(1)
   $core.List<$core.int> get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -258,29 +285,31 @@ class Digest extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Encapsulates digest and preimage used to verify that preimage results in digest
 class DigestVerification extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DigestVerification', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<Digest>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: Digest.create)
-    ..aOM<Preimage>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'preimage', subBuilder: Preimage.create)
-    ..hasRequiredFields = false
-  ;
-
-  DigestVerification._() : super();
   factory DigestVerification({
     Digest? digest,
     Preimage? preimage,
   }) {
-    final _result = create();
+    final $result = create();
     if (digest != null) {
-      _result.digest = digest;
+      $result.digest = digest;
     }
     if (preimage != null) {
-      _result.preimage = preimage;
+      $result.preimage = preimage;
     }
-    return _result;
+    return $result;
   }
+  DigestVerification._() : super();
   factory DigestVerification.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DigestVerification.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DigestVerification', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<Digest>(1, _omitFieldNames ? '' : 'digest', subBuilder: Digest.create)
+    ..aOM<Preimage>(2, _omitFieldNames ? '' : 'preimage', subBuilder: Preimage.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -290,8 +319,10 @@ class DigestVerification extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DigestVerification copyWith(void Function(DigestVerification) updates) => super.copyWith((message) => updates(message as DigestVerification)) as DigestVerification; // ignore: deprecated_member_use
+  DigestVerification copyWith(void Function(DigestVerification) updates) => super.copyWith((message) => updates(message as DigestVerification)) as DigestVerification;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DigestVerification create() => DigestVerification._();
   DigestVerification createEmptyInstance() => create();
@@ -324,23 +355,24 @@ class DigestVerification extends $pb.GeneratedMessage {
 }
 
 class VerificationKey_Ed25519Vk extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VerificationKey.Ed25519Vk', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  VerificationKey_Ed25519Vk._() : super();
   factory VerificationKey_Ed25519Vk({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  VerificationKey_Ed25519Vk._() : super();
   factory VerificationKey_Ed25519Vk.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VerificationKey_Ed25519Vk.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerificationKey.Ed25519Vk', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -350,8 +382,10 @@ class VerificationKey_Ed25519Vk extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerificationKey_Ed25519Vk copyWith(void Function(VerificationKey_Ed25519Vk) updates) => super.copyWith((message) => updates(message as VerificationKey_Ed25519Vk)) as VerificationKey_Ed25519Vk; // ignore: deprecated_member_use
+  VerificationKey_Ed25519Vk copyWith(void Function(VerificationKey_Ed25519Vk) updates) => super.copyWith((message) => updates(message as VerificationKey_Ed25519Vk)) as VerificationKey_Ed25519Vk;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VerificationKey_Ed25519Vk create() => VerificationKey_Ed25519Vk._();
   VerificationKey_Ed25519Vk createEmptyInstance() => create();
@@ -371,28 +405,29 @@ class VerificationKey_Ed25519Vk extends $pb.GeneratedMessage {
 }
 
 class VerificationKey_ExtendedEd25519Vk extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VerificationKey.ExtendedEd25519Vk', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<VerificationKey_Ed25519Vk>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vk', subBuilder: VerificationKey_Ed25519Vk.create)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainCode', $pb.PbFieldType.OY, protoName: 'chainCode')
-    ..hasRequiredFields = false
-  ;
-
-  VerificationKey_ExtendedEd25519Vk._() : super();
   factory VerificationKey_ExtendedEd25519Vk({
     VerificationKey_Ed25519Vk? vk,
     $core.List<$core.int>? chainCode,
   }) {
-    final _result = create();
+    final $result = create();
     if (vk != null) {
-      _result.vk = vk;
+      $result.vk = vk;
     }
     if (chainCode != null) {
-      _result.chainCode = chainCode;
+      $result.chainCode = chainCode;
     }
-    return _result;
+    return $result;
   }
+  VerificationKey_ExtendedEd25519Vk._() : super();
   factory VerificationKey_ExtendedEd25519Vk.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VerificationKey_ExtendedEd25519Vk.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerificationKey.ExtendedEd25519Vk', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<VerificationKey_Ed25519Vk>(1, _omitFieldNames ? '' : 'vk', subBuilder: VerificationKey_Ed25519Vk.create)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'chainCode', $pb.PbFieldType.OY, protoName: 'chainCode')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -402,8 +437,10 @@ class VerificationKey_ExtendedEd25519Vk extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerificationKey_ExtendedEd25519Vk copyWith(void Function(VerificationKey_ExtendedEd25519Vk) updates) => super.copyWith((message) => updates(message as VerificationKey_ExtendedEd25519Vk)) as VerificationKey_ExtendedEd25519Vk; // ignore: deprecated_member_use
+  VerificationKey_ExtendedEd25519Vk copyWith(void Function(VerificationKey_ExtendedEd25519Vk) updates) => super.copyWith((message) => updates(message as VerificationKey_ExtendedEd25519Vk)) as VerificationKey_ExtendedEd25519Vk;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VerificationKey_ExtendedEd25519Vk create() => VerificationKey_ExtendedEd25519Vk._();
   VerificationKey_ExtendedEd25519Vk createEmptyInstance() => create();
@@ -439,35 +476,37 @@ enum VerificationKey_Vk {
   notSet
 }
 
+/// public key in a key pair used for verification
 class VerificationKey extends $pb.GeneratedMessage {
+  factory VerificationKey({
+    VerificationKey_Ed25519Vk? ed25519,
+    VerificationKey_ExtendedEd25519Vk? extendedEd25519,
+  }) {
+    final $result = create();
+    if (ed25519 != null) {
+      $result.ed25519 = ed25519;
+    }
+    if (extendedEd25519 != null) {
+      $result.extendedEd25519 = extendedEd25519;
+    }
+    return $result;
+  }
+  VerificationKey._() : super();
+  factory VerificationKey.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VerificationKey.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, VerificationKey_Vk> _VerificationKey_VkByTag = {
     1 : VerificationKey_Vk.ed25519,
     2 : VerificationKey_Vk.extendedEd25519,
     0 : VerificationKey_Vk.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VerificationKey', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerificationKey', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<VerificationKey_Ed25519Vk>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ed25519', subBuilder: VerificationKey_Ed25519Vk.create)
-    ..aOM<VerificationKey_ExtendedEd25519Vk>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'extendedEd25519', protoName: 'extendedEd25519', subBuilder: VerificationKey_ExtendedEd25519Vk.create)
+    ..aOM<VerificationKey_Ed25519Vk>(1, _omitFieldNames ? '' : 'ed25519', subBuilder: VerificationKey_Ed25519Vk.create)
+    ..aOM<VerificationKey_ExtendedEd25519Vk>(2, _omitFieldNames ? '' : 'extendedEd25519', protoName: 'extendedEd25519', subBuilder: VerificationKey_ExtendedEd25519Vk.create)
     ..hasRequiredFields = false
   ;
 
-  VerificationKey._() : super();
-  factory VerificationKey({
-    VerificationKey_Ed25519Vk? ed25519,
-    VerificationKey_ExtendedEd25519Vk? extendedEd25519,
-  }) {
-    final _result = create();
-    if (ed25519 != null) {
-      _result.ed25519 = ed25519;
-    }
-    if (extendedEd25519 != null) {
-      _result.extendedEd25519 = extendedEd25519;
-    }
-    return _result;
-  }
-  factory VerificationKey.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory VerificationKey.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -477,8 +516,10 @@ class VerificationKey extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerificationKey copyWith(void Function(VerificationKey) updates) => super.copyWith((message) => updates(message as VerificationKey)) as VerificationKey; // ignore: deprecated_member_use
+  VerificationKey copyWith(void Function(VerificationKey) updates) => super.copyWith((message) => updates(message as VerificationKey)) as VerificationKey;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VerificationKey create() => VerificationKey._();
   VerificationKey createEmptyInstance() => create();
@@ -514,23 +555,24 @@ class VerificationKey extends $pb.GeneratedMessage {
 }
 
 class SigningKey_Ed25519Sk extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningKey.Ed25519Sk', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  SigningKey_Ed25519Sk._() : super();
   factory SigningKey_Ed25519Sk({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  SigningKey_Ed25519Sk._() : super();
   factory SigningKey_Ed25519Sk.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningKey_Ed25519Sk.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningKey.Ed25519Sk', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -540,8 +582,10 @@ class SigningKey_Ed25519Sk extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningKey_Ed25519Sk copyWith(void Function(SigningKey_Ed25519Sk) updates) => super.copyWith((message) => updates(message as SigningKey_Ed25519Sk)) as SigningKey_Ed25519Sk; // ignore: deprecated_member_use
+  SigningKey_Ed25519Sk copyWith(void Function(SigningKey_Ed25519Sk) updates) => super.copyWith((message) => updates(message as SigningKey_Ed25519Sk)) as SigningKey_Ed25519Sk;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SigningKey_Ed25519Sk create() => SigningKey_Ed25519Sk._();
   SigningKey_Ed25519Sk createEmptyInstance() => create();
@@ -561,33 +605,34 @@ class SigningKey_Ed25519Sk extends $pb.GeneratedMessage {
 }
 
 class SigningKey_ExtendedEd25519Sk extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningKey.ExtendedEd25519Sk', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leftKey', $pb.PbFieldType.OY, protoName: 'leftKey')
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rightKey', $pb.PbFieldType.OY, protoName: 'rightKey')
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainCode', $pb.PbFieldType.OY, protoName: 'chainCode')
-    ..hasRequiredFields = false
-  ;
-
-  SigningKey_ExtendedEd25519Sk._() : super();
   factory SigningKey_ExtendedEd25519Sk({
     $core.List<$core.int>? leftKey,
     $core.List<$core.int>? rightKey,
     $core.List<$core.int>? chainCode,
   }) {
-    final _result = create();
+    final $result = create();
     if (leftKey != null) {
-      _result.leftKey = leftKey;
+      $result.leftKey = leftKey;
     }
     if (rightKey != null) {
-      _result.rightKey = rightKey;
+      $result.rightKey = rightKey;
     }
     if (chainCode != null) {
-      _result.chainCode = chainCode;
+      $result.chainCode = chainCode;
     }
-    return _result;
+    return $result;
   }
+  SigningKey_ExtendedEd25519Sk._() : super();
   factory SigningKey_ExtendedEd25519Sk.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningKey_ExtendedEd25519Sk.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningKey.ExtendedEd25519Sk', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'leftKey', $pb.PbFieldType.OY, protoName: 'leftKey')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'rightKey', $pb.PbFieldType.OY, protoName: 'rightKey')
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'chainCode', $pb.PbFieldType.OY, protoName: 'chainCode')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -597,8 +642,10 @@ class SigningKey_ExtendedEd25519Sk extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningKey_ExtendedEd25519Sk copyWith(void Function(SigningKey_ExtendedEd25519Sk) updates) => super.copyWith((message) => updates(message as SigningKey_ExtendedEd25519Sk)) as SigningKey_ExtendedEd25519Sk; // ignore: deprecated_member_use
+  SigningKey_ExtendedEd25519Sk copyWith(void Function(SigningKey_ExtendedEd25519Sk) updates) => super.copyWith((message) => updates(message as SigningKey_ExtendedEd25519Sk)) as SigningKey_ExtendedEd25519Sk;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SigningKey_ExtendedEd25519Sk create() => SigningKey_ExtendedEd25519Sk._();
   SigningKey_ExtendedEd25519Sk createEmptyInstance() => create();
@@ -641,35 +688,37 @@ enum SigningKey_Sk {
   notSet
 }
 
+/// Private key used to sign
 class SigningKey extends $pb.GeneratedMessage {
+  factory SigningKey({
+    SigningKey_Ed25519Sk? ed25519,
+    SigningKey_ExtendedEd25519Sk? extendedEd25519,
+  }) {
+    final $result = create();
+    if (ed25519 != null) {
+      $result.ed25519 = ed25519;
+    }
+    if (extendedEd25519 != null) {
+      $result.extendedEd25519 = extendedEd25519;
+    }
+    return $result;
+  }
+  SigningKey._() : super();
+  factory SigningKey.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SigningKey.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, SigningKey_Sk> _SigningKey_SkByTag = {
     1 : SigningKey_Sk.ed25519,
     2 : SigningKey_Sk.extendedEd25519,
     0 : SigningKey_Sk.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningKey', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningKey', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<SigningKey_Ed25519Sk>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ed25519', subBuilder: SigningKey_Ed25519Sk.create)
-    ..aOM<SigningKey_ExtendedEd25519Sk>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'extendedEd25519', protoName: 'extendedEd25519', subBuilder: SigningKey_ExtendedEd25519Sk.create)
+    ..aOM<SigningKey_Ed25519Sk>(1, _omitFieldNames ? '' : 'ed25519', subBuilder: SigningKey_Ed25519Sk.create)
+    ..aOM<SigningKey_ExtendedEd25519Sk>(2, _omitFieldNames ? '' : 'extendedEd25519', protoName: 'extendedEd25519', subBuilder: SigningKey_ExtendedEd25519Sk.create)
     ..hasRequiredFields = false
   ;
 
-  SigningKey._() : super();
-  factory SigningKey({
-    SigningKey_Ed25519Sk? ed25519,
-    SigningKey_ExtendedEd25519Sk? extendedEd25519,
-  }) {
-    final _result = create();
-    if (ed25519 != null) {
-      _result.ed25519 = ed25519;
-    }
-    if (extendedEd25519 != null) {
-      _result.extendedEd25519 = extendedEd25519;
-    }
-    return _result;
-  }
-  factory SigningKey.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SigningKey.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -679,8 +728,10 @@ class SigningKey extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningKey copyWith(void Function(SigningKey) updates) => super.copyWith((message) => updates(message as SigningKey)) as SigningKey; // ignore: deprecated_member_use
+  SigningKey copyWith(void Function(SigningKey) updates) => super.copyWith((message) => updates(message as SigningKey)) as SigningKey;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SigningKey create() => SigningKey._();
   SigningKey createEmptyInstance() => create();
@@ -715,29 +766,31 @@ class SigningKey extends $pb.GeneratedMessage {
   SigningKey_ExtendedEd25519Sk ensureExtendedEd25519() => $_ensure(1);
 }
 
+/// Public and private key pairs used to sign and verify
 class KeyPair extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'KeyPair', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<VerificationKey>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vk', subBuilder: VerificationKey.create)
-    ..aOM<SigningKey>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sk', subBuilder: SigningKey.create)
-    ..hasRequiredFields = false
-  ;
-
-  KeyPair._() : super();
   factory KeyPair({
     VerificationKey? vk,
     SigningKey? sk,
   }) {
-    final _result = create();
+    final $result = create();
     if (vk != null) {
-      _result.vk = vk;
+      $result.vk = vk;
     }
     if (sk != null) {
-      _result.sk = sk;
+      $result.sk = sk;
     }
-    return _result;
+    return $result;
   }
+  KeyPair._() : super();
   factory KeyPair.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory KeyPair.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'KeyPair', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<VerificationKey>(1, _omitFieldNames ? '' : 'vk', subBuilder: VerificationKey.create)
+    ..aOM<SigningKey>(2, _omitFieldNames ? '' : 'sk', subBuilder: SigningKey.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -747,8 +800,10 @@ class KeyPair extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  KeyPair copyWith(void Function(KeyPair) updates) => super.copyWith((message) => updates(message as KeyPair)) as KeyPair; // ignore: deprecated_member_use
+  KeyPair copyWith(void Function(KeyPair) updates) => super.copyWith((message) => updates(message as KeyPair)) as KeyPair;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static KeyPair create() => KeyPair._();
   KeyPair createEmptyInstance() => create();
@@ -780,24 +835,26 @@ class KeyPair extends $pb.GeneratedMessage {
   SigningKey ensureSk() => $_ensure(1);
 }
 
+/// Message to sign
 class Message extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Message', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Message._() : super();
   factory Message({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  Message._() : super();
   factory Message.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Message', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -807,8 +864,10 @@ class Message extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message copyWith(void Function(Message) updates) => super.copyWith((message) => updates(message as Message)) as Message; // ignore: deprecated_member_use
+  Message copyWith(void Function(Message) updates) => super.copyWith((message) => updates(message as Message)) as Message;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Message create() => Message._();
   Message createEmptyInstance() => create();
@@ -827,24 +886,26 @@ class Message extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// generated signature
 class Witness extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Witness', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Witness._() : super();
   factory Witness({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  Witness._() : super();
   factory Witness.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Witness.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Witness', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -854,8 +915,10 @@ class Witness extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Witness copyWith(void Function(Witness) updates) => super.copyWith((message) => updates(message as Witness)) as Witness; // ignore: deprecated_member_use
+  Witness copyWith(void Function(Witness) updates) => super.copyWith((message) => updates(message as Witness)) as Witness;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Witness create() => Witness._();
   Witness createEmptyInstance() => create();
@@ -874,34 +937,36 @@ class Witness extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// encapsulates data used to verify a signing routine
 class SignatureVerification extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignatureVerification', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<VerificationKey>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verificationKey', protoName: 'verificationKey', subBuilder: VerificationKey.create)
-    ..aOM<Witness>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature', subBuilder: Witness.create)
-    ..aOM<Message>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message', subBuilder: Message.create)
-    ..hasRequiredFields = false
-  ;
-
-  SignatureVerification._() : super();
   factory SignatureVerification({
     VerificationKey? verificationKey,
     Witness? signature,
     Message? message,
   }) {
-    final _result = create();
+    final $result = create();
     if (verificationKey != null) {
-      _result.verificationKey = verificationKey;
+      $result.verificationKey = verificationKey;
     }
     if (signature != null) {
-      _result.signature = signature;
+      $result.signature = signature;
     }
     if (message != null) {
-      _result.message = message;
+      $result.message = message;
     }
-    return _result;
+    return $result;
   }
+  SignatureVerification._() : super();
   factory SignatureVerification.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SignatureVerification.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SignatureVerification', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<VerificationKey>(1, _omitFieldNames ? '' : 'verificationKey', protoName: 'verificationKey', subBuilder: VerificationKey.create)
+    ..aOM<Witness>(2, _omitFieldNames ? '' : 'signature', subBuilder: Witness.create)
+    ..aOM<Message>(3, _omitFieldNames ? '' : 'message', subBuilder: Message.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -911,8 +976,10 @@ class SignatureVerification extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SignatureVerification copyWith(void Function(SignatureVerification) updates) => super.copyWith((message) => updates(message as SignatureVerification)) as SignatureVerification; // ignore: deprecated_member_use
+  SignatureVerification copyWith(void Function(SignatureVerification) updates) => super.copyWith((message) => updates(message as SignatureVerification)) as SignatureVerification;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignatureVerification create() => SignatureVerification._();
   SignatureVerification createEmptyInstance() => create();
@@ -955,24 +1022,26 @@ class SignatureVerification extends $pb.GeneratedMessage {
   Message ensureMessage() => $_ensure(2);
 }
 
+/// signable in bytes
 class SignableBytes extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignableBytes', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  SignableBytes._() : super();
   factory SignableBytes({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  SignableBytes._() : super();
   factory SignableBytes.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SignableBytes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SignableBytes', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -982,8 +1051,10 @@ class SignableBytes extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SignableBytes copyWith(void Function(SignableBytes) updates) => super.copyWith((message) => updates(message as SignableBytes)) as SignableBytes; // ignore: deprecated_member_use
+  SignableBytes copyWith(void Function(SignableBytes) updates) => super.copyWith((message) => updates(message as SignableBytes)) as SignableBytes;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignableBytes create() => SignableBytes._();
   SignableBytes createEmptyInstance() => create();
@@ -1002,24 +1073,26 @@ class SignableBytes extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+/// Transaction bind uses signable bytes to bind a proof
 class TxBind extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TxBind', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  TxBind._() : super();
   factory TxBind({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  TxBind._() : super();
   factory TxBind.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TxBind.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxBind', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1029,8 +1102,10 @@ class TxBind extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TxBind copyWith(void Function(TxBind) updates) => super.copyWith((message) => updates(message as TxBind)) as TxBind; // ignore: deprecated_member_use
+  TxBind copyWith(void Function(TxBind) updates) => super.copyWith((message) => updates(message as TxBind)) as TxBind;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TxBind create() => TxBind._();
   TxBind createEmptyInstance() => create();
@@ -1049,24 +1124,26 @@ class TxBind extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+/// Represents a 128-bit integer
 class Int128 extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Int128', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  Int128._() : super();
   factory Int128({
     $core.List<$core.int>? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  Int128._() : super();
   factory Int128.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Int128.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Int128', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1076,8 +1153,10 @@ class Int128 extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Int128 copyWith(void Function(Int128) updates) => super.copyWith((message) => updates(message as Int128)) as Int128; // ignore: deprecated_member_use
+  Int128 copyWith(void Function(Int128) updates) => super.copyWith((message) => updates(message as Int128)) as Int128;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Int128 create() => Int128._();
   Int128 createEmptyInstance() => create();
@@ -1086,6 +1165,7 @@ class Int128 extends $pb.GeneratedMessage {
   static Int128 getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Int128>(create);
   static Int128? _defaultInstance;
 
+  /// Java BigInt Representation: two's-complement, big-endian
   @$pb.TagNumber(1)
   $core.List<$core.int> get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -1096,3 +1176,6 @@ class Int128 extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

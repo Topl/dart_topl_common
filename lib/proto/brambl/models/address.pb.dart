@@ -1,44 +1,50 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: brambl/models/address.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'identifier.pb.dart' as $7;
+import 'identifier.pb.dart' as $4;
 
+/// Used in UTXOs
 class LockAddress extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LockAddress', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ledger', $pb.PbFieldType.OU3)
-    ..aOM<$7.LockId>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $7.LockId.create)
-    ..hasRequiredFields = false
-  ;
-
-  LockAddress._() : super();
   factory LockAddress({
     $core.int? network,
     $core.int? ledger,
-    $7.LockId? id,
+    $4.LockId? id,
   }) {
-    final _result = create();
+    final $result = create();
     if (network != null) {
-      _result.network = network;
+      $result.network = network;
     }
     if (ledger != null) {
-      _result.ledger = ledger;
+      $result.ledger = ledger;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
-    return _result;
+    return $result;
   }
+  LockAddress._() : super();
   factory LockAddress.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory LockAddress.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LockAddress', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'network', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'ledger', $pb.PbFieldType.OU3)
+    ..aOM<$4.LockId>(3, _omitFieldNames ? '' : 'id', subBuilder: $4.LockId.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -48,8 +54,10 @@ class LockAddress extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  LockAddress copyWith(void Function(LockAddress) updates) => super.copyWith((message) => updates(message as LockAddress)) as LockAddress; // ignore: deprecated_member_use
+  LockAddress copyWith(void Function(LockAddress) updates) => super.copyWith((message) => updates(message as LockAddress)) as LockAddress;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LockAddress create() => LockAddress._();
   LockAddress createEmptyInstance() => create();
@@ -77,50 +85,52 @@ class LockAddress extends $pb.GeneratedMessage {
   void clearLedger() => clearField(2);
 
   @$pb.TagNumber(3)
-  $7.LockId get id => $_getN(2);
+  $4.LockId get id => $_getN(2);
   @$pb.TagNumber(3)
-  set id($7.LockId v) { setField(3, v); }
+  set id($4.LockId v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
   void clearId() => clearField(3);
   @$pb.TagNumber(3)
-  $7.LockId ensureId() => $_ensure(2);
+  $4.LockId ensureId() => $_ensure(2);
 }
 
+/// Used in STXOs
 class TransactionOutputAddress extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionOutputAddress', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ledger', $pb.PbFieldType.OU3)
-    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOM<$7.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $7.TransactionId.create)
-    ..hasRequiredFields = false
-  ;
-
-  TransactionOutputAddress._() : super();
   factory TransactionOutputAddress({
     $core.int? network,
     $core.int? ledger,
     $core.int? index,
-    $7.TransactionId? id,
+    $4.TransactionId? id,
   }) {
-    final _result = create();
+    final $result = create();
     if (network != null) {
-      _result.network = network;
+      $result.network = network;
     }
     if (ledger != null) {
-      _result.ledger = ledger;
+      $result.ledger = ledger;
     }
     if (index != null) {
-      _result.index = index;
+      $result.index = index;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
-    return _result;
+    return $result;
   }
+  TransactionOutputAddress._() : super();
   factory TransactionOutputAddress.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionOutputAddress.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransactionOutputAddress', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'network', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'ledger', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
+    ..aOM<$4.TransactionId>(4, _omitFieldNames ? '' : 'id', subBuilder: $4.TransactionId.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -130,8 +140,10 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransactionOutputAddress copyWith(void Function(TransactionOutputAddress) updates) => super.copyWith((message) => updates(message as TransactionOutputAddress)) as TransactionOutputAddress; // ignore: deprecated_member_use
+  TransactionOutputAddress copyWith(void Function(TransactionOutputAddress) updates) => super.copyWith((message) => updates(message as TransactionOutputAddress)) as TransactionOutputAddress;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransactionOutputAddress create() => TransactionOutputAddress._();
   TransactionOutputAddress createEmptyInstance() => create();
@@ -158,6 +170,7 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLedger() => clearField(2);
 
+  /// index of the output (UTXO) within the transaction targeted by id.
   @$pb.TagNumber(3)
   $core.int get index => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -168,50 +181,52 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
   void clearIndex() => clearField(3);
 
   @$pb.TagNumber(4)
-  $7.TransactionId get id => $_getN(3);
+  $4.TransactionId get id => $_getN(3);
   @$pb.TagNumber(4)
-  set id($7.TransactionId v) { setField(4, v); }
+  set id($4.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasId() => $_has(3);
   @$pb.TagNumber(4)
   void clearId() => clearField(4);
   @$pb.TagNumber(4)
-  $7.TransactionId ensureId() => $_ensure(3);
+  $4.TransactionId ensureId() => $_ensure(3);
 }
 
+/// Used in Challenge.PreviousProposition
 class TransactionInputAddress extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionInputAddress', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'network', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ledger', $pb.PbFieldType.OU3)
-    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOM<$7.TransactionId>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', subBuilder: $7.TransactionId.create)
-    ..hasRequiredFields = false
-  ;
-
-  TransactionInputAddress._() : super();
   factory TransactionInputAddress({
     $core.int? network,
     $core.int? ledger,
     $core.int? index,
-    $7.TransactionId? id,
+    $4.TransactionId? id,
   }) {
-    final _result = create();
+    final $result = create();
     if (network != null) {
-      _result.network = network;
+      $result.network = network;
     }
     if (ledger != null) {
-      _result.ledger = ledger;
+      $result.ledger = ledger;
     }
     if (index != null) {
-      _result.index = index;
+      $result.index = index;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
-    return _result;
+    return $result;
   }
+  TransactionInputAddress._() : super();
   factory TransactionInputAddress.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionInputAddress.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransactionInputAddress', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'network', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'ledger', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
+    ..aOM<$4.TransactionId>(4, _omitFieldNames ? '' : 'id', subBuilder: $4.TransactionId.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -221,8 +236,10 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransactionInputAddress copyWith(void Function(TransactionInputAddress) updates) => super.copyWith((message) => updates(message as TransactionInputAddress)) as TransactionInputAddress; // ignore: deprecated_member_use
+  TransactionInputAddress copyWith(void Function(TransactionInputAddress) updates) => super.copyWith((message) => updates(message as TransactionInputAddress)) as TransactionInputAddress;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransactionInputAddress create() => TransactionInputAddress._();
   TransactionInputAddress createEmptyInstance() => create();
@@ -259,14 +276,17 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
   void clearIndex() => clearField(3);
 
   @$pb.TagNumber(4)
-  $7.TransactionId get id => $_getN(3);
+  $4.TransactionId get id => $_getN(3);
   @$pb.TagNumber(4)
-  set id($7.TransactionId v) { setField(4, v); }
+  set id($4.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasId() => $_has(3);
   @$pb.TagNumber(4)
   void clearId() => clearField(4);
   @$pb.TagNumber(4)
-  $7.TransactionId ensureId() => $_ensure(3);
+  $4.TransactionId ensureId() => $_ensure(3);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,40 +1,47 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: brambl/models/box/lock.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'challenge.pb.dart' as $10;
-import '../identifier.pb.dart' as $7;
+import '../identifier.pb.dart' as $4;
+import 'challenge.pb.dart' as $7;
 
+/// Private information
+/// a Predicate is a type of lock that will be satisfied if at least the threshold number of the contained proposition are satisfied
 class Lock_Predicate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Lock.Predicate', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..pc<$10.Challenge>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'challenges', $pb.PbFieldType.PM, subBuilder: $10.Challenge.create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', $pb.PbFieldType.OU3)
+  factory Lock_Predicate({
+    $core.Iterable<$7.Challenge>? challenges,
+    $core.int? threshold,
+  }) {
+    final $result = create();
+    if (challenges != null) {
+      $result.challenges.addAll(challenges);
+    }
+    if (threshold != null) {
+      $result.threshold = threshold;
+    }
+    return $result;
+  }
+  Lock_Predicate._() : super();
+  factory Lock_Predicate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Lock_Predicate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Lock.Predicate', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..pc<$7.Challenge>(1, _omitFieldNames ? '' : 'challenges', $pb.PbFieldType.PM, subBuilder: $7.Challenge.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'threshold', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  Lock_Predicate._() : super();
-  factory Lock_Predicate({
-    $core.Iterable<$10.Challenge>? challenges,
-    $core.int? threshold,
-  }) {
-    final _result = create();
-    if (challenges != null) {
-      _result.challenges.addAll(challenges);
-    }
-    if (threshold != null) {
-      _result.threshold = threshold;
-    }
-    return _result;
-  }
-  factory Lock_Predicate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Lock_Predicate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -44,8 +51,10 @@ class Lock_Predicate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Lock_Predicate copyWith(void Function(Lock_Predicate) updates) => super.copyWith((message) => updates(message as Lock_Predicate)) as Lock_Predicate; // ignore: deprecated_member_use
+  Lock_Predicate copyWith(void Function(Lock_Predicate) updates) => super.copyWith((message) => updates(message as Lock_Predicate)) as Lock_Predicate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Lock_Predicate create() => Lock_Predicate._();
   Lock_Predicate createEmptyInstance() => create();
@@ -54,8 +63,9 @@ class Lock_Predicate extends $pb.GeneratedMessage {
   static Lock_Predicate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Lock_Predicate>(create);
   static Lock_Predicate? _defaultInstance;
 
+  /// this should probably be a non-empty chain
   @$pb.TagNumber(1)
-  $core.List<$10.Challenge> get challenges => $_getList(0);
+  $core.List<$7.Challenge> get challenges => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get threshold => $_getIZ(1);
@@ -67,29 +77,32 @@ class Lock_Predicate extends $pb.GeneratedMessage {
   void clearThreshold() => clearField(2);
 }
 
+/// Semi-public information
+/// The most commonly shared construction between parties
 class Lock_Image extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Lock.Image', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..pc<$7.LockId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'leaves', $pb.PbFieldType.PM, subBuilder: $7.LockId.create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', $pb.PbFieldType.OU3)
+  factory Lock_Image({
+    $core.Iterable<$4.LockId>? leaves,
+    $core.int? threshold,
+  }) {
+    final $result = create();
+    if (leaves != null) {
+      $result.leaves.addAll(leaves);
+    }
+    if (threshold != null) {
+      $result.threshold = threshold;
+    }
+    return $result;
+  }
+  Lock_Image._() : super();
+  factory Lock_Image.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Lock_Image.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Lock.Image', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..pc<$4.LockId>(1, _omitFieldNames ? '' : 'leaves', $pb.PbFieldType.PM, subBuilder: $4.LockId.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'threshold', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  Lock_Image._() : super();
-  factory Lock_Image({
-    $core.Iterable<$7.LockId>? leaves,
-    $core.int? threshold,
-  }) {
-    final _result = create();
-    if (leaves != null) {
-      _result.leaves.addAll(leaves);
-    }
-    if (threshold != null) {
-      _result.threshold = threshold;
-    }
-    return _result;
-  }
-  factory Lock_Image.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Lock_Image.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -99,8 +112,10 @@ class Lock_Image extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Lock_Image copyWith(void Function(Lock_Image) updates) => super.copyWith((message) => updates(message as Lock_Image)) as Lock_Image; // ignore: deprecated_member_use
+  Lock_Image copyWith(void Function(Lock_Image) updates) => super.copyWith((message) => updates(message as Lock_Image)) as Lock_Image;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Lock_Image create() => Lock_Image._();
   Lock_Image createEmptyInstance() => create();
@@ -110,7 +125,7 @@ class Lock_Image extends $pb.GeneratedMessage {
   static Lock_Image? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$7.LockId> get leaves => $_getList(0);
+  $core.List<$4.LockId> get leaves => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get threshold => $_getIZ(1);
@@ -122,29 +137,34 @@ class Lock_Image extends $pb.GeneratedMessage {
   void clearThreshold() => clearField(2);
 }
 
+/// todo: jaa - should disable ot figure out how to provide the needed witness in the attestation
+/// Public information
+/// Predicate Commitments are used to encumber boxes
+/// use a Root here so we can provide a membership proof of the conditions
 class Lock_Commitment extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Lock.Commitment', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$7.AccumulatorRootId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'root', subBuilder: $7.AccumulatorRootId.create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', $pb.PbFieldType.OU3)
+  factory Lock_Commitment({
+    $4.AccumulatorRootId? root,
+    $core.int? threshold,
+  }) {
+    final $result = create();
+    if (root != null) {
+      $result.root = root;
+    }
+    if (threshold != null) {
+      $result.threshold = threshold;
+    }
+    return $result;
+  }
+  Lock_Commitment._() : super();
+  factory Lock_Commitment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Lock_Commitment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Lock.Commitment', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..aOM<$4.AccumulatorRootId>(1, _omitFieldNames ? '' : 'root', subBuilder: $4.AccumulatorRootId.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'threshold', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  Lock_Commitment._() : super();
-  factory Lock_Commitment({
-    $7.AccumulatorRootId? root,
-    $core.int? threshold,
-  }) {
-    final _result = create();
-    if (root != null) {
-      _result.root = root;
-    }
-    if (threshold != null) {
-      _result.threshold = threshold;
-    }
-    return _result;
-  }
-  factory Lock_Commitment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Lock_Commitment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -154,8 +174,10 @@ class Lock_Commitment extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Lock_Commitment copyWith(void Function(Lock_Commitment) updates) => super.copyWith((message) => updates(message as Lock_Commitment)) as Lock_Commitment; // ignore: deprecated_member_use
+  Lock_Commitment copyWith(void Function(Lock_Commitment) updates) => super.copyWith((message) => updates(message as Lock_Commitment)) as Lock_Commitment;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Lock_Commitment create() => Lock_Commitment._();
   Lock_Commitment createEmptyInstance() => create();
@@ -165,15 +187,15 @@ class Lock_Commitment extends $pb.GeneratedMessage {
   static Lock_Commitment? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $7.AccumulatorRootId get root => $_getN(0);
+  $4.AccumulatorRootId get root => $_getN(0);
   @$pb.TagNumber(1)
-  set root($7.AccumulatorRootId v) { setField(1, v); }
+  set root($4.AccumulatorRootId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRoot() => $_has(0);
   @$pb.TagNumber(1)
   void clearRoot() => clearField(1);
   @$pb.TagNumber(1)
-  $7.AccumulatorRootId ensureRoot() => $_ensure(0);
+  $4.AccumulatorRootId ensureRoot() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.int get threshold => $_getIZ(1);
@@ -192,41 +214,45 @@ enum Lock_Value {
   notSet
 }
 
+/// used to lock a box value and needs to be satisfied in order for the value of the box to be spent
+/// should be able to calculate or retrieve the root of the Lock
+/// - from Predicate -> Image -> Commitment -> Signable -> Evidence
 class Lock extends $pb.GeneratedMessage {
+  factory Lock({
+    Lock_Predicate? predicate,
+    Lock_Image? image,
+    Lock_Commitment? commitment,
+  }) {
+    final $result = create();
+    if (predicate != null) {
+      $result.predicate = predicate;
+    }
+    if (image != null) {
+      $result.image = image;
+    }
+    if (commitment != null) {
+      $result.commitment = commitment;
+    }
+    return $result;
+  }
+  Lock._() : super();
+  factory Lock.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Lock.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Lock_Value> _Lock_ValueByTag = {
     1 : Lock_Value.predicate,
     2 : Lock_Value.image,
     3 : Lock_Value.commitment,
     0 : Lock_Value.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Lock', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Lock', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<Lock_Predicate>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'predicate', subBuilder: Lock_Predicate.create)
-    ..aOM<Lock_Image>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'image', subBuilder: Lock_Image.create)
-    ..aOM<Lock_Commitment>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'commitment', subBuilder: Lock_Commitment.create)
+    ..aOM<Lock_Predicate>(1, _omitFieldNames ? '' : 'predicate', subBuilder: Lock_Predicate.create)
+    ..aOM<Lock_Image>(2, _omitFieldNames ? '' : 'image', subBuilder: Lock_Image.create)
+    ..aOM<Lock_Commitment>(3, _omitFieldNames ? '' : 'commitment', subBuilder: Lock_Commitment.create)
     ..hasRequiredFields = false
   ;
 
-  Lock._() : super();
-  factory Lock({
-    Lock_Predicate? predicate,
-    Lock_Image? image,
-    Lock_Commitment? commitment,
-  }) {
-    final _result = create();
-    if (predicate != null) {
-      _result.predicate = predicate;
-    }
-    if (image != null) {
-      _result.image = image;
-    }
-    if (commitment != null) {
-      _result.commitment = commitment;
-    }
-    return _result;
-  }
-  factory Lock.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Lock.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -236,8 +262,10 @@ class Lock extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Lock copyWith(void Function(Lock) updates) => super.copyWith((message) => updates(message as Lock)) as Lock; // ignore: deprecated_member_use
+  Lock copyWith(void Function(Lock) updates) => super.copyWith((message) => updates(message as Lock)) as Lock;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Lock create() => Lock._();
   Lock createEmptyInstance() => create();
@@ -283,3 +311,6 @@ class Lock extends $pb.GeneratedMessage {
   Lock_Commitment ensureCommitment() => $_ensure(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

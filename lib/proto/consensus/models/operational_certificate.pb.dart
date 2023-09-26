@@ -1,47 +1,53 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: consensus/models/operational_certificate.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// A certificate which commits an operator to a linear key, which is then used to sign the block
 class OperationalCertificate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OperationalCertificate', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
-    ..aOM<VerificationKeyKesProduct>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentVK', protoName: 'parentVK', subBuilder: VerificationKeyKesProduct.create)
-    ..aOM<SignatureKesProduct>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parentSignature', protoName: 'parentSignature', subBuilder: SignatureKesProduct.create)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'childVK', $pb.PbFieldType.OY, protoName: 'childVK')
-    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'childSignature', $pb.PbFieldType.OY, protoName: 'childSignature')
-    ..hasRequiredFields = false
-  ;
-
-  OperationalCertificate._() : super();
   factory OperationalCertificate({
     VerificationKeyKesProduct? parentVK,
     SignatureKesProduct? parentSignature,
     $core.List<$core.int>? childVK,
     $core.List<$core.int>? childSignature,
   }) {
-    final _result = create();
+    final $result = create();
     if (parentVK != null) {
-      _result.parentVK = parentVK;
+      $result.parentVK = parentVK;
     }
     if (parentSignature != null) {
-      _result.parentSignature = parentSignature;
+      $result.parentSignature = parentSignature;
     }
     if (childVK != null) {
-      _result.childVK = childVK;
+      $result.childVK = childVK;
     }
     if (childSignature != null) {
-      _result.childSignature = childSignature;
+      $result.childSignature = childSignature;
     }
-    return _result;
+    return $result;
   }
+  OperationalCertificate._() : super();
   factory OperationalCertificate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory OperationalCertificate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OperationalCertificate', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
+    ..aOM<VerificationKeyKesProduct>(1, _omitFieldNames ? '' : 'parentVK', protoName: 'parentVK', subBuilder: VerificationKeyKesProduct.create)
+    ..aOM<SignatureKesProduct>(2, _omitFieldNames ? '' : 'parentSignature', protoName: 'parentSignature', subBuilder: SignatureKesProduct.create)
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'childVK', $pb.PbFieldType.OY, protoName: 'childVK')
+    ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'childSignature', $pb.PbFieldType.OY, protoName: 'childSignature')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -51,8 +57,10 @@ class OperationalCertificate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  OperationalCertificate copyWith(void Function(OperationalCertificate) updates) => super.copyWith((message) => updates(message as OperationalCertificate)) as OperationalCertificate; // ignore: deprecated_member_use
+  OperationalCertificate copyWith(void Function(OperationalCertificate) updates) => super.copyWith((message) => updates(message as OperationalCertificate)) as OperationalCertificate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationalCertificate create() => OperationalCertificate._();
   OperationalCertificate createEmptyInstance() => create();
@@ -61,6 +69,7 @@ class OperationalCertificate extends $pb.GeneratedMessage {
   static OperationalCertificate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OperationalCertificate>(create);
   static OperationalCertificate? _defaultInstance;
 
+  /// The KES VK of the parent key (forward-secure) (hour+minute hands)
   @$pb.TagNumber(1)
   VerificationKeyKesProduct get parentVK => $_getN(0);
   @$pb.TagNumber(1)
@@ -72,6 +81,7 @@ class OperationalCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   VerificationKeyKesProduct ensureParentVK() => $_ensure(0);
 
+  /// Signs the `childVK` using the `parentSK`
   @$pb.TagNumber(2)
   SignatureKesProduct get parentSignature => $_getN(1);
   @$pb.TagNumber(2)
@@ -83,6 +93,7 @@ class OperationalCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SignatureKesProduct ensureParentSignature() => $_ensure(1);
 
+  /// The linear VK
   @$pb.TagNumber(3)
   $core.List<$core.int> get childVK => $_getN(2);
   @$pb.TagNumber(3)
@@ -92,6 +103,7 @@ class OperationalCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearChildVK() => clearField(3);
 
+  /// The signature of the block
   @$pb.TagNumber(4)
   $core.List<$core.int> get childSignature => $_getN(3);
   @$pb.TagNumber(4)
@@ -103,28 +115,29 @@ class OperationalCertificate extends $pb.GeneratedMessage {
 }
 
 class VerificationKeyKesProduct extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'VerificationKeyKesProduct', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'step', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  VerificationKeyKesProduct._() : super();
   factory VerificationKeyKesProduct({
     $core.List<$core.int>? value,
     $core.int? step,
   }) {
-    final _result = create();
+    final $result = create();
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
     if (step != null) {
-      _result.step = step;
+      $result.step = step;
     }
-    return _result;
+    return $result;
   }
+  VerificationKeyKesProduct._() : super();
   factory VerificationKeyKesProduct.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory VerificationKeyKesProduct.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerificationKeyKesProduct', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'step', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -134,8 +147,10 @@ class VerificationKeyKesProduct extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerificationKeyKesProduct copyWith(void Function(VerificationKeyKesProduct) updates) => super.copyWith((message) => updates(message as VerificationKeyKesProduct)) as VerificationKeyKesProduct; // ignore: deprecated_member_use
+  VerificationKeyKesProduct copyWith(void Function(VerificationKeyKesProduct) updates) => super.copyWith((message) => updates(message as VerificationKeyKesProduct)) as VerificationKeyKesProduct;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static VerificationKeyKesProduct create() => VerificationKeyKesProduct._();
   VerificationKeyKesProduct createEmptyInstance() => create();
@@ -144,6 +159,7 @@ class VerificationKeyKesProduct extends $pb.GeneratedMessage {
   static VerificationKeyKesProduct getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VerificationKeyKesProduct>(create);
   static VerificationKeyKesProduct? _defaultInstance;
 
+  /// length = 32
   @$pb.TagNumber(1)
   $core.List<$core.int> get value => $_getN(0);
   @$pb.TagNumber(1)
@@ -164,33 +180,34 @@ class VerificationKeyKesProduct extends $pb.GeneratedMessage {
 }
 
 class SignatureKesSum extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignatureKesSum', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verificationKey', $pb.PbFieldType.OY, protoName: 'verificationKey')
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature', $pb.PbFieldType.OY)
-    ..p<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witness', $pb.PbFieldType.PY)
-    ..hasRequiredFields = false
-  ;
-
-  SignatureKesSum._() : super();
   factory SignatureKesSum({
     $core.List<$core.int>? verificationKey,
     $core.List<$core.int>? signature,
     $core.Iterable<$core.List<$core.int>>? witness,
   }) {
-    final _result = create();
+    final $result = create();
     if (verificationKey != null) {
-      _result.verificationKey = verificationKey;
+      $result.verificationKey = verificationKey;
     }
     if (signature != null) {
-      _result.signature = signature;
+      $result.signature = signature;
     }
     if (witness != null) {
-      _result.witness.addAll(witness);
+      $result.witness.addAll(witness);
     }
-    return _result;
+    return $result;
   }
+  SignatureKesSum._() : super();
   factory SignatureKesSum.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SignatureKesSum.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SignatureKesSum', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'verificationKey', $pb.PbFieldType.OY, protoName: 'verificationKey')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
+    ..p<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'witness', $pb.PbFieldType.PY)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -200,8 +217,10 @@ class SignatureKesSum extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SignatureKesSum copyWith(void Function(SignatureKesSum) updates) => super.copyWith((message) => updates(message as SignatureKesSum)) as SignatureKesSum; // ignore: deprecated_member_use
+  SignatureKesSum copyWith(void Function(SignatureKesSum) updates) => super.copyWith((message) => updates(message as SignatureKesSum)) as SignatureKesSum;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignatureKesSum create() => SignatureKesSum._();
   SignatureKesSum createEmptyInstance() => create();
@@ -228,38 +247,40 @@ class SignatureKesSum extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearSignature() => clearField(2);
 
+  /// item length = 32
   @$pb.TagNumber(3)
   $core.List<$core.List<$core.int>> get witness => $_getList(2);
 }
 
 class SignatureKesProduct extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignatureKesProduct', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
-    ..aOM<SignatureKesSum>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'superSignature', protoName: 'superSignature', subBuilder: SignatureKesSum.create)
-    ..aOM<SignatureKesSum>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'subSignature', protoName: 'subSignature', subBuilder: SignatureKesSum.create)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'subRoot', $pb.PbFieldType.OY, protoName: 'subRoot')
-    ..hasRequiredFields = false
-  ;
-
-  SignatureKesProduct._() : super();
   factory SignatureKesProduct({
     SignatureKesSum? superSignature,
     SignatureKesSum? subSignature,
     $core.List<$core.int>? subRoot,
   }) {
-    final _result = create();
+    final $result = create();
     if (superSignature != null) {
-      _result.superSignature = superSignature;
+      $result.superSignature = superSignature;
     }
     if (subSignature != null) {
-      _result.subSignature = subSignature;
+      $result.subSignature = subSignature;
     }
     if (subRoot != null) {
-      _result.subRoot = subRoot;
+      $result.subRoot = subRoot;
     }
-    return _result;
+    return $result;
   }
+  SignatureKesProduct._() : super();
   factory SignatureKesProduct.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SignatureKesProduct.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SignatureKesProduct', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
+    ..aOM<SignatureKesSum>(1, _omitFieldNames ? '' : 'superSignature', protoName: 'superSignature', subBuilder: SignatureKesSum.create)
+    ..aOM<SignatureKesSum>(2, _omitFieldNames ? '' : 'subSignature', protoName: 'subSignature', subBuilder: SignatureKesSum.create)
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'subRoot', $pb.PbFieldType.OY, protoName: 'subRoot')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -269,8 +290,10 @@ class SignatureKesProduct extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SignatureKesProduct copyWith(void Function(SignatureKesProduct) updates) => super.copyWith((message) => updates(message as SignatureKesProduct)) as SignatureKesProduct; // ignore: deprecated_member_use
+  SignatureKesProduct copyWith(void Function(SignatureKesProduct) updates) => super.copyWith((message) => updates(message as SignatureKesProduct)) as SignatureKesProduct;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignatureKesProduct create() => SignatureKesProduct._();
   SignatureKesProduct createEmptyInstance() => create();
@@ -301,6 +324,7 @@ class SignatureKesProduct extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SignatureKesSum ensureSubSignature() => $_ensure(1);
 
+  /// length = 32
   @$pb.TagNumber(3)
   $core.List<$core.int> get subRoot => $_getN(2);
   @$pb.TagNumber(3)
@@ -311,3 +335,6 @@ class SignatureKesProduct extends $pb.GeneratedMessage {
   void clearSubRoot() => clearField(3);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
