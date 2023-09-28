@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 2023-09-29
+
+- Updated protobuf specification up to commit [7b03091][https://github.com/Topl/protobuf-specs/commit/7b03091008b690af6826562ed6483c4416037df4]
+
 ## [2.0.2] - 2023-07-07
 
 - Added new methods from protobuf_specs
