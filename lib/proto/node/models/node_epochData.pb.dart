@@ -1,38 +1,23 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: node/models/node_epochData.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../quivr/models/shared.pb.dart' as $4;
+import '../../quivr/models/shared.pb.dart' as $3;
 
+/// Epoch data Contains, The "current" epoch is updated as node blocks are adopted over time
 class EpochData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EpochData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.proto.node'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'epoch', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'eon', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'era', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isComplete', protoName: 'isComplete')
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startHeight', $pb.PbFieldType.OU6, protoName: 'startHeight', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endHeight', $pb.PbFieldType.OU6, protoName: 'endHeight', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startSlot', $pb.PbFieldType.OU6, protoName: 'startSlot', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endSlot', $pb.PbFieldType.OU6, protoName: 'endSlot', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTimestamp', $pb.PbFieldType.OU6, protoName: 'startTimestamp', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endTimestamp', $pb.PbFieldType.OU6, protoName: 'endTimestamp', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionCount', $pb.PbFieldType.OU6, protoName: 'transactionCount', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$4.Int128>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'totalTransactionReward', protoName: 'totalTransactionReward', subBuilder: $4.Int128.create)
-    ..aOM<$4.Int128>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'activeStake', protoName: 'activeStake', subBuilder: $4.Int128.create)
-    ..aOM<$4.Int128>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'inactiveStake', protoName: 'inactiveStake', subBuilder: $4.Int128.create)
-    ..a<$fixnum.Int64>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'dataBytes', $pb.PbFieldType.OU6, protoName: 'dataBytes', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  EpochData._() : super();
   factory EpochData({
     $fixnum.Int64? epoch,
     $fixnum.Int64? eon,
@@ -45,61 +30,82 @@ class EpochData extends $pb.GeneratedMessage {
     $fixnum.Int64? startTimestamp,
     $fixnum.Int64? endTimestamp,
     $fixnum.Int64? transactionCount,
-    $4.Int128? totalTransactionReward,
-    $4.Int128? activeStake,
-    $4.Int128? inactiveStake,
+    $3.Int128? totalTransactionReward,
+    $3.Int128? activeStake,
+    $3.Int128? inactiveStake,
     $fixnum.Int64? dataBytes,
   }) {
-    final _result = create();
+    final $result = create();
     if (epoch != null) {
-      _result.epoch = epoch;
+      $result.epoch = epoch;
     }
     if (eon != null) {
-      _result.eon = eon;
+      $result.eon = eon;
     }
     if (era != null) {
-      _result.era = era;
+      $result.era = era;
     }
     if (isComplete != null) {
-      _result.isComplete = isComplete;
+      $result.isComplete = isComplete;
     }
     if (startHeight != null) {
-      _result.startHeight = startHeight;
+      $result.startHeight = startHeight;
     }
     if (endHeight != null) {
-      _result.endHeight = endHeight;
+      $result.endHeight = endHeight;
     }
     if (startSlot != null) {
-      _result.startSlot = startSlot;
+      $result.startSlot = startSlot;
     }
     if (endSlot != null) {
-      _result.endSlot = endSlot;
+      $result.endSlot = endSlot;
     }
     if (startTimestamp != null) {
-      _result.startTimestamp = startTimestamp;
+      $result.startTimestamp = startTimestamp;
     }
     if (endTimestamp != null) {
-      _result.endTimestamp = endTimestamp;
+      $result.endTimestamp = endTimestamp;
     }
     if (transactionCount != null) {
-      _result.transactionCount = transactionCount;
+      $result.transactionCount = transactionCount;
     }
     if (totalTransactionReward != null) {
-      _result.totalTransactionReward = totalTransactionReward;
+      $result.totalTransactionReward = totalTransactionReward;
     }
     if (activeStake != null) {
-      _result.activeStake = activeStake;
+      $result.activeStake = activeStake;
     }
     if (inactiveStake != null) {
-      _result.inactiveStake = inactiveStake;
+      $result.inactiveStake = inactiveStake;
     }
     if (dataBytes != null) {
-      _result.dataBytes = dataBytes;
+      $result.dataBytes = dataBytes;
     }
-    return _result;
+    return $result;
   }
+  EpochData._() : super();
   factory EpochData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EpochData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EpochData', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.proto.node'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'epoch', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'eon', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'era', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOB(4, _omitFieldNames ? '' : 'isComplete', protoName: 'isComplete')
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'startHeight', $pb.PbFieldType.OU6, protoName: 'startHeight', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'endHeight', $pb.PbFieldType.OU6, protoName: 'endHeight', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'startSlot', $pb.PbFieldType.OU6, protoName: 'startSlot', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'endSlot', $pb.PbFieldType.OU6, protoName: 'endSlot', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(9, _omitFieldNames ? '' : 'startTimestamp', $pb.PbFieldType.OU6, protoName: 'startTimestamp', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(10, _omitFieldNames ? '' : 'endTimestamp', $pb.PbFieldType.OU6, protoName: 'endTimestamp', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(11, _omitFieldNames ? '' : 'transactionCount', $pb.PbFieldType.OU6, protoName: 'transactionCount', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$3.Int128>(12, _omitFieldNames ? '' : 'totalTransactionReward', protoName: 'totalTransactionReward', subBuilder: $3.Int128.create)
+    ..aOM<$3.Int128>(13, _omitFieldNames ? '' : 'activeStake', protoName: 'activeStake', subBuilder: $3.Int128.create)
+    ..aOM<$3.Int128>(14, _omitFieldNames ? '' : 'inactiveStake', protoName: 'inactiveStake', subBuilder: $3.Int128.create)
+    ..a<$fixnum.Int64>(15, _omitFieldNames ? '' : 'dataBytes', $pb.PbFieldType.OU6, protoName: 'dataBytes', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -109,8 +115,10 @@ class EpochData extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  EpochData copyWith(void Function(EpochData) updates) => super.copyWith((message) => updates(message as EpochData)) as EpochData; // ignore: deprecated_member_use
+  EpochData copyWith(void Function(EpochData) updates) => super.copyWith((message) => updates(message as EpochData)) as EpochData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EpochData create() => EpochData._();
   EpochData createEmptyInstance() => create();
@@ -119,6 +127,7 @@ class EpochData extends $pb.GeneratedMessage {
   static EpochData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EpochData>(create);
   static EpochData? _defaultInstance;
 
+  /// epoch
   @$pb.TagNumber(1)
   $fixnum.Int64 get epoch => $_getI64(0);
   @$pb.TagNumber(1)
@@ -128,6 +137,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearEpoch() => clearField(1);
 
+  /// eon
   @$pb.TagNumber(2)
   $fixnum.Int64 get eon => $_getI64(1);
   @$pb.TagNumber(2)
@@ -137,6 +147,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearEon() => clearField(2);
 
+  /// era
   @$pb.TagNumber(3)
   $fixnum.Int64 get era => $_getI64(2);
   @$pb.TagNumber(3)
@@ -146,6 +157,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearEra() => clearField(3);
 
+  /// Flag indicating if the epoch has been completed
   @$pb.TagNumber(4)
   $core.bool get isComplete => $_getBF(3);
   @$pb.TagNumber(4)
@@ -155,6 +167,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIsComplete() => clearField(4);
 
+  /// The height of the first block in the epoch
   @$pb.TagNumber(5)
   $fixnum.Int64 get startHeight => $_getI64(4);
   @$pb.TagNumber(5)
@@ -164,6 +177,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearStartHeight() => clearField(5);
 
+  /// The height of the last/latest block in the epoch
   @$pb.TagNumber(6)
   $fixnum.Int64 get endHeight => $_getI64(5);
   @$pb.TagNumber(6)
@@ -173,6 +187,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearEndHeight() => clearField(6);
 
+  /// The first slot of the epoch
   @$pb.TagNumber(7)
   $fixnum.Int64 get startSlot => $_getI64(6);
   @$pb.TagNumber(7)
@@ -182,6 +197,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearStartSlot() => clearField(7);
 
+  /// The final slot of the epoch
   @$pb.TagNumber(8)
   $fixnum.Int64 get endSlot => $_getI64(7);
   @$pb.TagNumber(8)
@@ -191,6 +207,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearEndSlot() => clearField(8);
 
+  /// The timestamp of the epoch start
   @$pb.TagNumber(9)
   $fixnum.Int64 get startTimestamp => $_getI64(8);
   @$pb.TagNumber(9)
@@ -200,6 +217,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearStartTimestamp() => clearField(9);
 
+  /// The timestamp of the epoch end
   @$pb.TagNumber(10)
   $fixnum.Int64 get endTimestamp => $_getI64(9);
   @$pb.TagNumber(10)
@@ -209,6 +227,7 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearEndTimestamp() => clearField(10);
 
+  /// The total number of transactions in this epoch
   @$pb.TagNumber(11)
   $fixnum.Int64 get transactionCount => $_getI64(10);
   @$pb.TagNumber(11)
@@ -218,39 +237,43 @@ class EpochData extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearTransactionCount() => clearField(11);
 
+  /// The sum of all transaction rewards in the epoch
   @$pb.TagNumber(12)
-  $4.Int128 get totalTransactionReward => $_getN(11);
+  $3.Int128 get totalTransactionReward => $_getN(11);
   @$pb.TagNumber(12)
-  set totalTransactionReward($4.Int128 v) { setField(12, v); }
+  set totalTransactionReward($3.Int128 v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasTotalTransactionReward() => $_has(11);
   @$pb.TagNumber(12)
   void clearTotalTransactionReward() => clearField(12);
   @$pb.TagNumber(12)
-  $4.Int128 ensureTotalTransactionReward() => $_ensure(11);
+  $3.Int128 ensureTotalTransactionReward() => $_ensure(11);
 
+  /// The sum of all stake that is registered for the epoch
   @$pb.TagNumber(13)
-  $4.Int128 get activeStake => $_getN(12);
+  $3.Int128 get activeStake => $_getN(12);
   @$pb.TagNumber(13)
-  set activeStake($4.Int128 v) { setField(13, v); }
+  set activeStake($3.Int128 v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasActiveStake() => $_has(12);
   @$pb.TagNumber(13)
   void clearActiveStake() => clearField(13);
   @$pb.TagNumber(13)
-  $4.Int128 ensureActiveStake() => $_ensure(12);
+  $3.Int128 ensureActiveStake() => $_ensure(12);
 
+  /// The sum of all stake that is not registered for the epoch
   @$pb.TagNumber(14)
-  $4.Int128 get inactiveStake => $_getN(13);
+  $3.Int128 get inactiveStake => $_getN(13);
   @$pb.TagNumber(14)
-  set inactiveStake($4.Int128 v) { setField(14, v); }
+  set inactiveStake($3.Int128 v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasInactiveStake() => $_has(13);
   @$pb.TagNumber(14)
   void clearInactiveStake() => clearField(14);
   @$pb.TagNumber(14)
-  $4.Int128 ensureInactiveStake() => $_ensure(13);
+  $3.Int128 ensureInactiveStake() => $_ensure(13);
 
+  /// The sum total number of bytes of headers and transactions for the epoch
   @$pb.TagNumber(15)
   $fixnum.Int64 get dataBytes => $_getI64(14);
   @$pb.TagNumber(15)
@@ -261,3 +284,6 @@ class EpochData extends $pb.GeneratedMessage {
   void clearDataBytes() => clearField(15);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

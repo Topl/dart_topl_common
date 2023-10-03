@@ -1,42 +1,47 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: brambl/models/box/attestation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'lock.pb.dart' as $11;
-import '../../../quivr/models/proof.pb.dart' as $12;
-import 'challenge.pb.dart' as $10;
-import '../../../quivr/models/shared.pb.dart' as $4;
+import '../../../quivr/models/proof.pb.dart' as $17;
+import '../../../quivr/models/shared.pb.dart' as $3;
+import 'challenge.pb.dart' as $7;
+import 'lock.pb.dart' as $15;
 
 class Attestation_Predicate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Attestation.Predicate', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$11.Lock_Predicate>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $11.Lock_Predicate.create)
-    ..pc<$12.Proof>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $12.Proof.create)
+  factory Attestation_Predicate({
+    $15.Lock_Predicate? lock,
+    $core.Iterable<$17.Proof>? responses,
+  }) {
+    final $result = create();
+    if (lock != null) {
+      $result.lock = lock;
+    }
+    if (responses != null) {
+      $result.responses.addAll(responses);
+    }
+    return $result;
+  }
+  Attestation_Predicate._() : super();
+  factory Attestation_Predicate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Attestation_Predicate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attestation.Predicate', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..aOM<$15.Lock_Predicate>(1, _omitFieldNames ? '' : 'lock', subBuilder: $15.Lock_Predicate.create)
+    ..pc<$17.Proof>(2, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $17.Proof.create)
     ..hasRequiredFields = false
   ;
 
-  Attestation_Predicate._() : super();
-  factory Attestation_Predicate({
-    $11.Lock_Predicate? lock,
-    $core.Iterable<$12.Proof>? responses,
-  }) {
-    final _result = create();
-    if (lock != null) {
-      _result.lock = lock;
-    }
-    if (responses != null) {
-      _result.responses.addAll(responses);
-    }
-    return _result;
-  }
-  factory Attestation_Predicate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Attestation_Predicate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -46,8 +51,10 @@ class Attestation_Predicate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Attestation_Predicate copyWith(void Function(Attestation_Predicate) updates) => super.copyWith((message) => updates(message as Attestation_Predicate)) as Attestation_Predicate; // ignore: deprecated_member_use
+  Attestation_Predicate copyWith(void Function(Attestation_Predicate) updates) => super.copyWith((message) => updates(message as Attestation_Predicate)) as Attestation_Predicate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Attestation_Predicate create() => Attestation_Predicate._();
   Attestation_Predicate createEmptyInstance() => create();
@@ -57,48 +64,50 @@ class Attestation_Predicate extends $pb.GeneratedMessage {
   static Attestation_Predicate? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $11.Lock_Predicate get lock => $_getN(0);
+  $15.Lock_Predicate get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($11.Lock_Predicate v) { setField(1, v); }
+  set lock($15.Lock_Predicate v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $11.Lock_Predicate ensureLock() => $_ensure(0);
+  $15.Lock_Predicate ensureLock() => $_ensure(0);
 
+  /// list of optional values (proofs used to attempt to satisfy the challenges contained in the predicate lock)
   @$pb.TagNumber(2)
-  $core.List<$12.Proof> get responses => $_getList(1);
+  $core.List<$17.Proof> get responses => $_getList(1);
 }
 
 class Attestation_Image extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Attestation.Image', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$11.Lock_Image>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $11.Lock_Image.create)
-    ..pc<$10.Challenge>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $10.Challenge.create)
-    ..pc<$12.Proof>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $12.Proof.create)
+  factory Attestation_Image({
+    $15.Lock_Image? lock,
+    $core.Iterable<$7.Challenge>? known,
+    $core.Iterable<$17.Proof>? responses,
+  }) {
+    final $result = create();
+    if (lock != null) {
+      $result.lock = lock;
+    }
+    if (known != null) {
+      $result.known.addAll(known);
+    }
+    if (responses != null) {
+      $result.responses.addAll(responses);
+    }
+    return $result;
+  }
+  Attestation_Image._() : super();
+  factory Attestation_Image.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Attestation_Image.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attestation.Image', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..aOM<$15.Lock_Image>(1, _omitFieldNames ? '' : 'lock', subBuilder: $15.Lock_Image.create)
+    ..pc<$7.Challenge>(2, _omitFieldNames ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $7.Challenge.create)
+    ..pc<$17.Proof>(3, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $17.Proof.create)
     ..hasRequiredFields = false
   ;
 
-  Attestation_Image._() : super();
-  factory Attestation_Image({
-    $11.Lock_Image? lock,
-    $core.Iterable<$10.Challenge>? known,
-    $core.Iterable<$12.Proof>? responses,
-  }) {
-    final _result = create();
-    if (lock != null) {
-      _result.lock = lock;
-    }
-    if (known != null) {
-      _result.known.addAll(known);
-    }
-    if (responses != null) {
-      _result.responses.addAll(responses);
-    }
-    return _result;
-  }
-  factory Attestation_Image.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Attestation_Image.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -108,8 +117,10 @@ class Attestation_Image extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Attestation_Image copyWith(void Function(Attestation_Image) updates) => super.copyWith((message) => updates(message as Attestation_Image)) as Attestation_Image; // ignore: deprecated_member_use
+  Attestation_Image copyWith(void Function(Attestation_Image) updates) => super.copyWith((message) => updates(message as Attestation_Image)) as Attestation_Image;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Attestation_Image create() => Attestation_Image._();
   Attestation_Image createEmptyInstance() => create();
@@ -119,56 +130,59 @@ class Attestation_Image extends $pb.GeneratedMessage {
   static Attestation_Image? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $11.Lock_Image get lock => $_getN(0);
+  $15.Lock_Image get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($11.Lock_Image v) { setField(1, v); }
+  set lock($15.Lock_Image v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $11.Lock_Image ensureLock() => $_ensure(0);
+  $15.Lock_Image ensureLock() => $_ensure(0);
 
+  /// list of optional values
   @$pb.TagNumber(2)
-  $core.List<$10.Challenge> get known => $_getList(1);
+  $core.List<$7.Challenge> get known => $_getList(1);
 
+  /// list of optional values
   @$pb.TagNumber(3)
-  $core.List<$12.Proof> get responses => $_getList(2);
+  $core.List<$17.Proof> get responses => $_getList(2);
 }
 
 class Attestation_Commitment extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Attestation.Commitment', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$11.Lock_Commitment>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lock', subBuilder: $11.Lock_Commitment.create)
-    ..pc<$10.Challenge>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $10.Challenge.create)
-    ..pc<$4.Witness>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'witness', $pb.PbFieldType.PM, subBuilder: $4.Witness.create)
-    ..pc<$12.Proof>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $12.Proof.create)
+  factory Attestation_Commitment({
+    $15.Lock_Commitment? lock,
+    $core.Iterable<$7.Challenge>? known,
+    $core.Iterable<$3.Witness>? witness,
+    $core.Iterable<$17.Proof>? responses,
+  }) {
+    final $result = create();
+    if (lock != null) {
+      $result.lock = lock;
+    }
+    if (known != null) {
+      $result.known.addAll(known);
+    }
+    if (witness != null) {
+      $result.witness.addAll(witness);
+    }
+    if (responses != null) {
+      $result.responses.addAll(responses);
+    }
+    return $result;
+  }
+  Attestation_Commitment._() : super();
+  factory Attestation_Commitment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Attestation_Commitment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attestation.Commitment', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+    ..aOM<$15.Lock_Commitment>(1, _omitFieldNames ? '' : 'lock', subBuilder: $15.Lock_Commitment.create)
+    ..pc<$7.Challenge>(2, _omitFieldNames ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $7.Challenge.create)
+    ..pc<$3.Witness>(3, _omitFieldNames ? '' : 'witness', $pb.PbFieldType.PM, subBuilder: $3.Witness.create)
+    ..pc<$17.Proof>(4, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $17.Proof.create)
     ..hasRequiredFields = false
   ;
 
-  Attestation_Commitment._() : super();
-  factory Attestation_Commitment({
-    $11.Lock_Commitment? lock,
-    $core.Iterable<$10.Challenge>? known,
-    $core.Iterable<$4.Witness>? witness,
-    $core.Iterable<$12.Proof>? responses,
-  }) {
-    final _result = create();
-    if (lock != null) {
-      _result.lock = lock;
-    }
-    if (known != null) {
-      _result.known.addAll(known);
-    }
-    if (witness != null) {
-      _result.witness.addAll(witness);
-    }
-    if (responses != null) {
-      _result.responses.addAll(responses);
-    }
-    return _result;
-  }
-  factory Attestation_Commitment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Attestation_Commitment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -178,8 +192,10 @@ class Attestation_Commitment extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Attestation_Commitment copyWith(void Function(Attestation_Commitment) updates) => super.copyWith((message) => updates(message as Attestation_Commitment)) as Attestation_Commitment; // ignore: deprecated_member_use
+  Attestation_Commitment copyWith(void Function(Attestation_Commitment) updates) => super.copyWith((message) => updates(message as Attestation_Commitment)) as Attestation_Commitment;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Attestation_Commitment create() => Attestation_Commitment._();
   Attestation_Commitment createEmptyInstance() => create();
@@ -189,24 +205,27 @@ class Attestation_Commitment extends $pb.GeneratedMessage {
   static Attestation_Commitment? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $11.Lock_Commitment get lock => $_getN(0);
+  $15.Lock_Commitment get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($11.Lock_Commitment v) { setField(1, v); }
+  set lock($15.Lock_Commitment v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $11.Lock_Commitment ensureLock() => $_ensure(0);
+  $15.Lock_Commitment ensureLock() => $_ensure(0);
 
+  /// list of claim propositions that must be proven as memebrs of the root commitment and be suitably satisfied by the given proofs
   @$pb.TagNumber(2)
-  $core.List<$10.Challenge> get known => $_getList(1);
+  $core.List<$7.Challenge> get known => $_getList(1);
 
+  /// list of witnesses for proving membership of claimed propositions
   @$pb.TagNumber(3)
-  $core.List<$4.Witness> get witness => $_getList(2);
+  $core.List<$3.Witness> get witness => $_getList(2);
 
+  /// list of optional values
   @$pb.TagNumber(4)
-  $core.List<$12.Proof> get responses => $_getList(3);
+  $core.List<$17.Proof> get responses => $_getList(3);
 }
 
 enum Attestation_Value {
@@ -216,41 +235,43 @@ enum Attestation_Value {
   notSet
 }
 
+/// encapsulates the lock and responses are used to satisfy locks (may be successful or unsuccessful)
 class Attestation extends $pb.GeneratedMessage {
+  factory Attestation({
+    Attestation_Predicate? predicate,
+    Attestation_Image? image,
+    Attestation_Commitment? commitment,
+  }) {
+    final $result = create();
+    if (predicate != null) {
+      $result.predicate = predicate;
+    }
+    if (image != null) {
+      $result.image = image;
+    }
+    if (commitment != null) {
+      $result.commitment = commitment;
+    }
+    return $result;
+  }
+  Attestation._() : super();
+  factory Attestation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Attestation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Attestation_Value> _Attestation_ValueByTag = {
     1 : Attestation_Value.predicate,
     2 : Attestation_Value.image,
     3 : Attestation_Value.commitment,
     0 : Attestation_Value.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Attestation', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attestation', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<Attestation_Predicate>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'predicate', subBuilder: Attestation_Predicate.create)
-    ..aOM<Attestation_Image>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'image', subBuilder: Attestation_Image.create)
-    ..aOM<Attestation_Commitment>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'commitment', subBuilder: Attestation_Commitment.create)
+    ..aOM<Attestation_Predicate>(1, _omitFieldNames ? '' : 'predicate', subBuilder: Attestation_Predicate.create)
+    ..aOM<Attestation_Image>(2, _omitFieldNames ? '' : 'image', subBuilder: Attestation_Image.create)
+    ..aOM<Attestation_Commitment>(3, _omitFieldNames ? '' : 'commitment', subBuilder: Attestation_Commitment.create)
     ..hasRequiredFields = false
   ;
 
-  Attestation._() : super();
-  factory Attestation({
-    Attestation_Predicate? predicate,
-    Attestation_Image? image,
-    Attestation_Commitment? commitment,
-  }) {
-    final _result = create();
-    if (predicate != null) {
-      _result.predicate = predicate;
-    }
-    if (image != null) {
-      _result.image = image;
-    }
-    if (commitment != null) {
-      _result.commitment = commitment;
-    }
-    return _result;
-  }
-  factory Attestation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Attestation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -260,8 +281,10 @@ class Attestation extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Attestation copyWith(void Function(Attestation) updates) => super.copyWith((message) => updates(message as Attestation)) as Attestation; // ignore: deprecated_member_use
+  Attestation copyWith(void Function(Attestation) updates) => super.copyWith((message) => updates(message as Attestation)) as Attestation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Attestation create() => Attestation._();
   Attestation createEmptyInstance() => create();
@@ -307,3 +330,6 @@ class Attestation extends $pb.GeneratedMessage {
   Attestation_Commitment ensureCommitment() => $_ensure(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

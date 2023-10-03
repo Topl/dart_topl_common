@@ -1,35 +1,41 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: quivr/models/proposition.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'shared.pb.dart' as $4;
+import 'shared.pb.dart' as $3;
 
+/// Indicates that a proposition can never be satisfied
 class Proposition_Locked extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.Locked', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<$4.Data>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data', subBuilder: $4.Data.create)
+  factory Proposition_Locked({
+    $3.Data? data,
+  }) {
+    final $result = create();
+    if (data != null) {
+      $result.data = data;
+    }
+    return $result;
+  }
+  Proposition_Locked._() : super();
+  factory Proposition_Locked.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proposition_Locked.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.Locked', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<$3.Data>(1, _omitFieldNames ? '' : 'data', subBuilder: $3.Data.create)
     ..hasRequiredFields = false
   ;
 
-  Proposition_Locked._() : super();
-  factory Proposition_Locked({
-    $4.Data? data,
-  }) {
-    final _result = create();
-    if (data != null) {
-      _result.data = data;
-    }
-    return _result;
-  }
-  factory Proposition_Locked.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proposition_Locked.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -39,8 +45,10 @@ class Proposition_Locked extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_Locked copyWith(void Function(Proposition_Locked) updates) => super.copyWith((message) => updates(message as Proposition_Locked)) as Proposition_Locked; // ignore: deprecated_member_use
+  Proposition_Locked copyWith(void Function(Proposition_Locked) updates) => super.copyWith((message) => updates(message as Proposition_Locked)) as Proposition_Locked;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_Locked create() => Proposition_Locked._();
   Proposition_Locked createEmptyInstance() => create();
@@ -49,41 +57,44 @@ class Proposition_Locked extends $pb.GeneratedMessage {
   static Proposition_Locked getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Proposition_Locked>(create);
   static Proposition_Locked? _defaultInstance;
 
+  /// Optional metadata
   @$pb.TagNumber(1)
-  $4.Data get data => $_getN(0);
+  $3.Data get data => $_getN(0);
   @$pb.TagNumber(1)
-  set data($4.Data v) { setField(1, v); }
+  set data($3.Data v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasData() => $_has(0);
   @$pb.TagNumber(1)
   void clearData() => clearField(1);
   @$pb.TagNumber(1)
-  $4.Data ensureData() => $_ensure(0);
+  $3.Data ensureData() => $_ensure(0);
 }
 
+/// a proposition that can be satisfied if the proof contains the preimage matching the digest
 class Proposition_Digest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.Digest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'routine')
-    ..aOM<$4.Digest>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: $4.Digest.create)
+  factory Proposition_Digest({
+    $core.String? routine,
+    $3.Digest? digest,
+  }) {
+    final $result = create();
+    if (routine != null) {
+      $result.routine = routine;
+    }
+    if (digest != null) {
+      $result.digest = digest;
+    }
+    return $result;
+  }
+  Proposition_Digest._() : super();
+  factory Proposition_Digest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proposition_Digest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.Digest', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'routine')
+    ..aOM<$3.Digest>(2, _omitFieldNames ? '' : 'digest', subBuilder: $3.Digest.create)
     ..hasRequiredFields = false
   ;
 
-  Proposition_Digest._() : super();
-  factory Proposition_Digest({
-    $core.String? routine,
-    $4.Digest? digest,
-  }) {
-    final _result = create();
-    if (routine != null) {
-      _result.routine = routine;
-    }
-    if (digest != null) {
-      _result.digest = digest;
-    }
-    return _result;
-  }
-  factory Proposition_Digest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proposition_Digest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -93,8 +104,10 @@ class Proposition_Digest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_Digest copyWith(void Function(Proposition_Digest) updates) => super.copyWith((message) => updates(message as Proposition_Digest)) as Proposition_Digest; // ignore: deprecated_member_use
+  Proposition_Digest copyWith(void Function(Proposition_Digest) updates) => super.copyWith((message) => updates(message as Proposition_Digest)) as Proposition_Digest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_Digest create() => Proposition_Digest._();
   Proposition_Digest createEmptyInstance() => create();
@@ -113,40 +126,42 @@ class Proposition_Digest extends $pb.GeneratedMessage {
   void clearRoutine() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.Digest get digest => $_getN(1);
+  $3.Digest get digest => $_getN(1);
   @$pb.TagNumber(2)
-  set digest($4.Digest v) { setField(2, v); }
+  set digest($3.Digest v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDigest() => $_has(1);
   @$pb.TagNumber(2)
   void clearDigest() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Digest ensureDigest() => $_ensure(1);
+  $3.Digest ensureDigest() => $_ensure(1);
 }
 
+/// a proposition that can be satisfied if the proof contains the signature
 class Proposition_DigitalSignature extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.DigitalSignature', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'routine')
-    ..aOM<$4.VerificationKey>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'verificationKey', protoName: 'verificationKey', subBuilder: $4.VerificationKey.create)
+  factory Proposition_DigitalSignature({
+    $core.String? routine,
+    $3.VerificationKey? verificationKey,
+  }) {
+    final $result = create();
+    if (routine != null) {
+      $result.routine = routine;
+    }
+    if (verificationKey != null) {
+      $result.verificationKey = verificationKey;
+    }
+    return $result;
+  }
+  Proposition_DigitalSignature._() : super();
+  factory Proposition_DigitalSignature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proposition_DigitalSignature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.DigitalSignature', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'routine')
+    ..aOM<$3.VerificationKey>(2, _omitFieldNames ? '' : 'verificationKey', protoName: 'verificationKey', subBuilder: $3.VerificationKey.create)
     ..hasRequiredFields = false
   ;
 
-  Proposition_DigitalSignature._() : super();
-  factory Proposition_DigitalSignature({
-    $core.String? routine,
-    $4.VerificationKey? verificationKey,
-  }) {
-    final _result = create();
-    if (routine != null) {
-      _result.routine = routine;
-    }
-    if (verificationKey != null) {
-      _result.verificationKey = verificationKey;
-    }
-    return _result;
-  }
-  factory Proposition_DigitalSignature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proposition_DigitalSignature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -156,8 +171,10 @@ class Proposition_DigitalSignature extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_DigitalSignature copyWith(void Function(Proposition_DigitalSignature) updates) => super.copyWith((message) => updates(message as Proposition_DigitalSignature)) as Proposition_DigitalSignature; // ignore: deprecated_member_use
+  Proposition_DigitalSignature copyWith(void Function(Proposition_DigitalSignature) updates) => super.copyWith((message) => updates(message as Proposition_DigitalSignature)) as Proposition_DigitalSignature;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_DigitalSignature create() => Proposition_DigitalSignature._();
   Proposition_DigitalSignature createEmptyInstance() => create();
@@ -176,45 +193,47 @@ class Proposition_DigitalSignature extends $pb.GeneratedMessage {
   void clearRoutine() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.VerificationKey get verificationKey => $_getN(1);
+  $3.VerificationKey get verificationKey => $_getN(1);
   @$pb.TagNumber(2)
-  set verificationKey($4.VerificationKey v) { setField(2, v); }
+  set verificationKey($3.VerificationKey v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasVerificationKey() => $_has(1);
   @$pb.TagNumber(2)
   void clearVerificationKey() => clearField(2);
   @$pb.TagNumber(2)
-  $4.VerificationKey ensureVerificationKey() => $_ensure(1);
+  $3.VerificationKey ensureVerificationKey() => $_ensure(1);
 }
 
+/// a proposition that can be satisfied if the specified chain falls within min and max height values
 class Proposition_HeightRange extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.HeightRange', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chain')
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'min', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'max', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  Proposition_HeightRange._() : super();
   factory Proposition_HeightRange({
     $core.String? chain,
     $fixnum.Int64? min,
     $fixnum.Int64? max,
   }) {
-    final _result = create();
+    final $result = create();
     if (chain != null) {
-      _result.chain = chain;
+      $result.chain = chain;
     }
     if (min != null) {
-      _result.min = min;
+      $result.min = min;
     }
     if (max != null) {
-      _result.max = max;
+      $result.max = max;
     }
-    return _result;
+    return $result;
   }
+  Proposition_HeightRange._() : super();
   factory Proposition_HeightRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Proposition_HeightRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.HeightRange', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'chain')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'min', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'max', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -224,8 +243,10 @@ class Proposition_HeightRange extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_HeightRange copyWith(void Function(Proposition_HeightRange) updates) => super.copyWith((message) => updates(message as Proposition_HeightRange)) as Proposition_HeightRange; // ignore: deprecated_member_use
+  Proposition_HeightRange copyWith(void Function(Proposition_HeightRange) updates) => super.copyWith((message) => updates(message as Proposition_HeightRange)) as Proposition_HeightRange;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_HeightRange create() => Proposition_HeightRange._();
   Proposition_HeightRange createEmptyInstance() => create();
@@ -262,29 +283,31 @@ class Proposition_HeightRange extends $pb.GeneratedMessage {
   void clearMax() => clearField(3);
 }
 
+/// a proposition that can be satisfied if the time value falls within the min and max
 class Proposition_TickRange extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.TickRange', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'min', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'max', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  Proposition_TickRange._() : super();
   factory Proposition_TickRange({
     $fixnum.Int64? min,
     $fixnum.Int64? max,
   }) {
-    final _result = create();
+    final $result = create();
     if (min != null) {
-      _result.min = min;
+      $result.min = min;
     }
     if (max != null) {
-      _result.max = max;
+      $result.max = max;
     }
-    return _result;
+    return $result;
   }
+  Proposition_TickRange._() : super();
   factory Proposition_TickRange.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Proposition_TickRange.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.TickRange', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'min', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'max', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -294,8 +317,10 @@ class Proposition_TickRange extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_TickRange copyWith(void Function(Proposition_TickRange) updates) => super.copyWith((message) => updates(message as Proposition_TickRange)) as Proposition_TickRange; // ignore: deprecated_member_use
+  Proposition_TickRange copyWith(void Function(Proposition_TickRange) updates) => super.copyWith((message) => updates(message as Proposition_TickRange)) as Proposition_TickRange;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_TickRange create() => Proposition_TickRange._();
   Proposition_TickRange createEmptyInstance() => create();
@@ -323,29 +348,31 @@ class Proposition_TickRange extends $pb.GeneratedMessage {
   void clearMax() => clearField(2);
 }
 
+/// a proposition that can be satisfied if the value at a location is an exact match of the compareTo value
 class Proposition_ExactMatch extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.ExactMatch', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'location')
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', $pb.PbFieldType.OY, protoName: 'compareTo')
-    ..hasRequiredFields = false
-  ;
-
-  Proposition_ExactMatch._() : super();
   factory Proposition_ExactMatch({
     $core.String? location,
     $core.List<$core.int>? compareTo,
   }) {
-    final _result = create();
+    final $result = create();
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (compareTo != null) {
-      _result.compareTo = compareTo;
+      $result.compareTo = compareTo;
     }
-    return _result;
+    return $result;
   }
+  Proposition_ExactMatch._() : super();
   factory Proposition_ExactMatch.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Proposition_ExactMatch.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.ExactMatch', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'location')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'compareTo', $pb.PbFieldType.OY, protoName: 'compareTo')
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -355,8 +382,10 @@ class Proposition_ExactMatch extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_ExactMatch copyWith(void Function(Proposition_ExactMatch) updates) => super.copyWith((message) => updates(message as Proposition_ExactMatch)) as Proposition_ExactMatch; // ignore: deprecated_member_use
+  Proposition_ExactMatch copyWith(void Function(Proposition_ExactMatch) updates) => super.copyWith((message) => updates(message as Proposition_ExactMatch)) as Proposition_ExactMatch;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_ExactMatch create() => Proposition_ExactMatch._();
   Proposition_ExactMatch createEmptyInstance() => create();
@@ -384,29 +413,31 @@ class Proposition_ExactMatch extends $pb.GeneratedMessage {
   void clearCompareTo() => clearField(2);
 }
 
+/// a proposition that can be satisfied if the value at a location is less than the compareTo value
 class Proposition_LessThan extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.LessThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'location')
-    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $4.Int128.create)
+  factory Proposition_LessThan({
+    $core.String? location,
+    $3.Int128? compareTo,
+  }) {
+    final $result = create();
+    if (location != null) {
+      $result.location = location;
+    }
+    if (compareTo != null) {
+      $result.compareTo = compareTo;
+    }
+    return $result;
+  }
+  Proposition_LessThan._() : super();
+  factory Proposition_LessThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proposition_LessThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.LessThan', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'location')
+    ..aOM<$3.Int128>(2, _omitFieldNames ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $3.Int128.create)
     ..hasRequiredFields = false
   ;
 
-  Proposition_LessThan._() : super();
-  factory Proposition_LessThan({
-    $core.String? location,
-    $4.Int128? compareTo,
-  }) {
-    final _result = create();
-    if (location != null) {
-      _result.location = location;
-    }
-    if (compareTo != null) {
-      _result.compareTo = compareTo;
-    }
-    return _result;
-  }
-  factory Proposition_LessThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proposition_LessThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -416,8 +447,10 @@ class Proposition_LessThan extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_LessThan copyWith(void Function(Proposition_LessThan) updates) => super.copyWith((message) => updates(message as Proposition_LessThan)) as Proposition_LessThan; // ignore: deprecated_member_use
+  Proposition_LessThan copyWith(void Function(Proposition_LessThan) updates) => super.copyWith((message) => updates(message as Proposition_LessThan)) as Proposition_LessThan;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_LessThan create() => Proposition_LessThan._();
   Proposition_LessThan createEmptyInstance() => create();
@@ -436,40 +469,42 @@ class Proposition_LessThan extends $pb.GeneratedMessage {
   void clearLocation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.Int128 get compareTo => $_getN(1);
+  $3.Int128 get compareTo => $_getN(1);
   @$pb.TagNumber(2)
-  set compareTo($4.Int128 v) { setField(2, v); }
+  set compareTo($3.Int128 v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompareTo() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompareTo() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Int128 ensureCompareTo() => $_ensure(1);
+  $3.Int128 ensureCompareTo() => $_ensure(1);
 }
 
+/// a proposition that can be satisfied if the value at a location is greater than the compareTo value
 class Proposition_GreaterThan extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.GreaterThan', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'location')
-    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $4.Int128.create)
+  factory Proposition_GreaterThan({
+    $core.String? location,
+    $3.Int128? compareTo,
+  }) {
+    final $result = create();
+    if (location != null) {
+      $result.location = location;
+    }
+    if (compareTo != null) {
+      $result.compareTo = compareTo;
+    }
+    return $result;
+  }
+  Proposition_GreaterThan._() : super();
+  factory Proposition_GreaterThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proposition_GreaterThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.GreaterThan', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'location')
+    ..aOM<$3.Int128>(2, _omitFieldNames ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $3.Int128.create)
     ..hasRequiredFields = false
   ;
 
-  Proposition_GreaterThan._() : super();
-  factory Proposition_GreaterThan({
-    $core.String? location,
-    $4.Int128? compareTo,
-  }) {
-    final _result = create();
-    if (location != null) {
-      _result.location = location;
-    }
-    if (compareTo != null) {
-      _result.compareTo = compareTo;
-    }
-    return _result;
-  }
-  factory Proposition_GreaterThan.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proposition_GreaterThan.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -479,8 +514,10 @@ class Proposition_GreaterThan extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_GreaterThan copyWith(void Function(Proposition_GreaterThan) updates) => super.copyWith((message) => updates(message as Proposition_GreaterThan)) as Proposition_GreaterThan; // ignore: deprecated_member_use
+  Proposition_GreaterThan copyWith(void Function(Proposition_GreaterThan) updates) => super.copyWith((message) => updates(message as Proposition_GreaterThan)) as Proposition_GreaterThan;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_GreaterThan create() => Proposition_GreaterThan._();
   Proposition_GreaterThan createEmptyInstance() => create();
@@ -499,40 +536,42 @@ class Proposition_GreaterThan extends $pb.GeneratedMessage {
   void clearLocation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.Int128 get compareTo => $_getN(1);
+  $3.Int128 get compareTo => $_getN(1);
   @$pb.TagNumber(2)
-  set compareTo($4.Int128 v) { setField(2, v); }
+  set compareTo($3.Int128 v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompareTo() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompareTo() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Int128 ensureCompareTo() => $_ensure(1);
+  $3.Int128 ensureCompareTo() => $_ensure(1);
 }
 
+/// a proposition that can be satisfied if the value (int) at a location is equal to the compareTo value
 class Proposition_EqualTo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.EqualTo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'location')
-    ..aOM<$4.Int128>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $4.Int128.create)
+  factory Proposition_EqualTo({
+    $core.String? location,
+    $3.Int128? compareTo,
+  }) {
+    final $result = create();
+    if (location != null) {
+      $result.location = location;
+    }
+    if (compareTo != null) {
+      $result.compareTo = compareTo;
+    }
+    return $result;
+  }
+  Proposition_EqualTo._() : super();
+  factory Proposition_EqualTo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proposition_EqualTo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.EqualTo', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'location')
+    ..aOM<$3.Int128>(2, _omitFieldNames ? '' : 'compareTo', protoName: 'compareTo', subBuilder: $3.Int128.create)
     ..hasRequiredFields = false
   ;
 
-  Proposition_EqualTo._() : super();
-  factory Proposition_EqualTo({
-    $core.String? location,
-    $4.Int128? compareTo,
-  }) {
-    final _result = create();
-    if (location != null) {
-      _result.location = location;
-    }
-    if (compareTo != null) {
-      _result.compareTo = compareTo;
-    }
-    return _result;
-  }
-  factory Proposition_EqualTo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proposition_EqualTo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -542,8 +581,10 @@ class Proposition_EqualTo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_EqualTo copyWith(void Function(Proposition_EqualTo) updates) => super.copyWith((message) => updates(message as Proposition_EqualTo)) as Proposition_EqualTo; // ignore: deprecated_member_use
+  Proposition_EqualTo copyWith(void Function(Proposition_EqualTo) updates) => super.copyWith((message) => updates(message as Proposition_EqualTo)) as Proposition_EqualTo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_EqualTo create() => Proposition_EqualTo._();
   Proposition_EqualTo createEmptyInstance() => create();
@@ -562,40 +603,42 @@ class Proposition_EqualTo extends $pb.GeneratedMessage {
   void clearLocation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $4.Int128 get compareTo => $_getN(1);
+  $3.Int128 get compareTo => $_getN(1);
   @$pb.TagNumber(2)
-  set compareTo($4.Int128 v) { setField(2, v); }
+  set compareTo($3.Int128 v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCompareTo() => $_has(1);
   @$pb.TagNumber(2)
   void clearCompareTo() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Int128 ensureCompareTo() => $_ensure(1);
+  $3.Int128 ensureCompareTo() => $_ensure(1);
 }
 
+/// a proposition that can be satisfied if at least the threshold number of propositions are satisfied
 class Proposition_Threshold extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.Threshold', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..pc<Proposition>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'challenges', $pb.PbFieldType.PM, subBuilder: Proposition.create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  Proposition_Threshold._() : super();
   factory Proposition_Threshold({
     $core.Iterable<Proposition>? challenges,
     $core.int? threshold,
   }) {
-    final _result = create();
+    final $result = create();
     if (challenges != null) {
-      _result.challenges.addAll(challenges);
+      $result.challenges.addAll(challenges);
     }
     if (threshold != null) {
-      _result.threshold = threshold;
+      $result.threshold = threshold;
     }
-    return _result;
+    return $result;
   }
+  Proposition_Threshold._() : super();
   factory Proposition_Threshold.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Proposition_Threshold.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.Threshold', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..pc<Proposition>(1, _omitFieldNames ? '' : 'challenges', $pb.PbFieldType.PM, subBuilder: Proposition.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'threshold', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -605,8 +648,10 @@ class Proposition_Threshold extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_Threshold copyWith(void Function(Proposition_Threshold) updates) => super.copyWith((message) => updates(message as Proposition_Threshold)) as Proposition_Threshold; // ignore: deprecated_member_use
+  Proposition_Threshold copyWith(void Function(Proposition_Threshold) updates) => super.copyWith((message) => updates(message as Proposition_Threshold)) as Proposition_Threshold;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_Threshold create() => Proposition_Threshold._();
   Proposition_Threshold createEmptyInstance() => create();
@@ -628,24 +673,26 @@ class Proposition_Threshold extends $pb.GeneratedMessage {
   void clearThreshold() => clearField(2);
 }
 
+/// a proposition that can be satisfied if the proposition is contains is not satisfied
 class Proposition_Not extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.Not', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<Proposition>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'proposition', subBuilder: Proposition.create)
-    ..hasRequiredFields = false
-  ;
-
-  Proposition_Not._() : super();
   factory Proposition_Not({
     Proposition? proposition,
   }) {
-    final _result = create();
+    final $result = create();
     if (proposition != null) {
-      _result.proposition = proposition;
+      $result.proposition = proposition;
     }
-    return _result;
+    return $result;
   }
+  Proposition_Not._() : super();
   factory Proposition_Not.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Proposition_Not.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.Not', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<Proposition>(1, _omitFieldNames ? '' : 'proposition', subBuilder: Proposition.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -655,8 +702,10 @@ class Proposition_Not extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_Not copyWith(void Function(Proposition_Not) updates) => super.copyWith((message) => updates(message as Proposition_Not)) as Proposition_Not; // ignore: deprecated_member_use
+  Proposition_Not copyWith(void Function(Proposition_Not) updates) => super.copyWith((message) => updates(message as Proposition_Not)) as Proposition_Not;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_Not create() => Proposition_Not._();
   Proposition_Not createEmptyInstance() => create();
@@ -677,29 +726,31 @@ class Proposition_Not extends $pb.GeneratedMessage {
   Proposition ensureProposition() => $_ensure(0);
 }
 
+/// a proposition that can be satisfied if the prositions contained are both satisfied
 class Proposition_And extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.And', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<Proposition>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: Proposition.create)
-    ..aOM<Proposition>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: Proposition.create)
-    ..hasRequiredFields = false
-  ;
-
-  Proposition_And._() : super();
   factory Proposition_And({
     Proposition? left,
     Proposition? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  Proposition_And._() : super();
   factory Proposition_And.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Proposition_And.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.And', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<Proposition>(1, _omitFieldNames ? '' : 'left', subBuilder: Proposition.create)
+    ..aOM<Proposition>(2, _omitFieldNames ? '' : 'right', subBuilder: Proposition.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -709,8 +760,10 @@ class Proposition_And extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_And copyWith(void Function(Proposition_And) updates) => super.copyWith((message) => updates(message as Proposition_And)) as Proposition_And; // ignore: deprecated_member_use
+  Proposition_And copyWith(void Function(Proposition_And) updates) => super.copyWith((message) => updates(message as Proposition_And)) as Proposition_And;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_And create() => Proposition_And._();
   Proposition_And createEmptyInstance() => create();
@@ -742,29 +795,31 @@ class Proposition_And extends $pb.GeneratedMessage {
   Proposition ensureRight() => $_ensure(1);
 }
 
+/// a proposition that can be satisfied if either of the propositions contained are both satisfied
 class Proposition_Or extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition.Or', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
-    ..aOM<Proposition>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'left', subBuilder: Proposition.create)
-    ..aOM<Proposition>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'right', subBuilder: Proposition.create)
-    ..hasRequiredFields = false
-  ;
-
-  Proposition_Or._() : super();
   factory Proposition_Or({
     Proposition? left,
     Proposition? right,
   }) {
-    final _result = create();
+    final $result = create();
     if (left != null) {
-      _result.left = left;
+      $result.left = left;
     }
     if (right != null) {
-      _result.right = right;
+      $result.right = right;
     }
-    return _result;
+    return $result;
   }
+  Proposition_Or._() : super();
   factory Proposition_Or.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Proposition_Or.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition.Or', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
+    ..aOM<Proposition>(1, _omitFieldNames ? '' : 'left', subBuilder: Proposition.create)
+    ..aOM<Proposition>(2, _omitFieldNames ? '' : 'right', subBuilder: Proposition.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -774,8 +829,10 @@ class Proposition_Or extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition_Or copyWith(void Function(Proposition_Or) updates) => super.copyWith((message) => updates(message as Proposition_Or)) as Proposition_Or; // ignore: deprecated_member_use
+  Proposition_Or copyWith(void Function(Proposition_Or) updates) => super.copyWith((message) => updates(message as Proposition_Or)) as Proposition_Or;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition_Or create() => Proposition_Or._();
   Proposition_Or createEmptyInstance() => create();
@@ -824,7 +881,69 @@ enum Proposition_Value {
   notSet
 }
 
+/// Condition that must be satisfied to unlock
 class Proposition extends $pb.GeneratedMessage {
+  factory Proposition({
+    Proposition_Locked? locked,
+    Proposition_Digest? digest,
+    Proposition_DigitalSignature? digitalSignature,
+    Proposition_HeightRange? heightRange,
+    Proposition_TickRange? tickRange,
+    Proposition_ExactMatch? exactMatch,
+    Proposition_LessThan? lessThan,
+    Proposition_GreaterThan? greaterThan,
+    Proposition_EqualTo? equalTo,
+    Proposition_Threshold? threshold,
+    Proposition_Not? not,
+    Proposition_And? and,
+    Proposition_Or? or,
+  }) {
+    final $result = create();
+    if (locked != null) {
+      $result.locked = locked;
+    }
+    if (digest != null) {
+      $result.digest = digest;
+    }
+    if (digitalSignature != null) {
+      $result.digitalSignature = digitalSignature;
+    }
+    if (heightRange != null) {
+      $result.heightRange = heightRange;
+    }
+    if (tickRange != null) {
+      $result.tickRange = tickRange;
+    }
+    if (exactMatch != null) {
+      $result.exactMatch = exactMatch;
+    }
+    if (lessThan != null) {
+      $result.lessThan = lessThan;
+    }
+    if (greaterThan != null) {
+      $result.greaterThan = greaterThan;
+    }
+    if (equalTo != null) {
+      $result.equalTo = equalTo;
+    }
+    if (threshold != null) {
+      $result.threshold = threshold;
+    }
+    if (not != null) {
+      $result.not = not;
+    }
+    if (and != null) {
+      $result.and = and;
+    }
+    if (or != null) {
+      $result.or = or;
+    }
+    return $result;
+  }
+  Proposition._() : super();
+  factory Proposition.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proposition.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Proposition_Value> _Proposition_ValueByTag = {
     1 : Proposition_Value.locked,
     2 : Proposition_Value.digest,
@@ -841,84 +960,24 @@ class Proposition extends $pb.GeneratedMessage {
     13 : Proposition_Value.or,
     0 : Proposition_Value.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Proposition', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'quivr.models'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proposition', package: const $pb.PackageName(_omitMessageNames ? '' : 'quivr.models'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
-    ..aOM<Proposition_Locked>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'locked', subBuilder: Proposition_Locked.create)
-    ..aOM<Proposition_Digest>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digest', subBuilder: Proposition_Digest.create)
-    ..aOM<Proposition_DigitalSignature>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'digitalSignature', protoName: 'digitalSignature', subBuilder: Proposition_DigitalSignature.create)
-    ..aOM<Proposition_HeightRange>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'heightRange', protoName: 'heightRange', subBuilder: Proposition_HeightRange.create)
-    ..aOM<Proposition_TickRange>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tickRange', protoName: 'tickRange', subBuilder: Proposition_TickRange.create)
-    ..aOM<Proposition_ExactMatch>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exactMatch', protoName: 'exactMatch', subBuilder: Proposition_ExactMatch.create)
-    ..aOM<Proposition_LessThan>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lessThan', protoName: 'lessThan', subBuilder: Proposition_LessThan.create)
-    ..aOM<Proposition_GreaterThan>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'greaterThan', protoName: 'greaterThan', subBuilder: Proposition_GreaterThan.create)
-    ..aOM<Proposition_EqualTo>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'equalTo', protoName: 'equalTo', subBuilder: Proposition_EqualTo.create)
-    ..aOM<Proposition_Threshold>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'threshold', subBuilder: Proposition_Threshold.create)
-    ..aOM<Proposition_Not>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'not', subBuilder: Proposition_Not.create)
-    ..aOM<Proposition_And>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'and', subBuilder: Proposition_And.create)
-    ..aOM<Proposition_Or>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'or', subBuilder: Proposition_Or.create)
+    ..aOM<Proposition_Locked>(1, _omitFieldNames ? '' : 'locked', subBuilder: Proposition_Locked.create)
+    ..aOM<Proposition_Digest>(2, _omitFieldNames ? '' : 'digest', subBuilder: Proposition_Digest.create)
+    ..aOM<Proposition_DigitalSignature>(3, _omitFieldNames ? '' : 'digitalSignature', protoName: 'digitalSignature', subBuilder: Proposition_DigitalSignature.create)
+    ..aOM<Proposition_HeightRange>(4, _omitFieldNames ? '' : 'heightRange', protoName: 'heightRange', subBuilder: Proposition_HeightRange.create)
+    ..aOM<Proposition_TickRange>(5, _omitFieldNames ? '' : 'tickRange', protoName: 'tickRange', subBuilder: Proposition_TickRange.create)
+    ..aOM<Proposition_ExactMatch>(6, _omitFieldNames ? '' : 'exactMatch', protoName: 'exactMatch', subBuilder: Proposition_ExactMatch.create)
+    ..aOM<Proposition_LessThan>(7, _omitFieldNames ? '' : 'lessThan', protoName: 'lessThan', subBuilder: Proposition_LessThan.create)
+    ..aOM<Proposition_GreaterThan>(8, _omitFieldNames ? '' : 'greaterThan', protoName: 'greaterThan', subBuilder: Proposition_GreaterThan.create)
+    ..aOM<Proposition_EqualTo>(9, _omitFieldNames ? '' : 'equalTo', protoName: 'equalTo', subBuilder: Proposition_EqualTo.create)
+    ..aOM<Proposition_Threshold>(10, _omitFieldNames ? '' : 'threshold', subBuilder: Proposition_Threshold.create)
+    ..aOM<Proposition_Not>(11, _omitFieldNames ? '' : 'not', subBuilder: Proposition_Not.create)
+    ..aOM<Proposition_And>(12, _omitFieldNames ? '' : 'and', subBuilder: Proposition_And.create)
+    ..aOM<Proposition_Or>(13, _omitFieldNames ? '' : 'or', subBuilder: Proposition_Or.create)
     ..hasRequiredFields = false
   ;
 
-  Proposition._() : super();
-  factory Proposition({
-    Proposition_Locked? locked,
-    Proposition_Digest? digest,
-    Proposition_DigitalSignature? digitalSignature,
-    Proposition_HeightRange? heightRange,
-    Proposition_TickRange? tickRange,
-    Proposition_ExactMatch? exactMatch,
-    Proposition_LessThan? lessThan,
-    Proposition_GreaterThan? greaterThan,
-    Proposition_EqualTo? equalTo,
-    Proposition_Threshold? threshold,
-    Proposition_Not? not,
-    Proposition_And? and,
-    Proposition_Or? or,
-  }) {
-    final _result = create();
-    if (locked != null) {
-      _result.locked = locked;
-    }
-    if (digest != null) {
-      _result.digest = digest;
-    }
-    if (digitalSignature != null) {
-      _result.digitalSignature = digitalSignature;
-    }
-    if (heightRange != null) {
-      _result.heightRange = heightRange;
-    }
-    if (tickRange != null) {
-      _result.tickRange = tickRange;
-    }
-    if (exactMatch != null) {
-      _result.exactMatch = exactMatch;
-    }
-    if (lessThan != null) {
-      _result.lessThan = lessThan;
-    }
-    if (greaterThan != null) {
-      _result.greaterThan = greaterThan;
-    }
-    if (equalTo != null) {
-      _result.equalTo = equalTo;
-    }
-    if (threshold != null) {
-      _result.threshold = threshold;
-    }
-    if (not != null) {
-      _result.not = not;
-    }
-    if (and != null) {
-      _result.and = and;
-    }
-    if (or != null) {
-      _result.or = or;
-    }
-    return _result;
-  }
-  factory Proposition.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proposition.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -928,8 +987,10 @@ class Proposition extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Proposition copyWith(void Function(Proposition) updates) => super.copyWith((message) => updates(message as Proposition)) as Proposition; // ignore: deprecated_member_use
+  Proposition copyWith(void Function(Proposition) updates) => super.copyWith((message) => updates(message as Proposition)) as Proposition;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Proposition create() => Proposition._();
   Proposition createEmptyInstance() => create();
@@ -1085,3 +1146,6 @@ class Proposition extends $pb.GeneratedMessage {
   Proposition_Or ensureOr() => $_ensure(12);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
