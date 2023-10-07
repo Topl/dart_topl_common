@@ -1,5 +1,5 @@
 name: topl_common
-description: Topl Common and Proto definitions
+description: Topl's Common and Proto definitions used to build the next blockchain for good.
 repository: https://github.com/Topl/dart_topl_common
 
 version: 2.1.0
