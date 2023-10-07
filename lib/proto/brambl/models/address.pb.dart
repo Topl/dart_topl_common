@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'identifier.pb.dart' as $4;
+import 'identifier.pb.dart' as $10;
 
 /// Used in UTXOs
 class LockAddress extends $pb.GeneratedMessage {
   factory LockAddress({
     $core.int? network,
     $core.int? ledger,
-    $4.LockId? id,
+    $10.LockId? id,
   }) {
     final $result = create();
     if (network != null) {
@@ -41,7 +41,7 @@ class LockAddress extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LockAddress', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'network', $pb.PbFieldType.OU3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'ledger', $pb.PbFieldType.OU3)
-    ..aOM<$4.LockId>(3, _omitFieldNames ? '' : 'id', subBuilder: $4.LockId.create)
+    ..aOM<$10.LockId>(3, _omitFieldNames ? '' : 'id', subBuilder: $10.LockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -85,15 +85,15 @@ class LockAddress extends $pb.GeneratedMessage {
   void clearLedger() => clearField(2);
 
   @$pb.TagNumber(3)
-  $4.LockId get id => $_getN(2);
+  $10.LockId get id => $_getN(2);
   @$pb.TagNumber(3)
-  set id($4.LockId v) { setField(3, v); }
+  set id($10.LockId v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasId() => $_has(2);
   @$pb.TagNumber(3)
   void clearId() => clearField(3);
   @$pb.TagNumber(3)
-  $4.LockId ensureId() => $_ensure(2);
+  $10.LockId ensureId() => $_ensure(2);
 }
 
 /// Used in STXOs
@@ -102,7 +102,7 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
     $core.int? network,
     $core.int? ledger,
     $core.int? index,
-    $4.TransactionId? id,
+    $10.TransactionId? id,
   }) {
     final $result = create();
     if (network != null) {
@@ -127,7 +127,7 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'network', $pb.PbFieldType.OU3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'ledger', $pb.PbFieldType.OU3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOM<$4.TransactionId>(4, _omitFieldNames ? '' : 'id', subBuilder: $4.TransactionId.create)
+    ..aOM<$10.TransactionId>(4, _omitFieldNames ? '' : 'id', subBuilder: $10.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -181,15 +181,15 @@ class TransactionOutputAddress extends $pb.GeneratedMessage {
   void clearIndex() => clearField(3);
 
   @$pb.TagNumber(4)
-  $4.TransactionId get id => $_getN(3);
+  $10.TransactionId get id => $_getN(3);
   @$pb.TagNumber(4)
-  set id($4.TransactionId v) { setField(4, v); }
+  set id($10.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasId() => $_has(3);
   @$pb.TagNumber(4)
   void clearId() => clearField(4);
   @$pb.TagNumber(4)
-  $4.TransactionId ensureId() => $_ensure(3);
+  $10.TransactionId ensureId() => $_ensure(3);
 }
 
 /// Used in Challenge.PreviousProposition
@@ -198,7 +198,7 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
     $core.int? network,
     $core.int? ledger,
     $core.int? index,
-    $4.TransactionId? id,
+    $10.TransactionId? id,
   }) {
     final $result = create();
     if (network != null) {
@@ -223,7 +223,7 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'network', $pb.PbFieldType.OU3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'ledger', $pb.PbFieldType.OU3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOM<$4.TransactionId>(4, _omitFieldNames ? '' : 'id', subBuilder: $4.TransactionId.create)
+    ..aOM<$10.TransactionId>(4, _omitFieldNames ? '' : 'id', subBuilder: $10.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -276,15 +276,15 @@ class TransactionInputAddress extends $pb.GeneratedMessage {
   void clearIndex() => clearField(3);
 
   @$pb.TagNumber(4)
-  $4.TransactionId get id => $_getN(3);
+  $10.TransactionId get id => $_getN(3);
   @$pb.TagNumber(4)
-  set id($4.TransactionId v) { setField(4, v); }
+  set id($10.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasId() => $_has(3);
   @$pb.TagNumber(4)
   void clearId() => clearField(4);
   @$pb.TagNumber(4)
-  $4.TransactionId ensureId() => $_ensure(3);
+  $10.TransactionId ensureId() => $_ensure(3);
 }
 
 

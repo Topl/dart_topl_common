@@ -14,13 +14,13 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/struct.pb.dart' as $11;
-import '../../google/protobuf/wrappers.pb.dart' as $10;
+import '../../google/protobuf/struct.pb.dart' as $14;
+import '../../google/protobuf/wrappers.pb.dart' as $13;
 import '../../quivr/models/shared.pb.dart' as $3;
-import 'address.pb.dart' as $6;
-import 'box/asset.pbenum.dart' as $14;
-import 'identifier.pb.dart' as $4;
-import 'transaction/schedule.pb.dart' as $18;
+import 'address.pb.dart' as $12;
+import 'box/asset.pbenum.dart' as $15;
+import 'identifier.pb.dart' as $10;
+import 'transaction/schedule.pb.dart' as $11;
 
 class Event_Eon extends $pb.GeneratedMessage {
   factory Event_Eon({
@@ -266,7 +266,7 @@ class Event_Header extends $pb.GeneratedMessage {
 
 class Event_IoTransaction extends $pb.GeneratedMessage {
   factory Event_IoTransaction({
-    $18.Schedule? schedule,
+    $11.Schedule? schedule,
     $3.SmallData? metadata,
   }) {
     final $result = create();
@@ -283,7 +283,7 @@ class Event_IoTransaction extends $pb.GeneratedMessage {
   factory Event_IoTransaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Event.IoTransaction', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$18.Schedule>(1, _omitFieldNames ? '' : 'schedule', subBuilder: $18.Schedule.create)
+    ..aOM<$11.Schedule>(1, _omitFieldNames ? '' : 'schedule', subBuilder: $11.Schedule.create)
     ..aOM<$3.SmallData>(4, _omitFieldNames ? '' : 'metadata', subBuilder: $3.SmallData.create)
     ..hasRequiredFields = false
   ;
@@ -311,15 +311,15 @@ class Event_IoTransaction extends $pb.GeneratedMessage {
 
   /// the range of acceptable slots the transaction can be accepted into
   @$pb.TagNumber(1)
-  $18.Schedule get schedule => $_getN(0);
+  $11.Schedule get schedule => $_getN(0);
   @$pb.TagNumber(1)
-  set schedule($18.Schedule v) { setField(1, v); }
+  set schedule($11.Schedule v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSchedule() => $_has(0);
   @$pb.TagNumber(1)
   void clearSchedule() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Schedule ensureSchedule() => $_ensure(0);
+  $11.Schedule ensureSchedule() => $_ensure(0);
 
   @$pb.TagNumber(4)
   $3.SmallData get metadata => $_getN(1);
@@ -336,8 +336,8 @@ class Event_IoTransaction extends $pb.GeneratedMessage {
 class Event_GroupPolicy extends $pb.GeneratedMessage {
   factory Event_GroupPolicy({
     $core.String? label,
-    $6.TransactionOutputAddress? registrationUtxo,
-    $4.SeriesId? fixedSeries,
+    $12.TransactionOutputAddress? registrationUtxo,
+    $10.SeriesId? fixedSeries,
   }) {
     final $result = create();
     if (label != null) {
@@ -357,8 +357,8 @@ class Event_GroupPolicy extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Event.GroupPolicy', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'label')
-    ..aOM<$6.TransactionOutputAddress>(2, _omitFieldNames ? '' : 'registrationUtxo', protoName: 'registrationUtxo', subBuilder: $6.TransactionOutputAddress.create)
-    ..aOM<$4.SeriesId>(3, _omitFieldNames ? '' : 'fixedSeries', protoName: 'fixedSeries', subBuilder: $4.SeriesId.create)
+    ..aOM<$12.TransactionOutputAddress>(2, _omitFieldNames ? '' : 'registrationUtxo', protoName: 'registrationUtxo', subBuilder: $12.TransactionOutputAddress.create)
+    ..aOM<$10.SeriesId>(3, _omitFieldNames ? '' : 'fixedSeries', protoName: 'fixedSeries', subBuilder: $10.SeriesId.create)
     ..hasRequiredFields = false
   ;
 
@@ -395,38 +395,38 @@ class Event_GroupPolicy extends $pb.GeneratedMessage {
 
   /// The address of a UTXO. The UTXO contains the LVLs that are paid for minting the group constructor token.
   @$pb.TagNumber(2)
-  $6.TransactionOutputAddress get registrationUtxo => $_getN(1);
+  $12.TransactionOutputAddress get registrationUtxo => $_getN(1);
   @$pb.TagNumber(2)
-  set registrationUtxo($6.TransactionOutputAddress v) { setField(2, v); }
+  set registrationUtxo($12.TransactionOutputAddress v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRegistrationUtxo() => $_has(1);
   @$pb.TagNumber(2)
   void clearRegistrationUtxo() => clearField(2);
   @$pb.TagNumber(2)
-  $6.TransactionOutputAddress ensureRegistrationUtxo() => $_ensure(1);
+  $12.TransactionOutputAddress ensureRegistrationUtxo() => $_ensure(1);
 
   /// An optional series identifier. When this series identifier is defined, this groups that implement this policy can only be used to mint assets with the aforementioned series identifier
   @$pb.TagNumber(3)
-  $4.SeriesId get fixedSeries => $_getN(2);
+  $10.SeriesId get fixedSeries => $_getN(2);
   @$pb.TagNumber(3)
-  set fixedSeries($4.SeriesId v) { setField(3, v); }
+  set fixedSeries($10.SeriesId v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasFixedSeries() => $_has(2);
   @$pb.TagNumber(3)
   void clearFixedSeries() => clearField(3);
   @$pb.TagNumber(3)
-  $4.SeriesId ensureFixedSeries() => $_ensure(2);
+  $10.SeriesId ensureFixedSeries() => $_ensure(2);
 }
 
 class Event_SeriesPolicy extends $pb.GeneratedMessage {
   factory Event_SeriesPolicy({
     $core.String? label,
-    $10.UInt32Value? tokenSupply,
-    $6.TransactionOutputAddress? registrationUtxo,
-    $14.QuantityDescriptorType? quantityDescriptor,
-    $14.FungibilityType? fungibility,
-    $11.Struct? ephemeralMetadataScheme,
-    $11.Struct? permanentMetadataScheme,
+    $13.UInt32Value? tokenSupply,
+    $12.TransactionOutputAddress? registrationUtxo,
+    $15.QuantityDescriptorType? quantityDescriptor,
+    $15.FungibilityType? fungibility,
+    $14.Struct? ephemeralMetadataScheme,
+    $14.Struct? permanentMetadataScheme,
   }) {
     final $result = create();
     if (label != null) {
@@ -458,12 +458,12 @@ class Event_SeriesPolicy extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Event.SeriesPolicy', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'label')
-    ..aOM<$10.UInt32Value>(2, _omitFieldNames ? '' : 'tokenSupply', protoName: 'tokenSupply', subBuilder: $10.UInt32Value.create)
-    ..aOM<$6.TransactionOutputAddress>(3, _omitFieldNames ? '' : 'registrationUtxo', protoName: 'registrationUtxo', subBuilder: $6.TransactionOutputAddress.create)
-    ..e<$14.QuantityDescriptorType>(4, _omitFieldNames ? '' : 'quantityDescriptor', $pb.PbFieldType.OE, protoName: 'quantityDescriptor', defaultOrMaker: $14.QuantityDescriptorType.LIQUID, valueOf: $14.QuantityDescriptorType.valueOf, enumValues: $14.QuantityDescriptorType.values)
-    ..e<$14.FungibilityType>(5, _omitFieldNames ? '' : 'fungibility', $pb.PbFieldType.OE, defaultOrMaker: $14.FungibilityType.GROUP_AND_SERIES, valueOf: $14.FungibilityType.valueOf, enumValues: $14.FungibilityType.values)
-    ..aOM<$11.Struct>(6, _omitFieldNames ? '' : 'ephemeralMetadataScheme', protoName: 'ephemeralMetadataScheme', subBuilder: $11.Struct.create)
-    ..aOM<$11.Struct>(7, _omitFieldNames ? '' : 'permanentMetadataScheme', protoName: 'permanentMetadataScheme', subBuilder: $11.Struct.create)
+    ..aOM<$13.UInt32Value>(2, _omitFieldNames ? '' : 'tokenSupply', protoName: 'tokenSupply', subBuilder: $13.UInt32Value.create)
+    ..aOM<$12.TransactionOutputAddress>(3, _omitFieldNames ? '' : 'registrationUtxo', protoName: 'registrationUtxo', subBuilder: $12.TransactionOutputAddress.create)
+    ..e<$15.QuantityDescriptorType>(4, _omitFieldNames ? '' : 'quantityDescriptor', $pb.PbFieldType.OE, protoName: 'quantityDescriptor', defaultOrMaker: $15.QuantityDescriptorType.LIQUID, valueOf: $15.QuantityDescriptorType.valueOf, enumValues: $15.QuantityDescriptorType.values)
+    ..e<$15.FungibilityType>(5, _omitFieldNames ? '' : 'fungibility', $pb.PbFieldType.OE, defaultOrMaker: $15.FungibilityType.GROUP_AND_SERIES, valueOf: $15.FungibilityType.valueOf, enumValues: $15.FungibilityType.values)
+    ..aOM<$14.Struct>(6, _omitFieldNames ? '' : 'ephemeralMetadataScheme', protoName: 'ephemeralMetadataScheme', subBuilder: $14.Struct.create)
+    ..aOM<$14.Struct>(7, _omitFieldNames ? '' : 'permanentMetadataScheme', protoName: 'permanentMetadataScheme', subBuilder: $14.Struct.create)
     ..hasRequiredFields = false
   ;
 
@@ -502,33 +502,33 @@ class Event_SeriesPolicy extends $pb.GeneratedMessage {
   /// and the series constructor is burned by the minting transaction.
   /// When not provided, the series constructor is not burned, thus making the token supply unlimited.
   @$pb.TagNumber(2)
-  $10.UInt32Value get tokenSupply => $_getN(1);
+  $13.UInt32Value get tokenSupply => $_getN(1);
   @$pb.TagNumber(2)
-  set tokenSupply($10.UInt32Value v) { setField(2, v); }
+  set tokenSupply($13.UInt32Value v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTokenSupply() => $_has(1);
   @$pb.TagNumber(2)
   void clearTokenSupply() => clearField(2);
   @$pb.TagNumber(2)
-  $10.UInt32Value ensureTokenSupply() => $_ensure(1);
+  $13.UInt32Value ensureTokenSupply() => $_ensure(1);
 
   /// The address of a UTXO. The UTXO contains the LVLs that are paid for minting the series constructor token.
   @$pb.TagNumber(3)
-  $6.TransactionOutputAddress get registrationUtxo => $_getN(2);
+  $12.TransactionOutputAddress get registrationUtxo => $_getN(2);
   @$pb.TagNumber(3)
-  set registrationUtxo($6.TransactionOutputAddress v) { setField(3, v); }
+  set registrationUtxo($12.TransactionOutputAddress v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasRegistrationUtxo() => $_has(2);
   @$pb.TagNumber(3)
   void clearRegistrationUtxo() => clearField(3);
   @$pb.TagNumber(3)
-  $6.TransactionOutputAddress ensureRegistrationUtxo() => $_ensure(2);
+  $12.TransactionOutputAddress ensureRegistrationUtxo() => $_ensure(2);
 
   /// Describes the behavior of the quantity field of the assets minted using the series constructor derived from this policy.
   @$pb.TagNumber(4)
-  $14.QuantityDescriptorType get quantityDescriptor => $_getN(3);
+  $15.QuantityDescriptorType get quantityDescriptor => $_getN(3);
   @$pb.TagNumber(4)
-  set quantityDescriptor($14.QuantityDescriptorType v) { setField(4, v); }
+  set quantityDescriptor($15.QuantityDescriptorType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasQuantityDescriptor() => $_has(3);
   @$pb.TagNumber(4)
@@ -536,9 +536,9 @@ class Event_SeriesPolicy extends $pb.GeneratedMessage {
 
   /// Describes the fungibility of the assets minted using the series constructor token derived from this policy.
   @$pb.TagNumber(5)
-  $14.FungibilityType get fungibility => $_getN(4);
+  $15.FungibilityType get fungibility => $_getN(4);
   @$pb.TagNumber(5)
-  set fungibility($14.FungibilityType v) { setField(5, v); }
+  set fungibility($15.FungibilityType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasFungibility() => $_has(4);
   @$pb.TagNumber(5)
@@ -546,27 +546,27 @@ class Event_SeriesPolicy extends $pb.GeneratedMessage {
 
   /// Describes the schema of the data stored in the metadata field of the Asset Minting Statement.
   @$pb.TagNumber(6)
-  $11.Struct get ephemeralMetadataScheme => $_getN(5);
+  $14.Struct get ephemeralMetadataScheme => $_getN(5);
   @$pb.TagNumber(6)
-  set ephemeralMetadataScheme($11.Struct v) { setField(6, v); }
+  set ephemeralMetadataScheme($14.Struct v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasEphemeralMetadataScheme() => $_has(5);
   @$pb.TagNumber(6)
   void clearEphemeralMetadataScheme() => clearField(6);
   @$pb.TagNumber(6)
-  $11.Struct ensureEphemeralMetadataScheme() => $_ensure(5);
+  $14.Struct ensureEphemeralMetadataScheme() => $_ensure(5);
 
   /// Describes the schema of the data stored in the Asset Token.
   @$pb.TagNumber(7)
-  $11.Struct get permanentMetadataScheme => $_getN(6);
+  $14.Struct get permanentMetadataScheme => $_getN(6);
   @$pb.TagNumber(7)
-  set permanentMetadataScheme($11.Struct v) { setField(7, v); }
+  set permanentMetadataScheme($14.Struct v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasPermanentMetadataScheme() => $_has(6);
   @$pb.TagNumber(7)
   void clearPermanentMetadataScheme() => clearField(7);
   @$pb.TagNumber(7)
-  $11.Struct ensurePermanentMetadataScheme() => $_ensure(6);
+  $14.Struct ensurePermanentMetadataScheme() => $_ensure(6);
 }
 
 enum Event_Value {

@@ -14,12 +14,12 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../brambl/models/address.pb.dart' as $6;
+import '../brambl/models/address.pb.dart' as $12;
 import '../brambl/models/transaction/io_transaction.pb.dart' as $29;
-import '../brambl/models/transaction/unspent_transaction_output.pb.dart' as $22;
+import '../brambl/models/transaction/unspent_transaction_output.pb.dart' as $26;
 import '../consensus/models/block_header.pb.dart' as $30;
-import '../consensus/models/block_id.pb.dart' as $25;
-import '../google/protobuf/wrappers.pb.dart' as $10;
+import '../consensus/models/block_id.pb.dart' as $6;
+import '../google/protobuf/wrappers.pb.dart' as $13;
 import '../node/models/block.pb.dart' as $31;
 import 'genus_models.pbenum.dart';
 
@@ -28,9 +28,9 @@ export 'genus_models.pbenum.dart';
 /// A Txo and its status
 class Txo extends $pb.GeneratedMessage {
   factory Txo({
-    $22.UnspentTransactionOutput? transactionOutput,
+    $26.UnspentTransactionOutput? transactionOutput,
     TxoState? state,
-    $6.TransactionOutputAddress? outputAddress,
+    $12.TransactionOutputAddress? outputAddress,
   }) {
     final $result = create();
     if (transactionOutput != null) {
@@ -49,9 +49,9 @@ class Txo extends $pb.GeneratedMessage {
   factory Txo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Txo', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$22.UnspentTransactionOutput>(1, _omitFieldNames ? '' : 'transactionOutput', protoName: 'transactionOutput', subBuilder: $22.UnspentTransactionOutput.create)
+    ..aOM<$26.UnspentTransactionOutput>(1, _omitFieldNames ? '' : 'transactionOutput', protoName: 'transactionOutput', subBuilder: $26.UnspentTransactionOutput.create)
     ..e<TxoState>(2, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: TxoState.SPENT, valueOf: TxoState.valueOf, enumValues: TxoState.values)
-    ..aOM<$6.TransactionOutputAddress>(3, _omitFieldNames ? '' : 'outputAddress', protoName: 'outputAddress', subBuilder: $6.TransactionOutputAddress.create)
+    ..aOM<$12.TransactionOutputAddress>(3, _omitFieldNames ? '' : 'outputAddress', protoName: 'outputAddress', subBuilder: $12.TransactionOutputAddress.create)
     ..hasRequiredFields = false
   ;
 
@@ -77,15 +77,15 @@ class Txo extends $pb.GeneratedMessage {
   static Txo? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $22.UnspentTransactionOutput get transactionOutput => $_getN(0);
+  $26.UnspentTransactionOutput get transactionOutput => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionOutput($22.UnspentTransactionOutput v) { setField(1, v); }
+  set transactionOutput($26.UnspentTransactionOutput v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionOutput() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionOutput() => clearField(1);
   @$pb.TagNumber(1)
-  $22.UnspentTransactionOutput ensureTransactionOutput() => $_ensure(0);
+  $26.UnspentTransactionOutput ensureTransactionOutput() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TxoState get state => $_getN(1);
@@ -97,15 +97,15 @@ class Txo extends $pb.GeneratedMessage {
   void clearState() => clearField(2);
 
   @$pb.TagNumber(3)
-  $6.TransactionOutputAddress get outputAddress => $_getN(2);
+  $12.TransactionOutputAddress get outputAddress => $_getN(2);
   @$pb.TagNumber(3)
-  set outputAddress($6.TransactionOutputAddress v) { setField(3, v); }
+  set outputAddress($12.TransactionOutputAddress v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasOutputAddress() => $_has(2);
   @$pb.TagNumber(3)
   void clearOutputAddress() => clearField(3);
   @$pb.TagNumber(3)
-  $6.TransactionOutputAddress ensureOutputAddress() => $_ensure(2);
+  $12.TransactionOutputAddress ensureOutputAddress() => $_ensure(2);
 }
 
 /// 1 - the probability that something will be subject to a reorg.
@@ -246,7 +246,7 @@ class AssetLabel_Empty extends $pb.GeneratedMessage {
 class AssetLabel_V1Label extends $pb.GeneratedMessage {
   factory AssetLabel_V1Label({
     $core.int? version,
-    $6.LockAddress? mintingAddress,
+    $12.LockAddress? mintingAddress,
   }) {
     final $result = create();
     if (version != null) {
@@ -263,7 +263,7 @@ class AssetLabel_V1Label extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetLabel.V1Label', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU3)
-    ..aOM<$6.LockAddress>(2, _omitFieldNames ? '' : 'mintingAddress', protoName: 'mintingAddress', subBuilder: $6.LockAddress.create)
+    ..aOM<$12.LockAddress>(2, _omitFieldNames ? '' : 'mintingAddress', protoName: 'mintingAddress', subBuilder: $12.LockAddress.create)
     ..hasRequiredFields = false
   ;
 
@@ -298,15 +298,15 @@ class AssetLabel_V1Label extends $pb.GeneratedMessage {
   void clearVersion() => clearField(1);
 
   @$pb.TagNumber(2)
-  $6.LockAddress get mintingAddress => $_getN(1);
+  $12.LockAddress get mintingAddress => $_getN(1);
   @$pb.TagNumber(2)
-  set mintingAddress($6.LockAddress v) { setField(2, v); }
+  set mintingAddress($12.LockAddress v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMintingAddress() => $_has(1);
   @$pb.TagNumber(2)
   void clearMintingAddress() => clearField(2);
   @$pb.TagNumber(2)
-  $6.LockAddress ensureMintingAddress() => $_ensure(1);
+  $12.LockAddress ensureMintingAddress() => $_ensure(1);
 }
 
 class AssetLabel_Tam2Label extends $pb.GeneratedMessage {
@@ -748,7 +748,7 @@ class CsvIndexSpecs extends $pb.GeneratedMessage {
   factory CsvIndexSpecs({
     $core.Iterable<CsvIndexSpec>? specs,
     $core.int? separatorChar,
-    $10.UInt32Value? quoteChar,
+    $13.UInt32Value? quoteChar,
   }) {
     final $result = create();
     if (specs != null) {
@@ -769,7 +769,7 @@ class CsvIndexSpecs extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CsvIndexSpecs', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..pc<CsvIndexSpec>(1, _omitFieldNames ? '' : 'specs', $pb.PbFieldType.PM, subBuilder: CsvIndexSpec.create)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'separatorChar', $pb.PbFieldType.OU3, protoName: 'separatorChar')
-    ..aOM<$10.UInt32Value>(3, _omitFieldNames ? '' : 'quoteChar', protoName: 'quoteChar', subBuilder: $10.UInt32Value.create)
+    ..aOM<$13.UInt32Value>(3, _omitFieldNames ? '' : 'quoteChar', protoName: 'quoteChar', subBuilder: $13.UInt32Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -807,15 +807,15 @@ class CsvIndexSpecs extends $pb.GeneratedMessage {
   void clearSeparatorChar() => clearField(2);
 
   @$pb.TagNumber(3)
-  $10.UInt32Value get quoteChar => $_getN(2);
+  $13.UInt32Value get quoteChar => $_getN(2);
   @$pb.TagNumber(3)
-  set quoteChar($10.UInt32Value v) { setField(3, v); }
+  set quoteChar($13.UInt32Value v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasQuoteChar() => $_has(2);
   @$pb.TagNumber(3)
   void clearQuoteChar() => clearField(3);
   @$pb.TagNumber(3)
-  $10.UInt32Value ensureQuoteChar() => $_ensure(2);
+  $13.UInt32Value ensureQuoteChar() => $_ensure(2);
 }
 
 /// a sequence of csv field references to identify the values in data to be indexed
@@ -1076,7 +1076,7 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   factory TransactionReceipt({
     $29.IoTransaction? transaction,
     ConfidenceFactor? confidenceFactor,
-    $25.BlockId? blockId,
+    $6.BlockId? blockId,
     ChainDistance? depth,
   }) {
     final $result = create();
@@ -1101,7 +1101,7 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransactionReceipt', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
     ..aOM<$29.IoTransaction>(1, _omitFieldNames ? '' : 'transaction', subBuilder: $29.IoTransaction.create)
     ..aOM<ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: ConfidenceFactor.create)
-    ..aOM<$25.BlockId>(3, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(3, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $6.BlockId.create)
     ..aOM<ChainDistance>(4, _omitFieldNames ? '' : 'depth', subBuilder: ChainDistance.create)
     ..hasRequiredFields = false
   ;
@@ -1150,15 +1150,15 @@ class TransactionReceipt extends $pb.GeneratedMessage {
   ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $25.BlockId get blockId => $_getN(2);
+  $6.BlockId get blockId => $_getN(2);
   @$pb.TagNumber(3)
-  set blockId($25.BlockId v) { setField(3, v); }
+  set blockId($6.BlockId v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasBlockId() => $_has(2);
   @$pb.TagNumber(3)
   void clearBlockId() => clearField(3);
   @$pb.TagNumber(3)
-  $25.BlockId ensureBlockId() => $_ensure(2);
+  $6.BlockId ensureBlockId() => $_ensure(2);
 
   @$pb.TagNumber(4)
   ChainDistance get depth => $_getN(3);

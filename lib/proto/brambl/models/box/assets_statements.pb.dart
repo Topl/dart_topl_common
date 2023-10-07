@@ -13,17 +13,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/struct.pb.dart' as $11;
-import '../../../google/protobuf/wrappers.pb.dart' as $10;
+import '../../../google/protobuf/struct.pb.dart' as $14;
+import '../../../google/protobuf/wrappers.pb.dart' as $13;
 import '../../../quivr/models/shared.pb.dart' as $3;
-import '../address.pb.dart' as $6;
+import '../address.pb.dart' as $12;
 
 class AssetMintingStatement extends $pb.GeneratedMessage {
   factory AssetMintingStatement({
-    $6.TransactionOutputAddress? groupTokenUtxo,
-    $6.TransactionOutputAddress? seriesTokenUtxo,
+    $12.TransactionOutputAddress? groupTokenUtxo,
+    $12.TransactionOutputAddress? seriesTokenUtxo,
     $3.Int128? quantity,
-    $11.Struct? permanentMetadata,
+    $14.Struct? permanentMetadata,
   }) {
     final $result = create();
     if (groupTokenUtxo != null) {
@@ -45,10 +45,10 @@ class AssetMintingStatement extends $pb.GeneratedMessage {
   factory AssetMintingStatement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetMintingStatement', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$6.TransactionOutputAddress>(1, _omitFieldNames ? '' : 'groupTokenUtxo', protoName: 'groupTokenUtxo', subBuilder: $6.TransactionOutputAddress.create)
-    ..aOM<$6.TransactionOutputAddress>(2, _omitFieldNames ? '' : 'seriesTokenUtxo', protoName: 'seriesTokenUtxo', subBuilder: $6.TransactionOutputAddress.create)
+    ..aOM<$12.TransactionOutputAddress>(1, _omitFieldNames ? '' : 'groupTokenUtxo', protoName: 'groupTokenUtxo', subBuilder: $12.TransactionOutputAddress.create)
+    ..aOM<$12.TransactionOutputAddress>(2, _omitFieldNames ? '' : 'seriesTokenUtxo', protoName: 'seriesTokenUtxo', subBuilder: $12.TransactionOutputAddress.create)
     ..aOM<$3.Int128>(3, _omitFieldNames ? '' : 'quantity', subBuilder: $3.Int128.create)
-    ..aOM<$11.Struct>(4, _omitFieldNames ? '' : 'permanentMetadata', protoName: 'permanentMetadata', subBuilder: $11.Struct.create)
+    ..aOM<$14.Struct>(4, _omitFieldNames ? '' : 'permanentMetadata', protoName: 'permanentMetadata', subBuilder: $14.Struct.create)
     ..hasRequiredFields = false
   ;
 
@@ -75,27 +75,27 @@ class AssetMintingStatement extends $pb.GeneratedMessage {
 
   /// The address of the UTXO that contains the group constructor token that we are using to mint the asset token.
   @$pb.TagNumber(1)
-  $6.TransactionOutputAddress get groupTokenUtxo => $_getN(0);
+  $12.TransactionOutputAddress get groupTokenUtxo => $_getN(0);
   @$pb.TagNumber(1)
-  set groupTokenUtxo($6.TransactionOutputAddress v) { setField(1, v); }
+  set groupTokenUtxo($12.TransactionOutputAddress v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasGroupTokenUtxo() => $_has(0);
   @$pb.TagNumber(1)
   void clearGroupTokenUtxo() => clearField(1);
   @$pb.TagNumber(1)
-  $6.TransactionOutputAddress ensureGroupTokenUtxo() => $_ensure(0);
+  $12.TransactionOutputAddress ensureGroupTokenUtxo() => $_ensure(0);
 
   /// The address of the UTXO that contains the seriesconstructor token that we are using to mint the asset token.
   @$pb.TagNumber(2)
-  $6.TransactionOutputAddress get seriesTokenUtxo => $_getN(1);
+  $12.TransactionOutputAddress get seriesTokenUtxo => $_getN(1);
   @$pb.TagNumber(2)
-  set seriesTokenUtxo($6.TransactionOutputAddress v) { setField(2, v); }
+  set seriesTokenUtxo($12.TransactionOutputAddress v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasSeriesTokenUtxo() => $_has(1);
   @$pb.TagNumber(2)
   void clearSeriesTokenUtxo() => clearField(2);
   @$pb.TagNumber(2)
-  $6.TransactionOutputAddress ensureSeriesTokenUtxo() => $_ensure(1);
+  $12.TransactionOutputAddress ensureSeriesTokenUtxo() => $_ensure(1);
 
   /// The number of assets that we are minting using the group and series constructor token references by the two other attributes.
   @$pb.TagNumber(3)
@@ -113,20 +113,20 @@ class AssetMintingStatement extends $pb.GeneratedMessage {
   /// It follows the schema defined in the permanent metadata schema of the series policy corresponding to the token being minted.
   /// The conformance of this field to the schema is not checked by the node.
   @$pb.TagNumber(4)
-  $11.Struct get permanentMetadata => $_getN(3);
+  $14.Struct get permanentMetadata => $_getN(3);
   @$pb.TagNumber(4)
-  set permanentMetadata($11.Struct v) { setField(4, v); }
+  set permanentMetadata($14.Struct v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasPermanentMetadata() => $_has(3);
   @$pb.TagNumber(4)
   void clearPermanentMetadata() => clearField(4);
   @$pb.TagNumber(4)
-  $11.Struct ensurePermanentMetadata() => $_ensure(3);
+  $14.Struct ensurePermanentMetadata() => $_ensure(3);
 }
 
 class AssetMergingStatement extends $pb.GeneratedMessage {
   factory AssetMergingStatement({
-    $core.Iterable<$6.TransactionOutputAddress>? inputUtxos,
+    $core.Iterable<$12.TransactionOutputAddress>? inputUtxos,
     $core.int? outputIdx,
   }) {
     final $result = create();
@@ -143,7 +143,7 @@ class AssetMergingStatement extends $pb.GeneratedMessage {
   factory AssetMergingStatement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetMergingStatement', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..pc<$6.TransactionOutputAddress>(1, _omitFieldNames ? '' : 'inputUtxos', $pb.PbFieldType.PM, protoName: 'inputUtxos', subBuilder: $6.TransactionOutputAddress.create)
+    ..pc<$12.TransactionOutputAddress>(1, _omitFieldNames ? '' : 'inputUtxos', $pb.PbFieldType.PM, protoName: 'inputUtxos', subBuilder: $12.TransactionOutputAddress.create)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'outputIdx', $pb.PbFieldType.OU3, protoName: 'outputIdx')
     ..hasRequiredFields = false
   ;
@@ -171,7 +171,7 @@ class AssetMergingStatement extends $pb.GeneratedMessage {
 
   /// The non-empty list of UTXOs that we are using to compute the Merkle root for the alloy.
   @$pb.TagNumber(1)
-  $core.List<$6.TransactionOutputAddress> get inputUtxos => $_getList(0);
+  $core.List<$12.TransactionOutputAddress> get inputUtxos => $_getList(0);
 
   /// The index in the output sequence of the transaction where the merged tokens are stored.
   @$pb.TagNumber(2)
@@ -186,8 +186,8 @@ class AssetMergingStatement extends $pb.GeneratedMessage {
 
 class AssetSplittingStatement extends $pb.GeneratedMessage {
   factory AssetSplittingStatement({
-    $core.Iterable<$10.UInt32Value>? outputIndexes,
-    $6.TransactionOutputAddress? inputUtxo,
+    $core.Iterable<$13.UInt32Value>? outputIndexes,
+    $12.TransactionOutputAddress? inputUtxo,
   }) {
     final $result = create();
     if (outputIndexes != null) {
@@ -203,8 +203,8 @@ class AssetSplittingStatement extends $pb.GeneratedMessage {
   factory AssetSplittingStatement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AssetSplittingStatement', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..pc<$10.UInt32Value>(1, _omitFieldNames ? '' : 'outputIndexes', $pb.PbFieldType.PM, protoName: 'outputIndexes', subBuilder: $10.UInt32Value.create)
-    ..aOM<$6.TransactionOutputAddress>(2, _omitFieldNames ? '' : 'inputUtxo', protoName: 'inputUtxo', subBuilder: $6.TransactionOutputAddress.create)
+    ..pc<$13.UInt32Value>(1, _omitFieldNames ? '' : 'outputIndexes', $pb.PbFieldType.PM, protoName: 'outputIndexes', subBuilder: $13.UInt32Value.create)
+    ..aOM<$12.TransactionOutputAddress>(2, _omitFieldNames ? '' : 'inputUtxo', protoName: 'inputUtxo', subBuilder: $12.TransactionOutputAddress.create)
     ..hasRequiredFields = false
   ;
 
@@ -231,19 +231,19 @@ class AssetSplittingStatement extends $pb.GeneratedMessage {
 
   /// The non-empty list of indexes where the split asset is being put.
   @$pb.TagNumber(1)
-  $core.List<$10.UInt32Value> get outputIndexes => $_getList(0);
+  $core.List<$13.UInt32Value> get outputIndexes => $_getList(0);
 
   /// The UTXO that is being split.
   @$pb.TagNumber(2)
-  $6.TransactionOutputAddress get inputUtxo => $_getN(1);
+  $12.TransactionOutputAddress get inputUtxo => $_getN(1);
   @$pb.TagNumber(2)
-  set inputUtxo($6.TransactionOutputAddress v) { setField(2, v); }
+  set inputUtxo($12.TransactionOutputAddress v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasInputUtxo() => $_has(1);
   @$pb.TagNumber(2)
   void clearInputUtxo() => clearField(2);
   @$pb.TagNumber(2)
-  $6.TransactionOutputAddress ensureInputUtxo() => $_ensure(1);
+  $12.TransactionOutputAddress ensureInputUtxo() => $_ensure(1);
 }
 
 

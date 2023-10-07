@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../models/health_models.pbenum.dart' as $28;
+import '../models/health_models.pbenum.dart' as $4;
 
 class HealthCheckRequest extends $pb.GeneratedMessage {
   factory HealthCheckRequest({
@@ -67,7 +67,7 @@ class HealthCheckRequest extends $pb.GeneratedMessage {
 
 class HealthCheckResponse extends $pb.GeneratedMessage {
   factory HealthCheckResponse({
-    $28.ServingStatus? status,
+    $4.ServingStatus? status,
   }) {
     final $result = create();
     if (status != null) {
@@ -80,7 +80,7 @@ class HealthCheckResponse extends $pb.GeneratedMessage {
   factory HealthCheckResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HealthCheckResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'grpc.health.v1'), createEmptyInstance: create)
-    ..e<$28.ServingStatus>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $28.ServingStatus.UNKNOWN, valueOf: $28.ServingStatus.valueOf, enumValues: $28.ServingStatus.values)
+    ..e<$4.ServingStatus>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $4.ServingStatus.UNKNOWN, valueOf: $4.ServingStatus.valueOf, enumValues: $4.ServingStatus.values)
     ..hasRequiredFields = false
   ;
 
@@ -106,9 +106,9 @@ class HealthCheckResponse extends $pb.GeneratedMessage {
   static HealthCheckResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $28.ServingStatus get status => $_getN(0);
+  $4.ServingStatus get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($28.ServingStatus v) { setField(1, v); }
+  set status($4.ServingStatus v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)

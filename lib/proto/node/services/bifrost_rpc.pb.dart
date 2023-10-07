@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../brambl/models/identifier.pb.dart' as $4;
+import '../../brambl/models/identifier.pb.dart' as $10;
 import '../../brambl/models/transaction/io_transaction.pb.dart' as $29;
 import '../../consensus/models/block_header.pb.dart' as $30;
-import '../../consensus/models/block_id.pb.dart' as $25;
-import '../../google/protobuf/wrappers.pb.dart' as $10;
+import '../../consensus/models/block_id.pb.dart' as $6;
+import '../../google/protobuf/wrappers.pb.dart' as $13;
 import '../models/block.pb.dart' as $31;
-import '../models/node_config.pb.dart' as $33;
-import '../models/node_epochData.pb.dart' as $34;
+import '../models/node_config.pb.dart' as $32;
+import '../models/node_epochData.pb.dart' as $33;
 
 /// Request type for BroadcastTransaction
 class BroadcastTransactionReq extends $pb.GeneratedMessage {
@@ -146,7 +146,7 @@ class CurrentMempoolReq extends $pb.GeneratedMessage {
 /// Response type for CurrentMempool
 class CurrentMempoolRes extends $pb.GeneratedMessage {
   factory CurrentMempoolRes({
-    $core.Iterable<$4.TransactionId>? transactionIds,
+    $core.Iterable<$10.TransactionId>? transactionIds,
   }) {
     final $result = create();
     if (transactionIds != null) {
@@ -159,7 +159,7 @@ class CurrentMempoolRes extends $pb.GeneratedMessage {
   factory CurrentMempoolRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CurrentMempoolRes', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..pc<$4.TransactionId>(1, _omitFieldNames ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $4.TransactionId.create)
+    ..pc<$10.TransactionId>(1, _omitFieldNames ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $10.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -186,13 +186,13 @@ class CurrentMempoolRes extends $pb.GeneratedMessage {
 
   /// A list of Transaction IDs that are currently in the node's mempool
   @$pb.TagNumber(1)
-  $core.List<$4.TransactionId> get transactionIds => $_getList(0);
+  $core.List<$10.TransactionId> get transactionIds => $_getList(0);
 }
 
 /// Request type for CurrentMempoolContainsReq
 class CurrentMempoolContainsReq extends $pb.GeneratedMessage {
   factory CurrentMempoolContainsReq({
-    $4.TransactionId? transactionId,
+    $10.TransactionId? transactionId,
   }) {
     final $result = create();
     if (transactionId != null) {
@@ -205,7 +205,7 @@ class CurrentMempoolContainsReq extends $pb.GeneratedMessage {
   factory CurrentMempoolContainsReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CurrentMempoolContainsReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$4.TransactionId>(1, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $4.TransactionId.create)
+    ..aOM<$10.TransactionId>(1, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $10.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -231,15 +231,15 @@ class CurrentMempoolContainsReq extends $pb.GeneratedMessage {
   static CurrentMempoolContainsReq? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.TransactionId get transactionId => $_getN(0);
+  $10.TransactionId get transactionId => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionId($4.TransactionId v) { setField(1, v); }
+  set transactionId($10.TransactionId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionId() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.TransactionId ensureTransactionId() => $_ensure(0);
+  $10.TransactionId ensureTransactionId() => $_ensure(0);
 }
 
 /// Response type for CurrentMempoolContainsRes
@@ -297,7 +297,7 @@ class CurrentMempoolContainsRes extends $pb.GeneratedMessage {
 /// Request type for FetchBlockHeader
 class FetchBlockHeaderReq extends $pb.GeneratedMessage {
   factory FetchBlockHeaderReq({
-    $25.BlockId? blockId,
+    $6.BlockId? blockId,
   }) {
     final $result = create();
     if (blockId != null) {
@@ -310,7 +310,7 @@ class FetchBlockHeaderReq extends $pb.GeneratedMessage {
   factory FetchBlockHeaderReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchBlockHeaderReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$25.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $6.BlockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -337,15 +337,15 @@ class FetchBlockHeaderReq extends $pb.GeneratedMessage {
 
   /// The ID of the block to retrieve
   @$pb.TagNumber(1)
-  $25.BlockId get blockId => $_getN(0);
+  $6.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($25.BlockId v) { setField(1, v); }
+  set blockId($6.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $25.BlockId ensureBlockId() => $_ensure(0);
+  $6.BlockId ensureBlockId() => $_ensure(0);
 }
 
 /// Response type for FetchBlockHeader
@@ -406,7 +406,7 @@ class FetchBlockHeaderRes extends $pb.GeneratedMessage {
 /// Request type for FetchBlockBody
 class FetchBlockBodyReq extends $pb.GeneratedMessage {
   factory FetchBlockBodyReq({
-    $25.BlockId? blockId,
+    $6.BlockId? blockId,
   }) {
     final $result = create();
     if (blockId != null) {
@@ -419,7 +419,7 @@ class FetchBlockBodyReq extends $pb.GeneratedMessage {
   factory FetchBlockBodyReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchBlockBodyReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$25.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $6.BlockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -446,15 +446,15 @@ class FetchBlockBodyReq extends $pb.GeneratedMessage {
 
   /// The ID of the block to retrieve
   @$pb.TagNumber(1)
-  $25.BlockId get blockId => $_getN(0);
+  $6.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($25.BlockId v) { setField(1, v); }
+  set blockId($6.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $25.BlockId ensureBlockId() => $_ensure(0);
+  $6.BlockId ensureBlockId() => $_ensure(0);
 }
 
 /// Response type for FetchBlockBody
@@ -515,7 +515,7 @@ class FetchBlockBodyRes extends $pb.GeneratedMessage {
 /// Request type for FetchTransaction
 class FetchTransactionReq extends $pb.GeneratedMessage {
   factory FetchTransactionReq({
-    $4.TransactionId? transactionId,
+    $10.TransactionId? transactionId,
   }) {
     final $result = create();
     if (transactionId != null) {
@@ -528,7 +528,7 @@ class FetchTransactionReq extends $pb.GeneratedMessage {
   factory FetchTransactionReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchTransactionReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$4.TransactionId>(1, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $4.TransactionId.create)
+    ..aOM<$10.TransactionId>(1, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $10.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -554,15 +554,15 @@ class FetchTransactionReq extends $pb.GeneratedMessage {
   static FetchTransactionReq? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.TransactionId get transactionId => $_getN(0);
+  $10.TransactionId get transactionId => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionId($4.TransactionId v) { setField(1, v); }
+  set transactionId($10.TransactionId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionId() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.TransactionId ensureTransactionId() => $_ensure(0);
+  $10.TransactionId ensureTransactionId() => $_ensure(0);
 }
 
 /// Response type for FetchTransaction
@@ -675,7 +675,7 @@ class FetchBlockIdAtHeightReq extends $pb.GeneratedMessage {
 /// Response type for FetchBlockIdAtHeight
 class FetchBlockIdAtHeightRes extends $pb.GeneratedMessage {
   factory FetchBlockIdAtHeightRes({
-    $25.BlockId? blockId,
+    $6.BlockId? blockId,
   }) {
     final $result = create();
     if (blockId != null) {
@@ -688,7 +688,7 @@ class FetchBlockIdAtHeightRes extends $pb.GeneratedMessage {
   factory FetchBlockIdAtHeightRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchBlockIdAtHeightRes', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$25.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $6.BlockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -716,15 +716,15 @@ class FetchBlockIdAtHeightRes extends $pb.GeneratedMessage {
   /// The Block ID associated with the requested height.  None/null if not found.
   /// optional
   @$pb.TagNumber(1)
-  $25.BlockId get blockId => $_getN(0);
+  $6.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($25.BlockId v) { setField(1, v); }
+  set blockId($6.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $25.BlockId ensureBlockId() => $_ensure(0);
+  $6.BlockId ensureBlockId() => $_ensure(0);
 }
 
 /// Request type for FetchBlockIdAtDepth
@@ -782,7 +782,7 @@ class FetchBlockIdAtDepthReq extends $pb.GeneratedMessage {
 /// Response type for FetchBlockIdAtDepth
 class FetchBlockIdAtDepthRes extends $pb.GeneratedMessage {
   factory FetchBlockIdAtDepthRes({
-    $25.BlockId? blockId,
+    $6.BlockId? blockId,
   }) {
     final $result = create();
     if (blockId != null) {
@@ -795,7 +795,7 @@ class FetchBlockIdAtDepthRes extends $pb.GeneratedMessage {
   factory FetchBlockIdAtDepthRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchBlockIdAtDepthRes', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$25.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $6.BlockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -823,15 +823,15 @@ class FetchBlockIdAtDepthRes extends $pb.GeneratedMessage {
   /// The Block ID associated with the requested depth.  None/null if not found.
   /// optional
   @$pb.TagNumber(1)
-  $25.BlockId get blockId => $_getN(0);
+  $6.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($25.BlockId v) { setField(1, v); }
+  set blockId($6.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $25.BlockId ensureBlockId() => $_ensure(0);
+  $6.BlockId ensureBlockId() => $_ensure(0);
 }
 
 /// Request type for SynchronizationTraversal
@@ -876,8 +876,8 @@ enum SynchronizationTraversalRes_Status {
 /// Response type for SynchronizationTraversal
 class SynchronizationTraversalRes extends $pb.GeneratedMessage {
   factory SynchronizationTraversalRes({
-    $25.BlockId? applied,
-    $25.BlockId? unapplied,
+    $6.BlockId? applied,
+    $6.BlockId? unapplied,
   }) {
     final $result = create();
     if (applied != null) {
@@ -899,8 +899,8 @@ class SynchronizationTraversalRes extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SynchronizationTraversalRes', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$25.BlockId>(1, _omitFieldNames ? '' : 'applied', subBuilder: $25.BlockId.create)
-    ..aOM<$25.BlockId>(2, _omitFieldNames ? '' : 'unapplied', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(1, _omitFieldNames ? '' : 'applied', subBuilder: $6.BlockId.create)
+    ..aOM<$6.BlockId>(2, _omitFieldNames ? '' : 'unapplied', subBuilder: $6.BlockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -930,27 +930,27 @@ class SynchronizationTraversalRes extends $pb.GeneratedMessage {
 
   /// Block ID applied
   @$pb.TagNumber(1)
-  $25.BlockId get applied => $_getN(0);
+  $6.BlockId get applied => $_getN(0);
   @$pb.TagNumber(1)
-  set applied($25.BlockId v) { setField(1, v); }
+  set applied($6.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasApplied() => $_has(0);
   @$pb.TagNumber(1)
   void clearApplied() => clearField(1);
   @$pb.TagNumber(1)
-  $25.BlockId ensureApplied() => $_ensure(0);
+  $6.BlockId ensureApplied() => $_ensure(0);
 
   /// Block ID unapplied
   @$pb.TagNumber(2)
-  $25.BlockId get unapplied => $_getN(1);
+  $6.BlockId get unapplied => $_getN(1);
   @$pb.TagNumber(2)
-  set unapplied($25.BlockId v) { setField(2, v); }
+  set unapplied($6.BlockId v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUnapplied() => $_has(1);
   @$pb.TagNumber(2)
   void clearUnapplied() => clearField(2);
   @$pb.TagNumber(2)
-  $25.BlockId ensureUnapplied() => $_ensure(1);
+  $6.BlockId ensureUnapplied() => $_ensure(1);
 }
 
 /// Request type for FetchNodeConfigReq
@@ -989,7 +989,7 @@ class FetchNodeConfigReq extends $pb.GeneratedMessage {
 /// Response type for FetchNodeConfigRes
 class FetchNodeConfigRes extends $pb.GeneratedMessage {
   factory FetchNodeConfigRes({
-    $33.NodeConfig? config,
+    $32.NodeConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -1002,7 +1002,7 @@ class FetchNodeConfigRes extends $pb.GeneratedMessage {
   factory FetchNodeConfigRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchNodeConfigRes', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$33.NodeConfig>(1, _omitFieldNames ? '' : 'config', subBuilder: $33.NodeConfig.create)
+    ..aOM<$32.NodeConfig>(1, _omitFieldNames ? '' : 'config', subBuilder: $32.NodeConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -1028,21 +1028,21 @@ class FetchNodeConfigRes extends $pb.GeneratedMessage {
   static FetchNodeConfigRes? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $33.NodeConfig get config => $_getN(0);
+  $32.NodeConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($33.NodeConfig v) { setField(1, v); }
+  set config($32.NodeConfig v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $33.NodeConfig ensureConfig() => $_ensure(0);
+  $32.NodeConfig ensureConfig() => $_ensure(0);
 }
 
 /// Request type for FetchEpochDataReq
 class FetchEpochDataReq extends $pb.GeneratedMessage {
   factory FetchEpochDataReq({
-    $10.UInt64Value? epoch,
+    $13.UInt64Value? epoch,
   }) {
     final $result = create();
     if (epoch != null) {
@@ -1055,7 +1055,7 @@ class FetchEpochDataReq extends $pb.GeneratedMessage {
   factory FetchEpochDataReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchEpochDataReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$10.UInt64Value>(1, _omitFieldNames ? '' : 'epoch', subBuilder: $10.UInt64Value.create)
+    ..aOM<$13.UInt64Value>(1, _omitFieldNames ? '' : 'epoch', subBuilder: $13.UInt64Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -1081,21 +1081,21 @@ class FetchEpochDataReq extends $pb.GeneratedMessage {
   static FetchEpochDataReq? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $10.UInt64Value get epoch => $_getN(0);
+  $13.UInt64Value get epoch => $_getN(0);
   @$pb.TagNumber(1)
-  set epoch($10.UInt64Value v) { setField(1, v); }
+  set epoch($13.UInt64Value v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEpoch() => $_has(0);
   @$pb.TagNumber(1)
   void clearEpoch() => clearField(1);
   @$pb.TagNumber(1)
-  $10.UInt64Value ensureEpoch() => $_ensure(0);
+  $13.UInt64Value ensureEpoch() => $_ensure(0);
 }
 
 /// Response type for FetchEpochDataRes
 class FetchEpochDataRes extends $pb.GeneratedMessage {
   factory FetchEpochDataRes({
-    $34.EpochData? epochData,
+    $33.EpochData? epochData,
   }) {
     final $result = create();
     if (epochData != null) {
@@ -1108,7 +1108,7 @@ class FetchEpochDataRes extends $pb.GeneratedMessage {
   factory FetchEpochDataRes.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FetchEpochDataRes', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.services'), createEmptyInstance: create)
-    ..aOM<$34.EpochData>(1, _omitFieldNames ? '' : 'epochData', protoName: 'epochData', subBuilder: $34.EpochData.create)
+    ..aOM<$33.EpochData>(1, _omitFieldNames ? '' : 'epochData', protoName: 'epochData', subBuilder: $33.EpochData.create)
     ..hasRequiredFields = false
   ;
 
@@ -1134,15 +1134,15 @@ class FetchEpochDataRes extends $pb.GeneratedMessage {
   static FetchEpochDataRes? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $34.EpochData get epochData => $_getN(0);
+  $33.EpochData get epochData => $_getN(0);
   @$pb.TagNumber(1)
-  set epochData($34.EpochData v) { setField(1, v); }
+  set epochData($33.EpochData v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEpochData() => $_has(0);
   @$pb.TagNumber(1)
   void clearEpochData() => clearField(1);
   @$pb.TagNumber(1)
-  $34.EpochData ensureEpochData() => $_ensure(0);
+  $33.EpochData ensureEpochData() => $_ensure(0);
 }
 
 

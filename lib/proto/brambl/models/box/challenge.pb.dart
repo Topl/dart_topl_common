@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../quivr/models/proposition.pb.dart' as $5;
-import '../address.pb.dart' as $6;
+import '../../../quivr/models/proposition.pb.dart' as $18;
+import '../address.pb.dart' as $12;
 
 /// Previousroposition requires two parameters
 /// the transaction input address and index of the previously
 /// revealed proposition.
 class Challenge_PreviousProposition extends $pb.GeneratedMessage {
   factory Challenge_PreviousProposition({
-    $6.TransactionInputAddress? address,
+    $12.TransactionInputAddress? address,
     $core.int? index,
   }) {
     final $result = create();
@@ -38,7 +38,7 @@ class Challenge_PreviousProposition extends $pb.GeneratedMessage {
   factory Challenge_PreviousProposition.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Challenge.PreviousProposition', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$6.TransactionInputAddress>(1, _omitFieldNames ? '' : 'address', subBuilder: $6.TransactionInputAddress.create)
+    ..aOM<$12.TransactionInputAddress>(1, _omitFieldNames ? '' : 'address', subBuilder: $12.TransactionInputAddress.create)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
@@ -65,15 +65,15 @@ class Challenge_PreviousProposition extends $pb.GeneratedMessage {
   static Challenge_PreviousProposition? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $6.TransactionInputAddress get address => $_getN(0);
+  $12.TransactionInputAddress get address => $_getN(0);
   @$pb.TagNumber(1)
-  set address($6.TransactionInputAddress v) { setField(1, v); }
+  set address($12.TransactionInputAddress v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAddress() => $_has(0);
   @$pb.TagNumber(1)
   void clearAddress() => clearField(1);
   @$pb.TagNumber(1)
-  $6.TransactionInputAddress ensureAddress() => $_ensure(0);
+  $12.TransactionInputAddress ensureAddress() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.int get index => $_getIZ(1);
@@ -95,7 +95,7 @@ enum Challenge_Proposition {
 /// one of RevealedProposition or PreviousProposition
 class Challenge extends $pb.GeneratedMessage {
   factory Challenge({
-    $5.Proposition? revealed,
+    $18.Proposition? revealed,
     Challenge_PreviousProposition? previous,
   }) {
     final $result = create();
@@ -118,7 +118,7 @@ class Challenge extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Challenge', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$5.Proposition>(1, _omitFieldNames ? '' : 'revealed', subBuilder: $5.Proposition.create)
+    ..aOM<$18.Proposition>(1, _omitFieldNames ? '' : 'revealed', subBuilder: $18.Proposition.create)
     ..aOM<Challenge_PreviousProposition>(2, _omitFieldNames ? '' : 'previous', subBuilder: Challenge_PreviousProposition.create)
     ..hasRequiredFields = false
   ;
@@ -148,15 +148,15 @@ class Challenge extends $pb.GeneratedMessage {
   void clearProposition() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $5.Proposition get revealed => $_getN(0);
+  $18.Proposition get revealed => $_getN(0);
   @$pb.TagNumber(1)
-  set revealed($5.Proposition v) { setField(1, v); }
+  set revealed($18.Proposition v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRevealed() => $_has(0);
   @$pb.TagNumber(1)
   void clearRevealed() => clearField(1);
   @$pb.TagNumber(1)
-  $5.Proposition ensureRevealed() => $_ensure(0);
+  $18.Proposition ensureRevealed() => $_ensure(0);
 
   @$pb.TagNumber(2)
   Challenge_PreviousProposition get previous => $_getN(1);
