@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../consensus/models/staking.pb.dart' as $9;
-import '../../../google/protobuf/duration.pb.dart' as $13;
-import '../../../google/protobuf/struct.pb.dart' as $11;
-import '../../../google/protobuf/wrappers.pb.dart' as $10;
-import '../../../node/models/ratio.pb.dart' as $12;
+import '../../../consensus/models/staking.pb.dart' as $8;
+import '../../../google/protobuf/duration.pb.dart' as $17;
+import '../../../google/protobuf/struct.pb.dart' as $14;
+import '../../../google/protobuf/wrappers.pb.dart' as $13;
+import '../../../node/models/ratio.pb.dart' as $16;
 import '../../../quivr/models/shared.pb.dart' as $3;
-import '../identifier.pb.dart' as $4;
-import 'asset.pbenum.dart' as $14;
+import '../identifier.pb.dart' as $10;
+import 'asset.pbenum.dart' as $15;
 
 /// A payment token
 class Value_LVL extends $pb.GeneratedMessage {
@@ -79,7 +79,7 @@ class Value_LVL extends $pb.GeneratedMessage {
 class Value_TOPL extends $pb.GeneratedMessage {
   factory Value_TOPL({
     $3.Int128? quantity,
-    $9.StakingRegistration? registration,
+    $8.StakingRegistration? registration,
   }) {
     final $result = create();
     if (quantity != null) {
@@ -96,7 +96,7 @@ class Value_TOPL extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.TOPL', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
     ..aOM<$3.Int128>(1, _omitFieldNames ? '' : 'quantity', subBuilder: $3.Int128.create)
-    ..aOM<$9.StakingRegistration>(3, _omitFieldNames ? '' : 'registration', subBuilder: $9.StakingRegistration.create)
+    ..aOM<$8.StakingRegistration>(3, _omitFieldNames ? '' : 'registration', subBuilder: $8.StakingRegistration.create)
     ..hasRequiredFields = false
   ;
 
@@ -134,29 +134,29 @@ class Value_TOPL extends $pb.GeneratedMessage {
 
   /// Optional.  If provided, the registration will take effect at the start of 2 epochs from now. If not provided, this token will not be used for staking purposes.
   @$pb.TagNumber(3)
-  $9.StakingRegistration get registration => $_getN(1);
+  $8.StakingRegistration get registration => $_getN(1);
   @$pb.TagNumber(3)
-  set registration($9.StakingRegistration v) { setField(3, v); }
+  set registration($8.StakingRegistration v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasRegistration() => $_has(1);
   @$pb.TagNumber(3)
   void clearRegistration() => clearField(3);
   @$pb.TagNumber(3)
-  $9.StakingRegistration ensureRegistration() => $_ensure(1);
+  $8.StakingRegistration ensureRegistration() => $_ensure(1);
 }
 
 /// A user-defined token
 class Value_Asset extends $pb.GeneratedMessage {
   factory Value_Asset({
-    $4.GroupId? groupId,
-    $4.SeriesId? seriesId,
+    $10.GroupId? groupId,
+    $10.SeriesId? seriesId,
     $3.Int128? quantity,
-    $10.BytesValue? groupAlloy,
-    $10.BytesValue? seriesAlloy,
-    $14.FungibilityType? fungibility,
-    $14.QuantityDescriptorType? quantityDescriptor,
-    $11.Struct? ephemeralMetadata,
-    $10.BytesValue? commitment,
+    $13.BytesValue? groupAlloy,
+    $13.BytesValue? seriesAlloy,
+    $15.FungibilityType? fungibility,
+    $15.QuantityDescriptorType? quantityDescriptor,
+    $14.Struct? ephemeralMetadata,
+    $13.BytesValue? commitment,
   }) {
     final $result = create();
     if (groupId != null) {
@@ -193,15 +193,15 @@ class Value_Asset extends $pb.GeneratedMessage {
   factory Value_Asset.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.Asset', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$4.GroupId>(1, _omitFieldNames ? '' : 'groupId', protoName: 'groupId', subBuilder: $4.GroupId.create)
-    ..aOM<$4.SeriesId>(2, _omitFieldNames ? '' : 'seriesId', protoName: 'seriesId', subBuilder: $4.SeriesId.create)
+    ..aOM<$10.GroupId>(1, _omitFieldNames ? '' : 'groupId', protoName: 'groupId', subBuilder: $10.GroupId.create)
+    ..aOM<$10.SeriesId>(2, _omitFieldNames ? '' : 'seriesId', protoName: 'seriesId', subBuilder: $10.SeriesId.create)
     ..aOM<$3.Int128>(3, _omitFieldNames ? '' : 'quantity', subBuilder: $3.Int128.create)
-    ..aOM<$10.BytesValue>(4, _omitFieldNames ? '' : 'groupAlloy', protoName: 'groupAlloy', subBuilder: $10.BytesValue.create)
-    ..aOM<$10.BytesValue>(5, _omitFieldNames ? '' : 'seriesAlloy', protoName: 'seriesAlloy', subBuilder: $10.BytesValue.create)
-    ..e<$14.FungibilityType>(6, _omitFieldNames ? '' : 'fungibility', $pb.PbFieldType.OE, defaultOrMaker: $14.FungibilityType.GROUP_AND_SERIES, valueOf: $14.FungibilityType.valueOf, enumValues: $14.FungibilityType.values)
-    ..e<$14.QuantityDescriptorType>(7, _omitFieldNames ? '' : 'quantityDescriptor', $pb.PbFieldType.OE, protoName: 'quantityDescriptor', defaultOrMaker: $14.QuantityDescriptorType.LIQUID, valueOf: $14.QuantityDescriptorType.valueOf, enumValues: $14.QuantityDescriptorType.values)
-    ..aOM<$11.Struct>(8, _omitFieldNames ? '' : 'ephemeralMetadata', protoName: 'ephemeralMetadata', subBuilder: $11.Struct.create)
-    ..aOM<$10.BytesValue>(9, _omitFieldNames ? '' : 'commitment', subBuilder: $10.BytesValue.create)
+    ..aOM<$13.BytesValue>(4, _omitFieldNames ? '' : 'groupAlloy', protoName: 'groupAlloy', subBuilder: $13.BytesValue.create)
+    ..aOM<$13.BytesValue>(5, _omitFieldNames ? '' : 'seriesAlloy', protoName: 'seriesAlloy', subBuilder: $13.BytesValue.create)
+    ..e<$15.FungibilityType>(6, _omitFieldNames ? '' : 'fungibility', $pb.PbFieldType.OE, defaultOrMaker: $15.FungibilityType.GROUP_AND_SERIES, valueOf: $15.FungibilityType.valueOf, enumValues: $15.FungibilityType.values)
+    ..e<$15.QuantityDescriptorType>(7, _omitFieldNames ? '' : 'quantityDescriptor', $pb.PbFieldType.OE, protoName: 'quantityDescriptor', defaultOrMaker: $15.QuantityDescriptorType.LIQUID, valueOf: $15.QuantityDescriptorType.valueOf, enumValues: $15.QuantityDescriptorType.values)
+    ..aOM<$14.Struct>(8, _omitFieldNames ? '' : 'ephemeralMetadata', protoName: 'ephemeralMetadata', subBuilder: $14.Struct.create)
+    ..aOM<$13.BytesValue>(9, _omitFieldNames ? '' : 'commitment', subBuilder: $13.BytesValue.create)
     ..hasRequiredFields = false
   ;
 
@@ -228,27 +228,27 @@ class Value_Asset extends $pb.GeneratedMessage {
 
   /// The group identifier of the group token that was used to mint this asset. When there is a groupAlloy this field is not used.
   @$pb.TagNumber(1)
-  $4.GroupId get groupId => $_getN(0);
+  $10.GroupId get groupId => $_getN(0);
   @$pb.TagNumber(1)
-  set groupId($4.GroupId v) { setField(1, v); }
+  set groupId($10.GroupId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasGroupId() => $_has(0);
   @$pb.TagNumber(1)
   void clearGroupId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.GroupId ensureGroupId() => $_ensure(0);
+  $10.GroupId ensureGroupId() => $_ensure(0);
 
   /// The series identifier of the series token that was used to mint this asset. When there is a seriesAlloy this field is not used.
   @$pb.TagNumber(2)
-  $4.SeriesId get seriesId => $_getN(1);
+  $10.SeriesId get seriesId => $_getN(1);
   @$pb.TagNumber(2)
-  set seriesId($4.SeriesId v) { setField(2, v); }
+  set seriesId($10.SeriesId v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasSeriesId() => $_has(1);
   @$pb.TagNumber(2)
   void clearSeriesId() => clearField(2);
   @$pb.TagNumber(2)
-  $4.SeriesId ensureSeriesId() => $_ensure(1);
+  $10.SeriesId ensureSeriesId() => $_ensure(1);
 
   /// A quantity
   @$pb.TagNumber(3)
@@ -265,34 +265,34 @@ class Value_Asset extends $pb.GeneratedMessage {
   /// This field is optional and represents a Merkle root of the alloy of groups in this asset. This is only valid for tokens that are series fungible.
   /// length = 32
   @$pb.TagNumber(4)
-  $10.BytesValue get groupAlloy => $_getN(3);
+  $13.BytesValue get groupAlloy => $_getN(3);
   @$pb.TagNumber(4)
-  set groupAlloy($10.BytesValue v) { setField(4, v); }
+  set groupAlloy($13.BytesValue v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasGroupAlloy() => $_has(3);
   @$pb.TagNumber(4)
   void clearGroupAlloy() => clearField(4);
   @$pb.TagNumber(4)
-  $10.BytesValue ensureGroupAlloy() => $_ensure(3);
+  $13.BytesValue ensureGroupAlloy() => $_ensure(3);
 
   /// This field is optional and represents a Merkle root of the alloy of series in this asset. This is only valid for tokens that are group fungible.
   /// length = 32
   @$pb.TagNumber(5)
-  $10.BytesValue get seriesAlloy => $_getN(4);
+  $13.BytesValue get seriesAlloy => $_getN(4);
   @$pb.TagNumber(5)
-  set seriesAlloy($10.BytesValue v) { setField(5, v); }
+  set seriesAlloy($13.BytesValue v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasSeriesAlloy() => $_has(4);
   @$pb.TagNumber(5)
   void clearSeriesAlloy() => clearField(5);
   @$pb.TagNumber(5)
-  $10.BytesValue ensureSeriesAlloy() => $_ensure(4);
+  $13.BytesValue ensureSeriesAlloy() => $_ensure(4);
 
   /// Describes the fungibility of the asset..
   @$pb.TagNumber(6)
-  $14.FungibilityType get fungibility => $_getN(5);
+  $15.FungibilityType get fungibility => $_getN(5);
   @$pb.TagNumber(6)
-  set fungibility($14.FungibilityType v) { setField(6, v); }
+  set fungibility($15.FungibilityType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasFungibility() => $_has(5);
   @$pb.TagNumber(6)
@@ -300,9 +300,9 @@ class Value_Asset extends $pb.GeneratedMessage {
 
   /// Describes the quantity behavior of this asset.
   @$pb.TagNumber(7)
-  $14.QuantityDescriptorType get quantityDescriptor => $_getN(6);
+  $15.QuantityDescriptorType get quantityDescriptor => $_getN(6);
   @$pb.TagNumber(7)
-  set quantityDescriptor($14.QuantityDescriptorType v) { setField(7, v); }
+  set quantityDescriptor($15.QuantityDescriptorType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasQuantityDescriptor() => $_has(6);
   @$pb.TagNumber(7)
@@ -311,36 +311,36 @@ class Value_Asset extends $pb.GeneratedMessage {
   /// This is the ephemeral metadata of an asset. It follows the schema defined in the ephemeral metadata schema of the series policy corresponding to the token being minted.
   /// The conformance of this field to the schema is not checked by the node. This field is managed by the user.
   @$pb.TagNumber(8)
-  $11.Struct get ephemeralMetadata => $_getN(7);
+  $14.Struct get ephemeralMetadata => $_getN(7);
   @$pb.TagNumber(8)
-  set ephemeralMetadata($11.Struct v) { setField(8, v); }
+  set ephemeralMetadata($14.Struct v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasEphemeralMetadata() => $_has(7);
   @$pb.TagNumber(8)
   void clearEphemeralMetadata() => clearField(8);
   @$pb.TagNumber(8)
-  $11.Struct ensureEphemeralMetadata() => $_ensure(7);
+  $14.Struct ensureEphemeralMetadata() => $_ensure(7);
 
   /// This field is optional and meant to store a commitment in the form of a hash. This field is managed by the user.
   /// Metadata concerning this field can be added to the metadata.
   @$pb.TagNumber(9)
-  $10.BytesValue get commitment => $_getN(8);
+  $13.BytesValue get commitment => $_getN(8);
   @$pb.TagNumber(9)
-  set commitment($10.BytesValue v) { setField(9, v); }
+  set commitment($13.BytesValue v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasCommitment() => $_has(8);
   @$pb.TagNumber(9)
   void clearCommitment() => clearField(9);
   @$pb.TagNumber(9)
-  $10.BytesValue ensureCommitment() => $_ensure(8);
+  $13.BytesValue ensureCommitment() => $_ensure(8);
 }
 
 /// A group constructor token
 class Value_Group extends $pb.GeneratedMessage {
   factory Value_Group({
-    $4.GroupId? groupId,
+    $10.GroupId? groupId,
     $3.Int128? quantity,
-    $4.SeriesId? fixedSeries,
+    $10.SeriesId? fixedSeries,
   }) {
     final $result = create();
     if (groupId != null) {
@@ -359,9 +359,9 @@ class Value_Group extends $pb.GeneratedMessage {
   factory Value_Group.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.Group', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$4.GroupId>(1, _omitFieldNames ? '' : 'groupId', protoName: 'groupId', subBuilder: $4.GroupId.create)
+    ..aOM<$10.GroupId>(1, _omitFieldNames ? '' : 'groupId', protoName: 'groupId', subBuilder: $10.GroupId.create)
     ..aOM<$3.Int128>(2, _omitFieldNames ? '' : 'quantity', subBuilder: $3.Int128.create)
-    ..aOM<$4.SeriesId>(3, _omitFieldNames ? '' : 'fixedSeries', protoName: 'fixedSeries', subBuilder: $4.SeriesId.create)
+    ..aOM<$10.SeriesId>(3, _omitFieldNames ? '' : 'fixedSeries', protoName: 'fixedSeries', subBuilder: $10.SeriesId.create)
     ..hasRequiredFields = false
   ;
 
@@ -388,15 +388,15 @@ class Value_Group extends $pb.GeneratedMessage {
 
   /// The ID of _this_ Group. It is the digest of the Group Policy.
   @$pb.TagNumber(1)
-  $4.GroupId get groupId => $_getN(0);
+  $10.GroupId get groupId => $_getN(0);
   @$pb.TagNumber(1)
-  set groupId($4.GroupId v) { setField(1, v); }
+  set groupId($10.GroupId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasGroupId() => $_has(0);
   @$pb.TagNumber(1)
   void clearGroupId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.GroupId ensureGroupId() => $_ensure(0);
+  $10.GroupId ensureGroupId() => $_ensure(0);
 
   /// The quantity of group constructor tokens stored in a given UTXO.
   @$pb.TagNumber(2)
@@ -412,25 +412,25 @@ class Value_Group extends $pb.GeneratedMessage {
 
   /// An optional series identifier. When this series identifier is defined, this groups that implement this policy can only be used to mint assets with the aforementioned series identifier
   @$pb.TagNumber(3)
-  $4.SeriesId get fixedSeries => $_getN(2);
+  $10.SeriesId get fixedSeries => $_getN(2);
   @$pb.TagNumber(3)
-  set fixedSeries($4.SeriesId v) { setField(3, v); }
+  set fixedSeries($10.SeriesId v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasFixedSeries() => $_has(2);
   @$pb.TagNumber(3)
   void clearFixedSeries() => clearField(3);
   @$pb.TagNumber(3)
-  $4.SeriesId ensureFixedSeries() => $_ensure(2);
+  $10.SeriesId ensureFixedSeries() => $_ensure(2);
 }
 
 /// A series constructor token
 class Value_Series extends $pb.GeneratedMessage {
   factory Value_Series({
-    $4.SeriesId? seriesId,
+    $10.SeriesId? seriesId,
     $3.Int128? quantity,
-    $10.UInt32Value? tokenSupply,
-    $14.QuantityDescriptorType? quantityDescriptor,
-    $14.FungibilityType? fungibility,
+    $13.UInt32Value? tokenSupply,
+    $15.QuantityDescriptorType? quantityDescriptor,
+    $15.FungibilityType? fungibility,
   }) {
     final $result = create();
     if (seriesId != null) {
@@ -455,11 +455,11 @@ class Value_Series extends $pb.GeneratedMessage {
   factory Value_Series.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.Series', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$4.SeriesId>(1, _omitFieldNames ? '' : 'seriesId', protoName: 'seriesId', subBuilder: $4.SeriesId.create)
+    ..aOM<$10.SeriesId>(1, _omitFieldNames ? '' : 'seriesId', protoName: 'seriesId', subBuilder: $10.SeriesId.create)
     ..aOM<$3.Int128>(2, _omitFieldNames ? '' : 'quantity', subBuilder: $3.Int128.create)
-    ..aOM<$10.UInt32Value>(3, _omitFieldNames ? '' : 'tokenSupply', protoName: 'tokenSupply', subBuilder: $10.UInt32Value.create)
-    ..e<$14.QuantityDescriptorType>(4, _omitFieldNames ? '' : 'quantityDescriptor', $pb.PbFieldType.OE, protoName: 'quantityDescriptor', defaultOrMaker: $14.QuantityDescriptorType.LIQUID, valueOf: $14.QuantityDescriptorType.valueOf, enumValues: $14.QuantityDescriptorType.values)
-    ..e<$14.FungibilityType>(5, _omitFieldNames ? '' : 'fungibility', $pb.PbFieldType.OE, defaultOrMaker: $14.FungibilityType.GROUP_AND_SERIES, valueOf: $14.FungibilityType.valueOf, enumValues: $14.FungibilityType.values)
+    ..aOM<$13.UInt32Value>(3, _omitFieldNames ? '' : 'tokenSupply', protoName: 'tokenSupply', subBuilder: $13.UInt32Value.create)
+    ..e<$15.QuantityDescriptorType>(4, _omitFieldNames ? '' : 'quantityDescriptor', $pb.PbFieldType.OE, protoName: 'quantityDescriptor', defaultOrMaker: $15.QuantityDescriptorType.LIQUID, valueOf: $15.QuantityDescriptorType.valueOf, enumValues: $15.QuantityDescriptorType.values)
+    ..e<$15.FungibilityType>(5, _omitFieldNames ? '' : 'fungibility', $pb.PbFieldType.OE, defaultOrMaker: $15.FungibilityType.GROUP_AND_SERIES, valueOf: $15.FungibilityType.valueOf, enumValues: $15.FungibilityType.values)
     ..hasRequiredFields = false
   ;
 
@@ -486,15 +486,15 @@ class Value_Series extends $pb.GeneratedMessage {
 
   /// The ID of _this_ Series. It is the digest of the Series Policy.
   @$pb.TagNumber(1)
-  $4.SeriesId get seriesId => $_getN(0);
+  $10.SeriesId get seriesId => $_getN(0);
   @$pb.TagNumber(1)
-  set seriesId($4.SeriesId v) { setField(1, v); }
+  set seriesId($10.SeriesId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSeriesId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSeriesId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.SeriesId ensureSeriesId() => $_ensure(0);
+  $10.SeriesId ensureSeriesId() => $_ensure(0);
 
   /// The quantity of series constructor tokens stored in a given UTXO.
   @$pb.TagNumber(2)
@@ -512,21 +512,21 @@ class Value_Series extends $pb.GeneratedMessage {
   /// and the series constructor is burned by the minting transaction.
   /// When not provided, the series constructor is not burned, thus making the token supply unlimited.
   @$pb.TagNumber(3)
-  $10.UInt32Value get tokenSupply => $_getN(2);
+  $13.UInt32Value get tokenSupply => $_getN(2);
   @$pb.TagNumber(3)
-  set tokenSupply($10.UInt32Value v) { setField(3, v); }
+  set tokenSupply($13.UInt32Value v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTokenSupply() => $_has(2);
   @$pb.TagNumber(3)
   void clearTokenSupply() => clearField(3);
   @$pb.TagNumber(3)
-  $10.UInt32Value ensureTokenSupply() => $_ensure(2);
+  $13.UInt32Value ensureTokenSupply() => $_ensure(2);
 
   /// Describes the behavior of the quantity field of the assets minted using the series constructor derived from this policy.
   @$pb.TagNumber(4)
-  $14.QuantityDescriptorType get quantityDescriptor => $_getN(3);
+  $15.QuantityDescriptorType get quantityDescriptor => $_getN(3);
   @$pb.TagNumber(4)
-  set quantityDescriptor($14.QuantityDescriptorType v) { setField(4, v); }
+  set quantityDescriptor($15.QuantityDescriptorType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasQuantityDescriptor() => $_has(3);
   @$pb.TagNumber(4)
@@ -534,9 +534,9 @@ class Value_Series extends $pb.GeneratedMessage {
 
   /// Describes the fungibility of the assets minted using the series constructor token derived from this policy.
   @$pb.TagNumber(5)
-  $14.FungibilityType get fungibility => $_getN(4);
+  $15.FungibilityType get fungibility => $_getN(4);
   @$pb.TagNumber(5)
-  set fungibility($14.FungibilityType v) { setField(5, v); }
+  set fungibility($15.FungibilityType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasFungibility() => $_has(4);
   @$pb.TagNumber(5)
@@ -546,17 +546,17 @@ class Value_Series extends $pb.GeneratedMessage {
 class Value_UpdateProposal extends $pb.GeneratedMessage {
   factory Value_UpdateProposal({
     $core.String? label,
-    $12.Ratio? fEffective,
-    $10.UInt32Value? vrfLddCutoff,
-    $10.UInt32Value? vrfPrecision,
-    $12.Ratio? vrfBaselineDifficulty,
-    $12.Ratio? vrfAmplitude,
-    $10.UInt64Value? chainSelectionKLookback,
-    $13.Duration? slotDuration,
-    $10.UInt64Value? forwardBiasedSlotWindow,
-    $10.UInt64Value? operationalPeriodsPerEpoch,
-    $10.UInt32Value? kesKeyHours,
-    $10.UInt32Value? kesKeyMinutes,
+    $16.Ratio? fEffective,
+    $13.UInt32Value? vrfLddCutoff,
+    $13.UInt32Value? vrfPrecision,
+    $16.Ratio? vrfBaselineDifficulty,
+    $16.Ratio? vrfAmplitude,
+    $13.UInt64Value? chainSelectionKLookback,
+    $17.Duration? slotDuration,
+    $13.UInt64Value? forwardBiasedSlotWindow,
+    $13.UInt64Value? operationalPeriodsPerEpoch,
+    $13.UInt32Value? kesKeyHours,
+    $13.UInt32Value? kesKeyMinutes,
   }) {
     final $result = create();
     if (label != null) {
@@ -603,17 +603,17 @@ class Value_UpdateProposal extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Value.UpdateProposal', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'label')
-    ..aOM<$12.Ratio>(2, _omitFieldNames ? '' : 'fEffective', protoName: 'fEffective', subBuilder: $12.Ratio.create)
-    ..aOM<$10.UInt32Value>(3, _omitFieldNames ? '' : 'vrfLddCutoff', protoName: 'vrfLddCutoff', subBuilder: $10.UInt32Value.create)
-    ..aOM<$10.UInt32Value>(4, _omitFieldNames ? '' : 'vrfPrecision', protoName: 'vrfPrecision', subBuilder: $10.UInt32Value.create)
-    ..aOM<$12.Ratio>(5, _omitFieldNames ? '' : 'vrfBaselineDifficulty', protoName: 'vrfBaselineDifficulty', subBuilder: $12.Ratio.create)
-    ..aOM<$12.Ratio>(6, _omitFieldNames ? '' : 'vrfAmplitude', protoName: 'vrfAmplitude', subBuilder: $12.Ratio.create)
-    ..aOM<$10.UInt64Value>(7, _omitFieldNames ? '' : 'chainSelectionKLookback', protoName: 'chainSelectionKLookback', subBuilder: $10.UInt64Value.create)
-    ..aOM<$13.Duration>(8, _omitFieldNames ? '' : 'slotDuration', protoName: 'slotDuration', subBuilder: $13.Duration.create)
-    ..aOM<$10.UInt64Value>(9, _omitFieldNames ? '' : 'forwardBiasedSlotWindow', protoName: 'forwardBiasedSlotWindow', subBuilder: $10.UInt64Value.create)
-    ..aOM<$10.UInt64Value>(10, _omitFieldNames ? '' : 'operationalPeriodsPerEpoch', protoName: 'operationalPeriodsPerEpoch', subBuilder: $10.UInt64Value.create)
-    ..aOM<$10.UInt32Value>(11, _omitFieldNames ? '' : 'kesKeyHours', protoName: 'kesKeyHours', subBuilder: $10.UInt32Value.create)
-    ..aOM<$10.UInt32Value>(12, _omitFieldNames ? '' : 'kesKeyMinutes', protoName: 'kesKeyMinutes', subBuilder: $10.UInt32Value.create)
+    ..aOM<$16.Ratio>(2, _omitFieldNames ? '' : 'fEffective', protoName: 'fEffective', subBuilder: $16.Ratio.create)
+    ..aOM<$13.UInt32Value>(3, _omitFieldNames ? '' : 'vrfLddCutoff', protoName: 'vrfLddCutoff', subBuilder: $13.UInt32Value.create)
+    ..aOM<$13.UInt32Value>(4, _omitFieldNames ? '' : 'vrfPrecision', protoName: 'vrfPrecision', subBuilder: $13.UInt32Value.create)
+    ..aOM<$16.Ratio>(5, _omitFieldNames ? '' : 'vrfBaselineDifficulty', protoName: 'vrfBaselineDifficulty', subBuilder: $16.Ratio.create)
+    ..aOM<$16.Ratio>(6, _omitFieldNames ? '' : 'vrfAmplitude', protoName: 'vrfAmplitude', subBuilder: $16.Ratio.create)
+    ..aOM<$13.UInt64Value>(7, _omitFieldNames ? '' : 'chainSelectionKLookback', protoName: 'chainSelectionKLookback', subBuilder: $13.UInt64Value.create)
+    ..aOM<$17.Duration>(8, _omitFieldNames ? '' : 'slotDuration', protoName: 'slotDuration', subBuilder: $17.Duration.create)
+    ..aOM<$13.UInt64Value>(9, _omitFieldNames ? '' : 'forwardBiasedSlotWindow', protoName: 'forwardBiasedSlotWindow', subBuilder: $13.UInt64Value.create)
+    ..aOM<$13.UInt64Value>(10, _omitFieldNames ? '' : 'operationalPeriodsPerEpoch', protoName: 'operationalPeriodsPerEpoch', subBuilder: $13.UInt64Value.create)
+    ..aOM<$13.UInt32Value>(11, _omitFieldNames ? '' : 'kesKeyHours', protoName: 'kesKeyHours', subBuilder: $13.UInt32Value.create)
+    ..aOM<$13.UInt32Value>(12, _omitFieldNames ? '' : 'kesKeyMinutes', protoName: 'kesKeyMinutes', subBuilder: $13.UInt32Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -650,137 +650,137 @@ class Value_UpdateProposal extends $pb.GeneratedMessage {
 
   /// fEffective
   @$pb.TagNumber(2)
-  $12.Ratio get fEffective => $_getN(1);
+  $16.Ratio get fEffective => $_getN(1);
   @$pb.TagNumber(2)
-  set fEffective($12.Ratio v) { setField(2, v); }
+  set fEffective($16.Ratio v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasFEffective() => $_has(1);
   @$pb.TagNumber(2)
   void clearFEffective() => clearField(2);
   @$pb.TagNumber(2)
-  $12.Ratio ensureFEffective() => $_ensure(1);
+  $16.Ratio ensureFEffective() => $_ensure(1);
 
   /// vrfLddCutoff
   /// Verifiable Random Function: mechanism for leader election in Ouroboros proof-of-stake
   /// Local dynamic difficulty, Short timescale variation of the block production eligibility threshold.
   @$pb.TagNumber(3)
-  $10.UInt32Value get vrfLddCutoff => $_getN(2);
+  $13.UInt32Value get vrfLddCutoff => $_getN(2);
   @$pb.TagNumber(3)
-  set vrfLddCutoff($10.UInt32Value v) { setField(3, v); }
+  set vrfLddCutoff($13.UInt32Value v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasVrfLddCutoff() => $_has(2);
   @$pb.TagNumber(3)
   void clearVrfLddCutoff() => clearField(3);
   @$pb.TagNumber(3)
-  $10.UInt32Value ensureVrfLddCutoff() => $_ensure(2);
+  $13.UInt32Value ensureVrfLddCutoff() => $_ensure(2);
 
   /// vrfPrecision
   @$pb.TagNumber(4)
-  $10.UInt32Value get vrfPrecision => $_getN(3);
+  $13.UInt32Value get vrfPrecision => $_getN(3);
   @$pb.TagNumber(4)
-  set vrfPrecision($10.UInt32Value v) { setField(4, v); }
+  set vrfPrecision($13.UInt32Value v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasVrfPrecision() => $_has(3);
   @$pb.TagNumber(4)
   void clearVrfPrecision() => clearField(4);
   @$pb.TagNumber(4)
-  $10.UInt32Value ensureVrfPrecision() => $_ensure(3);
+  $13.UInt32Value ensureVrfPrecision() => $_ensure(3);
 
   /// vrfBaselineDifficulty
   @$pb.TagNumber(5)
-  $12.Ratio get vrfBaselineDifficulty => $_getN(4);
+  $16.Ratio get vrfBaselineDifficulty => $_getN(4);
   @$pb.TagNumber(5)
-  set vrfBaselineDifficulty($12.Ratio v) { setField(5, v); }
+  set vrfBaselineDifficulty($16.Ratio v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasVrfBaselineDifficulty() => $_has(4);
   @$pb.TagNumber(5)
   void clearVrfBaselineDifficulty() => clearField(5);
   @$pb.TagNumber(5)
-  $12.Ratio ensureVrfBaselineDifficulty() => $_ensure(4);
+  $16.Ratio ensureVrfBaselineDifficulty() => $_ensure(4);
 
   /// vrfAmplitude
   @$pb.TagNumber(6)
-  $12.Ratio get vrfAmplitude => $_getN(5);
+  $16.Ratio get vrfAmplitude => $_getN(5);
   @$pb.TagNumber(6)
-  set vrfAmplitude($12.Ratio v) { setField(6, v); }
+  set vrfAmplitude($16.Ratio v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasVrfAmplitude() => $_has(5);
   @$pb.TagNumber(6)
   void clearVrfAmplitude() => clearField(6);
   @$pb.TagNumber(6)
-  $12.Ratio ensureVrfAmplitude() => $_ensure(5);
+  $16.Ratio ensureVrfAmplitude() => $_ensure(5);
 
   /// chainSelectionKLookback
   @$pb.TagNumber(7)
-  $10.UInt64Value get chainSelectionKLookback => $_getN(6);
+  $13.UInt64Value get chainSelectionKLookback => $_getN(6);
   @$pb.TagNumber(7)
-  set chainSelectionKLookback($10.UInt64Value v) { setField(7, v); }
+  set chainSelectionKLookback($13.UInt64Value v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasChainSelectionKLookback() => $_has(6);
   @$pb.TagNumber(7)
   void clearChainSelectionKLookback() => clearField(7);
   @$pb.TagNumber(7)
-  $10.UInt64Value ensureChainSelectionKLookback() => $_ensure(6);
+  $13.UInt64Value ensureChainSelectionKLookback() => $_ensure(6);
 
   /// slotDuration, Slot: Atomic time unit in Ouroboros, smallest piece of time (~1 second for Topl, 2 for Cardano)
   @$pb.TagNumber(8)
-  $13.Duration get slotDuration => $_getN(7);
+  $17.Duration get slotDuration => $_getN(7);
   @$pb.TagNumber(8)
-  set slotDuration($13.Duration v) { setField(8, v); }
+  set slotDuration($17.Duration v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasSlotDuration() => $_has(7);
   @$pb.TagNumber(8)
   void clearSlotDuration() => clearField(8);
   @$pb.TagNumber(8)
-  $13.Duration ensureSlotDuration() => $_ensure(7);
+  $17.Duration ensureSlotDuration() => $_ensure(7);
 
   /// forwardBiasedSlotWindow
   @$pb.TagNumber(9)
-  $10.UInt64Value get forwardBiasedSlotWindow => $_getN(8);
+  $13.UInt64Value get forwardBiasedSlotWindow => $_getN(8);
   @$pb.TagNumber(9)
-  set forwardBiasedSlotWindow($10.UInt64Value v) { setField(9, v); }
+  set forwardBiasedSlotWindow($13.UInt64Value v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasForwardBiasedSlotWindow() => $_has(8);
   @$pb.TagNumber(9)
   void clearForwardBiasedSlotWindow() => clearField(9);
   @$pb.TagNumber(9)
-  $10.UInt64Value ensureForwardBiasedSlotWindow() => $_ensure(8);
+  $13.UInt64Value ensureForwardBiasedSlotWindow() => $_ensure(8);
 
   /// operationalPeriodsPerEpoch, Epoch: Long time scale in Ouroboros, epochs are composed of many slots
   @$pb.TagNumber(10)
-  $10.UInt64Value get operationalPeriodsPerEpoch => $_getN(9);
+  $13.UInt64Value get operationalPeriodsPerEpoch => $_getN(9);
   @$pb.TagNumber(10)
-  set operationalPeriodsPerEpoch($10.UInt64Value v) { setField(10, v); }
+  set operationalPeriodsPerEpoch($13.UInt64Value v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasOperationalPeriodsPerEpoch() => $_has(9);
   @$pb.TagNumber(10)
   void clearOperationalPeriodsPerEpoch() => clearField(10);
   @$pb.TagNumber(10)
-  $10.UInt64Value ensureOperationalPeriodsPerEpoch() => $_ensure(9);
+  $13.UInt64Value ensureOperationalPeriodsPerEpoch() => $_ensure(9);
 
   /// kesKeyHours Key-Evolving Signature: mechanism for securing chain selection process in Ouroboros proof-of-stake
   @$pb.TagNumber(11)
-  $10.UInt32Value get kesKeyHours => $_getN(10);
+  $13.UInt32Value get kesKeyHours => $_getN(10);
   @$pb.TagNumber(11)
-  set kesKeyHours($10.UInt32Value v) { setField(11, v); }
+  set kesKeyHours($13.UInt32Value v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasKesKeyHours() => $_has(10);
   @$pb.TagNumber(11)
   void clearKesKeyHours() => clearField(11);
   @$pb.TagNumber(11)
-  $10.UInt32Value ensureKesKeyHours() => $_ensure(10);
+  $13.UInt32Value ensureKesKeyHours() => $_ensure(10);
 
   /// kesKeyMinutes Key-Evolving Signature: mechanism for securing chain selection process in Ouroboros proof-of-stake
   @$pb.TagNumber(12)
-  $10.UInt32Value get kesKeyMinutes => $_getN(11);
+  $13.UInt32Value get kesKeyMinutes => $_getN(11);
   @$pb.TagNumber(12)
-  set kesKeyMinutes($10.UInt32Value v) { setField(12, v); }
+  set kesKeyMinutes($13.UInt32Value v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasKesKeyMinutes() => $_has(11);
   @$pb.TagNumber(12)
   void clearKesKeyMinutes() => clearField(12);
   @$pb.TagNumber(12)
-  $10.UInt32Value ensureKesKeyMinutes() => $_ensure(11);
+  $13.UInt32Value ensureKesKeyMinutes() => $_ensure(11);
 }
 
 enum Value_Value {

@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'block_id.pb.dart' as $25;
+import 'block_id.pb.dart' as $6;
 
 /// Represents a "mini" block header, containing just a subset of its data needed to quickly inspect consensus characteristics of a block
 class SlotData extends $pb.GeneratedMessage {
@@ -138,7 +138,7 @@ class SlotData extends $pb.GeneratedMessage {
 class SlotId extends $pb.GeneratedMessage {
   factory SlotId({
     $fixnum.Int64? slot,
-    $25.BlockId? blockId,
+    $6.BlockId? blockId,
   }) {
     final $result = create();
     if (slot != null) {
@@ -155,7 +155,7 @@ class SlotId extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SlotId', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'slot', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$25.BlockId>(2, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(2, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $6.BlockId.create)
     ..hasRequiredFields = false
   ;
 
@@ -192,15 +192,15 @@ class SlotId extends $pb.GeneratedMessage {
 
   /// The ID of the block
   @$pb.TagNumber(2)
-  $25.BlockId get blockId => $_getN(1);
+  $6.BlockId get blockId => $_getN(1);
   @$pb.TagNumber(2)
-  set blockId($25.BlockId v) { setField(2, v); }
+  set blockId($6.BlockId v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBlockId() => $_has(1);
   @$pb.TagNumber(2)
   void clearBlockId() => clearField(2);
   @$pb.TagNumber(2)
-  $25.BlockId ensureBlockId() => $_ensure(1);
+  $6.BlockId ensureBlockId() => $_ensure(1);
 }
 
 

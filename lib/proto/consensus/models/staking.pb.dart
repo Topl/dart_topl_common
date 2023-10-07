@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../quivr/models/shared.pb.dart' as $3;
-import 'operational_certificate.pb.dart' as $8;
+import 'operational_certificate.pb.dart' as $5;
 
 /// A reference to a unique staker
 class StakingAddress extends $pb.GeneratedMessage {
@@ -72,7 +72,7 @@ class StakingAddress extends $pb.GeneratedMessage {
 class StakingRegistration extends $pb.GeneratedMessage {
   factory StakingRegistration({
     StakingAddress? address,
-    $8.SignatureKesProduct? signature,
+    $5.SignatureKesProduct? signature,
   }) {
     final $result = create();
     if (address != null) {
@@ -89,7 +89,7 @@ class StakingRegistration extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StakingRegistration', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
     ..aOM<StakingAddress>(1, _omitFieldNames ? '' : 'address', subBuilder: StakingAddress.create)
-    ..aOM<$8.SignatureKesProduct>(2, _omitFieldNames ? '' : 'signature', subBuilder: $8.SignatureKesProduct.create)
+    ..aOM<$5.SignatureKesProduct>(2, _omitFieldNames ? '' : 'signature', subBuilder: $5.SignatureKesProduct.create)
     ..hasRequiredFields = false
   ;
 
@@ -128,15 +128,15 @@ class StakingRegistration extends $pb.GeneratedMessage {
 
   /// the staker's commitment to a VRF VK and StakingAddress, signed using KES SK at timestep=0
   @$pb.TagNumber(2)
-  $8.SignatureKesProduct get signature => $_getN(1);
+  $5.SignatureKesProduct get signature => $_getN(1);
   @$pb.TagNumber(2)
-  set signature($8.SignatureKesProduct v) { setField(2, v); }
+  set signature($5.SignatureKesProduct v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasSignature() => $_has(1);
   @$pb.TagNumber(2)
   void clearSignature() => clearField(2);
   @$pb.TagNumber(2)
-  $8.SignatureKesProduct ensureSignature() => $_ensure(1);
+  $5.SignatureKesProduct ensureSignature() => $_ensure(1);
 }
 
 /// An active, registered participate in the consensus protocol, for a particular epoch.

@@ -13,11 +13,11 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'event.pb.dart' as $19;
+import 'event.pb.dart' as $24;
 
 class Datum_Eon extends $pb.GeneratedMessage {
   factory Datum_Eon({
-    $19.Event_Eon? event,
+    $24.Event_Eon? event,
   }) {
     final $result = create();
     if (event != null) {
@@ -30,7 +30,7 @@ class Datum_Eon extends $pb.GeneratedMessage {
   factory Datum_Eon.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Datum.Eon', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$19.Event_Eon>(1, _omitFieldNames ? '' : 'event', subBuilder: $19.Event_Eon.create)
+    ..aOM<$24.Event_Eon>(1, _omitFieldNames ? '' : 'event', subBuilder: $24.Event_Eon.create)
     ..hasRequiredFields = false
   ;
 
@@ -56,20 +56,20 @@ class Datum_Eon extends $pb.GeneratedMessage {
   static Datum_Eon? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_Eon get event => $_getN(0);
+  $24.Event_Eon get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($19.Event_Eon v) { setField(1, v); }
+  set event($24.Event_Eon v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_Eon ensureEvent() => $_ensure(0);
+  $24.Event_Eon ensureEvent() => $_ensure(0);
 }
 
 class Datum_Era extends $pb.GeneratedMessage {
   factory Datum_Era({
-    $19.Event_Era? event,
+    $24.Event_Era? event,
   }) {
     final $result = create();
     if (event != null) {
@@ -82,7 +82,7 @@ class Datum_Era extends $pb.GeneratedMessage {
   factory Datum_Era.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Datum.Era', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$19.Event_Era>(1, _omitFieldNames ? '' : 'event', subBuilder: $19.Event_Era.create)
+    ..aOM<$24.Event_Era>(1, _omitFieldNames ? '' : 'event', subBuilder: $24.Event_Era.create)
     ..hasRequiredFields = false
   ;
 
@@ -108,20 +108,20 @@ class Datum_Era extends $pb.GeneratedMessage {
   static Datum_Era? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_Era get event => $_getN(0);
+  $24.Event_Era get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($19.Event_Era v) { setField(1, v); }
+  set event($24.Event_Era v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_Era ensureEvent() => $_ensure(0);
+  $24.Event_Era ensureEvent() => $_ensure(0);
 }
 
 class Datum_Epoch extends $pb.GeneratedMessage {
   factory Datum_Epoch({
-    $19.Event_Epoch? event,
+    $24.Event_Epoch? event,
   }) {
     final $result = create();
     if (event != null) {
@@ -134,7 +134,7 @@ class Datum_Epoch extends $pb.GeneratedMessage {
   factory Datum_Epoch.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Datum.Epoch', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$19.Event_Epoch>(1, _omitFieldNames ? '' : 'event', subBuilder: $19.Event_Epoch.create)
+    ..aOM<$24.Event_Epoch>(1, _omitFieldNames ? '' : 'event', subBuilder: $24.Event_Epoch.create)
     ..hasRequiredFields = false
   ;
 
@@ -160,20 +160,20 @@ class Datum_Epoch extends $pb.GeneratedMessage {
   static Datum_Epoch? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_Epoch get event => $_getN(0);
+  $24.Event_Epoch get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($19.Event_Epoch v) { setField(1, v); }
+  set event($24.Event_Epoch v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_Epoch ensureEvent() => $_ensure(0);
+  $24.Event_Epoch ensureEvent() => $_ensure(0);
 }
 
 class Datum_Header extends $pb.GeneratedMessage {
   factory Datum_Header({
-    $19.Event_Header? event,
+    $24.Event_Header? event,
   }) {
     final $result = create();
     if (event != null) {
@@ -186,7 +186,7 @@ class Datum_Header extends $pb.GeneratedMessage {
   factory Datum_Header.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Datum.Header', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$19.Event_Header>(1, _omitFieldNames ? '' : 'event', subBuilder: $19.Event_Header.create)
+    ..aOM<$24.Event_Header>(1, _omitFieldNames ? '' : 'event', subBuilder: $24.Event_Header.create)
     ..hasRequiredFields = false
   ;
 
@@ -212,20 +212,20 @@ class Datum_Header extends $pb.GeneratedMessage {
   static Datum_Header? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_Header get event => $_getN(0);
+  $24.Event_Header get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($19.Event_Header v) { setField(1, v); }
+  set event($24.Event_Header v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_Header ensureEvent() => $_ensure(0);
+  $24.Event_Header ensureEvent() => $_ensure(0);
 }
 
 class Datum_IoTransaction extends $pb.GeneratedMessage {
   factory Datum_IoTransaction({
-    $19.Event_IoTransaction? event,
+    $24.Event_IoTransaction? event,
   }) {
     final $result = create();
     if (event != null) {
@@ -238,7 +238,7 @@ class Datum_IoTransaction extends $pb.GeneratedMessage {
   factory Datum_IoTransaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Datum.IoTransaction', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$19.Event_IoTransaction>(1, _omitFieldNames ? '' : 'event', subBuilder: $19.Event_IoTransaction.create)
+    ..aOM<$24.Event_IoTransaction>(1, _omitFieldNames ? '' : 'event', subBuilder: $24.Event_IoTransaction.create)
     ..hasRequiredFields = false
   ;
 
@@ -264,20 +264,20 @@ class Datum_IoTransaction extends $pb.GeneratedMessage {
   static Datum_IoTransaction? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_IoTransaction get event => $_getN(0);
+  $24.Event_IoTransaction get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($19.Event_IoTransaction v) { setField(1, v); }
+  set event($24.Event_IoTransaction v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_IoTransaction ensureEvent() => $_ensure(0);
+  $24.Event_IoTransaction ensureEvent() => $_ensure(0);
 }
 
 class Datum_GroupPolicy extends $pb.GeneratedMessage {
   factory Datum_GroupPolicy({
-    $19.Event_GroupPolicy? event,
+    $24.Event_GroupPolicy? event,
   }) {
     final $result = create();
     if (event != null) {
@@ -290,7 +290,7 @@ class Datum_GroupPolicy extends $pb.GeneratedMessage {
   factory Datum_GroupPolicy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Datum.GroupPolicy', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$19.Event_GroupPolicy>(1, _omitFieldNames ? '' : 'event', subBuilder: $19.Event_GroupPolicy.create)
+    ..aOM<$24.Event_GroupPolicy>(1, _omitFieldNames ? '' : 'event', subBuilder: $24.Event_GroupPolicy.create)
     ..hasRequiredFields = false
   ;
 
@@ -316,20 +316,20 @@ class Datum_GroupPolicy extends $pb.GeneratedMessage {
   static Datum_GroupPolicy? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_GroupPolicy get event => $_getN(0);
+  $24.Event_GroupPolicy get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($19.Event_GroupPolicy v) { setField(1, v); }
+  set event($24.Event_GroupPolicy v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_GroupPolicy ensureEvent() => $_ensure(0);
+  $24.Event_GroupPolicy ensureEvent() => $_ensure(0);
 }
 
 class Datum_SeriesPolicy extends $pb.GeneratedMessage {
   factory Datum_SeriesPolicy({
-    $19.Event_SeriesPolicy? event,
+    $24.Event_SeriesPolicy? event,
   }) {
     final $result = create();
     if (event != null) {
@@ -342,7 +342,7 @@ class Datum_SeriesPolicy extends $pb.GeneratedMessage {
   factory Datum_SeriesPolicy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Datum.SeriesPolicy', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models'), createEmptyInstance: create)
-    ..aOM<$19.Event_SeriesPolicy>(1, _omitFieldNames ? '' : 'event', subBuilder: $19.Event_SeriesPolicy.create)
+    ..aOM<$24.Event_SeriesPolicy>(1, _omitFieldNames ? '' : 'event', subBuilder: $24.Event_SeriesPolicy.create)
     ..hasRequiredFields = false
   ;
 
@@ -368,15 +368,15 @@ class Datum_SeriesPolicy extends $pb.GeneratedMessage {
   static Datum_SeriesPolicy? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_SeriesPolicy get event => $_getN(0);
+  $24.Event_SeriesPolicy get event => $_getN(0);
   @$pb.TagNumber(1)
-  set event($19.Event_SeriesPolicy v) { setField(1, v); }
+  set event($24.Event_SeriesPolicy v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasEvent() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvent() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_SeriesPolicy ensureEvent() => $_ensure(0);
+  $24.Event_SeriesPolicy ensureEvent() => $_ensure(0);
 }
 
 enum Datum_Value {

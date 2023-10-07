@@ -13,22 +13,22 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../box/assets_statements.pb.dart' as $24;
-import '../datum.pb.dart' as $23;
-import '../identifier.pb.dart' as $4;
-import 'spent_transaction_output.pb.dart' as $21;
-import 'unspent_transaction_output.pb.dart' as $22;
+import '../box/assets_statements.pb.dart' as $28;
+import '../datum.pb.dart' as $27;
+import '../identifier.pb.dart' as $10;
+import 'spent_transaction_output.pb.dart' as $25;
+import 'unspent_transaction_output.pb.dart' as $26;
 
 /// defines a transaction
 class IoTransaction extends $pb.GeneratedMessage {
   factory IoTransaction({
-    $core.Iterable<$21.SpentTransactionOutput>? inputs,
-    $core.Iterable<$22.UnspentTransactionOutput>? outputs,
-    $23.Datum_IoTransaction? datum,
-    $4.TransactionId? transactionId,
-    $core.Iterable<$23.Datum_GroupPolicy>? groupPolicies,
-    $core.Iterable<$23.Datum_SeriesPolicy>? seriesPolicies,
-    $core.Iterable<$24.AssetMintingStatement>? mintingStatements,
+    $core.Iterable<$25.SpentTransactionOutput>? inputs,
+    $core.Iterable<$26.UnspentTransactionOutput>? outputs,
+    $27.Datum_IoTransaction? datum,
+    $10.TransactionId? transactionId,
+    $core.Iterable<$27.Datum_GroupPolicy>? groupPolicies,
+    $core.Iterable<$27.Datum_SeriesPolicy>? seriesPolicies,
+    $core.Iterable<$28.AssetMintingStatement>? mintingStatements,
   }) {
     final $result = create();
     if (inputs != null) {
@@ -59,13 +59,13 @@ class IoTransaction extends $pb.GeneratedMessage {
   factory IoTransaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IoTransaction', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.transaction'), createEmptyInstance: create)
-    ..pc<$21.SpentTransactionOutput>(1, _omitFieldNames ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $21.SpentTransactionOutput.create)
-    ..pc<$22.UnspentTransactionOutput>(2, _omitFieldNames ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $22.UnspentTransactionOutput.create)
-    ..aOM<$23.Datum_IoTransaction>(3, _omitFieldNames ? '' : 'datum', subBuilder: $23.Datum_IoTransaction.create)
-    ..aOM<$4.TransactionId>(4, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $4.TransactionId.create)
-    ..pc<$23.Datum_GroupPolicy>(5, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, protoName: 'groupPolicies', subBuilder: $23.Datum_GroupPolicy.create)
-    ..pc<$23.Datum_SeriesPolicy>(6, _omitFieldNames ? '' : 'seriesPolicies', $pb.PbFieldType.PM, protoName: 'seriesPolicies', subBuilder: $23.Datum_SeriesPolicy.create)
-    ..pc<$24.AssetMintingStatement>(7, _omitFieldNames ? '' : 'mintingStatements', $pb.PbFieldType.PM, protoName: 'mintingStatements', subBuilder: $24.AssetMintingStatement.create)
+    ..pc<$25.SpentTransactionOutput>(1, _omitFieldNames ? '' : 'inputs', $pb.PbFieldType.PM, subBuilder: $25.SpentTransactionOutput.create)
+    ..pc<$26.UnspentTransactionOutput>(2, _omitFieldNames ? '' : 'outputs', $pb.PbFieldType.PM, subBuilder: $26.UnspentTransactionOutput.create)
+    ..aOM<$27.Datum_IoTransaction>(3, _omitFieldNames ? '' : 'datum', subBuilder: $27.Datum_IoTransaction.create)
+    ..aOM<$10.TransactionId>(4, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $10.TransactionId.create)
+    ..pc<$27.Datum_GroupPolicy>(5, _omitFieldNames ? '' : 'groupPolicies', $pb.PbFieldType.PM, protoName: 'groupPolicies', subBuilder: $27.Datum_GroupPolicy.create)
+    ..pc<$27.Datum_SeriesPolicy>(6, _omitFieldNames ? '' : 'seriesPolicies', $pb.PbFieldType.PM, protoName: 'seriesPolicies', subBuilder: $27.Datum_SeriesPolicy.create)
+    ..pc<$28.AssetMintingStatement>(7, _omitFieldNames ? '' : 'mintingStatements', $pb.PbFieldType.PM, protoName: 'mintingStatements', subBuilder: $28.AssetMintingStatement.create)
     ..hasRequiredFields = false
   ;
 
@@ -92,48 +92,48 @@ class IoTransaction extends $pb.GeneratedMessage {
 
   /// 0-to-many list of inputs
   @$pb.TagNumber(1)
-  $core.List<$21.SpentTransactionOutput> get inputs => $_getList(0);
+  $core.List<$25.SpentTransactionOutput> get inputs => $_getList(0);
 
   /// 0-to-many list of outputs
   @$pb.TagNumber(2)
-  $core.List<$22.UnspentTransactionOutput> get outputs => $_getList(1);
+  $core.List<$26.UnspentTransactionOutput> get outputs => $_getList(1);
 
   /// Datum
   @$pb.TagNumber(3)
-  $23.Datum_IoTransaction get datum => $_getN(2);
+  $27.Datum_IoTransaction get datum => $_getN(2);
   @$pb.TagNumber(3)
-  set datum($23.Datum_IoTransaction v) { setField(3, v); }
+  set datum($27.Datum_IoTransaction v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasDatum() => $_has(2);
   @$pb.TagNumber(3)
   void clearDatum() => clearField(3);
   @$pb.TagNumber(3)
-  $23.Datum_IoTransaction ensureDatum() => $_ensure(2);
+  $27.Datum_IoTransaction ensureDatum() => $_ensure(2);
 
   /// The ID of _this_ transaction.  This value is optional and its contents are not included in the signable or identifiable data.  Clients which _can_ verify
   /// this value should verify this value, but some clients may not be able to or need to, in which case this field acts as a convenience.
   @$pb.TagNumber(4)
-  $4.TransactionId get transactionId => $_getN(3);
+  $10.TransactionId get transactionId => $_getN(3);
   @$pb.TagNumber(4)
-  set transactionId($4.TransactionId v) { setField(4, v); }
+  set transactionId($10.TransactionId v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTransactionId() => $_has(3);
   @$pb.TagNumber(4)
   void clearTransactionId() => clearField(4);
   @$pb.TagNumber(4)
-  $4.TransactionId ensureTransactionId() => $_ensure(3);
+  $10.TransactionId ensureTransactionId() => $_ensure(3);
 
   /// 0-to-many list of group Policy
   @$pb.TagNumber(5)
-  $core.List<$23.Datum_GroupPolicy> get groupPolicies => $_getList(4);
+  $core.List<$27.Datum_GroupPolicy> get groupPolicies => $_getList(4);
 
   /// 0-to-many list of seriesPolicy
   @$pb.TagNumber(6)
-  $core.List<$23.Datum_SeriesPolicy> get seriesPolicies => $_getList(5);
+  $core.List<$27.Datum_SeriesPolicy> get seriesPolicies => $_getList(5);
 
   /// 0-to-many list of minting asset statements
   @$pb.TagNumber(7)
-  $core.List<$24.AssetMintingStatement> get mintingStatements => $_getList(6);
+  $core.List<$28.AssetMintingStatement> get mintingStatements => $_getList(6);
 }
 
 

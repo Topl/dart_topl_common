@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../address.pb.dart' as $6;
-import '../box/attestation.pb.dart' as $20;
-import '../box/value.pb.dart' as $16;
+import '../address.pb.dart' as $12;
+import '../box/attestation.pb.dart' as $22;
+import '../box/value.pb.dart' as $23;
 
 /// Input to a transaction
 class SpentTransactionOutput extends $pb.GeneratedMessage {
   factory SpentTransactionOutput({
-    $6.TransactionOutputAddress? address,
-    $20.Attestation? attestation,
-    $16.Value? value,
+    $12.TransactionOutputAddress? address,
+    $22.Attestation? attestation,
+    $23.Value? value,
   }) {
     final $result = create();
     if (address != null) {
@@ -41,9 +41,9 @@ class SpentTransactionOutput extends $pb.GeneratedMessage {
   factory SpentTransactionOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpentTransactionOutput', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.transaction'), createEmptyInstance: create)
-    ..aOM<$6.TransactionOutputAddress>(1, _omitFieldNames ? '' : 'address', subBuilder: $6.TransactionOutputAddress.create)
-    ..aOM<$20.Attestation>(2, _omitFieldNames ? '' : 'attestation', subBuilder: $20.Attestation.create)
-    ..aOM<$16.Value>(3, _omitFieldNames ? '' : 'value', subBuilder: $16.Value.create)
+    ..aOM<$12.TransactionOutputAddress>(1, _omitFieldNames ? '' : 'address', subBuilder: $12.TransactionOutputAddress.create)
+    ..aOM<$22.Attestation>(2, _omitFieldNames ? '' : 'attestation', subBuilder: $22.Attestation.create)
+    ..aOM<$23.Value>(3, _omitFieldNames ? '' : 'value', subBuilder: $23.Value.create)
     ..hasRequiredFields = false
   ;
 
@@ -69,38 +69,38 @@ class SpentTransactionOutput extends $pb.GeneratedMessage {
   static SpentTransactionOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $6.TransactionOutputAddress get address => $_getN(0);
+  $12.TransactionOutputAddress get address => $_getN(0);
   @$pb.TagNumber(1)
-  set address($6.TransactionOutputAddress v) { setField(1, v); }
+  set address($12.TransactionOutputAddress v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAddress() => $_has(0);
   @$pb.TagNumber(1)
   void clearAddress() => clearField(1);
   @$pb.TagNumber(1)
-  $6.TransactionOutputAddress ensureAddress() => $_ensure(0);
+  $12.TransactionOutputAddress ensureAddress() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $20.Attestation get attestation => $_getN(1);
+  $22.Attestation get attestation => $_getN(1);
   @$pb.TagNumber(2)
-  set attestation($20.Attestation v) { setField(2, v); }
+  set attestation($22.Attestation v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasAttestation() => $_has(1);
   @$pb.TagNumber(2)
   void clearAttestation() => clearField(2);
   @$pb.TagNumber(2)
-  $20.Attestation ensureAttestation() => $_ensure(1);
+  $22.Attestation ensureAttestation() => $_ensure(1);
 
   /// the value of the box being spent
   @$pb.TagNumber(3)
-  $16.Value get value => $_getN(2);
+  $23.Value get value => $_getN(2);
   @$pb.TagNumber(3)
-  set value($16.Value v) { setField(3, v); }
+  set value($23.Value v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasValue() => $_has(2);
   @$pb.TagNumber(3)
   void clearValue() => clearField(3);
   @$pb.TagNumber(3)
-  $16.Value ensureValue() => $_ensure(2);
+  $23.Value ensureValue() => $_ensure(2);
 }
 
 

@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../brambl/models/identifier.pb.dart' as $4;
+import '../../brambl/models/identifier.pb.dart' as $10;
 import '../../brambl/models/transaction/io_transaction.pb.dart' as $29;
 import '../../consensus/models/block_header.pb.dart' as $30;
 
 /// Captures the ordering of transaction IDs within a block
 class BlockBody extends $pb.GeneratedMessage {
   factory BlockBody({
-    $core.Iterable<$4.TransactionId>? transactionIds,
-    $4.TransactionId? rewardTransactionId,
+    $core.Iterable<$10.TransactionId>? transactionIds,
+    $10.TransactionId? rewardTransactionId,
   }) {
     final $result = create();
     if (transactionIds != null) {
@@ -37,8 +37,8 @@ class BlockBody extends $pb.GeneratedMessage {
   factory BlockBody.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockBody', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.node.models'), createEmptyInstance: create)
-    ..pc<$4.TransactionId>(1, _omitFieldNames ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $4.TransactionId.create)
-    ..aOM<$4.TransactionId>(2, _omitFieldNames ? '' : 'rewardTransactionId', protoName: 'rewardTransactionId', subBuilder: $4.TransactionId.create)
+    ..pc<$10.TransactionId>(1, _omitFieldNames ? '' : 'transactionIds', $pb.PbFieldType.PM, protoName: 'transactionIds', subBuilder: $10.TransactionId.create)
+    ..aOM<$10.TransactionId>(2, _omitFieldNames ? '' : 'rewardTransactionId', protoName: 'rewardTransactionId', subBuilder: $10.TransactionId.create)
     ..hasRequiredFields = false
   ;
 
@@ -65,19 +65,19 @@ class BlockBody extends $pb.GeneratedMessage {
 
   /// A list of Transaction IDs included in this block
   @$pb.TagNumber(1)
-  $core.List<$4.TransactionId> get transactionIds => $_getList(0);
+  $core.List<$10.TransactionId> get transactionIds => $_getList(0);
 
   /// An optional Transaction ID that represents the reward transaction for this block.
   @$pb.TagNumber(2)
-  $4.TransactionId get rewardTransactionId => $_getN(1);
+  $10.TransactionId get rewardTransactionId => $_getN(1);
   @$pb.TagNumber(2)
-  set rewardTransactionId($4.TransactionId v) { setField(2, v); }
+  set rewardTransactionId($10.TransactionId v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRewardTransactionId() => $_has(1);
   @$pb.TagNumber(2)
   void clearRewardTransactionId() => clearField(2);
   @$pb.TagNumber(2)
-  $4.TransactionId ensureRewardTransactionId() => $_ensure(1);
+  $10.TransactionId ensureRewardTransactionId() => $_ensure(1);
 }
 
 /// Captures the ordering of transactions (not just IDs) within a block

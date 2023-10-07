@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../brambl/models/address.pb.dart' as $6;
-import '../brambl/models/event.pb.dart' as $19;
-import '../brambl/models/identifier.pb.dart' as $4;
-import '../consensus/models/block_id.pb.dart' as $25;
-import '../google/protobuf/wrappers.pb.dart' as $10;
+import '../brambl/models/address.pb.dart' as $12;
+import '../brambl/models/event.pb.dart' as $24;
+import '../brambl/models/identifier.pb.dart' as $10;
+import '../consensus/models/block_id.pb.dart' as $6;
+import '../google/protobuf/wrappers.pb.dart' as $13;
 import '../node/models/block.pb.dart' as $31;
-import 'genus_models.pb.dart' as $32;
-import 'genus_models.pbenum.dart' as $32;
+import 'genus_models.pb.dart' as $34;
+import 'genus_models.pbenum.dart' as $34;
 
 class GetExistingTransactionIndexesResponse extends $pb.GeneratedMessage {
   factory GetExistingTransactionIndexesResponse({
@@ -129,7 +129,7 @@ class BlockResponse extends $pb.GeneratedMessage {
 
 class TransactionResponse extends $pb.GeneratedMessage {
   factory TransactionResponse({
-    $32.TransactionReceipt? transactionReceipt,
+    $34.TransactionReceipt? transactionReceipt,
   }) {
     final $result = create();
     if (transactionReceipt != null) {
@@ -142,7 +142,7 @@ class TransactionResponse extends $pb.GeneratedMessage {
   factory TransactionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransactionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$32.TransactionReceipt>(1, _omitFieldNames ? '' : 'transactionReceipt', protoName: 'transactionReceipt', subBuilder: $32.TransactionReceipt.create)
+    ..aOM<$34.TransactionReceipt>(1, _omitFieldNames ? '' : 'transactionReceipt', protoName: 'transactionReceipt', subBuilder: $34.TransactionReceipt.create)
     ..hasRequiredFields = false
   ;
 
@@ -168,20 +168,20 @@ class TransactionResponse extends $pb.GeneratedMessage {
   static TransactionResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $32.TransactionReceipt get transactionReceipt => $_getN(0);
+  $34.TransactionReceipt get transactionReceipt => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionReceipt($32.TransactionReceipt v) { setField(1, v); }
+  set transactionReceipt($34.TransactionReceipt v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionReceipt() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionReceipt() => clearField(1);
   @$pb.TagNumber(1)
-  $32.TransactionReceipt ensureTransactionReceipt() => $_ensure(0);
+  $34.TransactionReceipt ensureTransactionReceipt() => $_ensure(0);
 }
 
 class TxoResponse extends $pb.GeneratedMessage {
   factory TxoResponse({
-    $32.Txo? txo,
+    $34.Txo? txo,
   }) {
     final $result = create();
     if (txo != null) {
@@ -194,7 +194,7 @@ class TxoResponse extends $pb.GeneratedMessage {
   factory TxoResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxoResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$32.Txo>(1, _omitFieldNames ? '' : 'txo', subBuilder: $32.Txo.create)
+    ..aOM<$34.Txo>(1, _omitFieldNames ? '' : 'txo', subBuilder: $34.Txo.create)
     ..hasRequiredFields = false
   ;
 
@@ -220,21 +220,21 @@ class TxoResponse extends $pb.GeneratedMessage {
   static TxoResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $32.Txo get txo => $_getN(0);
+  $34.Txo get txo => $_getN(0);
   @$pb.TagNumber(1)
-  set txo($32.Txo v) { setField(1, v); }
+  set txo($34.Txo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTxo() => $_has(0);
   @$pb.TagNumber(1)
   void clearTxo() => clearField(1);
   @$pb.TagNumber(1)
-  $32.Txo ensureTxo() => $_ensure(0);
+  $34.Txo ensureTxo() => $_ensure(0);
 }
 
 class GetBlockByIdRequest extends $pb.GeneratedMessage {
   factory GetBlockByIdRequest({
-    $25.BlockId? blockId,
-    $32.ConfidenceFactor? confidenceFactor,
+    $6.BlockId? blockId,
+    $34.ConfidenceFactor? confidenceFactor,
   }) {
     final $result = create();
     if (blockId != null) {
@@ -250,8 +250,8 @@ class GetBlockByIdRequest extends $pb.GeneratedMessage {
   factory GetBlockByIdRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBlockByIdRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$25.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $25.BlockId.create)
-    ..aOM<$32.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $32.ConfidenceFactor.create)
+    ..aOM<$6.BlockId>(1, _omitFieldNames ? '' : 'blockId', protoName: 'blockId', subBuilder: $6.BlockId.create)
+    ..aOM<$34.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $34.ConfidenceFactor.create)
     ..hasRequiredFields = false
   ;
 
@@ -277,32 +277,32 @@ class GetBlockByIdRequest extends $pb.GeneratedMessage {
   static GetBlockByIdRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.BlockId get blockId => $_getN(0);
+  $6.BlockId get blockId => $_getN(0);
   @$pb.TagNumber(1)
-  set blockId($25.BlockId v) { setField(1, v); }
+  set blockId($6.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBlockId() => $_has(0);
   @$pb.TagNumber(1)
   void clearBlockId() => clearField(1);
   @$pb.TagNumber(1)
-  $25.BlockId ensureBlockId() => $_ensure(0);
+  $6.BlockId ensureBlockId() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor get confidenceFactor => $_getN(1);
+  $34.ConfidenceFactor get confidenceFactor => $_getN(1);
   @$pb.TagNumber(2)
-  set confidenceFactor($32.ConfidenceFactor v) { setField(2, v); }
+  set confidenceFactor($34.ConfidenceFactor v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfidenceFactor() => $_has(1);
   @$pb.TagNumber(2)
   void clearConfidenceFactor() => clearField(2);
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
+  $34.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 }
 
 class GetBlockByHeightRequest extends $pb.GeneratedMessage {
   factory GetBlockByHeightRequest({
-    $32.ChainDistance? height,
-    $32.ConfidenceFactor? confidenceFactor,
+    $34.ChainDistance? height,
+    $34.ConfidenceFactor? confidenceFactor,
   }) {
     final $result = create();
     if (height != null) {
@@ -318,8 +318,8 @@ class GetBlockByHeightRequest extends $pb.GeneratedMessage {
   factory GetBlockByHeightRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBlockByHeightRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$32.ChainDistance>(1, _omitFieldNames ? '' : 'height', subBuilder: $32.ChainDistance.create)
-    ..aOM<$32.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $32.ConfidenceFactor.create)
+    ..aOM<$34.ChainDistance>(1, _omitFieldNames ? '' : 'height', subBuilder: $34.ChainDistance.create)
+    ..aOM<$34.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $34.ConfidenceFactor.create)
     ..hasRequiredFields = false
   ;
 
@@ -345,32 +345,32 @@ class GetBlockByHeightRequest extends $pb.GeneratedMessage {
   static GetBlockByHeightRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $32.ChainDistance get height => $_getN(0);
+  $34.ChainDistance get height => $_getN(0);
   @$pb.TagNumber(1)
-  set height($32.ChainDistance v) { setField(1, v); }
+  set height($34.ChainDistance v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasHeight() => $_has(0);
   @$pb.TagNumber(1)
   void clearHeight() => clearField(1);
   @$pb.TagNumber(1)
-  $32.ChainDistance ensureHeight() => $_ensure(0);
+  $34.ChainDistance ensureHeight() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor get confidenceFactor => $_getN(1);
+  $34.ConfidenceFactor get confidenceFactor => $_getN(1);
   @$pb.TagNumber(2)
-  set confidenceFactor($32.ConfidenceFactor v) { setField(2, v); }
+  set confidenceFactor($34.ConfidenceFactor v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfidenceFactor() => $_has(1);
   @$pb.TagNumber(2)
   void clearConfidenceFactor() => clearField(2);
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
+  $34.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 }
 
 class GetBlockByDepthRequest extends $pb.GeneratedMessage {
   factory GetBlockByDepthRequest({
-    $32.ChainDistance? depth,
-    $32.ConfidenceFactor? confidenceFactor,
+    $34.ChainDistance? depth,
+    $34.ConfidenceFactor? confidenceFactor,
   }) {
     final $result = create();
     if (depth != null) {
@@ -386,8 +386,8 @@ class GetBlockByDepthRequest extends $pb.GeneratedMessage {
   factory GetBlockByDepthRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetBlockByDepthRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$32.ChainDistance>(1, _omitFieldNames ? '' : 'depth', subBuilder: $32.ChainDistance.create)
-    ..aOM<$32.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $32.ConfidenceFactor.create)
+    ..aOM<$34.ChainDistance>(1, _omitFieldNames ? '' : 'depth', subBuilder: $34.ChainDistance.create)
+    ..aOM<$34.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $34.ConfidenceFactor.create)
     ..hasRequiredFields = false
   ;
 
@@ -413,33 +413,33 @@ class GetBlockByDepthRequest extends $pb.GeneratedMessage {
   static GetBlockByDepthRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $32.ChainDistance get depth => $_getN(0);
+  $34.ChainDistance get depth => $_getN(0);
   @$pb.TagNumber(1)
-  set depth($32.ChainDistance v) { setField(1, v); }
+  set depth($34.ChainDistance v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDepth() => $_has(0);
   @$pb.TagNumber(1)
   void clearDepth() => clearField(1);
   @$pb.TagNumber(1)
-  $32.ChainDistance ensureDepth() => $_ensure(0);
+  $34.ChainDistance ensureDepth() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor get confidenceFactor => $_getN(1);
+  $34.ConfidenceFactor get confidenceFactor => $_getN(1);
   @$pb.TagNumber(2)
-  set confidenceFactor($32.ConfidenceFactor v) { setField(2, v); }
+  set confidenceFactor($34.ConfidenceFactor v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfidenceFactor() => $_has(1);
   @$pb.TagNumber(2)
   void clearConfidenceFactor() => clearField(2);
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
+  $34.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 }
 
 /// Used to request a transaction by specifying its ID.
 class GetTransactionByIdRequest extends $pb.GeneratedMessage {
   factory GetTransactionByIdRequest({
-    $4.TransactionId? transactionId,
-    $32.ConfidenceFactor? confidenceFactor,
+    $10.TransactionId? transactionId,
+    $34.ConfidenceFactor? confidenceFactor,
   }) {
     final $result = create();
     if (transactionId != null) {
@@ -455,8 +455,8 @@ class GetTransactionByIdRequest extends $pb.GeneratedMessage {
   factory GetTransactionByIdRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetTransactionByIdRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$4.TransactionId>(1, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $4.TransactionId.create)
-    ..aOM<$32.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $32.ConfidenceFactor.create)
+    ..aOM<$10.TransactionId>(1, _omitFieldNames ? '' : 'transactionId', protoName: 'transactionId', subBuilder: $10.TransactionId.create)
+    ..aOM<$34.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $34.ConfidenceFactor.create)
     ..hasRequiredFields = false
   ;
 
@@ -482,27 +482,27 @@ class GetTransactionByIdRequest extends $pb.GeneratedMessage {
   static GetTransactionByIdRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $4.TransactionId get transactionId => $_getN(0);
+  $10.TransactionId get transactionId => $_getN(0);
   @$pb.TagNumber(1)
-  set transactionId($4.TransactionId v) { setField(1, v); }
+  set transactionId($10.TransactionId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTransactionId() => $_has(0);
   @$pb.TagNumber(1)
   void clearTransactionId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.TransactionId ensureTransactionId() => $_ensure(0);
+  $10.TransactionId ensureTransactionId() => $_ensure(0);
 
   /// The default value for confidenceFactor is 0.9999999 (7 nines)
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor get confidenceFactor => $_getN(1);
+  $34.ConfidenceFactor get confidenceFactor => $_getN(1);
   @$pb.TagNumber(2)
-  set confidenceFactor($32.ConfidenceFactor v) { setField(2, v); }
+  set confidenceFactor($34.ConfidenceFactor v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfidenceFactor() => $_has(1);
   @$pb.TagNumber(2)
   void clearConfidenceFactor() => clearField(2);
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
+  $34.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 }
 
 /// Request type for NetworkMetricsService:getTxoStats
@@ -818,9 +818,9 @@ class CreateOnChainTransactionIndexResponse extends $pb.GeneratedMessage {
 /// Used to request TxOs by their associated lock address
 class QueryByLockAddressRequest extends $pb.GeneratedMessage {
   factory QueryByLockAddressRequest({
-    $6.LockAddress? address,
-    $32.ConfidenceFactor? confidenceFactor,
-    $32.TxoState? state,
+    $12.LockAddress? address,
+    $34.ConfidenceFactor? confidenceFactor,
+    $34.TxoState? state,
   }) {
     final $result = create();
     if (address != null) {
@@ -839,9 +839,9 @@ class QueryByLockAddressRequest extends $pb.GeneratedMessage {
   factory QueryByLockAddressRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryByLockAddressRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$6.LockAddress>(1, _omitFieldNames ? '' : 'address', subBuilder: $6.LockAddress.create)
-    ..aOM<$32.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $32.ConfidenceFactor.create)
-    ..e<$32.TxoState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $32.TxoState.SPENT, valueOf: $32.TxoState.valueOf, enumValues: $32.TxoState.values)
+    ..aOM<$12.LockAddress>(1, _omitFieldNames ? '' : 'address', subBuilder: $12.LockAddress.create)
+    ..aOM<$34.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $34.ConfidenceFactor.create)
+    ..e<$34.TxoState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $34.TxoState.SPENT, valueOf: $34.TxoState.valueOf, enumValues: $34.TxoState.values)
     ..hasRequiredFields = false
   ;
 
@@ -868,33 +868,33 @@ class QueryByLockAddressRequest extends $pb.GeneratedMessage {
 
   /// Address of interest
   @$pb.TagNumber(1)
-  $6.LockAddress get address => $_getN(0);
+  $12.LockAddress get address => $_getN(0);
   @$pb.TagNumber(1)
-  set address($6.LockAddress v) { setField(1, v); }
+  set address($12.LockAddress v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAddress() => $_has(0);
   @$pb.TagNumber(1)
   void clearAddress() => clearField(1);
   @$pb.TagNumber(1)
-  $6.LockAddress ensureAddress() => $_ensure(0);
+  $12.LockAddress ensureAddress() => $_ensure(0);
 
   /// The default value for confidenceFactor is 0.9999999 (7 nines)
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor get confidenceFactor => $_getN(1);
+  $34.ConfidenceFactor get confidenceFactor => $_getN(1);
   @$pb.TagNumber(2)
-  set confidenceFactor($32.ConfidenceFactor v) { setField(2, v); }
+  set confidenceFactor($34.ConfidenceFactor v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfidenceFactor() => $_has(1);
   @$pb.TagNumber(2)
   void clearConfidenceFactor() => clearField(2);
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
+  $34.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 
   /// Filter by status
   @$pb.TagNumber(3)
-  $32.TxoState get state => $_getN(2);
+  $34.TxoState get state => $_getN(2);
   @$pb.TagNumber(3)
-  set state($32.TxoState v) { setField(3, v); }
+  set state($34.TxoState v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasState() => $_has(2);
   @$pb.TagNumber(3)
@@ -904,8 +904,8 @@ class QueryByLockAddressRequest extends $pb.GeneratedMessage {
 /// Used to request TxOs by their asset type
 class QueryByAssetLabelRequest extends $pb.GeneratedMessage {
   factory QueryByAssetLabelRequest({
-    $32.AssetLabel? assetLabel,
-    $32.ConfidenceFactor? confidenceFactor,
+    $34.AssetLabel? assetLabel,
+    $34.ConfidenceFactor? confidenceFactor,
   }) {
     final $result = create();
     if (assetLabel != null) {
@@ -921,8 +921,8 @@ class QueryByAssetLabelRequest extends $pb.GeneratedMessage {
   factory QueryByAssetLabelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryByAssetLabelRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$32.AssetLabel>(1, _omitFieldNames ? '' : 'assetLabel', protoName: 'assetLabel', subBuilder: $32.AssetLabel.create)
-    ..aOM<$32.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $32.ConfidenceFactor.create)
+    ..aOM<$34.AssetLabel>(1, _omitFieldNames ? '' : 'assetLabel', protoName: 'assetLabel', subBuilder: $34.AssetLabel.create)
+    ..aOM<$34.ConfidenceFactor>(2, _omitFieldNames ? '' : 'confidenceFactor', protoName: 'confidenceFactor', subBuilder: $34.ConfidenceFactor.create)
     ..hasRequiredFields = false
   ;
 
@@ -948,32 +948,32 @@ class QueryByAssetLabelRequest extends $pb.GeneratedMessage {
   static QueryByAssetLabelRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $32.AssetLabel get assetLabel => $_getN(0);
+  $34.AssetLabel get assetLabel => $_getN(0);
   @$pb.TagNumber(1)
-  set assetLabel($32.AssetLabel v) { setField(1, v); }
+  set assetLabel($34.AssetLabel v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAssetLabel() => $_has(0);
   @$pb.TagNumber(1)
   void clearAssetLabel() => clearField(1);
   @$pb.TagNumber(1)
-  $32.AssetLabel ensureAssetLabel() => $_ensure(0);
+  $34.AssetLabel ensureAssetLabel() => $_ensure(0);
 
   /// The default value for confidenceFactor is 0.9999999 (7 nines)
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor get confidenceFactor => $_getN(1);
+  $34.ConfidenceFactor get confidenceFactor => $_getN(1);
   @$pb.TagNumber(2)
-  set confidenceFactor($32.ConfidenceFactor v) { setField(2, v); }
+  set confidenceFactor($34.ConfidenceFactor v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfidenceFactor() => $_has(1);
   @$pb.TagNumber(2)
   void clearConfidenceFactor() => clearField(2);
   @$pb.TagNumber(2)
-  $32.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
+  $34.ConfidenceFactor ensureConfidenceFactor() => $_ensure(1);
 }
 
 class TxoLockAddressResponse extends $pb.GeneratedMessage {
   factory TxoLockAddressResponse({
-    $core.Iterable<$32.Txo>? txos,
+    $core.Iterable<$34.Txo>? txos,
   }) {
     final $result = create();
     if (txos != null) {
@@ -986,7 +986,7 @@ class TxoLockAddressResponse extends $pb.GeneratedMessage {
   factory TxoLockAddressResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxoLockAddressResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..pc<$32.Txo>(1, _omitFieldNames ? '' : 'Txos', $pb.PbFieldType.PM, protoName: 'Txos', subBuilder: $32.Txo.create)
+    ..pc<$34.Txo>(1, _omitFieldNames ? '' : 'Txos', $pb.PbFieldType.PM, protoName: 'Txos', subBuilder: $34.Txo.create)
     ..hasRequiredFields = false
   ;
 
@@ -1012,13 +1012,13 @@ class TxoLockAddressResponse extends $pb.GeneratedMessage {
   static TxoLockAddressResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$32.Txo> get txos => $_getList(0);
+  $core.List<$34.Txo> get txos => $_getList(0);
 }
 
 /// A request to create an index of transactions based on their on-chain data
 class CreateOnChainTransactionIndexRequest extends $pb.GeneratedMessage {
   factory CreateOnChainTransactionIndexRequest({
-    $32.IndexSpec? indexSpec,
+    $34.IndexSpec? indexSpec,
     $core.bool? populate,
   }) {
     final $result = create();
@@ -1035,7 +1035,7 @@ class CreateOnChainTransactionIndexRequest extends $pb.GeneratedMessage {
   factory CreateOnChainTransactionIndexRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateOnChainTransactionIndexRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$32.IndexSpec>(1, _omitFieldNames ? '' : 'indexSpec', protoName: 'indexSpec', subBuilder: $32.IndexSpec.create)
+    ..aOM<$34.IndexSpec>(1, _omitFieldNames ? '' : 'indexSpec', protoName: 'indexSpec', subBuilder: $34.IndexSpec.create)
     ..aOB(2, _omitFieldNames ? '' : 'populate')
     ..hasRequiredFields = false
   ;
@@ -1062,15 +1062,15 @@ class CreateOnChainTransactionIndexRequest extends $pb.GeneratedMessage {
   static CreateOnChainTransactionIndexRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $32.IndexSpec get indexSpec => $_getN(0);
+  $34.IndexSpec get indexSpec => $_getN(0);
   @$pb.TagNumber(1)
-  set indexSpec($32.IndexSpec v) { setField(1, v); }
+  set indexSpec($34.IndexSpec v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIndexSpec() => $_has(0);
   @$pb.TagNumber(1)
   void clearIndexSpec() => clearField(1);
   @$pb.TagNumber(1)
-  $32.IndexSpec ensureIndexSpec() => $_ensure(0);
+  $34.IndexSpec ensureIndexSpec() => $_ensure(0);
 
   /// If populate is true, then scan the existing transaction in the database to populate the index.
   @$pb.TagNumber(2)
@@ -1086,7 +1086,7 @@ class CreateOnChainTransactionIndexRequest extends $pb.GeneratedMessage {
 /// Used to request a group policy associated by groupId
 class QueryByGroupIdRequest extends $pb.GeneratedMessage {
   factory QueryByGroupIdRequest({
-    $4.GroupId? groupId,
+    $10.GroupId? groupId,
   }) {
     final $result = create();
     if (groupId != null) {
@@ -1099,7 +1099,7 @@ class QueryByGroupIdRequest extends $pb.GeneratedMessage {
   factory QueryByGroupIdRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryByGroupIdRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$4.GroupId>(1, _omitFieldNames ? '' : 'groupId', protoName: 'groupId', subBuilder: $4.GroupId.create)
+    ..aOM<$10.GroupId>(1, _omitFieldNames ? '' : 'groupId', protoName: 'groupId', subBuilder: $10.GroupId.create)
     ..hasRequiredFields = false
   ;
 
@@ -1126,20 +1126,20 @@ class QueryByGroupIdRequest extends $pb.GeneratedMessage {
 
   /// GroupId of interest
   @$pb.TagNumber(1)
-  $4.GroupId get groupId => $_getN(0);
+  $10.GroupId get groupId => $_getN(0);
   @$pb.TagNumber(1)
-  set groupId($4.GroupId v) { setField(1, v); }
+  set groupId($10.GroupId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasGroupId() => $_has(0);
   @$pb.TagNumber(1)
   void clearGroupId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.GroupId ensureGroupId() => $_ensure(0);
+  $10.GroupId ensureGroupId() => $_ensure(0);
 }
 
 class GroupPolicyResponse extends $pb.GeneratedMessage {
   factory GroupPolicyResponse({
-    $19.Event_GroupPolicy? groupPolicy,
+    $24.Event_GroupPolicy? groupPolicy,
   }) {
     final $result = create();
     if (groupPolicy != null) {
@@ -1152,7 +1152,7 @@ class GroupPolicyResponse extends $pb.GeneratedMessage {
   factory GroupPolicyResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GroupPolicyResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$19.Event_GroupPolicy>(1, _omitFieldNames ? '' : 'groupPolicy', protoName: 'groupPolicy', subBuilder: $19.Event_GroupPolicy.create)
+    ..aOM<$24.Event_GroupPolicy>(1, _omitFieldNames ? '' : 'groupPolicy', protoName: 'groupPolicy', subBuilder: $24.Event_GroupPolicy.create)
     ..hasRequiredFields = false
   ;
 
@@ -1178,21 +1178,21 @@ class GroupPolicyResponse extends $pb.GeneratedMessage {
   static GroupPolicyResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_GroupPolicy get groupPolicy => $_getN(0);
+  $24.Event_GroupPolicy get groupPolicy => $_getN(0);
   @$pb.TagNumber(1)
-  set groupPolicy($19.Event_GroupPolicy v) { setField(1, v); }
+  set groupPolicy($24.Event_GroupPolicy v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasGroupPolicy() => $_has(0);
   @$pb.TagNumber(1)
   void clearGroupPolicy() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_GroupPolicy ensureGroupPolicy() => $_ensure(0);
+  $24.Event_GroupPolicy ensureGroupPolicy() => $_ensure(0);
 }
 
 /// Used to request a series policy associated by seriesId
 class QueryBySeriesIdRequest extends $pb.GeneratedMessage {
   factory QueryBySeriesIdRequest({
-    $4.SeriesId? seriesId,
+    $10.SeriesId? seriesId,
   }) {
     final $result = create();
     if (seriesId != null) {
@@ -1205,7 +1205,7 @@ class QueryBySeriesIdRequest extends $pb.GeneratedMessage {
   factory QueryBySeriesIdRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryBySeriesIdRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$4.SeriesId>(1, _omitFieldNames ? '' : 'seriesId', protoName: 'seriesId', subBuilder: $4.SeriesId.create)
+    ..aOM<$10.SeriesId>(1, _omitFieldNames ? '' : 'seriesId', protoName: 'seriesId', subBuilder: $10.SeriesId.create)
     ..hasRequiredFields = false
   ;
 
@@ -1232,20 +1232,20 @@ class QueryBySeriesIdRequest extends $pb.GeneratedMessage {
 
   /// GroupId of interest
   @$pb.TagNumber(1)
-  $4.SeriesId get seriesId => $_getN(0);
+  $10.SeriesId get seriesId => $_getN(0);
   @$pb.TagNumber(1)
-  set seriesId($4.SeriesId v) { setField(1, v); }
+  set seriesId($10.SeriesId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSeriesId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSeriesId() => clearField(1);
   @$pb.TagNumber(1)
-  $4.SeriesId ensureSeriesId() => $_ensure(0);
+  $10.SeriesId ensureSeriesId() => $_ensure(0);
 }
 
 class SeriesPolicyResponse extends $pb.GeneratedMessage {
   factory SeriesPolicyResponse({
-    $19.Event_SeriesPolicy? seriesPolicy,
+    $24.Event_SeriesPolicy? seriesPolicy,
   }) {
     final $result = create();
     if (seriesPolicy != null) {
@@ -1258,7 +1258,7 @@ class SeriesPolicyResponse extends $pb.GeneratedMessage {
   factory SeriesPolicyResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SeriesPolicyResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..aOM<$19.Event_SeriesPolicy>(1, _omitFieldNames ? '' : 'seriesPolicy', protoName: 'seriesPolicy', subBuilder: $19.Event_SeriesPolicy.create)
+    ..aOM<$24.Event_SeriesPolicy>(1, _omitFieldNames ? '' : 'seriesPolicy', protoName: 'seriesPolicy', subBuilder: $24.Event_SeriesPolicy.create)
     ..hasRequiredFields = false
   ;
 
@@ -1284,21 +1284,21 @@ class SeriesPolicyResponse extends $pb.GeneratedMessage {
   static SeriesPolicyResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.Event_SeriesPolicy get seriesPolicy => $_getN(0);
+  $24.Event_SeriesPolicy get seriesPolicy => $_getN(0);
   @$pb.TagNumber(1)
-  set seriesPolicy($19.Event_SeriesPolicy v) { setField(1, v); }
+  set seriesPolicy($24.Event_SeriesPolicy v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSeriesPolicy() => $_has(0);
   @$pb.TagNumber(1)
   void clearSeriesPolicy() => clearField(1);
   @$pb.TagNumber(1)
-  $19.Event_SeriesPolicy ensureSeriesPolicy() => $_ensure(0);
+  $24.Event_SeriesPolicy ensureSeriesPolicy() => $_ensure(0);
 }
 
 /// Definitions of existing database indexes.
 class IndexSpecs extends $pb.GeneratedMessage {
   factory IndexSpecs({
-    $core.Iterable<$32.IndexSpec>? indexSpec,
+    $core.Iterable<$34.IndexSpec>? indexSpec,
   }) {
     final $result = create();
     if (indexSpec != null) {
@@ -1311,7 +1311,7 @@ class IndexSpecs extends $pb.GeneratedMessage {
   factory IndexSpecs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IndexSpecs', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.genus.services'), createEmptyInstance: create)
-    ..pc<$32.IndexSpec>(1, _omitFieldNames ? '' : 'indexSpec', $pb.PbFieldType.PM, protoName: 'indexSpec', subBuilder: $32.IndexSpec.create)
+    ..pc<$34.IndexSpec>(1, _omitFieldNames ? '' : 'indexSpec', $pb.PbFieldType.PM, protoName: 'indexSpec', subBuilder: $34.IndexSpec.create)
     ..hasRequiredFields = false
   ;
 
@@ -1337,7 +1337,7 @@ class IndexSpecs extends $pb.GeneratedMessage {
   static IndexSpecs? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$32.IndexSpec> get indexSpec => $_getList(0);
+  $core.List<$34.IndexSpec> get indexSpec => $_getList(0);
 }
 
 enum IndexDef_Xdev {
@@ -1644,7 +1644,7 @@ class IndexMatchValue extends $pb.GeneratedMessage {
     $core.String? stringValue,
     $fixnum.Int64? intValue,
     $fixnum.Int64? uintValue,
-    $10.StringValue? fieldName,
+    $13.StringValue? fieldName,
   }) {
     final $result = create();
     if (stringValue != null) {
@@ -1676,7 +1676,7 @@ class IndexMatchValue extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'stringValue', protoName: 'stringValue')
     ..aInt64(2, _omitFieldNames ? '' : 'intValue', protoName: 'intValue')
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'uintValue', $pb.PbFieldType.OU6, protoName: 'uintValue', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$10.StringValue>(4, _omitFieldNames ? '' : 'fieldName', protoName: 'fieldName', subBuilder: $10.StringValue.create)
+    ..aOM<$13.StringValue>(4, _omitFieldNames ? '' : 'fieldName', protoName: 'fieldName', subBuilder: $13.StringValue.create)
     ..hasRequiredFields = false
   ;
 
@@ -1732,15 +1732,15 @@ class IndexMatchValue extends $pb.GeneratedMessage {
   void clearUintValue() => clearField(3);
 
   @$pb.TagNumber(4)
-  $10.StringValue get fieldName => $_getN(3);
+  $13.StringValue get fieldName => $_getN(3);
   @$pb.TagNumber(4)
-  set fieldName($10.StringValue v) { setField(4, v); }
+  set fieldName($13.StringValue v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasFieldName() => $_has(3);
   @$pb.TagNumber(4)
   void clearFieldName() => clearField(4);
   @$pb.TagNumber(4)
-  $10.StringValue ensureFieldName() => $_ensure(3);
+  $13.StringValue ensureFieldName() => $_ensure(3);
 }
 
 class TxoStats extends $pb.GeneratedMessage {

@@ -14,28 +14,28 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'block_id.pb.dart' as $25;
-import 'eligibility_certificate.pb.dart' as $26;
-import 'operational_certificate.pb.dart' as $8;
-import 'protocol_version.pb.dart' as $27;
-import 'staking.pb.dart' as $9;
+import 'block_id.pb.dart' as $6;
+import 'eligibility_certificate.pb.dart' as $7;
+import 'operational_certificate.pb.dart' as $5;
+import 'protocol_version.pb.dart' as $9;
+import 'staking.pb.dart' as $8;
 
 /// Captures a block producer's consensus-commitment to a new block
 class BlockHeader extends $pb.GeneratedMessage {
   factory BlockHeader({
-    $25.BlockId? parentHeaderId,
+    $6.BlockId? parentHeaderId,
     $fixnum.Int64? parentSlot,
     $core.List<$core.int>? txRoot,
     $core.List<$core.int>? bloomFilter,
     $fixnum.Int64? timestamp,
     $fixnum.Int64? height,
     $fixnum.Int64? slot,
-    $26.EligibilityCertificate? eligibilityCertificate,
-    $8.OperationalCertificate? operationalCertificate,
+    $7.EligibilityCertificate? eligibilityCertificate,
+    $5.OperationalCertificate? operationalCertificate,
     $core.List<$core.int>? metadata,
-    $9.StakingAddress? address,
-    $25.BlockId? headerId,
-    $27.ProtocolVersion? version,
+    $8.StakingAddress? address,
+    $6.BlockId? headerId,
+    $9.ProtocolVersion? version,
   }) {
     final $result = create();
     if (parentHeaderId != null) {
@@ -84,19 +84,19 @@ class BlockHeader extends $pb.GeneratedMessage {
   factory BlockHeader.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BlockHeader', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.consensus.models'), createEmptyInstance: create)
-    ..aOM<$25.BlockId>(1, _omitFieldNames ? '' : 'parentHeaderId', protoName: 'parentHeaderId', subBuilder: $25.BlockId.create)
+    ..aOM<$6.BlockId>(1, _omitFieldNames ? '' : 'parentHeaderId', protoName: 'parentHeaderId', subBuilder: $6.BlockId.create)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'parentSlot', $pb.PbFieldType.OU6, protoName: 'parentSlot', defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'txRoot', $pb.PbFieldType.OY, protoName: 'txRoot')
     ..a<$core.List<$core.int>>(4, _omitFieldNames ? '' : 'bloomFilter', $pb.PbFieldType.OY, protoName: 'bloomFilter')
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'height', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(7, _omitFieldNames ? '' : 'slot', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$26.EligibilityCertificate>(8, _omitFieldNames ? '' : 'eligibilityCertificate', protoName: 'eligibilityCertificate', subBuilder: $26.EligibilityCertificate.create)
-    ..aOM<$8.OperationalCertificate>(9, _omitFieldNames ? '' : 'operationalCertificate', protoName: 'operationalCertificate', subBuilder: $8.OperationalCertificate.create)
+    ..aOM<$7.EligibilityCertificate>(8, _omitFieldNames ? '' : 'eligibilityCertificate', protoName: 'eligibilityCertificate', subBuilder: $7.EligibilityCertificate.create)
+    ..aOM<$5.OperationalCertificate>(9, _omitFieldNames ? '' : 'operationalCertificate', protoName: 'operationalCertificate', subBuilder: $5.OperationalCertificate.create)
     ..a<$core.List<$core.int>>(10, _omitFieldNames ? '' : 'metadata', $pb.PbFieldType.OY)
-    ..aOM<$9.StakingAddress>(11, _omitFieldNames ? '' : 'address', subBuilder: $9.StakingAddress.create)
-    ..aOM<$25.BlockId>(12, _omitFieldNames ? '' : 'headerId', protoName: 'headerId', subBuilder: $25.BlockId.create)
-    ..aOM<$27.ProtocolVersion>(13, _omitFieldNames ? '' : 'version', subBuilder: $27.ProtocolVersion.create)
+    ..aOM<$8.StakingAddress>(11, _omitFieldNames ? '' : 'address', subBuilder: $8.StakingAddress.create)
+    ..aOM<$6.BlockId>(12, _omitFieldNames ? '' : 'headerId', protoName: 'headerId', subBuilder: $6.BlockId.create)
+    ..aOM<$9.ProtocolVersion>(13, _omitFieldNames ? '' : 'version', subBuilder: $9.ProtocolVersion.create)
     ..hasRequiredFields = false
   ;
 
@@ -123,15 +123,15 @@ class BlockHeader extends $pb.GeneratedMessage {
 
   /// The parent block's ID.  Each header builds from a single parent.
   @$pb.TagNumber(1)
-  $25.BlockId get parentHeaderId => $_getN(0);
+  $6.BlockId get parentHeaderId => $_getN(0);
   @$pb.TagNumber(1)
-  set parentHeaderId($25.BlockId v) { setField(1, v); }
+  set parentHeaderId($6.BlockId v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasParentHeaderId() => $_has(0);
   @$pb.TagNumber(1)
   void clearParentHeaderId() => clearField(1);
   @$pb.TagNumber(1)
-  $25.BlockId ensureParentHeaderId() => $_ensure(0);
+  $6.BlockId ensureParentHeaderId() => $_ensure(0);
 
   /// The slot of the parent block
   @$pb.TagNumber(2)
@@ -197,27 +197,27 @@ class BlockHeader extends $pb.GeneratedMessage {
 
   /// A certificate indicating that the block producer was eligible to make this block
   @$pb.TagNumber(8)
-  $26.EligibilityCertificate get eligibilityCertificate => $_getN(7);
+  $7.EligibilityCertificate get eligibilityCertificate => $_getN(7);
   @$pb.TagNumber(8)
-  set eligibilityCertificate($26.EligibilityCertificate v) { setField(8, v); }
+  set eligibilityCertificate($7.EligibilityCertificate v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasEligibilityCertificate() => $_has(7);
   @$pb.TagNumber(8)
   void clearEligibilityCertificate() => clearField(8);
   @$pb.TagNumber(8)
-  $26.EligibilityCertificate ensureEligibilityCertificate() => $_ensure(7);
+  $7.EligibilityCertificate ensureEligibilityCertificate() => $_ensure(7);
 
   /// A certificate indicating the operator's commitment to this block
   @$pb.TagNumber(9)
-  $8.OperationalCertificate get operationalCertificate => $_getN(8);
+  $5.OperationalCertificate get operationalCertificate => $_getN(8);
   @$pb.TagNumber(9)
-  set operationalCertificate($8.OperationalCertificate v) { setField(9, v); }
+  set operationalCertificate($5.OperationalCertificate v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasOperationalCertificate() => $_has(8);
   @$pb.TagNumber(9)
   void clearOperationalCertificate() => clearField(9);
   @$pb.TagNumber(9)
-  $8.OperationalCertificate ensureOperationalCertificate() => $_ensure(8);
+  $5.OperationalCertificate ensureOperationalCertificate() => $_ensure(8);
 
   /// Optional metadata stamped by the operator.  Must be latin-1 encoded, and must be at most 32 bytes in length.
   /// optional
@@ -232,40 +232,40 @@ class BlockHeader extends $pb.GeneratedMessage {
 
   /// The operator's staking address
   @$pb.TagNumber(11)
-  $9.StakingAddress get address => $_getN(10);
+  $8.StakingAddress get address => $_getN(10);
   @$pb.TagNumber(11)
-  set address($9.StakingAddress v) { setField(11, v); }
+  set address($8.StakingAddress v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasAddress() => $_has(10);
   @$pb.TagNumber(11)
   void clearAddress() => clearField(11);
   @$pb.TagNumber(11)
-  $9.StakingAddress ensureAddress() => $_ensure(10);
+  $8.StakingAddress ensureAddress() => $_ensure(10);
 
   /// The ID of _this_ block header.  This value is optional and its contents are not included in the signable or identifiable data.  Clients which _can_ verify
   /// this value should verify this value, but some clients may not be able to or need to, in which case this field acts as a convenience.
   @$pb.TagNumber(12)
-  $25.BlockId get headerId => $_getN(11);
+  $6.BlockId get headerId => $_getN(11);
   @$pb.TagNumber(12)
-  set headerId($25.BlockId v) { setField(12, v); }
+  set headerId($6.BlockId v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasHeaderId() => $_has(11);
   @$pb.TagNumber(12)
   void clearHeaderId() => clearField(12);
   @$pb.TagNumber(12)
-  $25.BlockId ensureHeaderId() => $_ensure(11);
+  $6.BlockId ensureHeaderId() => $_ensure(11);
 
   /// Protocol Version
   @$pb.TagNumber(13)
-  $27.ProtocolVersion get version => $_getN(12);
+  $9.ProtocolVersion get version => $_getN(12);
   @$pb.TagNumber(13)
-  set version($27.ProtocolVersion v) { setField(13, v); }
+  set version($9.ProtocolVersion v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasVersion() => $_has(12);
   @$pb.TagNumber(13)
   void clearVersion() => clearField(13);
   @$pb.TagNumber(13)
-  $27.ProtocolVersion ensureVersion() => $_ensure(12);
+  $9.ProtocolVersion ensureVersion() => $_ensure(12);
 }
 
 

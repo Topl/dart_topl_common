@@ -6,8 +6,7 @@ import 'package:topl_common/genus/request_utils.dart';
 import 'package:topl_common/genus/constants.dart';
 import 'package:grpc/grpc.dart';
 import '../grpc_channel_settings.dart';
-import '../native_grpc_channel.dart'
-    if (dart.library.html) '../web_grpc_channel.dart';
+import '../native_grpc_channel.dart' if (dart.library.html) '../web_grpc_channel.dart';
 
 /// A gRPC service client for interacting with a remote node.
 ///
@@ -35,9 +34,7 @@ class NodeGRPCService {
       credentials: ChannelCredentials.insecure(),
     ),
   }) : nodeStub = NodeRpcClient(
-          getClientChannel(
-              grpcSettings:
-                  GrpcSettings(host: host, port: port, options: options)),
+          getClientChannel(grpcSettings: GrpcSettings(host: host, port: port, options: options)),
         );
 
   /// Returns a [FetchTransactionRes] object for the transaction at the given [transactionId].
@@ -59,7 +56,7 @@ class NodeGRPCService {
     }
 
     final FetchTransactionReq request = FetchTransactionReq(
-        transactionId: !transactionIdBytes.isEmpty
+        transactionId: transactionIdBytes.isNotEmpty
             ? getTransactionIdFromList(transactionIdBytes)
             : getTransactionIdFromString(transactionIdString));
     final FetchTransactionRes response = await nodeStub.fetchTransaction(
@@ -80,8 +77,7 @@ class NodeGRPCService {
     required int depth,
     CallOptions? options,
   }) async {
-    final FetchBlockIdAtDepthReq request =
-        FetchBlockIdAtDepthReq(depth: Int64(depth));
+    final FetchBlockIdAtDepthReq request = FetchBlockIdAtDepthReq(depth: Int64(depth));
     final FetchBlockIdAtDepthRes response = await nodeStub.fetchBlockIdAtDepth(
       request,
       options: options,
@@ -100,10 +96,8 @@ class NodeGRPCService {
     required int height,
     CallOptions? options,
   }) async {
-    final FetchBlockIdAtHeightReq request =
-        FetchBlockIdAtHeightReq(height: Int64(height));
-    final FetchBlockIdAtHeightRes response =
-        await nodeStub.fetchBlockIdAtHeight(
+    final FetchBlockIdAtHeightReq request = FetchBlockIdAtHeightReq(height: Int64(height));
+    final FetchBlockIdAtHeightRes response = await nodeStub.fetchBlockIdAtHeight(
       request,
       options: options,
     );
@@ -129,9 +123,7 @@ class NodeGRPCService {
     }
 
     final FetchBlockBodyReq request = FetchBlockBodyReq(
-        blockId: !blockIdBytes.isEmpty
-            ? getBlockIdFromList(blockIdBytes)
-            : getBlockIdFromString(blockIdString));
+        blockId: blockIdBytes.isNotEmpty ? getBlockIdFromList(blockIdBytes) : getBlockIdFromString(blockIdString));
     final FetchBlockBodyRes response = await nodeStub.fetchBlockBody(
       request,
       options: options,
@@ -158,9 +150,7 @@ class NodeGRPCService {
     }
 
     final FetchBlockHeaderReq request = FetchBlockHeaderReq(
-        blockId: !blockIdBytes.isEmpty
-            ? getBlockIdFromList(blockIdBytes)
-            : getBlockIdFromString(blockIdString));
+        blockId: !blockIdBytes.isEmpty ? getBlockIdFromList(blockIdBytes) : getBlockIdFromString(blockIdString));
     final FetchBlockHeaderRes response = await nodeStub.fetchBlockHeader(
       request,
       options: options,
@@ -206,8 +196,7 @@ class NodeGRPCService {
         transactionId: !transactionIdBytes.isEmpty
             ? getTransactionIdFromList(transactionIdBytes)
             : getTransactionIdFromString(transactionIdString));
-    final CurrentMempoolContainsRes response =
-        await nodeStub.currentMempoolContains(
+    final CurrentMempoolContainsRes response = await nodeStub.currentMempoolContains(
       request,
       options: options,
     );
@@ -223,10 +212,8 @@ class NodeGRPCService {
     required IoTransaction transaction,
     CallOptions? options,
   }) async {
-    final BroadcastTransactionReq request =
-        BroadcastTransactionReq(transaction: transaction);
-    final BroadcastTransactionRes response =
-        await nodeStub.broadcastTransaction(
+    final BroadcastTransactionReq request = BroadcastTransactionReq(transaction: transaction);
+    final BroadcastTransactionRes response = await nodeStub.broadcastTransaction(
       request,
       options: options,
     );
@@ -240,8 +227,7 @@ class NodeGRPCService {
     CallOptions? options,
   }) async* {
     final SynchronizationTraversalReq request = SynchronizationTraversalReq();
-    final Stream<SynchronizationTraversalRes> stream =
-        nodeStub.synchronizationTraversal(
+    final Stream<SynchronizationTraversalRes> stream = nodeStub.synchronizationTraversal(
       request,
       options: options,
     );

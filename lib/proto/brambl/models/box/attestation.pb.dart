@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../quivr/models/proof.pb.dart' as $17;
+import '../../../quivr/models/proof.pb.dart' as $21;
 import '../../../quivr/models/shared.pb.dart' as $3;
-import 'challenge.pb.dart' as $7;
-import 'lock.pb.dart' as $15;
+import 'challenge.pb.dart' as $19;
+import 'lock.pb.dart' as $20;
 
 class Attestation_Predicate extends $pb.GeneratedMessage {
   factory Attestation_Predicate({
-    $15.Lock_Predicate? lock,
-    $core.Iterable<$17.Proof>? responses,
+    $20.Lock_Predicate? lock,
+    $core.Iterable<$21.Proof>? responses,
   }) {
     final $result = create();
     if (lock != null) {
@@ -37,8 +37,8 @@ class Attestation_Predicate extends $pb.GeneratedMessage {
   factory Attestation_Predicate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attestation.Predicate', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$15.Lock_Predicate>(1, _omitFieldNames ? '' : 'lock', subBuilder: $15.Lock_Predicate.create)
-    ..pc<$17.Proof>(2, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $17.Proof.create)
+    ..aOM<$20.Lock_Predicate>(1, _omitFieldNames ? '' : 'lock', subBuilder: $20.Lock_Predicate.create)
+    ..pc<$21.Proof>(2, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $21.Proof.create)
     ..hasRequiredFields = false
   ;
 
@@ -64,26 +64,26 @@ class Attestation_Predicate extends $pb.GeneratedMessage {
   static Attestation_Predicate? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $15.Lock_Predicate get lock => $_getN(0);
+  $20.Lock_Predicate get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($15.Lock_Predicate v) { setField(1, v); }
+  set lock($20.Lock_Predicate v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $15.Lock_Predicate ensureLock() => $_ensure(0);
+  $20.Lock_Predicate ensureLock() => $_ensure(0);
 
   /// list of optional values (proofs used to attempt to satisfy the challenges contained in the predicate lock)
   @$pb.TagNumber(2)
-  $core.List<$17.Proof> get responses => $_getList(1);
+  $core.List<$21.Proof> get responses => $_getList(1);
 }
 
 class Attestation_Image extends $pb.GeneratedMessage {
   factory Attestation_Image({
-    $15.Lock_Image? lock,
-    $core.Iterable<$7.Challenge>? known,
-    $core.Iterable<$17.Proof>? responses,
+    $20.Lock_Image? lock,
+    $core.Iterable<$19.Challenge>? known,
+    $core.Iterable<$21.Proof>? responses,
   }) {
     final $result = create();
     if (lock != null) {
@@ -102,9 +102,9 @@ class Attestation_Image extends $pb.GeneratedMessage {
   factory Attestation_Image.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attestation.Image', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$15.Lock_Image>(1, _omitFieldNames ? '' : 'lock', subBuilder: $15.Lock_Image.create)
-    ..pc<$7.Challenge>(2, _omitFieldNames ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $7.Challenge.create)
-    ..pc<$17.Proof>(3, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $17.Proof.create)
+    ..aOM<$20.Lock_Image>(1, _omitFieldNames ? '' : 'lock', subBuilder: $20.Lock_Image.create)
+    ..pc<$19.Challenge>(2, _omitFieldNames ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $19.Challenge.create)
+    ..pc<$21.Proof>(3, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $21.Proof.create)
     ..hasRequiredFields = false
   ;
 
@@ -130,31 +130,31 @@ class Attestation_Image extends $pb.GeneratedMessage {
   static Attestation_Image? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $15.Lock_Image get lock => $_getN(0);
+  $20.Lock_Image get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($15.Lock_Image v) { setField(1, v); }
+  set lock($20.Lock_Image v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $15.Lock_Image ensureLock() => $_ensure(0);
+  $20.Lock_Image ensureLock() => $_ensure(0);
 
   /// list of optional values
   @$pb.TagNumber(2)
-  $core.List<$7.Challenge> get known => $_getList(1);
+  $core.List<$19.Challenge> get known => $_getList(1);
 
   /// list of optional values
   @$pb.TagNumber(3)
-  $core.List<$17.Proof> get responses => $_getList(2);
+  $core.List<$21.Proof> get responses => $_getList(2);
 }
 
 class Attestation_Commitment extends $pb.GeneratedMessage {
   factory Attestation_Commitment({
-    $15.Lock_Commitment? lock,
-    $core.Iterable<$7.Challenge>? known,
+    $20.Lock_Commitment? lock,
+    $core.Iterable<$19.Challenge>? known,
     $core.Iterable<$3.Witness>? witness,
-    $core.Iterable<$17.Proof>? responses,
+    $core.Iterable<$21.Proof>? responses,
   }) {
     final $result = create();
     if (lock != null) {
@@ -176,10 +176,10 @@ class Attestation_Commitment extends $pb.GeneratedMessage {
   factory Attestation_Commitment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attestation.Commitment', package: const $pb.PackageName(_omitMessageNames ? '' : 'co.topl.brambl.models.box'), createEmptyInstance: create)
-    ..aOM<$15.Lock_Commitment>(1, _omitFieldNames ? '' : 'lock', subBuilder: $15.Lock_Commitment.create)
-    ..pc<$7.Challenge>(2, _omitFieldNames ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $7.Challenge.create)
+    ..aOM<$20.Lock_Commitment>(1, _omitFieldNames ? '' : 'lock', subBuilder: $20.Lock_Commitment.create)
+    ..pc<$19.Challenge>(2, _omitFieldNames ? '' : 'known', $pb.PbFieldType.PM, subBuilder: $19.Challenge.create)
     ..pc<$3.Witness>(3, _omitFieldNames ? '' : 'witness', $pb.PbFieldType.PM, subBuilder: $3.Witness.create)
-    ..pc<$17.Proof>(4, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $17.Proof.create)
+    ..pc<$21.Proof>(4, _omitFieldNames ? '' : 'responses', $pb.PbFieldType.PM, subBuilder: $21.Proof.create)
     ..hasRequiredFields = false
   ;
 
@@ -205,19 +205,19 @@ class Attestation_Commitment extends $pb.GeneratedMessage {
   static Attestation_Commitment? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $15.Lock_Commitment get lock => $_getN(0);
+  $20.Lock_Commitment get lock => $_getN(0);
   @$pb.TagNumber(1)
-  set lock($15.Lock_Commitment v) { setField(1, v); }
+  set lock($20.Lock_Commitment v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLock() => $_has(0);
   @$pb.TagNumber(1)
   void clearLock() => clearField(1);
   @$pb.TagNumber(1)
-  $15.Lock_Commitment ensureLock() => $_ensure(0);
+  $20.Lock_Commitment ensureLock() => $_ensure(0);
 
   /// list of claim propositions that must be proven as memebrs of the root commitment and be suitably satisfied by the given proofs
   @$pb.TagNumber(2)
-  $core.List<$7.Challenge> get known => $_getList(1);
+  $core.List<$19.Challenge> get known => $_getList(1);
 
   /// list of witnesses for proving membership of claimed propositions
   @$pb.TagNumber(3)
@@ -225,7 +225,7 @@ class Attestation_Commitment extends $pb.GeneratedMessage {
 
   /// list of optional values
   @$pb.TagNumber(4)
-  $core.List<$17.Proof> get responses => $_getList(3);
+  $core.List<$21.Proof> get responses => $_getList(3);
 }
 
 enum Attestation_Value {
