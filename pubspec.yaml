@@ -5,7 +5,7 @@ repository: https://github.com/Topl/dart_topl_common
 version: 2.1.0
 
 environment:
-  sdk: ">=2.19.5 <3.0.0"
+  sdk: ">=2.19.5 <4.0.0"
 
 
 dependencies:
