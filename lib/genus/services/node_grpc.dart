@@ -262,11 +262,11 @@ class NodeGRPCService {
   ///
   /// Throws an [Exception] if an error occurs during the RPC request.
   Future<FetchEpochDataRes> fetchEpochData({
-    required int epoch,
+    required int? epoch,
     CallOptions? options,
   }) async {
     final FetchEpochDataReq request = FetchEpochDataReq(
-      epoch: UInt64Value(value: Int64(epoch)),
+      epoch: UInt64Value(value: epoch != null ? Int64(epoch) : null),
     );
     final FetchEpochDataRes response = await nodeStub.fetchEpochData(
       request,
