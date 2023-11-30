@@ -266,7 +266,7 @@ class NodeGRPCService {
     CallOptions? options,
   }) async {
     final FetchEpochDataReq request = FetchEpochDataReq(
-      epoch: UInt64Value(value: epoch != null ? Int64(epoch) : null),
+      epoch: epoch != null ? UInt64Value(value: Int64(epoch)) : null,
     );
     final FetchEpochDataRes response = await nodeStub.fetchEpochData(
       request,
